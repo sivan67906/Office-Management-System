@@ -1,0 +1,689 @@
+﻿@section Styles {
+		<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+		<link href="~/matrica/assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+		<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+		<link href="~/matrica/assets/libs/magic.css/magic.min.css" rel="stylesheet" type="text/css" />
+		<link href="~/matrica/assets/libs/simple-datatables/style.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+	<div class="col-lg-9">
+		<button type="button" class="btn btn-de-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalSend">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation align-self-center icon-xs me-2">
+				<polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+			</svg> Send
+		</button>
+		<button type="button" class="btn btn-de-primary btn-sm btn-animation" data-bs-toggle="modal" data-bs-target="#exampleModalSend" data-test="foolishIn"> FoolishIn </button>
+		<button type="button" class="btn btn-de-primary btn-sm btn-animation" data-bs-toggle="modal" data-bs-target="#exampleModalSend" data-test="twisterInDown"> TwisterInDown </button>
+		<div class="modal fade" id="exampleModalSend" tabindex="-1" aria-labelledby="exampleModalSendLabel" aria-hidden="true" style="display: none;">
+			<div id="animate-me">
+				<div class="modal-dialog">
+					<div class="ribbon4 rib4-warning">
+						<span class="ribbon4-band ribbon4-band-warning text-white text-center">New animation</span>
+					</div>
+					<div class="modal-content">
+						<div class="modal-header">
+							<h6 class="modal-title m-0" id="exampleModalDefaultSend">Send Coin</h6>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="mb-2">
+								<label for="cryptocurrency">Crypto Currency</label>
+								<select class="form-select" aria-label="Default select example">
+									<option selected="">-- Currency --</option>
+									<option value="BTC">BTC</option>
+									<option value="ETH">ETH</option>
+								</select>
+							</div>
+							<div class="mb-2">
+								<label for="cryptocurrency">Currency From</label>
+								<select class="form-select" aria-label="Default select example">
+									<option selected="">-- My wallet --</option>
+									<option value="BTC">BTC</option>
+									<option value="ETH">ETH</option>
+								</select>
+							</div>
+							<div class=" mb-2">
+								<label for="toaddress">To</label>
+								<div class="input-group">
+									<span class="input-group-text" id="QUcode">
+										<i class="fas fa-qrcode"></i>
+									</span>
+									<input type="text" class="form-control" placeholder="Can you scan" aria-label="Scancode">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="mb-2">
+										<label for="toaddress">USD</label>
+										<div class="input-group">
+											<span class="input-group-text" id="US-dollor">
+												<i class="fas fa-dollar-sign"></i>
+											</span>
+											<input type="text" class="form-control" placeholder="USD" aria-label="US-dollor">
+										</div>
+									</div>
+								</div>
+								<!--end col-->
+								<div class="col-md-6">
+									<div class="mb-2">
+										<label for="BTC">BTC</label>
+										<div class="input-group">
+											<span class="input-group-text" id="BTC-coin">
+												<i class="fab fa-btc"></i>
+											</span>
+											<input type="text" class="form-control" placeholder="BTC" aria-label="BTC-coin">
+										</div>
+									</div>
+								</div>
+								<!--end col-->
+							</div>
+							<!--end row-->
+							<div class="mb-2">
+								<label for="Description">Description</label>
+								<textarea class="form-control" rows="3" aria-label="With textarea"></textarea>
+							</div>
+							<div class="mt-2 mb-1">
+								<label for="NetworkFree">Network Free</label>
+							</div>
+							<div class="form-check form-check-inline mb-0">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Regular" value="option1">
+								<label class="form-check-label" for="Regular">Regular</label>
+							</div>
+							<div class="form-check form-check-inline mb-0">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="Priority" value="option2">
+								<label class="form-check-label" for="Priority">Priority</label>
+							</div>
+						</div>
+						<!--end modal-body-->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
+							<button class="btn btn-de-primary btn-sm" type="button">Continue</button>
+						</div>
+						<!--end modal-footer-->
+					</div>
+					<!--end modal-content-->
+				</div>
+				<!--end modal-dialog-->
+			</div>
+		</div>
+	</div>
+	<!--end col-->
+	<div class="col-lg-3"></div>
+	<!--end col-->
+</div>
+<!--end row-->
+<br />
+<br />
+<div class="row">
+	<div class="col-lg-6">
+		<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast-header">
+				<img src="~/matrica/assets/images/logo-sm.png" alt="" height="20" class="me-1">
+				<h5 class="me-auto my-0">Metrica</h5>
+				<small>11 mins ago</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body "> Hello, world! This is a toast message. </div>
+		</div>
+	</div>
+	<!--end col-->
+	<div class="col-lg-6">
+		<div id="ldSpinner" class="spinner-border text-warning" role="status"></div>
+		<span id="spnSpinner" style="display:none;" class="text-success">Spinner Loading finished.</span>
+	</div>
+</div>
+<!--end row-->
+<br />
+<br />
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">User Details</h4>
+				<p class="text-muted mb-0"> Find the below details </p>
+			</div>
+			<!--end card-header-->
+			<div class="card-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="mb-3 row">
+							<label for="example-text-input" class="col-sm-2 col-form-label text-end">Text</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-password-input" class="col-sm-2 col-form-label text-end">Password</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="password" value="hunter2" id="example-password-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-number-input" class="col-sm-2 col-form-label text-end">Number</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="number" value="42" id="example-number-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-datetime-local-input" class="col-sm-2 col-form-label text-end">Date and time</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="exampleColorInput" class="col-sm-2 col-form-label text-end">Color</label>
+							<div class="col-sm-10">
+								<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#0b51b7" title="Choose your color">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label class="col-sm-2 col-form-label text-end">Select</label>
+							<div class="col-sm-10">
+								<select class="form-select" aria-label="Default select example">
+									<option selected="">Open this select menu</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-text-input-lg" class="col-sm-2 col-form-label text-end">Large</label>
+							<div class="col-sm-10">
+								<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="example-text-input-lg">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-text-input-sm" class="col-sm-2 col-form-label text-end">Small</label>
+							<div class="col-sm-10">
+								<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="example-text-input-sm">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="mb-3 row">
+							<label for="example-date-input" class="col-sm-2 col-form-label text-end">Date</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-month-input" class="col-sm-2 col-form-label text-end">Month</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="month" value="2011-08" id="example-month-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-week-input" class="col-sm-2 col-form-label text-end">Week</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="week" value="2011-W33" id="example-week-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<label for="example-time-input" class="col-sm-2 col-form-label text-end">Time</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="time" value="13:45:00" id="example-time-input">
+							</div>
+						</div>
+						<div class="mb-3 row">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">Custom Touch Spin</h4>
+									<p class="text-muted mb-0">Custom Touch Spin only HTML &amp; JavaScript.</p>
+								</div>
+								<!--end card-header-->
+								<div class="card-body">
+									<div class="input-group qty-icons w-25">
+										<button class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+										<input type="number" class="form-control" min="0" name="quantity" value="0" style="pointer-events: none;">
+										<button class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+									</div>
+								</div>
+								<!-- end card-body -->
+							</div>
+							<!-- end card -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--end card-body-->
+		</div>
+		<!--end card-->
+	</div>
+	<!--end col-->
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Selectr Components</h4>
+				<p class="text-muted mb-0"> Select is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results. </p>
+			</div>
+			<!--end card-header-->
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-4">
+						<label class="mb-3">Default Select</label>
+						<div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+							@* <div class="selectr-selected" disabled="undefined" tabindex="0" aria-expanded="false">
+                  <span class="selectr-label">Value 1</span>
+                  <div class="selectr-placeholder">Select an option...</div>
+                </div> *@ <div class="selectr-options-container">
+								<div class="selectr-input-container">
+									<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+									<button class="selectr-input-clear" type="button"></button>
+								</div>
+								<div class="selectr-notice"></div>
+								<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+							</div>
+							<select id="default" tabindex="-1" class="selectr-hidden" aria-hidden="true">
+								<option value="value-1" selected="">Value 1</option>
+								<option value="value-2">Value 2</option>
+								<option value="value-3">Value 3</option>
+							</select>
+						</div>
+					</div>
+					<!-- end col -->
+					<div class="col-md-4">
+						<label class="mb-3">Multi Select</label>
+						<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+							@* <div class="selectr-selected" disabled="undefined" tabindex="0" aria-expanded="false">
+                  <ul class="selectr-label selectr-tags"></ul>
+                  <div class="selectr-placeholder">Select an option...</div>
+                </div> *@ <div class="selectr-options-container">
+								<div class="selectr-input-container">
+									<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+									<button class="selectr-input-clear" type="button"></button>
+								</div>
+								<div class="selectr-notice"></div>
+								<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+							</div>
+							<select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden" aria-hidden="true">
+								<option value="value-1">Value 1</option>
+								<option value="value-2">Value 2</option>
+								<option value="value-3">Value 3</option>
+							</select>
+						</div>
+					</div>
+					<!-- end col -->
+					<div class="col-md-4">
+						<label class="mb-3">Taggable Select</label>
+						<div class="selectr-container selectr-desktop multiple taggable" style="width: 100%;">
+							@* <div class="selectr-selected" disabled="undefined" tabindex="0" aria-expanded="false">
+                  <ul class="selectr-label selectr-tags">
+                    <li class="input-tag">
+                      <input class="selectr-tag-input" placeholder="Enter a tag..." tagindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                    </li>
+                  </ul>
+                  <div class="selectr-placeholder">Select an option...</div>
+                </div> *@ <div class="selectr-options-container">
+								<div class="selectr-notice"></div>
+								<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+							</div>
+							<select id="taggableSelect" multiple="" tabindex="-1" class="selectr-hidden" aria-hidden="true">
+								<option value="value-1">Value 1</option>
+								<option value="value-2">Value 2</option>
+								<option value="value-3">Value 3</option>
+							</select>
+						</div>
+					</div>
+					<!-- end col -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end card-body -->
+		</div>
+		<!-- end card -->
+	</div>
+	<!-- end col -->
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+	<div class="col-lg-6">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Huebee Color</h4>
+				<p class="text-muted mb-0"> Huebee is a JavaScript library for creating user-centric color pickers. </p>
+			</div>
+			<!--end card-header-->
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-4">
+						<input class="form-control color-input" value="#228" />
+					</div>
+					<!-- end col -->
+					<div class="col-md-4">
+						<input class="form-control " value="#024" data-huebee />
+					</div>
+					<!-- end col -->
+					<div class="col-md-4">
+						<input class="form-control " value="#f7f8f9" data-huebee='{ "setBGColor": true, "saturations": 2 }' />
+					</div>
+					<!-- end col -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end card-body -->
+		</div>
+		<!-- end card -->
+	</div>
+	<!-- end col -->
+	<div class="col-lg-6">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Vanilla JS Datepicker</h4>
+				<p class="text-muted mb-0"> A vanilla JavaScript remake of bootstrap-datepicker for Bulma and other CSS frameworks. </p>
+			</div>
+			<!--end card-header-->
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-6">
+						<label class="mb-3">Default Datepicker</label>
+						<input class="form-control mb-3" type="text" name="foo">
+						<label class="mb-3">Date Range Picker</label>
+						<div class="input-group" id="DateRange">
+							<input type="text" class="form-control" placeholder="Start" aria-label="StartDate">
+							<span class="input-group-text">to</span>
+							<input type="text" class="form-control" placeholder="End" aria-label="EndDate">
+						</div>
+					</div>
+					<!-- end col -->
+					<div class="col-md-6">
+						<label class="mb-3">Inline Datepicker</label>
+						<div id="inline_calendar"></div>
+					</div>
+					<!-- end col -->
+				</div>
+				<!-- end row -->
+			</div>
+			<!-- end card-body -->
+		</div>
+		<!-- end card -->
+	</div>
+	<!-- end col -->
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+	<div class="col-lg-6">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Vanilla JS Datepicker</h4>
+				<p class="text-muted mb-0"> A vanilla JavaScript remake of bootstrap-datepicker for Bulma and other CSS frameworks. </p>
+			</div>
+			<!--end card-header-->
+			<div class="card-body">
+				<div class="mb-2">
+					<label class="mb-2">
+						RegExp (Russian postal code) <span class="desc ms-2 font-11 text-muted">/^[1-6]\d{0,5}$/</span>
+					</label>
+					<input id="regexp-mask" type="text" value="" class="form-control">
+				</div>
+				<div class="mb-2">
+					<label class="mb-2">
+						Type here against mask <span class="desc ms-2 font-11 text-muted">+{7}(000)000-00-00</span>
+					</label>
+					<input id="start-phone-mask" type="text" value="" class="form-control">
+					<div class="desc font-11 text-muted">
+						unmasked: <span id="start-phone-unmasked"></span>
+						<span id="start-phone-complete" class="example__complete"></span>
+					</div>
+				</div>
+				<div class="mb-2">
+					<label class="mb-2">Mask in overwrite and autofix modes</label>
+					<input id="date-overwrite-mask" type="text" value="" class="form-control">
+				</div>
+				<div class="mb-2">
+					<label class="mb-2">Type to uppercase</label>
+					<input id="uppercase-mask" type="text" value="" class="form-control">
+				</div>
+				<div>
+					<label class="mb-2">Date and time</label>
+					<input id="moment-mask" type="text" value="" class="form-control">
+					<div class="desc font-11 text-muted">
+						date: <span id="moment-value"></span>
+					</div>
+				</div>
+			</div>
+			<!-- end card-body -->
+		</div>
+		<!-- end card -->
+	</div>
+	<div class="col-lg-6"></div>
+</div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Customers Details </h4>
+			</div>
+			<!--end card-header-->
+			<div class="card-body">
+				<div class="table-responsive">
+					<div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+						<div class="dataTable-top">
+							<div class="dataTable-dropdown">
+								<label>
+									<select class="dataTable-selector">
+										<option value="5">5</option>
+										<option value="10" selected="">10</option>
+										<option value="15">15</option>
+										<option value="20">20</option>
+										<option value="25">25</option>
+									</select> entries per page
+								</label>
+							</div>
+							<div class="dataTable-search">
+								<input class="dataTable-input" placeholder="Search..." type="text">
+							</div>
+						</div>
+						<div class="dataTable-container">
+							<table class="table dataTable-table" id="datatable_1">
+								<thead class="thead-light">
+									<tr>
+										<th data-sortable="" style="width: 27.3261%;">
+											<a href="#" class="dataTable-sorter">Name</a>
+										</th>
+										<th data-sortable="" style="width: 10.1425%;">
+											<a href="#" class="dataTable-sorter">Ext.</a>
+										</th>
+										<th data-sortable="" style="width: 25.9849%;">
+											<a href="#" class="dataTable-sorter">City</a>
+										</th>
+										<th data-type="date" data-format="YYYY/DD/MM" data-sortable="" style="width: 18.5247%;">
+											<a href="#" class="dataTable-sorter">Start Date</a>
+										</th>
+										<th data-sortable="" style="width: 18.0218%;">
+											<a href="#" class="dataTable-sorter">Completion</a>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Unity Pugh</td>
+										<td>9958</td>
+										<td>Curicó</td>
+										<td>2005/02/11</td>
+										<td>37%</td>
+									</tr>
+									<tr>
+										<td>Theodore Duran</td>
+										<td>8971</td>
+										<td>Dhanbad</td>
+										<td>1999/04/07</td>
+										<td>97%</td>
+									</tr>
+									<tr>
+										<td>Kylie Bishop</td>
+										<td>3147</td>
+										<td>Norman</td>
+										<td>2005/09/08</td>
+										<td>63%</td>
+									</tr>
+									<tr>
+										<td>Willow Gilliam</td>
+										<td>3497</td>
+										<td>Amqui</td>
+										<td>2009/29/11</td>
+										<td>30%</td>
+									</tr>
+									<tr>
+										<td>Blossom Dickerson</td>
+										<td>5018</td>
+										<td>Kempten</td>
+										<td>2006/11/09</td>
+										<td>17%</td>
+									</tr>
+									<tr>
+										<td>Elliott Snyder</td>
+										<td>3925</td>
+										<td>Enines</td>
+										<td>2006/03/08</td>
+										<td>57%</td>
+									</tr>
+									<tr>
+										<td>Castor Pugh</td>
+										<td>9488</td>
+										<td>Neath</td>
+										<td>2014/23/12</td>
+										<td>93%</td>
+									</tr>
+									<tr>
+										<td>Pearl Carlson</td>
+										<td>6231</td>
+										<td>Cobourg</td>
+										<td>2014/31/08</td>
+										<td>100%</td>
+									</tr>
+									<tr>
+										<td>Deirdre Bridges</td>
+										<td>1579</td>
+										<td>Eberswalde-Finow</td>
+										<td>2014/26/08</td>
+										<td>44%</td>
+									</tr>
+									<tr>
+										<td>Daniel Baldwin</td>
+										<td>6095</td>
+										<td>Moircy</td>
+										<td>2000/11/01</td>
+										<td>33%</td>
+									</tr>
+									<tr>
+										<td>Castor Pugh</td>
+										<td>9488</td>
+										<td>Neath</td>
+										<td>2014/23/12</td>
+										<td>93%</td>
+									</tr>
+									<tr>
+										<td>Pearl Carlson</td>
+										<td>6231</td>
+										<td>Cobourg</td>
+										<td>2014/31/08</td>
+										<td>100%</td>
+									</tr>
+									<tr>
+										<td>Deirdre Bridges</td>
+										<td>1579</td>
+										<td>Eberswalde-Finow</td>
+										<td>2014/26/08</td>
+										<td>44%</td>
+									</tr>
+									<tr>
+										<td>Daniel Baldwin</td>
+										<td>6095</td>
+										<td>Moircy</td>
+										<td>2000/11/01</td>
+										<td>33%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="dataTable-bottom">
+							<div class="dataTable-info">Showing 1 to 10 of 11 entries</div>
+							<nav class="dataTable-pagination">
+								<ul class="dataTable-pagination-list">
+									<li class="active">
+										<a href="#" data-page="1">1</a>
+									</li>
+									<li class="">
+										<a href="#" data-page="2">2</a>
+									</li>
+									<li class="pager">
+										<a href="#" data-page="2">›</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end col -->
+</div>
+<div class="row" style="display: none;">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Export Table </h4>
+			</div><!--end card-header-->
+			<div class="card-body">
+				<div class="table-responsive">
+					<div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+						<div class="dataTable-top"><div class="dataTable-dropdown"><label><select class="dataTable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> entries per page</label></div><div class="dataTable-search"><input class="dataTable-input" placeholder="Search..." type="text"></div></div><div class="dataTable-container">
+							<table class="table dataTable-table" id="datatable_2">
+								<thead class="thead-light">
+									<tr><th data-sortable="" style="width: 27.3261%;"><a href="#" class="dataTable-sorter">Name</a></th><th data-sortable="" style="width: 10.1425%;"><a href="#" class="dataTable-sorter">Ext.</a></th><th data-sortable="" style="width: 25.9849%;"><a href="#" class="dataTable-sorter">City</a></th><th data-type="date" data-format="YYYY/DD/MM" data-sortable="" style="width: 18.5247%;"><a href="#" class="dataTable-sorter">Start Date</a></th><th data-sortable="" style="width: 18.0218%;"><a href="#" class="dataTable-sorter">Completion</a></th></tr>
+								</thead>
+								<tbody><tr><td>Unity Pugh</td><td>9958</td><td>Curicó</td><td>2005/02/11</td><td>37%</td></tr><tr><td>Theodore Duran</td><td>8971</td><td>Dhanbad</td><td>1999/04/07</td><td>97%</td></tr><tr><td>Kylie Bishop</td><td>3147</td><td>Norman</td><td>2005/09/08</td><td>63%</td></tr><tr><td>Willow Gilliam</td><td>3497</td><td>Amqui</td><td>2009/29/11</td><td>30%</td></tr><tr><td>Blossom Dickerson</td><td>5018</td><td>Kempten</td><td>2006/11/09</td><td>17%</td></tr><tr><td>Elliott Snyder</td><td>3925</td><td>Enines</td><td>2006/03/08</td><td>57%</td></tr><tr><td>Castor Pugh</td><td>9488</td><td>Neath</td><td>2014/23/12</td><td>93%</td></tr><tr><td>Pearl Carlson</td><td>6231</td><td>Cobourg</td><td>2014/31/08</td><td>100%</td></tr><tr><td>Deirdre Bridges</td><td>1579</td><td>Eberswalde-Finow</td><td>2014/26/08</td><td>44%</td></tr><tr><td>Daniel Baldwin</td><td>6095</td><td>Moircy</td><td>2000/11/01</td><td>33%</td></tr><tr><td>Pearl Carlson</td><td>6231</td><td>Cobourg</td><td>2014/31/08</td><td>100%</td></tr></tbody>
+							</table>
+						</div><div class="dataTable-bottom"><div class="dataTable-info">Showing 1 to 11 of 11 entries</div><nav class="dataTable-pagination"><ul class="dataTable-pagination-list"></ul></nav></div>
+					</div>
+					<button type="button" class="btn btn-sm btn-primary csv">Export CSV</button>
+					<button type="button" class="btn btn-sm btn-primary sql">Export SQL</button>
+					<button type="button" class="btn btn-sm btn-primary txt">Export TXT</button>
+					<button type="button" class="btn btn-sm btn-primary json">Export JSON</button>
+				</div>
+			</div>
+		</div>
+	</div> <!-- end col -->
+</div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+
+@section Scripts {
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+	<script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
+	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+	<script src="~/matrica/assets/js/moment.js"></script>
+	<script src="~/matrica/assets/libs/imask/imask.min.js"></script>
+	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+
+	<script src="~/matrica/assets/libs/simple-datatables/umd/simple-datatables.js"></script>
+	<script src="~/matrica/assets/js/pages/datatable.init.js"></script>
+
+	<script src="~/matrica/assets/js/pages/animation.init.js"></script>
+
+	<script type="text/javascript">
+		//  $(document).ready(function() {
+		//     $('#datatable_1').DataTable();
+		//     $('#datatable_2').DataTable();
+		// } );
+		$('#ldSpinner').delay(5000).hide(0);
+		$('#spnSpinner').delay(5000).show(0);
+	</script>
+						}
