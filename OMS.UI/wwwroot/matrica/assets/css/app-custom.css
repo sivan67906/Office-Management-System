@@ -1,0 +1,25 @@
+﻿.form-check-input-custom {
+    height: 20px !important;
+    vertical-align: middle !important;
+    width: 20px !important;
+}
+.labelcustom {
+    margin-left: 8px;
+    vertical-align: -webkit-baseline-middle;
+}
+.col-md-15 {
+    width: 12.499999995% !important;
+    flex: 0 0 12.499% !important;
+    max-width: 12.499% !important;
+}
+.col-md-25 {
+    width: 20.833333325% !important;
+    flex: 0 0 20.833% !important;
+    max-width: 20.833% !important;
+}
+.toggle-password {
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: -25px;
+}

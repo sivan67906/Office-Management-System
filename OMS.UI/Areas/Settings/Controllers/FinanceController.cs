@@ -8,12 +8,12 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Controll";
+            ViewData["pTitle"] = "Finance Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
             ViewData["bParent"] = "Finance";
-            ViewData["bChild"] = "Dashboard";
+            ViewData["bChild"] = "Finance Control";
 
             return View();
         }
@@ -21,7 +21,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Payment()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Controll";
+            ViewData["pTitle"] = "Finance Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -34,7 +34,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Finance()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Controll";
+            ViewData["pTitle"] = "Finance Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -47,7 +47,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Tax()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Controll";
+            ViewData["pTitle"] = "Finance Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -60,7 +60,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Payroll()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Controll";
+            ViewData["pTitle"] = "Finance Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

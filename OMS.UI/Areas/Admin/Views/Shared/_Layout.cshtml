@@ -39,7 +39,12 @@
                             <a href="#AvivSettings" id="settings-tab" class="nav-link">
                                 <i class="mdi mdi-settings-outline menu-icon"></i>
                             </a><!--end nav-link-->
-                        </li><!--end nav-item-->                        
+                        </li><!--end nav-item--> 
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Uikit" data-bs-trigger="hover">
+                            <a href="#UikitSettings" id="uikit-tab" class="nav-link">
+                                <i class="ti ti-planet menu-icon menu-icon"></i>
+                            </a><!--end nav-link-->
+                        </li><!--end nav-item-->
                     </ul><!--end nav-->
                 </div><!--end /div-->
             </div><!--end main-icon-menu-body-->
@@ -101,9 +106,6 @@
 
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Common Settings</a>
-                        </li><!--end nav-item-->
-                        <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Company">Company Settings</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
@@ -140,7 +142,7 @@
                             <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Project Settings</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Attendance Settings</a>
+                            <a class="nav-link" asp-area="Settings" asp-controller="Attendance" asp-action="Index">Attendance Settings</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Leaves Settings</a>
@@ -198,6 +200,18 @@
                         </li><!--end nav-item-->
                     </ul><!--end nav-->
                 </div><!-- end Settings -->
+
+                <div id="UikitSettings" class="main-icon-menu-pane tab-pane" role="tabpanel"
+                     aria-labelledby="uikit-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Uikit</h6>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">UI Customization</a>
+                        </li><!--end nav-item-->
+                    </ul><!--end nav-->
+                </div><!-- end Uikit -->
             </div><!--end menu-body-->
         </div><!-- end main-menu-inner-->
     </div>

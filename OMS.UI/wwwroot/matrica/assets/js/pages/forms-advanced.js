@@ -1,10 +1,24 @@
-new Selectr("#default"), 
-    new Selectr("#multiSelect", {
+document.querySelectorAll('.defaultSelectrLoad').forEach(element => {
+    new Selectr(element);
+});
+document.querySelectorAll('.multiSelectrLoad').forEach(element => {
+    new Selectr(element, {
         multiple: !0
-    }), new Selectr("#taggableSelect", {
+    });
+});
+document.querySelectorAll('.taggableSelectrLoad').forEach(element => {
+    new Selectr(element, {
         taggable: !0,
         tagSeperators: [",", "|"]
     });
+});
+//new Selectr("#default"), 
+//    new Selectr("#multiSelect", {
+//        multiple: !0
+//    }), new Selectr("#taggableSelect", {
+//        taggable: !0,
+//        tagSeperators: [",", "|"]
+//    });
 var hueb = new Huebee(".color-input", {
     setBGColor: !0,
     saturations: 3

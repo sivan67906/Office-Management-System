@@ -1,5 +1,388 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="row">
+    <div class="col-12 col-lg-10 mx-auto">
+
+        <div class="card">
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbProfile" role="tab">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbEmergencyContacts" role="tab">Emergency Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbDocuments" role="tab">Documents</a>
+                    </li>
+                </ul>
+            </div><!--end card-body-->
+            <div class="card-body pt-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tbProfile" role="tabpanel">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"> Profile</h4>
+                            </div><!--end card-header-->
+
+                            <div class="card-body">
+                                <div class="form-group mb-3">
+                                    <img src="~/matrica/assets/images/users/dr-pro.png" alt="" class="thumb-lg rounded me-2">
+                                    <label class="btn btn-de-primary btn-sm text-light">
+                                        Add Avatar <input type="file" hidden>
+                                    </label>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-1 mb-3">
+                                        <label class="mb-3">Prifix</label>
+                                        <select class="form-select">
+                                            <option>--</option>
+                                            <option>Mr.</option>
+                                            <option>Mrs.</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 mb-3">
+                                        <label class="mb-3">Full Name</label>
+                                        <input type="text" placeholder="Full Name" class="form-control" name="FullName" id="txtFullName">
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Email</label>
+                                        <input type="text" placeholder="Email Address" class="form-control" name="Email" id="txtEmail">
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Password</label>
+                                        <input type="password" placeholder="Password" class="form-control" name="Password" id="txtPassword">
+                                        <p class="text-muted mb-0"> Leave blank to keep the current password. </p>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Receive email notifications?</label>
+                                        <div class="mt-1 ms-3">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rdoNotification" id="inlineRadio1" value="true">
+                                                <label class="form-check-label" for="inlineRadio1">Enable</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rdoNotification" id="inlineRadio2" value="false">
+                                                <label class="form-check-label" for="inlineRadio2">Disable</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Country</label>
+                                        <select class="form-select">
+                                            <option>--</option>
+                                            <option>India</option>
+                                            <option>Malaysia</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Mobile</label>
+                                        <input type="number" placeholder="Mobile Number" class="form-control" name="Mobile" id="txtMobile">
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Change Language</label>
+                                        <select class="form-select">
+                                            <option>--</option>
+                                            <option>Tamil</option>
+                                            <option>English</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Enable Google Calender</label>
+                                        <div class="mt-1 ms-3">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rdoCalender" id="inlineRadio3" value="true">
+                                                <label class="form-check-label" for="inlineRadio3">Yes</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="rdoCalender" id="inlineRadio4" value="false">
+                                                <label class="form-check-label" for="inlineRadio4">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Gender</label>
+                                        <select class="form-select">
+                                            <option>--</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Date of Birth</label>
+                                        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label class="mb-3">Marital Status</label>
+                                        <select class="form-select">
+                                            <option>--</option>
+                                            <option>Married</option>
+                                            <option>Unmarried</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label class="mb-3">Address</label>
+                                        <textarea class="form-control" rows="5" id="txtAddress"></textarea>
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label class="mb-3">About</label>
+                                        <textarea class="form-control" rows="5" id="txtAbout"></textarea>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12 text-end">
+                                            <button type="submit" class="btn btn-de-primary">Submit</button>
+                                            <button type="button" class="btn btn-de-danger">Cancel</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!--end card-body-->
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="tbEmergencyContacts" role="tabpanel">
+
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Contact List</h4>
+                                    </div><!--end col-->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewEmergencyContact-modal-lg">New Emergency Contact </button>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone No</th>
+                                                <th>Relationship</th>                                         
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="assets/images/users/user-10.jpg" alt="" class="thumb-sm rounded-circle me-2">Donald Gardner</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>Starbucks coffee</td>
+                                                
+                                                <td>
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="assets/images/users/user-9.jpg" alt="" class="thumb-sm rounded-circle me-2">Matt Rosales</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>Mac Donald</td>
+                                                
+                                                <td>
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="assets/images/users/user-8.jpg" alt="" class="thumb-sm rounded-circle me-2">Michael Hill</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>Life Good</td>
+                                                
+                                                <td>
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="assets/images/users/user-7.jpg" alt="" class="thumb-sm rounded-circle me-2">Nancy Flanary</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>Flipcart</td>
+                                                
+                                                <td>
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="assets/images/users/user-6.jpg" alt="" class="thumb-sm rounded-circle me-2">Dorothy Key</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>Adidas</td>
+                                               
+                                                <td>
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="assets/images/users/user-5.jpg" alt="" class="thumb-sm rounded-circle me-2">Joseph Cross</td>
+                                                <td>xyx@gmail.com</td>
+                                                <td>+123456789</td>
+                                                <td>Reebok</td>
+                                               
+                                                <td>
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                        
+
+                    </div>
+                    <!--  Modal content for New Emergency Contact -->
+                    <div class="modal fade bs-NewEmergencyContact-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myECModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myECModalLabel">New Emergency Contact</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                       
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="ECName">Name</label>
+                                                    <input type="text" class="form-control" id="ECName" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="ECEmail">Email</label>
+                                                    <input type="text" class="form-control" id="ECEmail" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="ECContactNum">Contact Number</label>
+                                                    <input type="text" class="form-control" id="ECContactNum" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="ECRelationship">Relationship</label>
+                                                    <input type="text" class="form-control" id="ECRelationship" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="ECAddress">Address</label>
+                                                    <textarea class="form-control" rows="3" id="ECAddress"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                       
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <div class="tab-pane" id="tbDocuments" role="tabpanel">
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Document List</h4>
+                                    </div><!--end col-->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewDocumentUpload-modal-lg">New Document Upload </button>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                        </div>
+                    </div>
+
+                    <!--  Modal content for New Document -->
+                    <div class="modal fade bs-NewDocumentUpload-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myDocUploadModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myDocUploadModalLabel">New Document Upload</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="DUFileName">File Name</label>
+                                                    <input type="text" class="form-control" id="ECName" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">File Upload</h4>
+                                                       
+                                                    </div><!--end card-header-->
+                                                    <div class="card-body">
+                                                        @* <div id="drag-drop-area">
+                                                            <div class="uppy-Root" dir="ltr">
+                                                                <button type="button" class="uppy-u-reset uppy-DragDrop-container uppy-DragDrop--isDragDropSupported" style="width:100%; height:100%"></button>
+                                                            </div>
+                                                        </div> *@
+
+                                                        <div class="d-grid">
+                                                            <p class="text-muted"> Please click "Upload" Button to upload your files.</p>
+                                                            <div class="preview-box d-block justify-content-center rounded shadow overflow-hidden bg-light p-1"></div>
+                                                            <input type="file" id="input-file" name="input-file" accept="image/*" onchange={handleChange()} hidden />
+                                                            <label class="btn-upload btn btn-primary mt-4" for="input-file">Upload </label>
+                                                        </div>
+                                                    </div><!--end card-body-->
+                                                </div><!--end card-->
+                                            </div><!--end col-->
+                                        </div><!--end row-->                                           
+                                     
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                </div>
+            </div><!--end card-body-->
+        </div><!--end card-->
+
+    </div>
+</div>
+

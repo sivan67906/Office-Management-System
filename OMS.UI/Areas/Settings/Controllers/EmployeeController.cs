@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Controll";
+            ViewData["pTitle"] = "Employee Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -21,7 +21,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Attendance()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Controll";
+            ViewData["pTitle"] = "Employee Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -34,7 +34,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult LeavesType()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Controll";
+            ViewData["pTitle"] = "Employee Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -47,7 +47,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult TimeLog()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Controll";
+            ViewData["pTitle"] = "Employee Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -60,7 +60,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Recruit()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Controll";
+            ViewData["pTitle"] = "Employee Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

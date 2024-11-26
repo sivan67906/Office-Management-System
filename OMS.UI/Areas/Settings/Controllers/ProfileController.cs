@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Profile Controll";
+            ViewData["pTitle"] = "Profile Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -21,7 +21,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult ChangePassword()
         {
             // Page Title
-            ViewData["pTitle"] = "Profile Controll";
+            ViewData["pTitle"] = "Profile Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -34,7 +34,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult EmergencyContact()
         {
             // Page Title
-            ViewData["pTitle"] = "Profile Controll";
+            ViewData["pTitle"] = "Profile Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

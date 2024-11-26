@@ -1,0 +1,467 @@
+﻿@section Styles {
+	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/magic.css/magic.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/simple-datatables/style.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Attendance Settings</h4> 
+			</div>
+			<!--end card-header-->
+			<div class="card-body">
+				<form action="" method="post" id="custom-step">
+					<nav>
+						<div class="nav nav-tabs" id="nav-tab" role="tablist">
+							<a class="nav-link active" id="tbAttendance-tab" data-bs-toggle="tab" href="#tbAttendance" aria-selected="true" role="tab">Attendance Settings</a>
+							<a class="nav-link" id="tbEmployeeShift-tab" data-bs-toggle="tab" href="#tbEmployeeShift" aria-selected="false" role="tab" tabindex="-1">Employee Shifts</a>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane active show" id="tbAttendance" role="tabpanel" aria-labelledby="#tbAttendance-tab">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="custom-control custom-checkbox mt-4 mb-2">
+										<input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
+										<label class="custom-control-label labelcustom" for="reqShiftChange">Allow employee to request shift change</label>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="custom-control custom-checkbox mt-4 mb-2">
+										<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
+										<label class="custom-control-label labelcustom" for="clockInLocation">Save Clock-In Location</label>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="custom-control custom-checkbox mt-4 mb-2">
+										<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
+										<label class="custom-control-label labelcustom" for="clockInOutShift">Allow clock-in outside shift hours</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="row">
+										<div class="col-lg-6 custom-control custom-checkbox mt-4 mb-2">
+											<input type="checkbox" class="form-check-input form-check-input-custom" id="firstSignLoc" data-parsley-multiple="" data-parsley-mincheck="2">
+											<label class="custom-control-label labelcustom" for="firstSignLoc">Auto clock-in employee by first sign in</label>
+										</div>
+										<div id="defaultLocation" class="col-lg-6 mt-4 mb-2" style="display: none;">
+											<select id="sltDefaultLocation" class="form-select" aria-label="Default select example">
+												<option selected="selected">Select Default Location</option>
+												<option value="1">OFFICE</option>
+												<option value="2">HOME</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="row">
+										<div class="col-lg-6 custom-control custom-checkbox mt-4 mb-2">
+											<input type="checkbox" class="form-check-input form-check-input-custom" id="monthEmailRpt" data-parsley-multiple="" data-parsley-mincheck="2">
+											<label class="custom-control-label labelcustom" for="monthEmailRpt">Send monthly attendance report email</label>
+										</div>
+										<div id="emailRptRole" class="col-lg-6 mt-4 mb-2" style="display: none;">
+											<select id="emailRptRole" class="form-select" aria-label="Default select example">
+												<option selected="selected">Choose Roles for Email Report</option>
+												<option value="1">App Administrator</option>
+												<option value="2">Employee</option>
+												<option value="3">Membership</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-lg-4">
+									<label for="example-text-input" class="col-form-label text-end">Week Starts From</label>
+									<select id="weekStartsFrom" class="form-select" aria-label="">
+										<option value="0"> Sunday </option>
+										<option value="1" selected=""> Monday </option>
+										<option value="2"> Tuesday </option>
+										<option value="3"> Wednesday </option>
+										<option value="4"> Thursday </option>
+										<option value="5"> Friday </option>
+										<option value="6"> Saturday </option>
+									</select>
+								</div>
+								<div class="col-lg-4 form-check form-switch form-switch-primary mt-5 float-end text-end">
+									<input class="form-check-input  position-absolute" type="checkbox" id="customSwitchPrimary">
+									<label class="form-check-label" for="customSwitchPrimary"> Attendance Reminder Status </label>
+								</div>
+								<div class="col-lg-4" id="divReminderAftrMns" style="display: none;">
+									<label id="lblreminderaftrmns" for="reminderAftrMns" class="col-form-label">
+										Reminder After Minutes
+									</label>
+									<input class="form-control" type="text" value="" id="reminderAftrMns">
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div id="divClockoutReminderSwitchPrimary" class="col-md-1 col-md-15 form-check form-switch form-switch-primary mt-5 float-end text-end"
+									 style="">
+									<input class="form-check-input  position-absolute" type="checkbox" id="clockoutReminderSwitchPrimary">
+									<label class="form-check-label" for="clockoutReminderSwitchPrimary">Clockout reminder</label>
+								</div>
+								<div class="col-md-2 col-md-25" id="divClockOutReminder" style="display: none;">
+									<label id="lblClockOutReminder" for="clockOutReminder" class="col-form-label">
+										Clockout Reminder After Minutes
+									</label>
+									<input class="form-control" type="text" value="" id="clockOutReminder">
+								</div>
+
+								<div class="col-md-1 col-md-15 form-check form-switch form-switch-primary mt-5 float-end text-end"
+									 style="">
+									<input class="form-check-input  position-absolute" type="checkbox" id="taskReminderIntervalSwitchPrimary">
+									<label class="form-check-label" for="taskReminderIntervalSwitchPrimary">Task reminder</label>
+								</div>
+								<div class="col-md-2 col-md-25" id="divTaskReminderInterval" style="display: none;">
+									<label id="lblClockOutReminder" for="taskReminderInterval" class="col-form-label">
+										Task Reminder Interval (Minutes)
+									</label>
+									<input class="form-control" type="text" value="" id="taskReminderInterval">
+								</div>
+
+								<div class="col-md-1 col-md-15 form-check form-switch form-switch-primary mt-5 float-end text-end"
+									 style="">
+									<input class="form-check-input  position-absolute" type="checkbox" id="restReminderIntervalSwitchPrimary">
+									<label class="form-check-label" for="restReminderIntervalSwitchPrimary">Rest reminder</label>
+								</div>
+								<div class="col-md-2 col-md-25" id="divrestReminderInterval" style="display: none;">
+									<label id="lblClockOutReminder" for="restReminderInterval" class="col-form-label">
+										Rest Reminder Interval (Minutes)
+									</label>
+									<input class="form-control" type="text" value="" id="restReminderInterval">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-4">
+									<div id="divEmpClockInClockOut" class="custom-control custom-checkbox mt-4 mb-2">
+										<input type="checkbox" class="form-check-input form-check-input-custom" id="empClockInClockOut" data-parsley-multiple="" data-parsley-mincheck="2">
+										<label class="custom-control-label labelcustom" for="empClockInClockOut">Allowed Employee self Clock-In/Clock-Out</label>
+									</div>
+								</div>
+								<div id="divClockInLocationRadius" class="col-lg-4" style="display: none;">
+									<div class="custom-control custom-checkbox mt-4 mb-2">
+										<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocationRadius" data-parsley-multiple="" data-parsley-mincheck="2">
+										<label class="custom-control-label labelcustom" for="clockInLocationRadius">Clock-in check with added location Radius</label>
+									</div>
+								</div>
+								<div id="divClockInIPAddress" class="col-lg-4" style="display: none;">
+									<div class="custom-control custom-checkbox mt-4 mb-2">
+										<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInIPAddress" data-parsley-multiple="" data-parsley-mincheck="2">
+										<label class="custom-control-label labelcustom" for="clockInIPAddress">Clock-in check with added IP address</label>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="col-lg-4">
+									<div id="divEmpClockOutEnds" class="custom-control custom-checkbox mt-4 mb-2">
+										<input type="checkbox" class="form-check-input form-check-input-custom" id="empClockOutEnds" data-parsley-multiple="" data-parsley-mincheck="2">
+										<label class="custom-control-label labelcustom" for="empClockOutEnds">Auto Clock-out when shift ends</label>
+									</div>
+								</div>
+								<div id="dummydiv" class="col-lg-4" style="display: none;">
+								</div>
+								<div class="col-lg-4" id="divRadiusinMtrs" style="display: none;">
+									<label id="lblRadiusinMtrs" for="radiusinMtrs" class="col-form-label">
+										Radius (in meter)
+									</label>
+									<input class="form-control" type="text" value="" id="radiusinMtrs">
+								</div>
+								<div class="col-lg-4" id="divTblClockInIPAddress" style="display: none;">
+									<div class="row">
+										<div class="col-lg-12" id="divExpTable">
+											<table id="ExpTable" class="">
+												<thead style="display: -webkit-box;">
+													<tr class="">
+														<th class="col-form-label" style="font-weight: normal !important;">IP Address</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													@for (int i = 0; i < 1; i++)
+													{
+														<tr>
+															<td>
+																<input class="form-control" type="text" value="" id="txtipaddress-@i">
+															</td>
+															<td>
+																<button id="btnadd-@i" type="button" class="btn btn-sm btn-primary ml-1 visible" onclick="AddItem(this)">Add IP Address</button>
+																<button id="btnremove-@i" type="button" class="btn btn-sm btn-danger invisible" onclick="DeleteItem(this)">Delete</button>
+															</td>
+														</tr>
+													}
+												</tbody>
+												<input type="hidden" id="hdnLastIndex" value="0" />
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+						</div>
+						<div class="tab-pane" id="tbEmployeeShift" role="tabpanel" aria-labelledby="#tbEmployeeShift-tab">
+							<div class="card">
+								<div class="card-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h4 class="card-title">Contact List</h4>
+										</div><!--end col-->
+										<div class="col-auto">
+											<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewShift-modal-lg">Add New Shift</button>
+										</div><!--end col-->
+									</div>  <!--end row-->
+								</div><!--end card-header-->
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table mb-0">
+											<thead class="thead-light">
+												<tr>
+													<th>Name</th>
+													<th>Time</th>
+													<th>Others</th>
+													<th>IsDefault</th>
+													<th>Action</th>
+												</tr><!--end tr-->
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>General Shift</td>
+													<td>
+														Start Time: 09:00 AM<br />
+														Half Day:<br />
+														Start Time: 06:00 PM<br />
+													</td>
+													<td>
+														Late mark after (minutes): 20<br />
+														Maximum check-in allowed in a day: 2<br />
+														Office opens on: Monday Tuesday Wednesday Thursday Friday<br />
+													</td>
+													<td>Yes</td>
+													<td>
+														<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													</td>
+												</tr><!--end tr-->
+											</tbody>
+										</table>
+									</div>
+								</div><!--end card-body-->
+							</div><!--end card-->
+						</div>
+						<div class="modal fade bs-addNewShift-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNSModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl">
+								<div class="modal-content" style="height: 428px !important;">
+									<div class="modal-header">
+										<h5 class="modal-title mt-0" id="myECModalLabel">Add New Shift</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<form>
+											<div class="row mt-3">
+												<div class="col-lg-4">Shift Name</div>
+												<div class="col-lg-4">Shift Short Code</div>
+												<div class="col-lg-4">Color Code</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required=""></div>
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required=""></div>
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required=""></div>
+											</div>
+											<div class="row mt-4">
+												<div class="col-lg-4">Shift Start Time</div>
+												<div class="col-lg-4">Shift End Time</div>
+												<div class="col-lg-4">Half-day Mark Time</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4"><input class="form-control" type="time" value="" id=""></div>
+												<div class="col-lg-4"><input class="form-control" type="time" value="" id=""></div>
+												<div class="col-lg-4"><input class="form-control" type="time" value="" id=""></div>
+											</div>
+											<div class="row mt-4">
+												<div class="col-lg-4">Early Clock In (minutes)</div>
+												<div class="col-lg-4">Late mark after (minutes)</div>
+												<div class="col-lg-4">Maximum check-in allowed in a day</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required=""></div>
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required=""></div>
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required=""></div>
+											</div>
+											<div class="row mt-4">
+												Office opens on
+											</div>
+											<div class="row">
+												<div class="col-md-1"></div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Monday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Tuesday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Wednesday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Thursday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Friday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Saturday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Sunday</label>
+												</div>
+											</div>
+											<div class="row mt-2">
+												<div class="col-lg-8"></div>
+												<div class="col-lg-4 text-end">
+													<button type="button" class="btn btn-sm btn-de-primary">Save</button>
+													<button type="button" class="btn btn-sm btn-de-danger">Delete</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+					</div>
+				</form>
+				<!--end form-->
+			</div>
+			<!--end card-body-->
+		</div>
+		<!--end card-->
+	</div>
+	<!--end col-->
+</div>
+<!--end row-->
+@section Scripts {
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+	<script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
+	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+	<script src="~/matrica/assets/js/moment.js"></script>
+	<script src="~/matrica/assets/libs/imask/imask.min.js"></script>
+	<script src="~/matrica/assets/js/pages/animation.init.js"></script>
+
+	<script type="text/javascript">
+		function AddItem(btn) {
+		  let ipv46address = /((^\s*((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))\s*$)|(^\s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))(%.+)?\s*$))/;
+		  let content = $(btn).closest("td").prev("td").find("input").val();
+		  if (ipv46address.test(content)) {
+			var table = document.getElementById('ExpTable');
+			var rows = table.getElementsByTagName('tr');
+			var rowOuterHtml = rows[rows.length - 1].outerHTML;
+			var lastrowIdx = document.getElementById('hdnLastIndex').value;
+			var nextrowIdx = eval(lastrowIdx) + 1;
+			document.getElementById('hdnLastIndex').value = nextrowIdx;
+			rowOuterHtml = rowOuterHtml.replaceAll(lastrowIdx, nextrowIdx);
+			var newRow = table.insertRow();
+			newRow.innerHTML = rowOuterHtml;
+			var btnAddID = btn.id;
+			var btnDeleteid = btnAddID.replaceAll('btnadd', 'btnremove');
+			var delbtn = document.getElementById(btnDeleteid);
+			delbtn.classList.add('visible');
+			delbtn.classList.remove('invisible');
+			var addbtn = document.getElementById(btnAddID);
+			addbtn.classList.add('invisible');
+			addbtn.classList.remove('visible');
+			$(btn).closest("td").prev("td").find("input").children(0).prevObject[0].disabled = true;
+		  } else {
+			$(btn).closest("td").prev("td").find("input").children(0).prevObject[0].value = "";
+		  }
+		}
+
+		function DeleteItem(btn) {
+		  $(btn).closest('tr').remove();
+		}
+		$(document).ready(function() {
+		  $('#firstSignLoc').click(function() {
+			if ($(this).is(':checked')) $("#defaultLocation").css("display", "block");
+			else $("#defaultLocation").css("display", "none");
+		  });
+		  $('#monthEmailRpt').click(function() {
+			if ($(this).is(':checked')) $("#emailRptRole").css("display", "block");
+			else $("#emailRptRole").css("display", "none");
+		  });
+		  $('#customSwitchPrimary').click(function() {
+				  if ($(this).is(':checked')) $("#divReminderAftrMns").css("display", "block");
+				  else $("#divReminderAftrMns").css("display", "none");
+		  });
+
+		  $('#clockoutReminderSwitchPrimary').click(function() {
+				  if ($(this).is(':checked')) $("#divClockOutReminder").css("display", "block");
+				  else $("#divClockOutReminder").css("display", "none");
+		  });
+		  $('#taskReminderIntervalSwitchPrimary').click(function() {
+				  if ($(this).is(':checked')) $("#divTaskReminderInterval").css("display", "block");
+				  else $("#divTaskReminderInterval").css("display", "none");
+		  });
+		  $('#restReminderIntervalSwitchPrimary').click(function() {
+				  if ($(this).is(':checked')) $("#divrestReminderInterval").css("display", "block");
+				  else $("#divrestReminderInterval").css("display", "none");
+		  });
+
+		  $('#empClockInClockOut').click(function() {
+				  if ($(this).is(':checked'))
+				  {
+					  $("#divClockInLocationRadius").css("display", "block");
+					  $("#clockInLocationRadius").attr("disabled", false);
+					  $("#divClockInIPAddress").css("display", "block");
+					  $("#clockInIPAddress").attr("disabled", false);
+					  $("#radiusinMtrs").attr("disabled", false);
+					  $("#ExpTable").find("input,button,textarea,select").attr("disabled", false);
+				  }
+				  else {
+					  $("#divClockInLocationRadius").css("display", "block");
+					  $("#clockInLocationRadius").attr("disabled", true);
+					  $("#divClockInIPAddress").css("display", "block");
+					  $("#clockInIPAddress").attr("disabled", true);
+					  $("#radiusinMtrs").attr("disabled", true);
+					  $("#ExpTable").find("input,button,textarea,select").attr("disabled", true);
+				  }
+		  });
+		  $('#clockInLocationRadius').click(function() {
+				  if ($(this).is(':checked')) {
+					  $("#divRadiusinMtrs").css("display", "block");
+					  $("#dummydiv").css("display", "none");}
+				  else {
+					  $("#divRadiusinMtrs").css("display", "none");
+					  $("#dummydiv").css("display", "block");
+				  }
+		  });
+		  $('#clockInIPAddress').click(function() {
+				  if ($(this).is(':checked')) $("#divTblClockInIPAddress").css("display", "block");
+				  else $("#divTblClockInIPAddress").css("display", "none");
+		  });
+		  $('#empClockOutEnds').click(function() {
+				  if ($(this).is(':checked'))
+				  {
+					  $("#clockoutReminderSwitchPrimary").attr("disabled", true);
+					  $("#clockOutReminder").attr("disabled", true);
+				  }
+				  else {
+					  $("#clockoutReminderSwitchPrimary").attr("disabled", false);
+					  $("#clockOutReminder").attr("disabled", false);
+				  }
+		  });
+		});
+	</script>
+}

@@ -21,7 +21,7 @@ public class CompanyController : Controller
     public IActionResult Company()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -34,7 +34,7 @@ public class CompanyController : Controller
     public IActionResult BusinessAddress()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -47,7 +47,7 @@ public class CompanyController : Controller
     public IActionResult Notifications()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -60,7 +60,7 @@ public class CompanyController : Controller
     public IActionResult Currency()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -73,7 +73,7 @@ public class CompanyController : Controller
     public IActionResult Contract()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -88,7 +88,7 @@ public class CompanyController : Controller
         // Roles & Permissions both here only.
 
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -101,7 +101,7 @@ public class CompanyController : Controller
     public IActionResult Message()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -114,7 +114,7 @@ public class CompanyController : Controller
     public IActionResult Security()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -129,7 +129,7 @@ public class CompanyController : Controller
         // Module Settings.
 
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -142,7 +142,7 @@ public class CompanyController : Controller
     public IActionResult Assets()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -155,7 +155,7 @@ public class CompanyController : Controller
     public IActionResult SMS()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -168,7 +168,7 @@ public class CompanyController : Controller
     public IActionResult Planning()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";

@@ -3,17 +3,17 @@
 namespace OMS.UI.Areas.Settings.Controllers;
 
 [Area("Settings")]
-public class AppController : Controller
+public class AttendanceController : Controller
 {
     public IActionResult Index()
     {
         // Page Title
-        ViewData["pTitle"] = "App Settings";
+        ViewData["pTitle"] = "Attendance Settings";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "App";
-        ViewData["bChild"] = "App Setup";
+        ViewData["bParent"] = "Attendance";
+        ViewData["bChild"] = "Attendance Setup";
 
         return View();
     }

@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Project Controll";
+            ViewData["pTitle"] = "Project Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -21,7 +21,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Task()
         {
             // Page Title
-            ViewData["pTitle"] = "Task Controll";
+            ViewData["pTitle"] = "Task Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
