@@ -1,0 +1,139 @@
+﻿@section Scripts{
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+}
+
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="card-title">Designation & Roles Mapping</h4>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BAddress"><i class="fas fa-plus"></i> Add Timesheet</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col=md-12 text-md-end">
+
+                    <div class="modal fade" id="BAddress" tabindex="-1" aria-labelledby="BAddressLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title m-0" id="BAddressLabel">Add Mapping</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Company Name <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option value="" selected>Select Company</option>
+                                                    <option value="1">Meta</option>
+                                                    <option value="2">Apple</option>
+                                                    <option value="3">Microsoft</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Department Name
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option value="" selected>Select Department</option>
+                                                    <option value="1">IT</option>
+                                                    <option value="2">Sales</option>
+                                                    <option value="3">Finance</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Designation
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option value="" selected>Select Employee</option>
+                                                    <option value="1">CEO</option>
+                                                    <option value="2">Senior</option>
+                                                    <option value="3">Junior</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label class="">Roles</label>
+                                                <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+                                                    <div class="selectr-options-container">
+                                                        <div class="selectr-input-container">
+                                                            <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                            <button class="selectr-input-clear" type="button"></button>
+                                                        </div>
+                                                        <div class="selectr-notice"></div>
+                                                        <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                    </div>
+                                                    <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                        <option value="value-1">Manger</option>
+                                                        <option value="value-2">Developer</option>
+                                                       
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                                    <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                </div><!--end modal-footer-->
+                            </div><!--end modal-content-->
+                        </div><!--end modal-dialog-->
+                    </div><!--end modal-->
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Company Name</th>
+                            <th>Department</th>
+                            <th>Designation</th>
+                            <th>Roles</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Meta</td>
+                            <td>IT</td>
+                            <td>Senior</td>
+                            <td>
+                                Manager,
+                                Developer
+                            </td>
+                            <td>
+                                <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><!--end /table-->
+            </div><!--end /tableresponsive-->
+        </div>
+    </div>
+</div>

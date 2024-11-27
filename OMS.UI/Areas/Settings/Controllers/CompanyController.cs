@@ -228,4 +228,16 @@ public class CompanyController : Controller
 
         return View();
     }
+    public IActionResult DesignationRoleMap()
+    {
+        // Page Title
+        ViewData["pTitle"] = "Company Control";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Settings";
+        ViewData["bParent"] = "Company";
+        ViewData["bChild"] = "Planning";
+
+        return View();
+    }
 }

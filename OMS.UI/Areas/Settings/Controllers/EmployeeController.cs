@@ -82,6 +82,17 @@ namespace OMS.UI.Areas.Settings.Controllers
 
             return View();
         }
+        public IActionResult Timesheet()
+        {
+            // Page Title
+            ViewData["pTitle"] = "Employee Controll";
 
+            // Breadcrumb
+            ViewData["bGParent"] = "Settings";
+            ViewData["bParent"] = "Employee";
+            ViewData["bChild"] = "EmployeeCreation";
+
+            return View();
+        }
     }
 }

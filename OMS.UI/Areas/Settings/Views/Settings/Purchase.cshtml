@@ -1,11 +1,4 @@
 ﻿@section Styles {
-    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/magic.css/magic.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/simple-datatables/style.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/css/app-imgpicker-custom.css" rel="stylesheet" type="text/css" />
 }
 <div class="row">
     <div class="col-12 col-lg-12">
@@ -16,9 +9,9 @@
                     <li class="nav-item">
                         <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbPurchaseSettings" role="tab">Purchase Settings</a>
                     </li>
-                    <li class="nav-item">
+                    @* <li class="nav-item">
                         <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbPurchaseNotfnSettings" role="tab">Purchase Notification Template</a>
-                    </li>
+                    </li> *@
                 </ul>
             </div><!--end card-body-->
             <div class="card-body pt-0">
@@ -75,19 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="tbPurchaseNotfnSettings" role="tabpanel">
-                        @* <div class="card">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                        <h4 class="card-title">Purchase Notification Settings</h4>
-                                    </div><!--end col-->
-                                </div>  <!--end row-->
-                            </div><!--end card-header-->
-                            <div class="card-body">
-                                
-                            </div><!--end card-body--> *@
-
+                   @*  <div class="tab-pane" id="tbPurchaseNotfnSettings" role="tabpanel">
                         <div class="toast m-2 fade show" role="alert" aria-live="assertive" aria-atomic="true">
                             <div class="toast-body">
                                 Hi! This functionality is under developing stage.
@@ -97,7 +78,7 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                        </div> *@
                     </div>
                 </div><!--end card-body-->
             </div><!--end card-->
@@ -105,16 +86,6 @@
     </div>
 <!--end row-->
 @section Scripts {
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
-    <script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-    <script src="~/matrica/assets/js/moment.js"></script>
-    <script src="~/matrica/assets/libs/imask/imask.min.js"></script>
-    <script src="~/matrica/assets/js/pages/animation.init.js"></script>
-    <script src="~/matrica/assets/libs/clipboard/clipboard.min.js"></script>
-    <script src="~/matrica/assets/js/pages/clipboard.init.js"></script>
-
     <script type="text/javascript">
 
             $.event.special.inputchange = {

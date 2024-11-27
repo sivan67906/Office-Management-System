@@ -1,9 +1,4 @@
 ﻿@section Styles {
-    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/magic.css/magic.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/matrica/assets/libs/simple-datatables/style.css" rel="stylesheet" type="text/css" />
     <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
     <link href="~/matrica/assets/css/app-imgpicker-custom.css" rel="stylesheet" type="text/css" />
 }
@@ -122,34 +117,34 @@
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox mt-4 mb-2">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Show Tax number on invoice</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="showTax">Show Tax number on invoice</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox mt-4 mb-2">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="clockInLocation">Hsn/Sac Code Show</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showHSN" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="showHSN">Hsn/Sac Code Show</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox mt-4 mb-2">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="clockInOutShift">Show tax calculation message</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showTaxCalc" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="showTaxCalc">Show tax calculation message</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Show Status</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showStatus" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="showStatus">Show Status</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="clockInLocation">Show Authorised Signatory</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showAuthorised" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="showAuthorised">Show Authorised Signatory</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -161,40 +156,40 @@
                                 <div class="row mb-2">
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Client Name</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clientName" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clientName">Client Name</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="clockInLocation">Client Email</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clientEmail" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clientEmail">Client Email</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="clockInOutShift">Client Phone</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clientPhone" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clientPhone">Client Phone</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Company Name</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="companyName" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="companyName">Company Name</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="clockInLocation">Client Address</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clientAddress" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clientAddress">Client Address</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
-                                            <label class="custom-control-label labelcustom" for="clockInOutShift">Show Project on Invoice</label>
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showPrjInvoice" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="showPrjInvoice">Show Project on Invoice</label>
                                         </div>
                                     </div>
                                 </div>
@@ -472,13 +467,6 @@
 </div>
 <!--end row-->
 @section Scripts {
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
-    <script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-    <script src="~/matrica/assets/js/moment.js"></script>
-    <script src="~/matrica/assets/libs/imask/imask.min.js"></script>
-    <script src="~/matrica/assets/js/pages/animation.init.js"></script>
     <script src="~/matrica/assets/libs/clipboard/clipboard.min.js"></script>
     <script src="~/matrica/assets/js/pages/clipboard.init.js"></script>
 
