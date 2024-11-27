@@ -11,50 +11,50 @@
         <div class="row">
             <div class="col-md-3 g-2">
                 <div class="mb-3 text-start">
-                    <label for="contpre" >
+                    <label for="prefix">
                         Contract Prefix
                         <span class="f-14 mr-1 text-danger">*</span>
                     </label>
-                    
-                       
-                        <input class="form-control" type="text" placeholder="" value="CONT" id="contpre">
+
+
+                    <input class="form-control" type="text" placeholder="" value="" id="prefix" oninput="updateExample()" >
                         
                     
                 </div>
             </div>
             <div class="col-lg-3 g-2">
                 <div class="mb-3 text-start">
-                    <label for="contnumseparater" >
+                    <label for="separator">
                         Contract Number Separator
                         
                     </label>
-                   
-                        <input class="form-control" type="text" placeholder="" value="#" id="contnumseparater">
+
+                    <input class="form-control" type="text" placeholder="" value="" id="separator" oninput="updateExample()" >
                    
                 </div>
             </div>
        
             <div class="col-md-3 g-2">
                 <div class="mb-3 text-start">
-                    <label for="contnumdig" >
+                    <label for="digits">
                         Contract Number Digits
                         
                     </label>
-                    
-                        
-                        <input class="form-control" type="number" placeholder="" value="3" id="contnumdig">
+
+
+                    <input class="form-control" type="number" placeholder="" value="" id="digits" oninput="updateExample()" >
                         
                    
                 </div>
             </div>
             <div class="col-lg-3 g-2">
                 <div class="mb-3 text-start">
-                    <label for="contnumex" >
+                    <label for="output">
                         Contract Number Example
                         
                     </label>
-                    
-                        <input class="form-control" type="text" placeholder="" value="CONT#001" id="contnumex" disabled>
+
+                    <input class="form-control" type="text" placeholder="" value="" id="output" disabled>
                     
                 </div>
             </div>
@@ -64,3 +64,30 @@
         <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
     </div>
 </div>
+
+
+
+
+<script>
+    function updateExample() {
+        // Get input values
+        const prefix = document.getElementById('prefix').value;
+        const separator = document.getElementById('separator').value;
+        const digits = parseInt(document.getElementById('digits').value, 10);
+
+        // Validate inputs
+        if (!prefix || !separator || isNaN(digits) || digits <= 0) {
+            document.getElementById('output').value = ''; // Clear output for invalid inputs
+            return;
+        }
+
+        // Generate the number part with leading zeros
+        const numberPart = '0'.repeat(digits - 1) + '1';
+
+        // Construct the example string
+        const example = `${prefix}${separator}${numberPart}`;
+
+        // Update the disabled textbox
+        document.getElementById('output').value = example;
+    }
+</script>

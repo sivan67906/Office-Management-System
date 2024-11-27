@@ -1,5 +1,401 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@section Styles {
+	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/magic.css/magic.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/simple-datatables/style.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/css/app-imgpicker-custom.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+	<div class="col-12 col-lg-12">
+		<div class="card">
+			<div class="card-body">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbLdSource" role="tab">Lead Source</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbLdStatus" role="tab">Lead Status</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbLdAgent" role="tab">Lead Agent</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbLdCategory" role="tab">Lead Category</a>
+					</li>
+				</ul>
+			</div><!--end card-body-->
+			<div class="card-body pt-0">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active show" id="tbLdSource" role="tabpanel">
+						<div class="card">
+							<div class="card-header">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="card-title">Lead Source</h4>
+									</div><!--end col-->
+									<div class="col-auto">
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewLeadSource-modal-lg">Add New Lead Source</button>
+									</div><!--end col-->
+								</div>  <!--end row-->
+							</div><!--end card-header-->
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead class="thead-light">
+											<tr>
+												<th>#</th>
+												<th>Name</th>
+												<th>Action</th>
+											</tr><!--end tr-->
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Email</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+											<tr>
+												<td>2</td>
+												<td>Google</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+											<tr>
+												<td>3</td>
+												<td>Facebook</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+											<tr>
+												<td>4</td>
+												<td>Friend</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+											<tr>
+												<td>5</td>
+												<td>Direct</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+											<tr>
+												<td>6</td>
+												<td>Tv</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+										</tbody>
+									</table>
+								</div>
+							</div><!--end card-body-->
+						</div>
+					</div>
+					<div class="modal fade bs-addNewLeadSource-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLSModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myECModalLabel">Add Lead Source</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-12">Lead Source</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12"><input type="text" placeholder="" class="form-control" id="txtLdSource"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-8"></div>
+											<div class="col-lg-4 text-end">
+												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
+												<button type="button" class="btn btn-sm btn-de-danger">Close</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+
+					<div class="tab-pane" id="tbLdStatus" role="tabpanel">
+						<div class="card">
+							<div class="card-header">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="card-title">Lead Status</h4>
+									</div><!--end col-->
+									<div class="col-auto">
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewLS-modal-lg">Add New Lead Status</button>
+									</div><!--end col-->
+								</div>  <!--end row-->
+							</div><!--end card-header-->
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead class="thead-light">
+											<tr>
+												<th>#</th>
+												<th>Status</th>
+												<th>Default Lead Status</th>
+												<th>Action</th>
+											</tr><!--end tr-->
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>pending</td>
+												<td>Yes</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+											<tr>
+												<td>2</td>
+												<td>in process</td>
+												<td>No</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+											<tr>
+												<td>3</td>
+												<td>done</td>
+												<td>No</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+										</tbody>
+									</table>
+								</div>
+							</div><!--end card-body-->
+						</div>
+					</div>
+					<div class="modal fade bs-addNewLS-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLSModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myECModalLabel">Add New Lead Status</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-6">Lead Status</div>
+											<div class="col-lg-6">Label Color</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-6"><input type="text" placeholder="e.g. In Progress" class="form-control" id="txtLeadStatus"></div>
+											<div class="col-lg-6">
+												<input id="txtLabelColor" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);">
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-8"></div>
+											<div class="col-lg-4 text-end">
+												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
+												<button type="button" class="btn btn-sm btn-de-danger">Close</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+
+					<div class="tab-pane" id="tbLdAgent" role="tabpanel">
+						<div class="card">
+							<div class="card-header">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="card-title">Lead Agent</h4>
+									</div><!--end col-->
+									<div class="col-auto">
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewLdAgent-modal-lg">Add New Lead Agent</button>
+									</div><!--end col-->
+								</div>  <!--end row-->
+							</div><!--end card-header-->
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead class="thead-light">
+											<tr>
+												<th>#</th>
+												<th>Name</th>
+												<th>Action</th>
+											</tr><!--end tr-->
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>John</td>
+												<td>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+										</tbody>
+									</table>
+								</div>
+							</div><!--end card-body-->
+						</div>
+					</div>
+					<div class="modal fade bs-addNewLdAgent-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLAModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myECModalLabel">Add New Lead Agent</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-12">Choose Agents</div>
+										</div>
+										<div class="row">
+											@* <div class="col-lg-12">
+                                                <input type="text" placeholder="" class="form-control" id="txtLdAgent"></div> *@
+
+
+
+
+											<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+												<div class="selectr-options-container">
+													<div class="selectr-input-container">
+														<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+														<button class="selectr-input-clear" type="button"></button>
+													</div>
+													<div class="selectr-notice"></div>
+													<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+												</div>
+												<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+														<select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+														<option value="value-1">John</option>
+														<option value="value-1">Doe</option>
+													</select>
+												</div>
+											</div>
+
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-8"></div>
+											<div class="col-lg-4 text-end">
+												<button type="button" class="btn btn-sm btn-de-primary">Save Changes</button>
+												<button type="button" class="btn btn-sm btn-de-danger">Close</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+
+					<div class="tab-pane" id="tbLdCategory" role="tabpanel">
+						<div class="card">
+							<div class="card-header">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="card-title">Lead Category</h4>
+									</div><!--end col-->
+									<div class="col-auto">
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewLdCategory-modal-lg">Add New Lead Category</button>
+									</div><!--end col-->
+								</div>  <!--end row-->
+							</div><!--end card-header-->
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead class="thead-light">
+											<tr>
+												<th>#</th>
+												<th>Category Name</th>
+												<th>Action</th>
+											</tr><!--end tr-->
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Category1</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+										</tbody>
+									</table>
+								</div>
+							</div><!--end card-body-->
+						</div>
+					</div>
+					<div class="modal fade bs-addNewLdCategory-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLCModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myECModalLabel">Add New Lead Category</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-12">Category Name</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12"><input type="text" placeholder="" class="form-control" id="txtLdCategory"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-8"></div>
+											<div class="col-lg-4 text-end">
+												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
+												<button type="button" class="btn btn-sm btn-de-danger">Close</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+				</div><!--end card-body-->
+			</div><!--end card-->
+
+		</div>
+	</div>
+</div>
+<!--end row-->
+@section Scripts {
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+	<script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
+	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+	<script src="~/matrica/assets/js/moment.js"></script>
+	<script src="~/matrica/assets/libs/imask/imask.min.js"></script>
+	<script src="~/matrica/assets/js/pages/animation.init.js"></script>
+	<script src="~/matrica/assets/libs/clipboard/clipboard.min.js"></script>
+	<script src="~/matrica/assets/js/pages/clipboard.init.js"></script>
+	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+
+	<script type="text/javascript">
+	</script>
 }

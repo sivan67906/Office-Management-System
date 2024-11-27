@@ -1,12 +1,12 @@
-document.querySelectorAll('.defaultSelectrLoad').forEach(element => {
+document.querySelectorAll('.defaultSelectr').forEach(element => {
     new Selectr(element);
 });
-document.querySelectorAll('.multiSelectrLoad').forEach(element => {
+document.querySelectorAll('.multiSelectr').forEach(element => {
     new Selectr(element, {
         multiple: !0
     });
 });
-document.querySelectorAll('.taggableSelectrLoad').forEach(element => {
+document.querySelectorAll('.taggableSelectr').forEach(element => {
     new Selectr(element, {
         taggable: !0,
         tagSeperators: [",", "|"]

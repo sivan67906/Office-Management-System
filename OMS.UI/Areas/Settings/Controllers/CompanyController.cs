@@ -17,6 +17,57 @@ public class CompanyController : Controller
 
         return View();
     }
+    public IActionResult Consumer()
+    {
+        // Page Title
+        ViewData["pTitle"] = "Company Controll";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Settings";
+        ViewData["bParent"] = "Consumer Settings";
+        ViewData["bChild"] = "Consumer Creation";
+
+        return View();
+    }
+
+    public IActionResult Department()
+    {
+        // Page Title
+        ViewData["pTitle"] = "Company Controll";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Settings";
+        ViewData["bParent"] = "Department Settings";
+        ViewData["bChild"] = "Department Creation";
+
+        return View();
+    }
+
+    public IActionResult Designation()
+    {
+        // Page Title
+        ViewData["pTitle"] = "Company Controll";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Settings";
+        ViewData["bParent"] = "Designation Settings";
+        ViewData["bChild"] = "Designation Creation";
+
+        return View();
+    }
+
+    public IActionResult Client()
+    {
+        // Page Title
+        ViewData["pTitle"] = "Company Controll";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Settings";
+        ViewData["bParent"] = "Company";
+        ViewData["bChild"] = "Client";
+
+        return View();
+    }
 
     public IActionResult Company()
     {

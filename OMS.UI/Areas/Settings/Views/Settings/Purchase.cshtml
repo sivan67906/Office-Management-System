@@ -1,5 +1,225 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@section Styles {
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/magic.css/magic.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/simple-datatables/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/css/app-imgpicker-custom.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+    <div class="col-12 col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbPurchaseSettings" role="tab">Purchase Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbPurchaseNotfnSettings" role="tab">Purchase Notification Template</a>
+                    </li>
+                </ul>
+            </div><!--end card-body-->
+            <div class="card-body pt-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!--  Modal content for New Emergency Contact -->
+                    <div class="tab-pane active show" id="tbPurchaseSettings" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Purchase Settings</h4>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-lg-3">Purchase Order Prefix</div>
+                                    <div class="col-lg-3">Purchase Order Number Seprator</div>
+                                    <div class="col-lg-3">Purchase Order Number Digits</div>
+                                    <div class="col-lg-3">Purchase Order Number Example</div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-3"><input type="text" placeholder="Enter Order Prefix" class="form-control" name="purchaseOrderPrefix" id="txtPurchaseOrderPrefix" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Seperator" class="form-control" name="purchaseOrderNoSeperator" id="txtPurchaseOrderNoSeperator" /></div>
+                                    <div class="col-lg-3"><input type="number" placeholder="Order Number Digits" class="form-control" name="purchaseOrderNoDigits" id="txtPurchaseOrderNoDigits" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Example" class="form-control" name="purchaseOrderNoExample" id="txtPurchaseOrderNoExample" disabled="disabled" /></div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-lg-3">Bill Order Prefix</div>
+                                    <div class="col-lg-3">Bill Order Number Seprator</div>
+                                    <div class="col-lg-3">Bill Order Digits</div>
+                                    <div class="col-lg-3">Bill Order Example</div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-3"><input type="text" placeholder="Enter Bill Order Prefix" class="form-control" name="billOrderNotePrefix" id="txtBillOrderPrefix" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Separator" class="form-control" name="billOrderNoSeperator" id="txtBillOrderNoSeperator" /></div>
+                                    <div class="col-lg-3"><input type="number" placeholder="Bill Order Digits" class="form-control" name="billOrderNoDigits" id="txtBillOrderNoDigits" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Example" class="form-control" name="billOrderNoExample" id="txtBillOrderNoExample" disabled="disabled" /></div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-lg-3">Vendor Credit Prefix</div>
+                                    <div class="col-lg-3">Vendor Credit Number Seprator</div>
+                                    <div class="col-lg-3">Vendor Credit Number Digits</div>
+                                    <div class="col-lg-3">Vendor Credit Number Example</div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Prefix" class="form-control" name="vendorCreditPrefix" id="txtVendorCreditPrefix" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Separator" class="form-control" name="vendorCreditNoSeperator" id="txtVendorCreditNoSeperator" /></div>
+                                    <div class="col-lg-3"><input type="number" placeholder="Vendor Credit Number Digits" class="form-control" name="vendorCreditNoDigits" id="txtVendorCreditNoDigits" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Example" class="form-control" name="vendorCreditNoExample" id="txtVendorCreditNoExample" disabled="disabled" /></div>
+                                </div>
+                                <button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tbPurchaseNotfnSettings" role="tabpanel">
+                        @* <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Purchase Notification Settings</h4>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                
+                            </div><!--end card-body--> *@
+
+                        <div class="toast m-2 fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-body">
+                                Hi! This functionality is under developing stage.
+                                <div class="mt-2 pt-2 border-top">
+                                    <button type="button" class="btn btn-de-primary btn-sm">Take action</button>
+                                    <button type="button" class="btn btn-de-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div><!--end card-body-->
+            </div><!--end card-->
+        </div>
+    </div>
+<!--end row-->
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
+    <script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+    <script src="~/matrica/assets/js/moment.js"></script>
+    <script src="~/matrica/assets/libs/imask/imask.min.js"></script>
+    <script src="~/matrica/assets/js/pages/animation.init.js"></script>
+    <script src="~/matrica/assets/libs/clipboard/clipboard.min.js"></script>
+    <script src="~/matrica/assets/js/pages/clipboard.init.js"></script>
+
+    <script type="text/javascript">
+
+            $.event.special.inputchange = {
+            setup: function() {
+                var self = this, val;
+                $.data(this, 'timer', window.setInterval(function() {
+                    val = self.value;
+                    if ( $.data( self, 'cache') != val ) {
+                        $.data( self, 'cache', val );
+                        $( self ).trigger( 'inputchange' );
+                    }
+                }, 20));
+            },
+            teardown: function() {
+                window.clearInterval( $.data(this, 'timer') );
+            },
+            add: function() {
+                $.data(this, 'cache', this.value);
+            }
+        };
+
+        $('#txtPurchaseOrderPrefix').on('inputchange', function() {
+                   var prefix = $("#txtPurchaseOrderPrefix").val();
+                    var seperator = $("#txtPurchaseOrderNoSeperator").val();
+                    var digits = $("#txtPurchaseOrderNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtPurchaseOrderNoExample").val(result);
+        });
+        $('#txtPurchaseOrderNoSeperator').on('inputchange', function() {
+                   var prefix = $("#txtPurchaseOrderPrefix").val();
+                    var seperator = $("#txtPurchaseOrderNoSeperator").val();
+                    var digits = $("#txtPurchaseOrderNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtPurchaseOrderNoExample").val(result);
+        });
+        $('#txtPurchaseOrderNoDigits').on('inputchange', function() {
+                   var prefix = $("#txtPurchaseOrderPrefix").val();
+                    var seperator = $("#txtPurchaseOrderNoSeperator").val();
+                    var digits = $("#txtPurchaseOrderNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtPurchaseOrderNoExample").val(result);
+        });
+
+
+        $('#txtBillOrderPrefix').on('inputchange', function() {
+                   var prefix = $("#txtBillOrderPrefix").val();
+                    var seperator = $("#txtBillOrderNoSeperator").val();
+                    var digits = $("#txtBillOrderNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtBillOrderNoExample").val(result);
+        });
+        $('#txtBillOrderNoSeperator').on('inputchange', function() {
+                   var prefix = $("#txtBillOrderPrefix").val();
+                    var seperator = $("#txtBillOrderNoSeperator").val();
+                    var digits = $("#txtBillOrderNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtBillOrderNoExample").val(result);
+        });
+        $('#txtBillOrderNoDigits').on('inputchange', function() {
+                   var prefix = $("#txtBillOrderPrefix").val();
+                    var seperator = $("#txtBillOrderNoSeperator").val();
+                    var digits = $("#txtBillOrderNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtBillOrderNoExample").val(result);
+        });
+
+
+        $('#txtVendorCreditPrefix').on('inputchange', function() {
+                   var prefix = $("#txtVendorCreditPrefix").val();
+                    var seperator = $("#txtVendorCreditNoSeperator").val();
+                    var digits = $("#txtVendorCreditNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtVendorCreditNoExample").val(result);
+        });
+        $('#txtVendorCreditNoSeperator').on('inputchange', function() {
+                   var prefix = $("#txtVendorCreditPrefix").val();
+                    var seperator = $("#txtVendorCreditNoSeperator").val();
+                    var digits = $("#txtVendorCreditNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtVendorCreditNoExample").val(result);
+        });
+        $('#txtVendorCreditNoDigits').on('inputchange', function() {
+                   var prefix = $("#txtVendorCreditPrefix").val();
+                    var seperator = $("#txtVendorCreditNoSeperator").val();
+                    var digits = $("#txtVendorCreditNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtVendorCreditNoExample").val(result);
+        });
+    </script>
 }

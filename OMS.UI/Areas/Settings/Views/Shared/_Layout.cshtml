@@ -113,13 +113,27 @@
 
                     <ul class="nav flex-column">
                         <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Consumer">Consumer Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Planning">Planning Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Company">Company Settings</a>
                         </li><!--end nav-item-->
+
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="BusinessAddress">Business Address</a>
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="BusinessAddress">Business Location</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Settings" asp-controller="App" asp-action="Index">App Settings</a>
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Department">Department Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Designation">Designation Settings</a>
+                        </li><!--end nav-item-->
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Application">App Settings</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Profile" asp-action="Index">Profile Settings</a>
@@ -149,13 +163,19 @@
                             <a class="nav-link" asp-area="Settings" asp-controller="Project" asp-action="Index">Project Settings</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Settings" asp-controller="Attendance" asp-action="Index">Attendance Settings</a>
+                            <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Attendance">Attendance Settings</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="LeavesType">Leaves Settings</a>
                         </li><!--end nav-item-->                        
                         <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Roles">Roles & Permissions</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="EmployeeCreation">Employee Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Client">Client Settings</a>
                         </li><!--end nav-item-->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Message">Message Settings</a>
@@ -198,9 +218,6 @@
                         </li><!--end nav-item-->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="SMS">SMS Settings</a>
-                        </li><!--end nav-item-->
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Planning">Billing</a>
                         </li><!--end nav-item-->
                     </ul><!--end nav-->
                 </div><!-- end Settings -->

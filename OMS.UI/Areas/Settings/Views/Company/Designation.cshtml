@@ -10,10 +10,10 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h4 class="card-title">Role Settings</h4>
+                        <h4 class="card-title">Designation Settings</h4>
                     </div>
                     <div class="col-lg-6 text-end">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BAddress"><i class="fas fa-plus"></i> Add Role</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BAddress"><i class="fas fa-plus"></i> Add Designation</button>
                     </div>
                 </div>
             </div><!--end card-header-->
@@ -25,7 +25,7 @@
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="BAddressLabel">Add Role</h6>
+                                        <h6 class="modal-title m-0" id="BAddressLabel">Add Designation</h6>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -33,16 +33,71 @@
                                             <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
-                                                        Role Name <span class="f-14 mr-1 text-danger">*</span>
+                                                        Designation Name
+                                                        <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
+
                                                     <input class="form-control" type="text" value="" id="example-text-input">
+
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
-                                                        Company Name
+                                                        Department Name
                                                         <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option value="" selected>Select Department</option>
+                                                        <option value="1">IT</option>
+                                                        <option value="2">Sales</option>
+                                                        <option value="3">Finance</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Refferal Code
+                                                        
+                                                    </label>
+
+                                                    <input class="form-control" type="text" value="" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Descrption
+                                                    </label>
+
+                                                    <input class="form-control" type="text" value="" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Consumer Name
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option value="" selected>Select Consumer</option>
+                                                        <option value="1">Nark</option>
+                                                        <option value="2">Seteve jobs</option>
+                                                        <option value="3">Bill Gates</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Company Name <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
                                                     <select class="form-select" aria-label="Default select example">
                                                         <option value="" selected>Select Company</option>
@@ -53,34 +108,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Department Name
-                                                        <span class="f-14 mr-1 text-danger">*</span>
-                                                    </label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option value="" selected>Select Department</option>
-                                                        <option value="1">IT</option>
-                                                        <option value="2">Finance</option>
-                                                        <option value="3">Sales</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Description
-                                                        
-                                                    </label>
 
-                                                    <input class="form-control" type="email" value="" id="example-text-input">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
                                     </div><!--end card-body-->
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
@@ -96,18 +124,24 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Role Name</th>
+                                <th>Designation</th>
+                                <th>Software</th>
+                                <th>Reffral Code</th>
+                                <th>Description</th>
+                                <th>Consumer Name</th>
                                 <th>Company Name</th>
-                                <th>Department Name</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Manager</td>
-                                <td>Meta</td>
+                                <td></td>
                                 <td>Finance</td>
+                                <td>F007</td>
+                                <td>Welcome to Finance</td>
+                                <td>Mark</td>
+                                <td>Meta</td>
                                 <td>
                                     <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>

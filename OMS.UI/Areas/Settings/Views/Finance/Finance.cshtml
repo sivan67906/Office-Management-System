@@ -1,5 +1,637 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@section Styles {
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/huebee/huebee.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/magic.css/magic.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/simple-datatables/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/css/app-imgpicker-custom.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+    <div class="col-12 col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbInvoiceSettings" role="tab">Invoice Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbInvoiceTemplate" role="tab">Invoice Template</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbPrefixSettings" role="tab">Prefix Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbUnit" role="tab">Unit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbQuickbooksSettings" role="tab">Quickbooks Settings</a>
+                    </li>
+                </ul>
+            </div><!--end card-body-->
+            <div class="card-body pt-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tbInvoiceSettings" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"> Invoice Settings</h4>
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Invoice Logo</h4>
+                                            </div><!--end card-header-->
+                                            <div class="card-body">
+                                                <div class="d-grid">
+                                                    <p class="text-muted">Please click "Upload" Button to upload your Invoice logo</p>
+                                                    <input type="file" id="input-file" name="input-file" accept="image/*" onchange="{handleChange()}" hidden="">
+                                                    <label class="btn-upload btn btn-primary" for="input-file">Upload </label>
+                                                </div>
+                                            </div><!--end card-body-->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Authorised Signatory Signature</h4>
+                                            </div><!--end card-header-->
+                                            <div class="card-body">
+                                                <div class="d-grid">
+                                                    <p class="text-muted">Authorised Signatory Signature</p>
+                                                    <input type="file" id="input-file" name="input-file" accept="image/*" onchange="{handleChange()}" hidden="">
+                                                    <label class="btn-upload btn btn-primary" for="input-file">Choose a file</label>
+                                                </div>
+                                            </div><!--end card-body-->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">Language</div>
+                                    <div class="col-lg-6">Due after</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <select id="sltLanguage" class="form-select" aria-label="">
+                                            <option data-content="<span class='flag-icon flag-icon-gb flag-icon-squared'></span> English" selected="" value="en"> English </option>
+                                            <option data-content="<span class='flag-icon flag-icon-sa flag-icon-squared'></span> Arabic" value="ar"> Arabic </option>
+                                            <option data-content="<span class='flag-icon flag-icon-de flag-icon-squared'></span> German" value="de"> German </option>
+                                            <option data-content="<span class='flag-icon flag-icon-id flag-icon-squared'></span> Indonesian" value="id"> Indonesian </option>
+                                            <option data-content="<span class='flag-icon flag-icon-my flag-icon-squared'></span> Malaysia" value="ms"> Malaysia </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="15" aria-label="" aria-describedby="dueDays">
+                                            <span class="input-group-text" id="dueDays">Day(s)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-6">Send Reminder Before</div>
+                                    <div class="col-lg-6"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="0" aria-label="" aria-describedby="sendReminder">
+                                            <span class="input-group-text" id="sendReminder">Day(s)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2" style="padding-right: 0px;">
+                                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                                        <select class="form-select" id="inlineFormSelectPref">
+                                            <option value="1" selected="">Send Reminder After</option>
+                                            <option value="2">Send Reminder Before</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4" style="padding-left: 0px;">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="0" aria-label="" aria-describedby="dueDays">
+                                            <span class="input-group-text" id="dueDays">Day(s)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox mt-4 mb-2">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Show Tax number on invoice</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox mt-4 mb-2">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clockInLocation">Hsn/Sac Code Show</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox mt-4 mb-2">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clockInOutShift">Show tax calculation message</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Show Status</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clockInLocation">Show Authorised Signatory</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <h4>Client info to show on invoice</h4>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Client Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clockInLocation">Client Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clockInOutShift">Client Phone</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="reqShiftChange">Company Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clockInLocation">Client Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
+                                            <label class="custom-control-label labelcustom" for="clockInOutShift">Show Project on Invoice</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mt-4 mb-2">
+                                        <label class="custom-control-label" for="reqShiftChange" style="font-size: 14px;">Terms and Conditions</label>
+                                        <textarea class="form-control" rows="5" id="termsConditions">Thank you for your business.</textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mt-4 mb-2">
+                                        <label class="custom-control-label" for="reqShiftChange" style="font-size: 14px;">Other information</label>
+                                        <textarea class="form-control" rows="5" id="otherInformation" placeholder="Enter Other information"></textarea>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+                            </div><!--end card-body-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="tbInvoiceTemplate" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Template</h4>
+                                    </div><!--end col-->
+
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <select name="template" class="image-picker show-labels show-html" style="display: none;">
+                                            <option data-img-src="~/matrica/assets/images/templates/1.png" selected="" value="invoice-1"> Template 1 </option>
+                                            <option data-img-src="~/matrica/assets/images/templates/2.png" value="invoice-2"> Template 2 </option>
+                                            <option data-img-src="~/matrica/assets/images/templates/3.png" value="invoice-3"> Template 3 </option>
+                                        </select>
+                                        <ul class="thumbnails image_picker_selector">
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img class="" src="~/matrica/assets/images/templates/1.png">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img class="image_picker_image" src="~/matrica/assets/images/templates/2.png">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thumbnail">
+                                                    <img class="image_picker_image" src="~/matrica/assets/images/templates/3.png">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div>
+                    <!--  Modal content for New Emergency Contact -->
+                    <div class="tab-pane" id="tbPrefixSettings" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Prefix</h4>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-lg-3">Invoice Prefix</div>
+                                    <div class="col-lg-3">Invoice Number Separator</div>
+                                    <div class="col-lg-3">Invoice Number Digits</div>
+                                    <div class="col-lg-3">Invoice Number Example</div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-3"><input type="text" placeholder="Enter Invoice Prefix" class="form-control" name="invoiceNoPrefix" id="txtInvoiceNoPrefix" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Invoice Number Seperator" class="form-control" name="invoiceNoNoSeperator" id="txtInvoiceNoNoSeperator" /></div>
+                                    <div class="col-lg-3"><input type="number" placeholder="Invoice Number Digits" class="form-control" name="invoiceNoNoDigits" id="txtInvoiceNoNoDigits" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Invoice Number Example" class="form-control" name="invoiceNoNoExample" id="txtInvoiceNoNoExample" disabled="disabled" /></div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-lg-3">Credit Note Prefix</div>
+                                    <div class="col-lg-3">Credit Note Number Separator</div>
+                                    <div class="col-lg-3">Credit Note Digits</div>
+                                    <div class="col-lg-3">Credit Note Number Example</div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-3"><input type="text" placeholder="Enter Credit Note Prefix" class="form-control" name="creditNotePrefix" id="txtCreditNotePrefix" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Credit Note Number Separator" class="form-control" name="creditNoteNoSeperator" id="txtCreditNoteNoSeperator" /></div>
+                                    <div class="col-lg-3"><input type="number" placeholder="Credit Note Digits" class="form-control" name="creditNoteNoDigits" id="txtCreditNoteNoDigits" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Credit Note Number Example" class="form-control" name="creditNoteNoExample" id="txtCreditNoteNoExample" disabled="disabled" /></div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-lg-3">Estimate Prefix</div>
+                                    <div class="col-lg-3">Estimate Number Separator</div>
+                                    <div class="col-lg-3">Estimate Number Digits</div>
+                                    <div class="col-lg-3">Estimate Number Example</div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-3"><input type="text" placeholder="Estimate Prefix" class="form-control" name="estimatePrefix" id="txtEstimatePrefix" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Estimate Number Separator" class="form-control" name="estimateNoSeperator" id="txtEstimateNoSeperator" /></div>
+                                    <div class="col-lg-3"><input type="number" placeholder="Estimate Number Digits" class="form-control" name="estimateNoDigits" id="txtEstimateNoDigits" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Estimate Number Example" class="form-control" name="estimateNoExample" id="txtEstimateNoExample" disabled="disabled" /></div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-lg-3">Order Prefix</div>
+                                    <div class="col-lg-3">Order Number Separator</div>
+                                    <div class="col-lg-3">Order Number Digits</div>
+                                    <div class="col-lg-3">Order Number Example</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3"><input type="text" placeholder="Order Prefix" class="form-control" name="orderPrefix" id="txtOrderPrefix" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Separator" class="form-control" name="ordNoSeperator" id="txtOrdNoSeperator" /></div>
+                                    <div class="col-lg-3"><input type="number" placeholder="Order Number Digits" class="form-control" name="ordNoDigits" id="txtOrdNoDigits" /></div>
+                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Example" class="form-control" name="ordNoExample" id="txtOrdNoExample" disabled="disabled" /></div>
+                                </div>
+                                <button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="tbUnit" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Units</h4>
+                                    </div><!--end col-->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewUnit-modal-lg">Add New Unit</button>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Units</th>
+                                                <th>IsDefault</th>
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>Pcs</td>
+                                                <td>Yes</td>
+                                                <td>
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end card-body-->
+
+
+
+                        </div>
+                    </div>
+                    <div class="modal fade bs-addNewUnit-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNUModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myECModalLabel">Add New Unit</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row mt-3 mb-2">
+                                            <div class="col-lg-12">Unit Type</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12"><input type="text" placeholder="Enter a category name" class="form-control" id="txtUnit"></div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-lg-8"></div>
+                                            <div class="col-lg-4 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+
+                    <div class="tab-pane" id="tbQuickbooksSettings" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Quickbooks Settings</h4>
+                                    </div><!--end col-->
+
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="row mt-2">
+                                    <div class="col-lg-12">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="qbStatus">
+                                            <label class="custom-control-label labelcustom" for="qbStatus">Status</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="divSettings" style="display: none;">
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4">Select Environment</div>
+                                        <div class="col-lg-4">Client ID</div>
+                                        <div class="col-lg-4">Client Secret</div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-lg-4">
+                                            <label class="visually-hidden" for="sltEnvironment">Preference</label>
+                                            <select class="form-select" id="sltEnvironment">
+                                                <option value="1" selected="">Sandbox</option>
+                                                <option value="2">Live</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4"><input type="text" placeholder="" class="form-control" id="txtClientId"></div>
+                                        <div class="col-lg-4">
+                                            <input type="password" id="txtclientSecret" class="form-control" value="">
+                                            <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-12">
+                                            <h4 class="card-title">
+                                                Quickbooks Redirect URL
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-lg-10" style="border: 1px solid #e8ebf3; align-content: center;">
+                                            <p id="qbCopy" aria-describedby="btnqbCopy">
+                                                https://www.google.co.in/?gfe_rd=cr&ei=kMpCVunlFurI8AehyrX4Aw
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2" style="padding-left: 0px;">
+                                            <button class="btn btn-de-secondary" type="button" id="btnqbCopy"
+                                                    data-clipboard-action="copy" data-clipboard-target="#qbCopy">
+                                                <i class="far fa-copy me-2"></i>Copy
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <p style="color: blue;">
+                                            (Add this callback url in your quickbooks app settings.)
+                                        </p>
+                                    </div>
+                                    <div class="row alert alert-danger border-0" role="alert" style="margin: 0px;">
+                                        Connect Quickbooks Account. Without connecting quickbooks account Sync will not work.
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div>
+
+
+
+                </div><!--end card-body-->
+            </div><!--end card-->
+
+        </div>
+    </div>
+</div>
+<!--end row-->
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
+    <script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+    <script src="~/matrica/assets/js/moment.js"></script>
+    <script src="~/matrica/assets/libs/imask/imask.min.js"></script>
+    <script src="~/matrica/assets/js/pages/animation.init.js"></script>
+    <script src="~/matrica/assets/libs/clipboard/clipboard.min.js"></script>
+    <script src="~/matrica/assets/js/pages/clipboard.init.js"></script>
+
+    <script type="text/javascript">
+                $(".toggle-password").click(function() {
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            input = $(this).parent().find("input");
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+
+
+                $.event.special.inputchange = {
+            setup: function() {
+                var self = this, val;
+                $.data(this, 'timer', window.setInterval(function() {
+                    val = self.value;
+                    if ( $.data( self, 'cache') != val ) {
+                        $.data( self, 'cache', val );
+                        $( self ).trigger( 'inputchange' );
+                    }
+                }, 20));
+            },
+            teardown: function() {
+                window.clearInterval( $.data(this, 'timer') );
+            },
+            add: function() {
+                $.data(this, 'cache', this.value);
+            }
+        };
+
+        $('#txtInvoiceNoPrefix').on('inputchange', function() {
+                   var prefix = $("#txtInvoiceNoPrefix").val();
+                    var seperator = $("#txtInvoiceNoNoSeperator").val();
+                    var digits = $("#txtInvoiceNoNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtInvoiceNoNoExample").val(result);
+        });
+        $('#txtInvoiceNoNoSeperator').on('inputchange', function() {
+                   var prefix = $("#txtInvoiceNoPrefix").val();
+                    var seperator = $("#txtInvoiceNoNoSeperator").val();
+                    var digits = $("#txtInvoiceNoNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtInvoiceNoNoExample").val(result);
+        });
+        $('#txtInvoiceNoNoDigits').on('inputchange', function() {
+                   var prefix = $("#txtInvoiceNoPrefix").val();
+                    var seperator = $("#txtInvoiceNoNoSeperator").val();
+                    var digits = $("#txtInvoiceNoNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtInvoiceNoNoExample").val(result);
+        });
+
+
+        $('#txtCreditNotePrefix').on('inputchange', function() {
+                   var prefix = $("#txtCreditNotePrefix").val();
+                    var seperator = $("#txtCreditNoteNoSeperator").val();
+                    var digits = $("#txtCreditNoteNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtCreditNoteNoExample").val(result);
+        });
+        $('#txtCreditNoteNoSeperator').on('inputchange', function() {
+                   var prefix = $("#txtCreditNotePrefix").val();
+                    var seperator = $("#txtCreditNoteNoSeperator").val();
+                    var digits = $("#txtCreditNoteNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtCreditNoteNoExample").val(result);
+        });
+        $('#txtCreditNoteNoDigits').on('inputchange', function() {
+                   var prefix = $("#txtCreditNotePrefix").val();
+                    var seperator = $("#txtCreditNoteNoSeperator").val();
+                    var digits = $("#txtCreditNoteNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtCreditNoteNoExample").val(result);
+        });
+
+
+        $('#txtEstimatePrefix').on('inputchange', function() {
+                   var prefix = $("#txtEstimatePrefix").val();
+                    var seperator = $("#txtEstimateNoSeperator").val();
+                    var digits = $("#txtEstimateNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtEstimateNoExample").val(result);
+        });
+        $('#txtEstimateNoSeperator').on('inputchange', function() {
+                   var prefix = $("#txtEstimatePrefix").val();
+                    var seperator = $("#txtEstimateNoSeperator").val();
+                    var digits = $("#txtEstimateNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtEstimateNoExample").val(result);
+        });
+        $('#txtEstimateNoDigits').on('inputchange', function() {
+                   var prefix = $("#txtEstimatePrefix").val();
+                    var seperator = $("#txtEstimateNoSeperator").val();
+                    var digits = $("#txtEstimateNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtEstimateNoExample").val(result);
+        });
+
+        $('#txtOrderPrefix').on('inputchange', function() {
+                   var prefix = $("#txtOrderPrefix").val();
+                    var seperator = $("#txtOrdNoSeperator").val();
+                    var digits = $("#txtOrdNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtOrdNoExample").val(result);
+        });
+        $('#txtOrdNoSeperator').on('inputchange', function() {
+                   var prefix = $("#txtOrderPrefix").val();
+                    var seperator = $("#txtOrdNoSeperator").val();
+                    var digits = $("#txtOrdNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtOrdNoExample").val(result);
+        });
+        $('#txtOrdNoDigits').on('inputchange', function() {
+                   var prefix = $("#txtOrderPrefix").val();
+                    var seperator = $("#txtOrdNoSeperator").val();
+                    var digits = $("#txtOrdNoDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#txtOrdNoExample").val(result);
+        });
+
+        $(document).ready(function() {
+            $('#qbStatus').click(function() {
+            if ($(this).is(':checked')) $("#divSettings").css("display", "block");
+            else $("#divSettings").css("display", "none");
+          });
+        });
+    </script>
 }

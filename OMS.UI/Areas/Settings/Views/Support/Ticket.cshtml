@@ -1,5 +1,544 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="row">
+    <div class="col-12 col-lg-10 mx-auto">
+
+        <div class="card">
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbTicketAgents" role="tab">Ticket Agents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbTicketGroups" role="tab">Ticket Groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbTicketTypes" role="tab">Ticket Types</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbTicketChannel" role="tab">Ticket Channel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbReplyTemplates" role="tab">Reply Templates</a>
+                    </li>
+                </ul>
+            </div><!--end card-body-->
+            <div class="card-body pt-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tbTicketAgents" role="tabpanel">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"> Ticket Agents</h4>
+                                <div class="col-auto text-end">
+                                    <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicket-modal-lg">Add Ticket Agent </button>
+                                </div><!--end col-->
+                            </div><!--end card-header-->
+
+                            <div class="card-body">
+                                
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                              
+                                                <th>Name</th>
+                                                <th>Group</th>
+                                                <th>Type</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Matt Frend</td>
+                                                <td>Client</td>
+                                                <td>Question</td>
+                                                <td>Enabled</td>    
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketAgent-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                        <tr>
+                                                <td>Donald String</td>
+                                                <td>Client</td>
+                                                <td>Sales</td>
+                                                <td>Enabled</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketAgent-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                        </tr><!--end tr-->
+
+                                        </tbody>
+                                    </table>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 text-end">
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+
+                            </div><!--end card-body-->
+                        </div>
+                    </div>
+                </div>
+
+                    <!--  Modal content for New Ticket Agent -->
+                    <div class="modal fade bs-NewTicket-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myNewTicketModal">New Ticket Agent</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-2 col-form-label text-end">Choose Agents</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>-- select --</option>
+                                                            <option value="1">Matt Frend</option>
+                                                            <option value="2">Donald String</option>                                                         
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-2 col-form-label text-end">Assign Groups</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>-- select --</option>
+                                                            <option value="1">Client</option>
+                                                            <option value="2">Sales</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <!--  Modal content for Edit Ticket Agent -->
+                    <div class="modal fade bs-EditTicketAgent-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketAgent" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myEditTicketAgent">Edit Ticket Agent</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-2 col-form-label text-end">Choose Agents</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>-- select --</option>
+                                                            <option value="1">Matt Frend</option>
+                                                            <option value="2">Donald String</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 row">
+                                                    <label class="col-sm-2 col-form-label text-end">Assign Groups</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>-- select --</option>
+                                                            <option value="1">Client</option>
+                                                            <option value="2">Sales</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <div class="tab-pane" id="tbTicketGroups" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Ticket Groups</h4>
+                                        <div class="col-auto text-end">
+                                            <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicketGroup-modal-lg">Add Ticket Group </button>
+                                        </div><!--end col-->
+                                    </div><!--end col-->
+
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                               
+                                                <th>Name</th>                                                
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>                                              
+                                                <td>Client</td>                                                
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketGroup-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>Sales</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketGroup-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>Management</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketGroup-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div>
+                    <!--  Modal content for New Ticket Group -->
+                    <div class="modal fade bs-NewTicketGroup-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketGroupModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myNewTicketGroupModal">New Ticket Group</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="TicketGroupName">Group Name</label>
+                                                    <input type="text" class="form-control" id="GroupName" required="">
+                                                </div>
+                                            </div>
+                                            
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <!--  Modal content for Edit Ticket Group -->
+                    <div class="modal fade bs-EditTicketGroup-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketGroupModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myEditTicketGroupModal">Edit Ticket Group</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="GroupName">Group Name</label>
+                                                    <input type="text" class="form-control" id="GroupName" required="">
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <div class="tab-pane" id="tbTicketTypes" role="tabpanel">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Ticket Types</h4>
+                                    </div><!--end col-->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicketType-modal-lg">New Ticket Type </button>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+
+                                                <th>Name</th>
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>Bug</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketType-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>Code</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketType-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>Management</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketType-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end card-body-->
+                        </div>
+                    </div>
+
+                    <!--  Modal content for New Ticket Type -->
+                    <div class="modal fade bs-NewTicketType-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketTypeModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myNewTicketTypeModal">New Ticket Type</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="TicketTypeName">Ticket Type</label>
+                                                    <input type="text" class="form-control" id="TicketTypeName" required="">
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <!--  Modal content for Edit Ticket Type -->
+                    <div class="modal fade bs-EditTicketType-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketTypeModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myEditTicketTypeModal">Edit Ticket Type</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="EditTicketTypeName">Ticket Type</label>
+                                                    <input type="text" class="form-control" id="EditTicketTypeName" required="">
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <div class="tab-pane" id="tbTicketChannel" role="tabpanel">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Ticket Channel</h4>
+                                    </div><!--end col-->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicketChannel-modal-lg">New Ticket Channel </button>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+
+                                                <th>Name</th>
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>Bug</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketChannel-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>Code</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketChannel-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>Management</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditTicketChannel-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end card-body-->
+                        </div>
+                    </div>
+
+                    <!--  Modal content for New Ticket Channel -->
+                    <div class="modal fade bs-NewTicketChannel-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketChannelModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myNewTicketChannelModal">New Ticket Channel</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="TicketChannelName">Ticket Channel</label>
+                                                    <input type="text" class="form-control" id="TicketChannelName" required="">
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+                    <!--  Modal content for Edit Ticket Channel -->
+                    <div class="modal fade bs-EditTicketChannel-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketChannelModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myEditTicketChannelModal">Edit Ticket Channel</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="EditTicketChannelName">Ticket Channel</label>
+                                                    <input type="text" class="form-control" id="EditTicketChannelName" required="">
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+
+                </div>
+            </div><!--end card-body-->
+        </div><!--end card-->
+
+    </div>
+</div>
+
