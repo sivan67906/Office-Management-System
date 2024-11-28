@@ -45,26 +45,26 @@
 									<div class="col-lg-4">
 										<div class="custom-control custom-checkbox mt-4 mb-2">
 											<input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
-											<label class="custom-control-label labelcustom" for="reqShiftChange">Enable Career Site</label>
+											<label class="custom-control-label labelcustom" for="reqShiftChange">Enable Career Site <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 										</div>
 									</div>
 									<div class="col-lg-4">
 										<div class="custom-control custom-checkbox mt-4 mb-2">
 											<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
-											<label class="custom-control-label labelcustom" for="clockInLocation">Google Recaptchas</label>
+											<label class="custom-control-label labelcustom" for="clockInLocation">Google Recaptchas <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 										</div>
 									</div>
 									<div class="col-lg-4">
 										<div class="custom-control custom-checkbox mt-4 mb-2">
 											<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
-											<label class="custom-control-label labelcustom" for="clockInOutShift">Job Alert</label>
+											<label class="custom-control-label labelcustom" for="clockInOutShift">Job Alert <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 										</div>
 									</div>
 								</div>
 								<div class="row mt-4">
 									<div class="col-lg-4">Company Name</div>
 									<div class="col-lg-4">Company Website</div>
-									<div class="col-lg-4">Company Logo</div>
+									<div class="col-lg-4">Company Logo <i class="fa fa-question-circle" aria-hidden="true"></i></div>
 								</div>
 								<div class="row mt-2">
 									<div class="col-lg-4"><input type="text" placeholder="e.g. Acme Corporation" class="form-control" id="txtClientId"></div>
@@ -180,8 +180,10 @@
 									</div>
 								</div>
 								<div class="row mt-4">
-									<div class="col-lg-6">Duplicate Job Application Restriction (In days)</div>
-									<div class="col-lg-6">Offer Letter Reminder To Candidate(In days)</div>
+									<div class="col-lg-6">
+										Duplicate Job Application Restriction (In days)<span class="text-danger"> *</span> <i class="fa fa-question-circle" aria-hidden="true"></i>
+									</div>
+									<div class="col-lg-6">Offer Letter Reminder To Candidate(In days)<span class="text-danger"> *</span> <i class="fa fa-question-circle" aria-hidden="true"></i></div>
 								</div>
 								<div class="row mt-2">
 									<div class="col-lg-6"><input class="form-control" type="number" value="" id=""></div>
@@ -213,7 +215,9 @@
 								</div>
 								<div id="divBackroundColor" style="display:none;">
 									<div class="row mt-2">
-										<div class="col-lg-12">Background Color</div>
+										<div class="col-lg-12">
+											Background Color <span class="text-danger">*</span>
+										</div>
 									</div>
 									<div class="row col-lg-12">
 										<input id="" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);">
@@ -272,7 +276,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addNewFooterSource-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNFSModalLabel" aria-hidden="true">
+					<div id="mdlFooterLink" class="modal fade bs-addNewFooterSource-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNFSModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -282,8 +286,8 @@
 								<div class="modal-body">
 									<form>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-4">Title</div>
-											<div class="col-lg-4">Slug</div>
+											<div class="col-lg-4">Title <span class="text-danger">*</span></div>
+											<div class="col-lg-4">Slug <span class="text-danger">*</span></div>
 											<div class="col-lg-4">Status</div>
 										</div>
 										<div class="row mt-3 mb-2">
@@ -312,7 +316,7 @@
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
 												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-												<button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+												<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Cancel</button>
 											</div>
 										</div>
 									</form>
@@ -366,7 +370,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addNewRecruiter-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNRSModalLabel" aria-hidden="true">
+					<div id="mdlAddNewRecruiter" class="modal fade bs-addNewRecruiter-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNRSModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -376,7 +380,7 @@
 								<div class="modal-body">
 									<form>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-12">Recruiter</div>
+											<div class="col-lg-12">Recruiter <span class="text-danger">*</span></div>
 										</div>
 										<div class="row">
 											<div class="col-lg-12">
@@ -390,7 +394,7 @@
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
 												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-												<button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+												<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Cancel</button>
 											</div>
 										</div>
 									</form>
@@ -414,7 +418,7 @@
 										Mail Settings
 									</h4>
 								</div>
-								<div class="row">Send mail when application status changes to</div>
+								<div class="row">Send mail when application status changes to <i class="fa fa-question-circle" aria-hidden="true"></i></div>
 								<div class="row">
 									<div class="col-md-2 col-md-25">
 										<div class="custom-control custom-checkbox mt-2 mb-2">
@@ -599,7 +603,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addJobApplnStatus-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNJASModalLabel" aria-hidden="true">
+					<div id="mdlAddStatusColumn" class="modal fade bs-addJobApplnStatus-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNJASModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -609,8 +613,8 @@
 								<div class="modal-body">
 									<form>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-6">Category</div>
-											<div class="col-lg-6">Status</div>
+											<div class="col-lg-6">Category <span class="text-danger">*</span></div>
+											<div class="col-lg-6">Status <span class="text-danger">*</span></div>
 										</div>
 										<div class="row mt-3 mb-2">
 											<div class="col-lg-6">
@@ -626,7 +630,7 @@
 											<div class="col-lg-6"><input type="text" placeholder="" class="form-control" id=""></div>
 										</div>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-6">Label Color</div>
+											<div class="col-lg-6">Label Color <span class="text-danger">*</span></div>
 											<div class="col-lg-6">Position</div>
 										</div>
 										<div class="row mt-3 mb-2">
@@ -654,7 +658,7 @@
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
 												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-												<button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+												<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Cancel</button>
 											</div>
 										</div>
 									</form>
@@ -731,7 +735,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addNewCustomQn-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNCQModalLabel" aria-hidden="true">
+					<div id="mdlAddQuestion" class="modal fade bs-addNewCustomQn-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNCQModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -742,7 +746,7 @@
 									<form>
 										<div class="row mt-3 mb-2">
 											<div class="col-lg-6">Category</div>
-											<div class="col-lg-6">Question</div>
+											<div class="col-lg-6">Question <span class="text-danger">*</span></div>
 										</div>
 										<div class="row mb-2">
 											<div class="col-lg-6">
@@ -799,6 +803,37 @@
 						</div><!-- /.modal-dialog -->
 					</div><!-- /.modal -->
 				</div>
+				<div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex=""
+					 role="dialog" aria-labelledby="myCModalLabel">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+							</div>
+							<div class="modal-body">
+								<div class="row mt-3 mb-2">
+									<div class="col-lg-12">Select Company</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<select class="form-select" id="sltChooseCompany">
+											<option value="0" selected="">Select Company</option>
+											<option value="1">Company 1</option>
+											<option value="2">Company 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-lg-8"></div>
+									<div class="col-lg-4 text-end">
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+									</div>
+								</div>
+
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div>
 			</div>
 		</div><!--end card-body-->
 	</div><!--end card-->
@@ -830,5 +865,13 @@
 			 $("#divBackroundImage").css("display", "none");
 		  });
 		  });
+		 $(window).on('load', function() {
+				$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
+				$('#mdlSelectCompany').modal('show');
+				$('#mdlFooterLink').modal({backdrop: 'static', keyboard: false});
+				$('#mdlAddQuestion').modal({backdrop: 'static', keyboard: false});
+				$('#mdlAddStatusColumn').modal({backdrop: 'static', keyboard: false});
+				$('#mdlAddNewRecruiter').modal({backdrop: 'static', keyboard: false});
+			});
 	</script>
 }

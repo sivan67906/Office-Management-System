@@ -104,7 +104,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addNewLeadSource-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLSModalLabel" aria-hidden="true">
+					<div id="mdlNewLeadSource" class="modal fade bs-addNewLeadSource-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLSModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -114,7 +114,7 @@
 								<div class="modal-body">
 									<form>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-12">Lead Source</div>
+											<div class="col-lg-12">Lead Source <span class="text-danger">*</span></div>
 										</div>
 										<div class="row">
 											<div class="col-lg-12"><input type="text" placeholder="" class="form-control" id="txtLdSource"></div>
@@ -123,7 +123,7 @@
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
 												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-												<button type="button" class="btn btn-sm btn-de-danger">Close</button>
+												<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Close</button>
 											</div>
 										</div>
 									</form>
@@ -190,7 +190,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addNewLS-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLSModalLabel" aria-hidden="true">
+					<div id="mdlNewLeadStatus" class="modal fade bs-addNewLS-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLSModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -200,8 +200,8 @@
 								<div class="modal-body">
 									<form>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-6">Lead Status</div>
-											<div class="col-lg-6">Label Color</div>
+											<div class="col-lg-6">Lead Status <span class="text-danger">*</span></div>
+											<div class="col-lg-6">Label Color <span class="text-danger">*</span></div>
 										</div>
 										<div class="row">
 											<div class="col-lg-6"><input type="text" placeholder="e.g. In Progress" class="form-control" id="txtLeadStatus"></div>
@@ -213,7 +213,7 @@
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
 												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-												<button type="button" class="btn btn-sm btn-de-danger">Close</button>
+												<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Close</button>
 											</div>
 										</div>
 									</form>
@@ -259,7 +259,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addNewLdAgent-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLAModalLabel" aria-hidden="true">
+					<div id="mdlNewLeadAgent" class="modal fade bs-addNewLdAgent-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLAModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -269,7 +269,7 @@
 								<div class="modal-body">
 									<form>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-12">Choose Agents</div>
+											<div class="col-lg-12">Choose Agents <span class="text-danger">*</span></div>
 										</div>
 										<div class="row">
 											<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
@@ -282,7 +282,7 @@
 													<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
 												</div>
 												<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
-														<select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+													<select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
 														<option value="value-1">John</option>
 														<option value="value-1">Doe</option>
 													</select>
@@ -340,7 +340,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div class="modal fade bs-addNewLdCategory-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLCModalLabel" aria-hidden="true">
+					<div id="mdlNewLeadCategory" class="modal fade bs-addNewLdCategory-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNLCModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -350,7 +350,7 @@
 								<div class="modal-body">
 									<form>
 										<div class="row mt-3 mb-2">
-											<div class="col-lg-12">Category Name</div>
+											<div class="col-lg-12">Category Name <span class="text-danger">*</span></div>
 										</div>
 										<div class="row">
 											<div class="col-lg-12"><input type="text" placeholder="" class="form-control" id="txtLdCategory"></div>
@@ -359,7 +359,7 @@
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
 												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-												<button type="button" class="btn btn-sm btn-de-danger">Close</button>
+												<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Close</button>
 											</div>
 										</div>
 									</form>
@@ -368,8 +368,38 @@
 						</div><!-- /.modal-dialog -->
 					</div><!-- /.modal -->
 				</div><!--end card-body-->
-			</div><!--end card-->
+				<div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex=""
+					 role="dialog" aria-labelledby="myCModalLabel">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+							</div>
+							<div class="modal-body">
+								<div class="row mt-3 mb-2">
+									<div class="col-lg-12">Select Company</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<select class="form-select" id="sltChooseCompany">
+											<option value="0" selected="">Select Company</option>
+											<option value="1">Company 1</option>
+											<option value="2">Company 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-lg-8"></div>
+									<div class="col-lg-4 text-end">
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+									</div>
+								</div>
 
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div>
+			</div><!--end card-->
 		</div>
 	</div>
 </div>
@@ -378,4 +408,14 @@
 	<script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
 	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
 	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+	<script type="text/javascript">
+					$(window).on('load', function() {
+				$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
+				$('#mdlSelectCompany').modal('show');
+				$('#mdlNewLeadCategory').modal({backdrop: 'static', keyboard: false});
+				$('#mdlNewLeadAgent').modal({backdrop: 'static', keyboard: false});
+				$('#mdlNewLeadStatus').modal({backdrop: 'static', keyboard: false});
+				$('#mdlNewLeadSource').modal({backdrop: 'static', keyboard: false});
+			});
+	</script>
 }

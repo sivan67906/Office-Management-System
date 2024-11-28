@@ -75,7 +75,7 @@
 							</div>
 							<div class="row mt-3">
 								<div class="col-lg-4">
-									<label for="example-text-input" class="col-form-label text-end">Week Starts From</label>
+									<label for="example-text-input" class="col-form-label text-end">Week Starts From <span class="text-danger">*</span></label>
 									<select id="weekStartsFrom" class="form-select" aria-label="">
 										<option value="0"> Sunday </option>
 										<option value="1" selected=""> Monday </option>
@@ -88,11 +88,11 @@
 								</div>
 								<div class="col-lg-4 form-check form-switch form-switch-primary mt-5 float-end text-end">
 									<input class="form-check-input  position-absolute" type="checkbox" id="customSwitchPrimary">
-									<label class="form-check-label" for="customSwitchPrimary"> Attendance Reminder Status </label>
+									<label class="form-check-label" for="customSwitchPrimary"> Attendance Reminder Status <span class="text-danger">*</span></label>
 								</div>
 								<div class="col-lg-4" id="divReminderAftrMns" style="display: none;">
 									<label id="lblreminderaftrmns" for="reminderAftrMns" class="col-form-label">
-										Reminder After Minutes
+										Reminder After Minutes <span class="text-danger">*</span>
 									</label>
 									<input class="form-control" type="number" value="" id="reminderAftrMns">
 								</div>
@@ -116,19 +116,19 @@
 							<div class="row">
 								<div class="col-lg-4" id="divClockOutReminder" style="display: none;">
 									<label id="lblClockOutReminder" for="clockOutReminder" class="col-form-label">
-										Clockout Reminder After Minutes
+										Clockout Reminder After Minutes <span class="text-danger">*</span>
 									</label>
 									<input class="form-control" type="number" value="" id="clockOutReminder">
 								</div>
 								<div class="col-lg-4" id="divTaskReminderInterval" style="display: none;">
 									<label id="lblClockOutReminder" for="taskReminderInterval" class="col-form-label">
-										Task Reminder Interval (Minutes)
+										Task Reminder Interval (Minutes) <span class="text-danger">*</span>
 									</label>
 									<input class="form-control" type="number" value="" id="taskReminderInterval">
 								</div>
 								<div class="col-lg-4" id="divrestReminderInterval" style="display: none;">
 									<label id="lblClockOutReminder" for="restReminderInterval" class="col-form-label">
-										Rest Reminder Interval (Minutes)
+										Rest Reminder Interval (Minutes) <span class="text-danger">*</span>
 									</label>
 									<input class="form-control" type="number" value="" id="restReminderInterval">
 								</div>
@@ -197,7 +197,7 @@
 								<div class="col-lg-4">
 									<div id="divEmpClockOutEnds" class="custom-control custom-checkbox mt-4 mb-2">
 										<input type="checkbox" class="form-check-input form-check-input-custom" id="empClockOutEnds" data-parsley-multiple="" data-parsley-mincheck="2">
-										<label class="custom-control-label labelcustom" for="empClockOutEnds">Auto Clock-out when shift ends</label>
+										<label class="custom-control-label labelcustom" for="empClockOutEnds">Auto Clock-out when shift ends <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 									</div>
 								</div>
 								<div id="dummydiv" class="col-lg-4" style="display: none;">
@@ -289,7 +289,7 @@
 								</div><!--end card-body-->
 							</div><!--end card-->
 						</div>
-						<div class="modal fade bs-addNewShift-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNSModalLabel" aria-hidden="true">
+						<div id="mdlNewShift" class="modal fade bs-addNewShift-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNSModalLabel" aria-hidden="true">
 							<div class="modal-dialog modal-xl">
 								<div class="modal-content" style="height: 428px !important;">
 									<div class="modal-header">
@@ -299,9 +299,9 @@
 									<div class="modal-body">
 										<form>
 											<div class="row mt-3">
-												<div class="col-lg-4">Shift Name</div>
-												<div class="col-lg-4">Shift Short Code</div>
-												<div class="col-lg-4">Color Code</div>
+												<div class="col-lg-4">Shift Name <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Shift Short Code <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Color Code <span class="text-danger">*</span></div>
 											</div>
 											<div class="row">
 												<div class="col-lg-4"><input type="text" class="form-control" id="" required=""></div>
@@ -309,9 +309,9 @@
 												<div class="col-lg-4"><input id="txtLabelColor" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);"></div>
 											</div>
 											<div class="row mt-4">
-												<div class="col-lg-4">Shift Start Time</div>
-												<div class="col-lg-4">Shift End Time</div>
-												<div class="col-lg-4">Half-day Mark Time</div>
+												<div class="col-lg-4">Shift Start Time <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Shift End Time <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Half-day Mark Time <span class="text-danger">*</span></div>
 											</div>
 											<div class="row">
 												<div class="col-lg-4"><input class="form-control" type="time" value="" id=""></div>
@@ -319,9 +319,9 @@
 												<div class="col-lg-4"><input class="form-control" type="time" value="" id=""></div>
 											</div>
 											<div class="row mt-4">
-												<div class="col-lg-4">Early Clock In (minutes)</div>
-												<div class="col-lg-4">Late mark after (minutes)</div>
-												<div class="col-lg-4">Maximum check-in allowed in a day</div>
+												<div class="col-lg-4">Early Clock In (minutes) <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Late mark after (minutes) <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Maximum check-in allowed in a day <span class="text-danger">*</span></div>
 											</div>
 											<div class="row">
 												<div class="col-lg-4"><input type="number" class="form-control" id="" required=""></div>
@@ -329,7 +329,7 @@
 												<div class="col-lg-4"><input type="number" class="form-control" id="" required=""></div>
 											</div>
 											<div class="row mt-4">
-												Office opens on
+												<div class="col-lg-12">Office opens on <span class="text-danger">*</span></div>
 											</div>
 											<div class="row">
 												<div class="col-md-1"></div>
@@ -366,7 +366,7 @@
 												<div class="col-lg-8"></div>
 												<div class="col-lg-4 text-end">
 													<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-													<button type="button" class="btn btn-sm btn-de-danger">Delete</button>
+													<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Delete</button>
 												</div>
 											</div>
 										</form>
@@ -377,6 +377,37 @@
 					</div>
 				</form>
 				<!--end form-->
+				<div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex=""
+					 role="dialog" aria-labelledby="myCModalLabel">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+							</div>
+							<div class="modal-body">
+								<div class="row mt-3 mb-2">
+									<div class="col-lg-12">Select Company</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<select class="form-select" id="sltChooseCompany">
+											<option value="0" selected="">Select Company</option>
+											<option value="1">Company 1</option>
+											<option value="2">Company 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-lg-8"></div>
+									<div class="col-lg-4 text-end">
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+									</div>
+								</div>
+
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div>
 			</div>
 			<!--end card-body-->
 		</div>
@@ -488,6 +519,12 @@
 					  $("#clockOutReminder").attr("disabled", false);
 				  }
 		  });
+		});
+		
+		$(window).on('load', function() {
+			$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
+			$('#mdlSelectCompany').modal('show');
+			$('#mdlNewShift').modal({backdrop: 'static', keyboard: false});
 		});
 	</script>
 }
