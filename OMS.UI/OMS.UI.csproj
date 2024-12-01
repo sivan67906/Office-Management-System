@@ -13,8 +13,42 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\CRM\Data\" />
+    <Folder Include="Areas\CRM\Models\" />
+    <Folder Include="Areas\Dashboard\Controllers\" />
+    <Folder Include="Areas\Dashboard\Data\" />
+    <Folder Include="Areas\Dashboard\Models\" />
+    <Folder Include="Areas\Dashboard\Views\" />
+    <Folder Include="Areas\Event\Data\" />
+    <Folder Include="Areas\Event\Models\" />
+    <Folder Include="Areas\Finance\Data\" />
+    <Folder Include="Areas\Finance\Models\" />
+    <Folder Include="Areas\HR\Data\" />
+    <Folder Include="Areas\HR\Models\" />
+    <Folder Include="Areas\Inventory\Controllers\" />
+    <Folder Include="Areas\Inventory\Data\" />
+    <Folder Include="Areas\Inventory\Models\" />
+    <Folder Include="Areas\Inventory\Views\" />
+    <Folder Include="Areas\Messages\Controllers\" />
+    <Folder Include="Areas\Messages\Data\" />
+    <Folder Include="Areas\Messages\Models\" />
+    <Folder Include="Areas\Messages\Views\" />
+    <Folder Include="Areas\NoticeBoard\Controllers\" />
+    <Folder Include="Areas\NoticeBoard\Data\" />
+    <Folder Include="Areas\NoticeBoard\Models\" />
+    <Folder Include="Areas\NoticeBoard\Views\" />
+    <Folder Include="Areas\Payroll\Data\" />
+    <Folder Include="Areas\Payroll\Models\" />
+    <Folder Include="Areas\Recruit\Data\" />
+    <Folder Include="Areas\Recruit\Models\" />
     <Folder Include="Areas\Settings\Data\" />
     <Folder Include="Areas\Settings\Models\" />
+    <Folder Include="Areas\Ticket\Controllers\" />
+    <Folder Include="Areas\Ticket\Data\" />
+    <Folder Include="Areas\Ticket\Models\" />
+    <Folder Include="Areas\Ticket\Views\" />
+    <Folder Include="Areas\Work\Data\" />
+    <Folder Include="Areas\Work\Models\" />
   </ItemGroup>
 
 </Project>

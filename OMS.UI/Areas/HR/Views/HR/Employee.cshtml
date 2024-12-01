@@ -1,0 +1,482 @@
+﻿@section Scripts {
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+}
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="card-title">Employees</h4>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BAddress"><i class="fas fa-plus"></i> Add Employee </button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row">
+                <div class="row">
+                    <div class="col=md-12 text-md-end">
+                        <div class="modal fade" id="BAddress" tabindex="-1" aria-labelledby="BAddressLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="BAddressLabel">Add Employee</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Employee ID  <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <input class="form-control" type="text" value="" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Salutation <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option value="" selected>Select Salutation</option>
+                                                        <option value="1">Mr</option>
+                                                        <option value="2">Mrs</option>
+                                                        <option value="3">Miss</option>
+                                                        <option value="3">Dr</option>
+                                                        <option value="3">Sir</option>
+                                                        <option value="3">Madam</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Employee Name
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <input class="form-control" type="text" value="" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Employee Email
+
+                                                    </label>
+
+                                                    <input class="form-control" type="email" value="" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Profile Picture
+
+                                                    </label>
+                                                    <input type="file" class="form-control" id="inputGroupFile01">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Date of Birth
+
+                                                    </label>
+                                                    <input type="date" class="form-control" id="inputGroupFile01">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Designation
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">Cheif</option>
+                                                            <option value="value-2">Junior</option>
+                                                            <option value="value-3">Senior</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Department
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">IT</option>
+                                                            <option value="value-2">Sales</option>
+                                                            <option value="value-3">Marketing</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">India</option>
+                                                            <option value="value-2">Malaysia</option>
+                                                            <option value="value-3">Russia</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Mobile
+                                                    </label>
+                                                    <input class="form-control" type="tel" value="" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Gender
+                                                    </label>
+                                                    <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                        <option value="value-1" selected="">Male</option>
+                                                        <option value="value-2">Female</option>
+                                                        <option value="value-3">Others</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Joining Date<span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control" type="Date" value="" id="example-text-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Reporting To
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">Admin</option>
+                                                            <option value="value-2">EMP-1</option>
+                                                            <option value="value-2">EMP-2</option>
+                                                            <option value="value-2">EMP-3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Language
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">English</option>
+                                                            <option value="value-2">Tamil</option>
+                                                            <option value="value-2">Chainese</option>
+                                                            <option value="value-2">Kerean</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        User Role
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">App Administrator</option>
+                                                            <option value="value-2">Employee</option>
+                                                            <option value="value-3">Membership</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-start">
+                                                <label for="address">Address</label>
+                                                <textarea class="form-control" id="address" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-start">
+                                                <label for="address">About</label>
+                                                <textarea class="form-control" id="address" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-start">
+                                                <h4 class="header-title">Other Details</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Login Allowed?
+                                                    </label>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Receive email notifications?
+                                                    </label>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Hourly Rate
+                                                    </label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-text">$</div>
+                                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Slack Member ID
+                                                    </label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-text">$</div>
+                                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Skills
+                                                    </label>
+                                                    <input type="text" class="form-control" id="slack" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Probation End Date <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control" type="Date" value="" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Notice Period Start Date<span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control" type="Date" value="" id="example-text-input">
+                                                </div>
+                                            </div> 
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Notice Period End Date<span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control" type="Date" value="" id="example-text-input">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Employment Type
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">Full Time</option>
+                                                            <option value="value-2">Part Time</option>
+                                                            <option value="value-3">On Contract Internship</option>
+                                                            <option value="value-3">Trainee</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Marital Status
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">Maried</option>
+                                                            <option value="value-2">Single</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div><!--end card-body-->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                                        <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                        <button class="btn btn-de-primary btn-sm" type="button">Save & Add More</button>
+                                    </div><!--end modal-footer-->
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>User Role</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mr.Alwin</td>
+                                <td>aba@email.com</td>
+                                <td>Employee</td>
+                                <td>Active</td>
+                                <td>
+                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><!--end /table-->
+                </div><!--end /tableresponsive-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
+<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
+<script>
+    tinymce.init({
+      selector: 'textarea#txtlead'
+    });
+    tinymce.init({
+      selector: 'textarea#txtedittemplate'
+    });
+</script>

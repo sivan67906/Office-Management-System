@@ -1,0 +1,324 @@
+﻿@section Styles {
+	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<form action="" method="post" id="custom-step">
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane active show" id="tbOfferLetter" role="tabpanel" aria-labelledby="#tbOfferLetter-tab">
+							<div class="card">
+								<div class="card-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h4 class="card-title">Offer Letter</h4>
+										</div><!--end col-->
+										<div class="col-auto">
+											<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewJobOfferDetails-modal-lg">Add Offer Details</button>
+										</div><!--end col-->
+									</div>  <!--end row-->
+								</div><!--end card-header-->
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table mb-0">
+											<thead class="thead-light">
+												<tr>
+													<th>#</th>
+													<th>Job</th>
+													<th>Job Applicant</th>
+													<th>Added By</th>
+													<th>Offer Expire On</th>
+													<th>Expected Joining Data</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr><!--end tr-->
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Job 1</td>
+													<td>John</td>
+													<td>Doel</td>
+													<td>2024-12-01</td>
+													<td>2024-11-30</td>
+													<td>
+														<select id="sltCheck" class="form-select" aria-label="">
+															<option value="1" selected=""> Open </option>
+															<option value="2"> Closed </option>
+														</select>
+													</td>
+													<td>
+														<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+														<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													</td>
+												</tr><!--end tr-->
+											</tbody>
+										</table>
+									</div>
+								</div><!--end card-body-->
+							</div><!--end card-->
+						</div>
+						<div id="mdlNewJobOfferDetails" class="modal fade bs-addNewJobOfferDetails-modal-lg" tabindex="" role="dialog" aria-labelledby="myOJDModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title mt-0" id="myOJDModalLabel">Add Job Offer Detials</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div class="row mt-4">
+											<div class="col-lg-3">Jobs <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Job Applicant <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Offer Expire On <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Expected Joining Date <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="0" selected="selected">--</option>
+																<option value="">Job 1</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="0" selected="selected">--</option>
+																<option value="">Job 1</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<input class="form-control mb-3 " type="text" name="foo">
+											</div>
+											<div class="col-lg-3">
+												<input class="form-control mb-3 " type="text" name="foo1">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Salary <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Rate <span class="text-danger">*</span></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required=""></div>
+											<div class="col-lg-3" id="divJobOfferRate">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option value="0" selected="selected">--</option>
+													<option value="1">USD ($)</option>
+												</select>
+											</div>
+											<div class="col-lg-3">
+												<input class="form-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Signature Required</label>
+											</div>
+											<div class="col-lg-3">
+												<input class="form-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Add Salary Structure</label>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-12">
+												<h4>Salary Structure</h4>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Select Salary Components</div>
+											<div class="col-lg-3">Annual CTC <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Basic Salary <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Basic Value Type <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="0" selected="selected">--</option>
+																<option value="">Skils 1</option>
+																<option value="">Skills 2</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required=""></div>
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required=""></div>
+											<div class="col-lg-3">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option value="1" selected="selected">Fixed</option>
+													<option value="2">CTC Present</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">
+												<h5>Salary Component</h5>
+											</div>
+											<div class="col-lg-3"><h5>Calculation Type</h5></div>
+											<div class="col-lg-3"><h5>Monthly Amount</h5></div>
+											<div class="col-lg-3"><h5>Annual Amount</h5></div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12">
+												<h4>Earnings</h4>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<label>Basic Salary</label>
+											</div>
+											<div class="col-lg-3">
+												<label>--</label>
+											</div>
+											<div class="col-lg-3">
+												<input disabled="disabled" type="text" placeholder="" class="form-control" id="" required="" value="$0.00">
+											</div>
+											<div class="col-lg-3">
+												<input disabled="disabled" type="text" placeholder="" class="form-control" id="" required="" value="$0.00">
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<label>
+													Fixed Allowance
+													(Annual CTC - Sum of all other components)
+												</label>
+											</div>
+											<div class="col-lg-3">
+												<label>Fixed Allowance</label>
+											</div>
+											<div class="col-lg-3">
+												<label>$0.00</label>
+											</div>
+											<div class="col-lg-3">
+												<label>$0.00</label>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<h4>Gross Salary</h4>
+											</div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3">
+												<h4>$0.00</h4>
+											</div>
+											<div class="col-lg-3">
+												<h4>$0.00</h4>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-lg-12">
+												<h5>Add Files</h5>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="card-body">
+													<div class="d-grid">
+														<input type="file" id="input-file" name="input-file" accept="image/*" onchange="" hidden="">
+														<label class="btn-upload btn btn-primary" for="input-file">Add Files </label>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+											</div>
+										</div>
+										<button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+							</div><!-- /.modal -->
+						</div>
+					</div>
+				</form>
+				<input name="__RequestVerificationToken" type="hidden" value="CfDJ8Evbwb0hAAtIldBGmVZRcEHYSvmgSiYd1-m4dPylj5Q7405tWn1iIPRi8ZDevaPi5T1Znwyp70aG8Znoyy74dJIauTtatq9iTtpEFkKT_rWOWpUEjUvTxpapgAq-0lTxcqo9ywKNOfPcAIXpaiJM8n4">
+				<!--end form-->
+				<div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex="" aria-labelledby="myCModalLabel" style="display: none;" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+							</div>
+							<div class="modal-body">
+								<div class="row mt-3 mb-2">
+									<div class="col-lg-12">Select Company</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<select class="form-select" id="sltChooseCompany">
+											<option value="0" selected="">Select Company</option>
+											<option value="1">Company 1</option>
+											<option value="2">Company 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-lg-8"></div>
+									<div class="col-lg-4 text-end">
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+									</div>
+								</div>
+
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div>
+			</div>
+			<!--end card-body-->
+		</div>
+		<!--end card-->
+	</div>
+	<!--end col-->
+</div>
+<!--end row-->
+@section Scripts {
+	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+	<script src="~/matrica/assets/js/moment.js"></script>
+	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+	<script>
+		$(window).on('load', function() {
+			$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
+			$('#mdlSelectCompany').modal('show');
+		});
+	</script>
+}

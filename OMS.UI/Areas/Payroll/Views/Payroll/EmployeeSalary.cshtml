@@ -1,0 +1,434 @@
+﻿@section Styles {
+    <link href="~/matrica/assets/css/main.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+	<div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h4 class="card-title">Employee Salary</h4>
+                </div><!--end col-->
+        </div><!--end card-header-->
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table mb-0">
+					<thead class="thead-light">
+						<tr>
+							<th>#</th>
+							<th>Name</th>
+							<th>Employee Salary Cycle</th>
+							<th>Salary Group</th>
+							<th>Allow Payroll Generate</th>
+							<th>Action</th>
+						</tr><!--end tr-->
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>John</td>
+							<td>
+								<select id="" class="form-select" aria-label="Default select example">
+									<option selected="" value="1">Monthly</option>
+									<option value="2">Weekly</option>
+									<option value="3">Bi-Weekly</option>
+									<option value="4">Semi-Monthly</option>
+								</select>
+							</td>
+							<td>IT</td>
+							<td>
+                                <select id="" class="form-select" aria-label="Default select example">
+                                    <option selected="" value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+							</td>
+							<td>
+                                <a href="#" data-bs-toggle="modal" 
+                                data-animation="bounce" data-bs-target=".bs-addNewSalary-modal-lg"><i class="fa fa-plus"></i></a>
+							</td>
+						</tr><!--end tr-->
+					</tbody>
+				</table>
+			</div>
+		</div><!--end card-body-->
+
+
+            <div id="mdlNewSalary" class="modal fade bs-addNewSalary-modal-lg" tabindex="" role="dialog" aria-labelledby="myNSModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title mt-0" id="myNSModalLabel">Add New Salary</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <label class="f-14 text-dark-grey mb-12 my-3" data-label="true" for="">
+                                            Annual CTC
+                                            <sup class="f-14 mr-1">*</sup>
+
+                                        </label>
+
+                                        <p class="f-11 text-grey">(Cost to company value for the whole year.)</p>
+
+                                        <input type="hidden" name="user_id" id="user_id" value="2435">
+                                        <input type="hidden" name="type" id="type" value="initial">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="input-group mt-2">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text f-14 bg-white-shade">$</span>
+                                            </div>
+
+                                            <input type="number" class="form-control height-35 f-14" name="annual_salary" onkeyup="changeClc()" id="annual_salary" value="">
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12">
+                                <div class="row border-bottom-grey">
+                                    <div class="col-md-3">
+
+                                        <h4 class="heading-h5 text-capitalize mb-0 py-4">
+                                            Salary Component
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4 class="heading-h5 text-capitalize mb-0 py-4">
+                                            Calculation Type
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4 class="heading-h5 text-capitalize mb-0 py-4">
+                                            Monthly Amount
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4 class="heading-h5 text-capitalize mb-0 py-4">
+                                            Annual Amount
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" id="components">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="heading-h3 text-capitalize mb-0 py-4">
+                                            Earnings
+                                        </h3>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row mb-2">
+                                            <div class="col-md-3">
+                                                <label class="f-14 text-dark-grey mb-12" data-label="" for="">
+                                                    Basic Salary
+
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="input-group">
+
+                                                    <input type="number" value="50" onmouseout="changeClc()" name="basic_salary" id="basic_value" class="form-control height-35 f-15 tttt" style="width:30%">
+
+                                                    <div class="dropdown bootstrap-select form-control select-picker">
+                                                        <select name="basic_value" id="basic-type" onchange="selectType(this.value)" class="form-control select-picker" data-size="8">
+                                                            <option value="fixed">Fixed</option>
+                                                            <option selected="" value="ctc_percent">% of CTC</option>
+                                                        </select><button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-10" aria-haspopup="listbox" aria-expanded="false" data-id="basic-type" title="% of CTC"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">% of CTC</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-10" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text f-14 bg-white-shade">$</span>
+                                                    </div>
+
+                                                    <input type="text" class="form-control height-35 f-14" name="basic_type" id="basic_type" value="0.00" readonly="">
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text f-14 bg-white-shade">$</span>
+                                                    </div>
+
+                                                    <input type="text" class="form-control height-35 f-14" name="slack_username" id="slack_username" value="0.00" readonly="">
+
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-1">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="f-14 text-dark-grey mb-12" data-label="" for="">
+                                                    EmplComponent
+
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="f-14 text-dark-grey mb-12" data-label="" for="">
+                                                    Variable
+
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="input-group">
+
+                                                    <span class="input-group-text f-14 bg-white-shade">$</span>
+
+                                                    <input type="text" class="form-control height-35 f-14 variable" name="earning_variable[13]" data-type-id="13" id="variable-13" value="120.00">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="input-group">
+
+                                                    <span class="input-group-text f-14 bg-white-shade">$</span>
+
+                                                    <input type="text" class="form-control height-35 f-14" name="" id="variableAnually13" value="1440" readonly="">
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row my-3">
+                                            <div class="col-md-3">
+                                                <label class="f-14 text-dark-grey mb-12" data-label="" for="">
+                                                    Fixed Allowance <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                                </label>
+                                                <p class="f-11 text-grey">(Annual CTC - Sum of all other components)</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="f-14 text-dark-grey mb-12" data-label="" for="">
+                                                    Fixed Allowance
+
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="f-14 text-dark-grey mb-12 text-danger monthlyFixedAllowance" data-label="" for="">
+                                                    $-120.00
+
+                                                </label>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <label class="f-14 text-dark-grey mb-12 text-danger yearFixedAllowance" data-label="" for="">
+                                                    $-1,440.00
+
+                                                </label>
+                                                <input type="hidden" name="fixedAllowance" value="-120">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 salary-total mt-2 rounded bg-light">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h3 class="heading-h3 mb-0 py-4">
+                                                    Cost To Company
+                                                </h3>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h3 class="heading-h3 mb-0 py-4">
+                                                    $0.00
+                                                </h3>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h3 class="heading-h3 mb-0 py-4">
+                                                    $0.00
+                                                </h3>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-12  mt-2 rounded bg-light">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4 class="heading-h5 mb-0 py-4">
+                                                    Total Deductions
+                                                </h4>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h5 class="heading-h5 mb-0 py-4">
+                                                    $0.00
+                                                </h5>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h5 class="heading-h5 mb-0 py-4">
+                                                    $0.00
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <script>
+                                    lastValue = 0;
+                                    yearlySalary =
+                                    $('.variable').on('keyup', function (e) {
+                                        var variable = $(this).val();
+                                        var id = $(this).data('type-id');
+                                        var type = $(this).data('type');
+
+                                        var yearly = (variable.replace(/[,]/g, '') * 12);
+                                        if(type == 'deduction'){
+                                            $('#variableAnuallyDeduction' + id).val(yearly);
+                                        }
+                                        else{
+                                            $('#variableAnually' + id).val(yearly);
+                                        }
+
+                                        salaryClaculation(variable.replace(/[,]/g, ''));
+                                    })
+
+                                    $('.select-picker').selectpicker();
+
+                                    $('.variable').on('keydown', e => {
+                                        lastValue = $(e.target).val();
+                                        lastValue = lastValue.replace(/[,]/g, '');
+                                    });
+
+                                    function salaryClaculation(variable) {
+
+                                        var fixed = $('.fixedAllowance').val();
+
+                                        if (fixed == '' || fixed == 'NaN' || fixed == undefined) {
+                                            fixed = 0;
+                                        }
+
+                                        if (lastValue == '' || lastValue == 'NaN' || lastValue == undefined) {
+                                            lastValue = 0;
+                                        }
+
+                                        if (variable == '' || variable == 'NaN' || variable == undefined) {
+                                            variable = 0;
+                                        }
+
+                                        var newFixed = 0;
+
+                                        if (lastValue > variable) {
+                                            newFixed = (lastValue - variable) + parseInt(fixed);
+                                        }
+
+                                        if (lastValue < variable) {
+                                            newFixed = (parseInt(fixed) - (variable - lastValue));
+                                        }
+
+                                        if (lastValue == variable) {
+                                            newFixed = parseInt(fixed);
+                                        }
+
+                                        if ((variable == '' || variable == 'NaN' || variable == undefined) && (lastValue == '' || lastValue == 'NaN' ||
+                                            lastValue == undefined)) {
+                                            newFixed = fixed;
+
+                                        }
+
+                                        $('.fixedAllowance').val(newFixed);
+
+                                        var yearlyvariableFix = newFixed * 12;
+
+                                        $('.monthlyFixedAllowance').html(number_format(newFixed));
+                                        //text-danger
+
+                                        if(newFixed < 0) {
+                                            $(".monthlyFixedAllowance").addClass("text-danger");
+                                            $(".yearFixedAllowance").addClass("text-danger");
+                                        }
+                                        else{
+                                            $(".monthlyFixedAllowance").removeClass("text-danger");
+                                            $(".yearFixedAllowance").removeClass("text-danger");
+                                        }
+
+
+                                        $('.yearFixedAllowance').html(number_format(yearlyvariableFix));
+                                    }
+
+                                    $("body").tooltip({
+                                        selector: '[data-toggle="tooltip"]'
+                                    })
+                                </script>
+                            </div>
+                        </div>
+
+                        <div class="w-100 d-block d-lg-flex d-md-flex justify-content-start pt-3">
+                                <button type="button" class="btn btn-primary mt-4 me-4"><b><i class="mdi mdi-check me-2"></i>Add</b></button>
+                                <button type="button" class="btn btn-danger mt-4"><b><i class="fa fa-close"></i>Cancel</b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex="" aria-labelledby="myCModalLabel" style="display: none;" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+					</div>
+					<div class="modal-body">
+						<div class="row mt-3 mb-2">
+							<div class="col-lg-12">Select Company</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<select class="form-select" id="sltChooseCompany">
+									<option value="0" selected="">Select Company</option>
+									<option value="1">Company 1</option>
+									<option value="2">Company 2</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-8"></div>
+							<div class="col-lg-4 text-end">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+							</div>
+						</div>
+
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+	</div><!--end card-->
+</div>
+</div>
+<!--end row-->
+@section Scripts {
+	<script>
+		$(window).on('load', function() {
+			$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
+			$('#mdlSelectCompany').modal('show');
+		});
+
+		function toggleTextbox(id) {
+			const divContainer = document.getElementById(id);
+			if (divContainer) {
+				// Toggle display of the specific textbox
+				divContainer.style.display = divContainer.style.display === 'none' ? 'block' : 'none';
+			}
+		}
+	</script>
+}

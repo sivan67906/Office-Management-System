@@ -1,0 +1,459 @@
+﻿@section Styles {
+	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<form action="" method="post" id="custom-step">
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane active show" id="tbEmployeeShift" role="tabpanel" aria-labelledby="#tbEmployeeShift-tab">
+							<div class="card">
+								<div class="card-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h4 class="card-title">Job List</h4>
+										</div><!--end col-->
+										<div class="col-auto">
+											<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewJob-modal-lg">Add New Job</button>
+										</div><!--end col-->
+									</div>  <!--end row-->
+								</div><!--end card-header-->
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table mb-0">
+											<thead class="thead-light">
+												<tr>
+													<th>#</th>
+													<th>Job Title</th>
+													<th>Recruiter</th>
+													<th>Start Date</th>
+													<th>End Date</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr><!--end tr-->
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Job 1</td>
+													<td>John</td>
+													<td>2024-11-01</td>
+													<td>2024-11-10</td>
+													<td>
+														<select id="sltCheck" class="form-select" aria-label="">
+															<option value="1" selected=""> Open </option>
+															<option value="2"> Closed </option>
+														</select>
+													</td>
+													<td>
+														<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+														<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													</td>
+												</tr><!--end tr-->
+											</tbody>
+										</table>
+									</div>
+								</div><!--end card-body-->
+							</div><!--end card-->
+						</div>
+						<div id="mdlNewJob" class="modal fade bs-addNewJob-modal-lg" tabindex="" role="dialog" aria-labelledby="myNJModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title mt-0" id="myNJModalLabel">Add New Job</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div class="row mt-4">
+											<div class="col-lg-3">Job Title <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Job Category <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Job Sub Category <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Department <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3"><input type="text" placeholder="Job Title" class="form-control" id="" required=""></div>
+											<div class="col-lg-3">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option selected="selected">--</option>
+													<option value="1">Category 1</option>
+													<option value="2">Category 2</option>
+												</select>
+											</div>
+											<div class="col-lg-3">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option selected="selected">--</option>
+													<option value="1">Sub Category 1</option>
+													<option value="2">Sub Category 2</option>
+												</select>
+											</div>
+											<div class="col-lg-3">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option selected="selected">--</option>
+													<option value="1">IT</option>
+													<option value="2">CSE</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Skills <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Location <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Interview Rounds <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Start Date <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">Skils 1</option>
+																<option value="">Skills 2</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">Location 1</option>
+																<option value="">Location 2</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">Technical Round</option>
+																<option value="">HR Round</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<input class="form-control mb-3 " type="text" name="foo">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div id="spnEndDate" style="display: block;" class="col-lg-3">End Date <span class="text-danger">*</span></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3">Total Openings <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Status <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3" id="divEndDate" style="display: block;">
+												<input class="form-control mb-3 foo1" id="fooDatePicker" type="text" name="foo1">
+											</div>
+											<div class="col-lg-3">
+												<input class="form-check-input form-check-input-custom me-2" type="checkbox" id="ipNoEndDate" onclick="toggleTextbox('divEndDate')">
+												<label class="form-check-label" for="ipNoEndDate">No End Date</label>
+											</div>
+											<div class="col-lg-3">
+												<input class="form-control" type="text" value="" id="">
+											</div>
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">Open</option>
+																<option value="">Closed</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Recruiter <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Job Type <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Work Experience <span class="text-danger">*</span></div>
+											<div class="col-lg-3">Currency <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">John</option>
+																<option value="">Doel</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">FullTime</option>
+																<option value="">PartTime</option>
+																<option value="">On Contract</option>
+																<option value="">Internship</option>
+																<option value="">Trainee</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">Fresher</option>
+																<option value="">0-1 Years</option>
+																<option value="">1-3 Years</option>
+																<option value="">3-5 Years</option>
+																<option value="">5+ Years</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option value="1" selected="selected">USD ($)</option>
+													<option value="2">MYR (RM)</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Show Pay By <span class="text-danger">*</span></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<div class="row">
+													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+														<div class="selectr-options-container">
+															<div class="selectr-input-container">
+																<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+																<button class="selectr-input-clear" type="button"></button>
+															</div>
+															<div class="selectr-notice"></div>
+															<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+														</div>
+														<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+															<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+																<option value="">Open</option>
+																<option value="">Closed</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Is this a remote Job?</label>
+											</div>
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Disclose salary on career site</label>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Job Description</div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-12 card-body">
+												<textarea id="txtAbtCompany">Hello, World!</textarea>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Required Fields <i class="fa fa-question-circle" aria-hidden="true"></i></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Photo</label>
+											</div>
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Resume</label>
+											</div>
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Date of Birth</label>
+											</div>
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Gender</label>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Additional Questions</div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+											<div class="col-lg-3"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">What is your aim?</label>
+											</div>
+											<div class="col-lg-3">
+												<input class="fform-check-input form-check-input-custom me-2" type="checkbox" id="">
+												<label class="form-check-label" for="">Question Sample2 ?</label>
+											</div>
+											<div class="col-lg-3">
+											</div>
+											<div class="col-lg-3">
+											</div>
+										</div>
+										<button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+							</div><!-- /.modal -->
+						</div>
+				</div></form>
+				<input name="__RequestVerificationToken" type="hidden" value="CfDJ8Evbwb0hAAtIldBGmVZRcEHYSvmgSiYd1-m4dPylj5Q7405tWn1iIPRi8ZDevaPi5T1Znwyp70aG8Znoyy74dJIauTtatq9iTtpEFkKT_rWOWpUEjUvTxpapgAq-0lTxcqo9ywKNOfPcAIXpaiJM8n4">
+				<!--end form-->
+				<div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex="" aria-labelledby="myCModalLabel" style="display: none;" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+							</div>
+							<div class="modal-body">
+								<div class="row mt-3 mb-2">
+									<div class="col-lg-12">Select Company</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<select class="form-select" id="sltChooseCompany">
+											<option value="0" selected="">Select Company</option>
+											<option value="1">Company 1</option>
+											<option value="2">Company 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="row mt-2">
+									<div class="col-lg-8"></div>
+									<div class="col-lg-4 text-end">
+										<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+									</div>
+								</div>
+
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div>
+			</div>
+			<!--end card-body-->
+		</div>
+		<!--end card-->
+	</div>
+	<!--end col-->
+</div>
+<!--end row-->
+@section Scripts {
+	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+	<script src="~/matrica/assets/js/moment.js"></script>
+	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+	<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
+	<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
+		<script>
+		$(window).on('load', function() {
+			$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
+			$('#mdlSelectCompany').modal('show');
+		});
+				$(function() {
+			$("body").delegate(".datepicker", "focusin", function(){
+				$(this).datepicker();
+			});
+		});
+				tinymce.init({
+		  selector: 'textarea#txtAbtCompany'
+		});
+
+		function toggleTextbox(id) {
+			const textbox = document.getElementById(id);
+			const divContainer = document.getElementById("spnEndDate");
+			if (textbox) {
+				// Toggle display of the specific textbox
+				textbox.style.display = textbox.style.display === 'block' ? 'none' : 'block';
+				divContainer.style.display = divContainer.style.display === 'block' ? 'none' : 'block';
+			}
+		}
+		//fooDatePicker
+	</script>
+}

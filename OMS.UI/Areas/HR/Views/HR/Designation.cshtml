@@ -1,0 +1,99 @@
+﻿@section Scripts {
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+}
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="card-title">Designation</h4>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BAddress"><i class="fas fa-plus"></i> Add Designation </button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="row">
+                <div class="row">
+                    <div class="col=md-12 text-md-end">
+                        <div class="modal fade" id="BAddress" tabindex="-1" aria-labelledby="BAddressLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="BAddressLabel">Add Designation</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                       Name  <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input type="text" class="form-control" id=""/>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Parent 
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1" selected="">---</option>
+                                                            <option value="value-2">Formal</option>
+                                                            <option value="value-3">Casual</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end card-body-->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                                        <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                    </div><!--end modal-footer-->
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" /></th>
+                                <th>Name</th>
+                                <th>Parent Designation</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Senior</td>
+                                <td>Super Senior</td>
+                                <td>
+                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><!--end /table-->
+                </div><!--end /tableresponsive-->
+            </div>
+        </div>
+    </div>
+</div>
+

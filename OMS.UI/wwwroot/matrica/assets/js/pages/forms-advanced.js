@@ -1,33 +1,82 @@
-document.querySelectorAll('.defaultSelectr').forEach(element => {
-    new Selectr(element);
-});
-document.querySelectorAll('.multiSelectr').forEach(element => {
-    new Selectr(element, {
-        multiple: !0
+if ($("select").hasClass("defaultSelectr")) {
+    document.querySelectorAll('.defaultSelectr').forEach(element => {
+        new Selectr(element);
     });
-});
-document.querySelectorAll('.taggableSelectr').forEach(element => {
-    new Selectr(element, {
-        taggable: !0,
-        tagSeperators: [",", "|"]
+}
+if ($("select").hasClass("multiSelectr")) {
+    document.querySelectorAll('.multiSelectr').forEach(element => {
+        new Selectr(element, {
+            multiple: !0
+        });
     });
-});
-//new Selectr("#default"), 
+}
+if ($("select").hasClass("taggableSelectr")) {
+    document.querySelectorAll('.taggableSelectr').forEach(element => {
+        new Selectr(element, {
+            taggable: !0,
+            tagSeperators: [",", "|"]
+        });
+    });
+}
+//new Selectr("#default"),
 //    new Selectr("#multiSelect", {
 //        multiple: !0
 //    }), new Selectr("#taggableSelect", {
 //        taggable: !0,
 //        tagSeperators: [",", "|"]
 //    });
-var hueb = new Huebee(".color-input", {
-    setBGColor: !0,
-    saturations: 3
-}),
-    elem = document.querySelector('input[name="foo"]'),
-    regExpMask = (new Datepicker(elem, {}), elem = document.getElementById("inline_calendar"), new Datepicker(elem, {}), elem = document.getElementById("DateRange"), new DateRangePicker(elem, {}), IMask(document.getElementById("regexp-mask"), {
-        mask: /^[1-6]\d{0,5}$/
-    })),
-    startPhoneMask = IMask(document.getElementById("start-phone-mask"), {
+//var hueb = new Huebee(".color-input", {
+//    setBGColor: !0,
+//    saturations: 3
+//}),
+var hueb;
+if ($("input").hasClass("color-input")) {
+    hueb = new Huebee(".color-input", {
+        setBGColor: !0,
+        saturations: 3
+    });
+}
+
+if ((document.querySelector('input[name="foo1"]') === null) != true)
+{
+    const elem1 = document.querySelector('input[name="foo1"]');
+    const datepicker = new Datepicker(elem1, {
+        autohide: true,
+        //todayHighlight: true,
+        //format: "yyyy-mm-dd",
+    });
+}
+
+//check foo1 named input textbox is there
+if ((document.querySelector('input[name="foo1"]') === null) == false) {
+    const elem1 = document.querySelector('input[name="foo1"]');
+    const datepicker = new Datepicker(elem1, {
+        autohide: true,
+        //todayHighlight: true,
+        //format: "yyyy-mm-dd",
+    });
+}
+
+//check foo named input textbox is there
+if ((document.querySelector('input[name="foo"]') === null) == false) {
+
+    var elem = document.querySelector('input[name="foo"]'),
+        regExpMask = (new Datepicker(elem, {}),
+            elem = document.getElementById("inline_calendar"),
+            new Datepicker(elem, {}), elem = document.getElementById("DateRange"),
+            new DateRangePicker(elem, {}), IMask(document.getElementById("regexp-mask"), {
+                mask: /^[1-6]\d{0,5}$/
+            }));
+    }
+//const elem1 = document.querySelector('input[name="foo1"]');
+//const datepicker = new Datepicker(elem1, {
+//    autohide: true,
+//    todayHighlight: true,
+//    format: "yyyy-mm-dd",
+//});
+
+    
+   var startPhoneMask = IMask(document.getElementById("start-phone-mask"), {
         mask: "+{7}(000)000-00-00"
     }).on("accept", function () {
         document.getElementById("start-phone-complete").style.display = "", document.getElementById("start-phone-unmasked").innerHTML = startPhoneMask.unmaskedValue

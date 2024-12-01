@@ -1,0 +1,281 @@
+﻿@section Styles {
+	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+
+	<style type="text/css">
+		.table td {
+			padding: 10px 0 0 5px !important;
+		}
+	</style>
+}
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane active show" id="tbEmployeeShift" role="tabpanel" aria-labelledby="#tbEmployeeShift-tab">
+						<div class="card">
+							<div class="card-header">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="card-title">Expense</h4>
+									</div><!--end col-->
+									<div class="col-auto">
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewExpense-modal-lg">Create Expense</button>
+									</div><!--end col-->
+								</div>  <!--end row-->
+							</div><!--end card-header-->
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead class="thead-light">
+											<tr>
+												<th>Bill</th>
+												<th>Item Name</th>
+												<th>Price</th>
+												<th>Employees</th>
+												<th>Purchased From</th>
+												<th>Purchase Date</th>
+												<th>Status</th>
+												<th>Expense Category</th>
+												<th>Action</th>
+											</tr><!--end tr-->
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Item 1</td>
+												<td>$5053</td>
+												<td>John</td>
+												<td>--</td>
+												<td>2024-11-01</td>
+												<td>
+													<select id="sltCheck" class="form-select" aria-label="">
+														<option value="1" selected=""> Pending </option>
+														<option value="2"> Approved </option>
+														<option value="2"> Rejected </option>
+													</select>
+												</td>
+												<td>--</td>
+												<td>
+													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+												</td>
+											</tr><!--end tr-->
+										</tbody>
+									</table>
+								</div>
+							</div><!--end card-body-->
+						</div><!--end card-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="mdlNewJob" class="modal fade bs-addNewExpense-modal-lg" tabindex="" role="dialog" aria-labelledby="myNEModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title mt-0" id="myNEModalLabel">Expense Details</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row mt-2">
+							<div class="col-lg-3">Item Name <span class="text-danger">*</span></div>
+							<div class="col-lg-3">Currency <span class="text-danger">*</span></div>
+							<div class="col-lg-3">Exchange Rate <span class="text-danger">*</span></div>
+							<div class="col-lg-3">Price <span class="text-danger">*</span></div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-3">
+								<input type="text" placeholder="e.g. Wireless Keyboard" class="form-control" id="" required="">
+							</div>
+							<div class="col-lg-3">
+								<select id="" class="form-select" aria-label="Default select example">
+									<option value="0" selected="selected">--</option>
+									<option value="1">Dollars - ($)</option>
+									<option value="2">Ringgit Malaysia - (RM)</option>
+								</select>
+							</div>
+							<div class="col-lg-3">
+								<input type="text" placeholder="" disabled="disabled" class="form-control" id="" required="">
+							</div>
+							<div class="col-lg-3">
+								<input type="text" placeholder="e.g. 10000" class="form-control" id="" required="">
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-4">Purchase Date <span class="text-danger">*</span></div>
+							<div class="col-lg-4">Employee <span class="text-danger">*</span></div>
+							<div class="col-lg-4">Project<span class="text-danger">*</span></div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-4">
+								<input class="form-control mb-3 " type="text" name="foo">
+							</div>
+							<div class="col-lg-4">
+								<div class="row">
+									<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+										<div class="selectr-options-container">
+											<div class="selectr-input-container">
+												<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+												<button class="selectr-input-clear" type="button"></button>
+											</div>
+											<div class="selectr-notice"></div>
+											<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+										</div>
+										<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+											<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+												<option value="">John</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="row">
+									<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+										<div class="selectr-options-container">
+											<div class="selectr-input-container">
+												<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+												<button class="selectr-input-clear" type="button"></button>
+											</div>
+											<div class="selectr-notice"></div>
+											<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+										</div>
+										<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+											<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+												<option value="">Project 1</option>
+												<option value="">Project 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-4">Expense Category <span class="text-danger">*</span></div>
+							<div class="col-lg-4">Purchased From <span class="text-danger">*</span></div>
+							<div class="col-lg-4">Bank Account<span class="text-danger">*</span></div>
+						</div>
+						<div class="row mt-2">
+							
+							<div class="col-lg-4">
+								<div class="row">
+									<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+										<div class="selectr-options-container">
+											<div class="selectr-input-container">
+												<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+												<button class="selectr-input-clear" type="button"></button>
+											</div>
+											<div class="selectr-notice"></div>
+											<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+										</div>
+										<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+											<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+												<option value="">Category 1</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<input type="text" placeholder="e.g. Acme Corporation" class="form-control" id="" required="">
+							</div>
+							<div class="col-lg-4">
+								<div class="row">
+									<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+										<div class="selectr-options-container">
+											<div class="selectr-input-container">
+												<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+												<button class="selectr-input-clear" type="button"></button>
+											</div>
+											<div class="selectr-notice"></div>
+											<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+										</div>
+										<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
+											<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
+												<option value="">6546545615</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row mt-4">
+							<div class="col-lg-3">Description</div>
+							<div class="col-lg-3"></div>
+							<div class="col-lg-3"></div>
+							<div class="col-lg-3"></div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-12">
+								<textarea class="form-control" rows="5" id="txtDescription"></textarea>
+							</div>
+						</div>
+						<div class="row mt-4">
+							<h5>Bill <i class="fa fa-question-circle" aria-hidden="true"></i></h5>
+						</div>
+						<div class="row mt-2">
+							<input type="file" id="input-file" name="input-file" accept="image/*" onchange="" hidden="">
+							<label class="btn-upload btn btn-primary" for="input-file">Upload </label>
+						</div>
+						<button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+		</div>
+		<div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex="" aria-labelledby="myCModalLabel" style="display: none;" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+					</div>
+					<div class="modal-body">
+						<div class="row mt-3 mb-2">
+							<div class="col-lg-12">Select Company</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<select class="form-select" id="sltChooseCompany">
+									<option value="0" selected="">Select Company</option>
+									<option value="1">Company 1</option>
+									<option value="2">Company 2</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-lg-8"></div>
+							<div class="col-lg-4 text-end">
+								<button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+							</div>
+						</div>
+
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+	</div>
+	<!--end form-->
+</div>
+
+<!--end col-->
+@section Scripts {
+	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+	<script src="~/matrica/assets/js/moment.js"></script>
+	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+	<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
+	<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
+	<script>
+		$(window).on('load', function() {
+			$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
+			$('#mdlSelectCompany').modal('show');
+		});
+		tinymce.init({
+		  selector: 'textarea#txtDescription'
+		});
+	</script>
+}
