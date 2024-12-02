@@ -2,6 +2,7 @@
 
 namespace OMS.UI.Areas.NoticeBoard.Controllers
 {
+    [Area("NoticeBoard")]
     public class NoticeBoardController : Controller
     {
         public IActionResult Index()
