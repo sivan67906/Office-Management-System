@@ -55,7 +55,7 @@
 										<div class="col-lg-12" id="divTblSkillOuter">
 											<div class="row">
 												<div class="col-lg-12" id="divSkillInnerTable">
-													<table id="SkillTable" class="">
+													<table id="SkillTable" style="width: 100%;">
 														<thead style="display: -webkit-box;">
 															<tr class="">
 																<th class="col-form-label" style="font-weight: normal !important;">Skill <span class="text-danger">*</span></th>
@@ -70,7 +70,7 @@
 																		<input class="form-control" type="text" value="" id="txtSkill-@i">
 																	</td>
 																	<td>
-																		<button id="btnadd-@i" type="button" class="btn btn-sm btn-primary ml-1 visible" onclick="AddItem(this)">Add More</button>
+																		<button id="btnadd-@i" type="button" class="btn btn-sm btn-primary visible" onclick="AddItem(this)">Add More</button>
 																		<button id="btnremove-@i" type="button" class="btn btn-sm btn-danger invisible" onclick="DeleteItem(this)">Delete</button>
 																	</td>
 																</tr>
@@ -84,8 +84,7 @@
 										<div class="row mt-2">
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
-												<button type="button" class="btn btn-sm btn-de-primary">Save</button>
-												<button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Cancel</button>
+												<button type="button" class="btn btn-primary mt-2"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
 											</div>
 										</div>
 									</div>

@@ -46,12 +46,7 @@
 												<td>5000</td>
 												<td>2024-11-01</td>
 												<td>Yes</td>
-												<td>
-													<select id="sltCheck" class="form-select" aria-label="">
-														<option value="1" selected=""> Open </option>
-														<option value="2"> Closed </option>
-													</select>
-												</td>
+												<td>Open</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
@@ -74,7 +69,7 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="row mt-4">
+						<div class="row mt-2">
 							<div class="col-lg-4">Estimate Number</div>
 							<div class="col-lg-4">Valid Till <span class="text-danger">*</span></div>
 							<div class="col-lg-4">Currency</div>
@@ -140,7 +135,7 @@
 								</div>
 							</div> *@
 						</div>
-						<div class="row mt-4">
+						<div class="row mt-2">
 							<div class="col-lg-4">Client <span class="text-danger">*</span></div>
 							<div class="col-lg-4">Calculate Tax</div>
 							<div class="col-lg-4"></div>
@@ -298,18 +293,14 @@
 																	<table width="100%" class="mw-250">
 																		<tbody>
 																			<tr>
-																				<td width="70%" class="c-inv-sub-padding">
+																				<td width="50%" class="c-inv-sub-padding">
 																					<input type="number" min="0" name="discount_value" class="f-14 border-0 w-100 text-right discount_value" placeholder="0" value="0" autocomplete="off">
 																				</td>
-																				<td width="30%" align="left" class="c-inv-sub-padding">
-																					<div class="select-others select-tax height-35 rounded border-0">
-																						<div class="dropdown bootstrap-select form-control select-picker">
-																							<select id="" class="form-select" aria-label="Default select example">
-																								<option value="1" selected="selected">%</option>
-																								<option value="2">Amount</option>
-																							</select>
-																						</div>
-																					</div>
+																				<td width="50%" align="left" class="c-inv-sub-padding">
+																					<select id="" class="form-select" aria-label="Default select example">
+																						<option value="1" selected="selected">%</option>
+																						<option value="2">Amount</option>
+																					</select>
 																				</td>
 																			</tr>
 																		</tbody>
@@ -362,7 +353,7 @@
 								Thank you for your business.
 							</div>
 						</div>
-						<button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+						<button type="button" class="btn btn-primary mt-2"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
