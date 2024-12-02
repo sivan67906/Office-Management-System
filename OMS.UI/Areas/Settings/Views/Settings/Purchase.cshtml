@@ -3,117 +3,84 @@
 <div class="row">
     <div class="col-12 col-lg-12">
         <div class="card">
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h4 class="card-title">Purchase Settings</h4>
+                    </div><!--end col-->
+                </div>  <!--end row-->
+            </div><!--end card-header-->
             <div class="card-body">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbPurchaseSettings" role="tab">Purchase Settings</a>
-                    </li>
-                    @* <li class="nav-item">
-                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbPurchaseNotfnSettings" role="tab">Purchase Notification Template</a>
-                    </li> *@
-                </ul>
-            </div><!--end card-body-->
-            <div class="card-body pt-0">
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <!--  Modal content for New Emergency Contact -->
-                    <div class="tab-pane active show" id="tbPurchaseSettings" role="tabpanel">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                        <h4 class="card-title">Purchase Settings</h4>
-                                    </div><!--end col-->
-                                </div>  <!--end row-->
-                            </div><!--end card-header-->
-                            <div class="card-body">
-                                <div class="row mb-2">
-                                    <div class="col-lg-3">Purchase Order Prefix <span class="text-danger">*</span></div>
-                                    <div class="col-lg-3">Purchase Order Number Seprator</div>
-                                    <div class="col-lg-3">Purchase Order Number Digits</div>
-                                    <div class="col-lg-3">Purchase Order Number Example</div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-lg-3"><input type="text" placeholder="Enter Order Prefix" class="form-control" name="purchaseOrderPrefix" id="txtPurchaseOrderPrefix" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Seperator" class="form-control" name="purchaseOrderNoSeperator" id="txtPurchaseOrderNoSeperator" /></div>
-                                    <div class="col-lg-3"><input type="number" placeholder="Order Number Digits" class="form-control" name="purchaseOrderNoDigits" id="txtPurchaseOrderNoDigits" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Example" class="form-control" name="purchaseOrderNoExample" id="txtPurchaseOrderNoExample" disabled="disabled" /></div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-lg-3">Bill Order Prefix <span class="text-danger">*</span></div>
-                                    <div class="col-lg-3">Bill Order Number Seprator</div>
-                                    <div class="col-lg-3">Bill Order Digits</div>
-                                    <div class="col-lg-3">Bill Order Example</div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-lg-3"><input type="text" placeholder="Enter Bill Order Prefix" class="form-control" name="billOrderNotePrefix" id="txtBillOrderPrefix" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Separator" class="form-control" name="billOrderNoSeperator" id="txtBillOrderNoSeperator" /></div>
-                                    <div class="col-lg-3"><input type="number" placeholder="Bill Order Digits" class="form-control" name="billOrderNoDigits" id="txtBillOrderNoDigits" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Example" class="form-control" name="billOrderNoExample" id="txtBillOrderNoExample" disabled="disabled" /></div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-lg-3">Vendor Credit Prefix <span class="text-danger">*</span></div>
-                                    <div class="col-lg-3">Vendor Credit Number Seprator</div>
-                                    <div class="col-lg-3">Vendor Credit Number Digits</div>
-                                    <div class="col-lg-3">Vendor Credit Number Example</div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Prefix" class="form-control" name="vendorCreditPrefix" id="txtVendorCreditPrefix" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Separator" class="form-control" name="vendorCreditNoSeperator" id="txtVendorCreditNoSeperator" /></div>
-                                    <div class="col-lg-3"><input type="number" placeholder="Vendor Credit Number Digits" class="form-control" name="vendorCreditNoDigits" id="txtVendorCreditNoDigits" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Example" class="form-control" name="vendorCreditNoExample" id="txtVendorCreditNoExample" disabled="disabled" /></div>
-                                </div>
-                                <button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
-                            </div>
-                        </div>
-                    </div>
-                   @*  <div class="tab-pane" id="tbPurchaseNotfnSettings" role="tabpanel">
-                        <div class="toast m-2 fade show" role="alert" aria-live="assertive" aria-atomic="true">
-                            <div class="toast-body">
-                                Hi! This functionality is under developing stage.
-                                <div class="mt-2 pt-2 border-top">
-                                    <button type="button" class="btn btn-de-primary btn-sm">Take action</button>
-                                    <button type="button" class="btn btn-de-secondary btn-sm" data-bs-dismiss="toast">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                        </div> *@
-                    </div>
-                <div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex=""
-                     role="dialog" aria-labelledby="myCModalLabel">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row mt-3 mb-2">
-                                    <div class="col-lg-12">Select Company</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <select class="form-select" id="sltChooseCompany">
-                                            <option value="0" selected="">Select Company</option>
-                                            <option value="1">Company 1</option>
-                                            <option value="2">Company 2</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-lg-8"></div>
-                                    <div class="col-lg-4 text-end">
-                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
+                <div class="row mb-2">
+                    <div class="col-lg-3">Purchase Order Prefix <span class="text-danger">*</span></div>
+                    <div class="col-lg-3">Purchase Order Number Seprator</div>
+                    <div class="col-lg-3">Purchase Order Number Digits</div>
+                    <div class="col-lg-3">Purchase Order Number Example</div>
                 </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3"><input type="text" placeholder="Enter Order Prefix" class="form-control" name="purchaseOrderPrefix" id="txtPurchaseOrderPrefix" /></div>
+                    <div class="col-lg-3"><input type="text" placeholder="Order Number Seperator" class="form-control" name="purchaseOrderNoSeperator" id="txtPurchaseOrderNoSeperator" /></div>
+                    <div class="col-lg-3"><input type="number" placeholder="Order Number Digits" class="form-control" name="purchaseOrderNoDigits" id="txtPurchaseOrderNoDigits" /></div>
+                    <div class="col-lg-3"><input type="text" placeholder="Order Number Example" class="form-control" name="purchaseOrderNoExample" id="txtPurchaseOrderNoExample" disabled="disabled" /></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-lg-3">Bill Order Prefix <span class="text-danger">*</span></div>
+                    <div class="col-lg-3">Bill Order Number Seprator</div>
+                    <div class="col-lg-3">Bill Order Digits</div>
+                    <div class="col-lg-3">Bill Order Example</div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3"><input type="text" placeholder="Enter Bill Order Prefix" class="form-control" name="billOrderNotePrefix" id="txtBillOrderPrefix" /></div>
+                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Separator" class="form-control" name="billOrderNoSeperator" id="txtBillOrderNoSeperator" /></div>
+                    <div class="col-lg-3"><input type="number" placeholder="Bill Order Digits" class="form-control" name="billOrderNoDigits" id="txtBillOrderNoDigits" /></div>
+                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Example" class="form-control" name="billOrderNoExample" id="txtBillOrderNoExample" disabled="disabled" /></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-lg-3">Vendor Credit Prefix <span class="text-danger">*</span></div>
+                    <div class="col-lg-3">Vendor Credit Number Seprator</div>
+                    <div class="col-lg-3">Vendor Credit Number Digits</div>
+                    <div class="col-lg-3">Vendor Credit Number Example</div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Prefix" class="form-control" name="vendorCreditPrefix" id="txtVendorCreditPrefix" /></div>
+                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Separator" class="form-control" name="vendorCreditNoSeperator" id="txtVendorCreditNoSeperator" /></div>
+                    <div class="col-lg-3"><input type="number" placeholder="Vendor Credit Number Digits" class="form-control" name="vendorCreditNoDigits" id="txtVendorCreditNoDigits" /></div>
+                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Example" class="form-control" name="vendorCreditNoExample" id="txtVendorCreditNoExample" disabled="disabled" /></div>
+                </div>
+                <button type="button" class="btn btn-primary"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+            </div>
+        </div>
+        <div id="mdlSelectCompany" class="modal fade bs-addCompany-modal-lg" tabindex=""
+             role="dialog" aria-labelledby="myCModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mt-0" id="myCModalLabel">Company Profile</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mt-3 mb-2">
+                            <div class="col-lg-12">Company Index</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <select class="form-select" id="sltChooseCompany">
+                                    <option selected="" value="">--</option>
+                                    <option value="1">Company 1</option>
+                                    <option value="2">Company 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-8"></div>
+                            <div class="col-lg-4 text-end">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><b><i class="mdi mdi-check me-2"></i>Ok</b></button>
+                            </div>
+                        </div>
 
-                </div><!--end card-body-->
-            </div><!--end card-->
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
         </div>
     </div>
 <!--end row-->

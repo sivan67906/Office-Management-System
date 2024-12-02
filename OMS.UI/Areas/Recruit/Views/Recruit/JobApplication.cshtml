@@ -17,7 +17,8 @@
 											<h4 class="card-title">Job Application</h4>
 										</div><!--end col-->
 										<div class="col-auto">
-											<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewJobApplication-modal-lg">Add Job Application</button>
+											<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" 
+											data-bs-target=".bs-addNewJobApplication-modal-lg">Add Job Application</button>
 										</div><!--end col-->
 									</div>  <!--end row-->
 								</div><!--end card-header-->
@@ -46,7 +47,7 @@
 													<td>Open</td>
 													<td>
 														<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-														<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+														<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 													</td>
 												</tr><!--end tr-->
 											</tbody>
@@ -59,11 +60,11 @@
 							<div class="modal-dialog modal-xl">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h5 class="modal-title mt-0" id="myNJModalLabel">Add Job Application</h5>
+										<h5 class="modal-title mt-0" id="myNJModalLabel">Job Application Setup</h5>
 										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 									</div>
 									<div class="modal-body">
-										<div class="row mt-4">
+										<div class="row mt-2">
 											<div class="col-lg-3">Jobs <span class="text-danger">*</span></div>
 											<div class="col-lg-3">Name <span class="text-danger">*</span></div>
 											<div class="col-lg-3">Email</div>
@@ -166,7 +167,7 @@
 											<div class="col-lg-3">Notice Period<span class="text-danger">*</span></div>
 										</div>
 										<div class="row mt-2">
-											<div class="col-lg-3"><input type="text" placeholder="expected ctc" class="form-control" id="" required=""></div>
+											<div class="col-lg-3"><input type="text" placeholder="Expected CTC" class="form-control" id="" required=""></div>
 											<div class="col-lg-3">
 												<div class="row">
 													<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
@@ -216,6 +217,7 @@
 										<div class="row mt-2">
 											<div class="col-lg-3">
 												<select id="" class="form-select" aria-label="Default select example">
+													<option selected="" value="">--</option>
 													<option value="1"> Applied</option>
 													<option value="2"> Phone Screen</option>
 													<option value="3">Interview</option>
@@ -247,7 +249,7 @@
 										<div class="row mt-2">
 											<div class="col-lg-12">
 											<div class="col-md-12 mb-3">
-												<textarea class="form-control" placeholder="cover letter" rows="5" id="txtAddress"></textarea>
+													<textarea class="form-control" placeholder="Cover Letter" rows="5" id="txtAddress"></textarea>
 											</div>
 												</div>
 										</div>
@@ -264,16 +266,16 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+								<h5 class="modal-title mt-0" id="myCModalLabel">Company Profile</h5>
 							</div>
 							<div class="modal-body">
 								<div class="row mt-3 mb-2">
-									<div class="col-lg-12">Select Company</div>
+									<div class="col-lg-12">Company Index</div>
 								</div>
 								<div class="row">
 									<div class="col-lg-12">
 										<select class="form-select" id="sltChooseCompany">
-											<option value="0" selected="">Select Company</option>
+											<option selected="" value="">--</option>
 											<option value="1">Company 1</option>
 											<option value="2">Company 2</option>
 										</select>

@@ -73,7 +73,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult EmployeeCreation()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Controll";
+            ViewData["pTitle"] = "Employee Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -85,7 +85,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Timesheet()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Controll";
+            ViewData["pTitle"] = "Employee Control";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

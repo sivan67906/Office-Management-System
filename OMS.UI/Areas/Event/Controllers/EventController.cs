@@ -6,10 +6,24 @@ public class EventController : Controller
 {
     public IActionResult Index()
     {
+        // Page Title
+        ViewData["pTitle"] = "Event Control";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Event";
+        ViewData["bParent"] = "Event";
+        ViewData["bChild"] = "Index";
         return View();
     }
     public IActionResult Event()
     {
+        // Page Title
+        ViewData["pTitle"] = "Event Control";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Event";
+        ViewData["bParent"] = "Event";
+        ViewData["bChild"] = "Event";
         return View();
     }
 }

@@ -3,9 +3,9 @@
 	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
 
 	<style type="text/css">
-		.table td {
+		/* .table td {
 			padding: 10px 0 0 5px !important;
-		}
+		} */
 	</style>
 }
 <div class="row">
@@ -21,7 +21,8 @@
 										<h4 class="card-title">Estimate</h4>
 									</div><!--end col-->
 									<div class="col-auto">
-										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewEstimate-modal-lg">Create Estimate</button>
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" 
+										data-animation="bounce" data-bs-target=".bs-addNewEstimate-modal-lg">Add Estimate</button>
 									</div><!--end col-->
 								</div>  <!--end row-->
 							</div><!--end card-header-->
@@ -49,7 +50,7 @@
 												<td>Open</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 										</tbody>
@@ -61,11 +62,11 @@
 				</div>
 			</div>
 		</div>
-		<div id="mdlNewJob" class="modal fade bs-addNewEstimate-modal-lg" tabindex="" role="dialog" aria-labelledby="myNEModalLabel" aria-hidden="true">
+		<div id="mdlNewEstimate" class="modal fade bs-addNewEstimate-modal-lg" tabindex="" role="dialog" aria-labelledby="myNEModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title mt-0" id="myNEModalLabel">Estimate Details</h5>
+						<h5 class="modal-title mt-0" id="myNEModalLabel">Estimate Setup</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
@@ -83,57 +84,18 @@
 									</div>
 									<input type="text" name="estimate_number" id="estimate_number" class="form-control height-35 f-15" value="1 " placeholder="0019" aria-label="0019" aria-describedby="basic-addon1" autocomplete="off">
 								</div>
-								@* <div class="row">
-									<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
-										<div class="selectr-options-container">
-											<div class="selectr-input-container">
-												<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
-												<button class="selectr-input-clear" type="button"></button>
-											</div>
-											<div class="selectr-notice"></div>
-											<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
-										</div>
-										<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
-											<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
-
-												<option value="">John</option>
-												<option value="">Doel</option>
-											</select>
-										</div>
-									</div>
-								</div> *@
 							</div>
 							<div class="col-lg-4">
 								<input class="form-control mb-3 " type="text" name="foo">
 							</div>
 							<div class="col-lg-4">
 								<select id="" class="form-select" aria-label="Default select example">
-
+									<option selected="" value="">--</option>
 									<option value="1">USD ($)</option>
 									<option value="2">MYR (RM)</option>
 								</select>
 							</div>
-							@* <div class="col-lg-3">
-								<div class="row">
-									<div class="selectr-container selectr-desktop multiple" style="width: 100%;">
-										<div class="selectr-options-container">
-											<div class="selectr-input-container">
-												<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
-												<button class="selectr-input-clear" type="button"></button>
-											</div>
-											<div class="selectr-notice"></div>
-											<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
-										</div>
-										<div class="selectr-container selectr-desktop multiple inverted" style="width: 100%;">
-											<select id="multiSelect" multiple="" tabindex="" class="selectr-hidden multiSelectr" aria-hidden="true">
-
-												<option value="">After Discount</option>
-												<option value="">Before Discount</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div> *@
+							
 						</div>
 						<div class="row mt-2">
 							<div class="col-lg-4">Client <span class="text-danger">*</span></div>
@@ -362,16 +324,16 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+						<h5 class="modal-title mt-0" id="myCModalLabel">Company Profile</h5>
 					</div>
 					<div class="modal-body">
 						<div class="row mt-3 mb-2">
-							<div class="col-lg-12">Select Company</div>
+							<div class="col-lg-12">Company Index</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-12">
 								<select class="form-select" id="sltChooseCompany">
-									<option value="0" selected="">Select Company</option>
+									<option selected="" value="">--</option>
 									<option value="1">Company 1</option>
 									<option value="2">Company 2</option>
 								</select>

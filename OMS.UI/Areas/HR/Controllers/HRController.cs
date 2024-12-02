@@ -10,12 +10,12 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Settings";
+        ViewData["pTitle"] = "HR Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";
         ViewData["bParent"] = "Employee";
-        ViewData["bChild"] = "Employee Page";
+        ViewData["bChild"] = "Employee";
 
         return View();
     }
@@ -23,12 +23,12 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Settings";
+        ViewData["pTitle"] = "HR Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";
         ViewData["bParent"] = "Leave";
-        ViewData["bChild"] = "Leave Page";
+        ViewData["bChild"] = "Leave";
 
         return View();
     }
@@ -37,12 +37,12 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Settings";
+        ViewData["pTitle"] = "HR Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";
         ViewData["bParent"] = "Designation";
-        ViewData["bChild"] = "Designation Page";
+        ViewData["bChild"] = "Designation";
 
         return View();
     }
@@ -51,12 +51,12 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Settings";
+        ViewData["pTitle"] = "HR Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";
         ViewData["bParent"] = "Department";
-        ViewData["bChild"] = "Department Page";
+        ViewData["bChild"] = "Department";
 
         return View();
     }

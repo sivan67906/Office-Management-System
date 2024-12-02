@@ -13,19 +13,19 @@ public class CRMController : Controller
         // Breadcrumb
         ViewData["bGParent"] = "CRM";
         ViewData["bParent"] = "Lead";
-        ViewData["bChild"] = "Lead Page";
+        ViewData["bChild"] = "Lead";
 
         return View();
     }
     public IActionResult Client()
     {
         // Page Title
-        ViewData["pTitle"] = "CRM Controll";
+        ViewData["pTitle"] = "CRM Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "CRM";
         ViewData["bParent"] = "Client";
-        ViewData["bChild"] = "Client Page";
+        ViewData["bChild"] = "Client";
 
         return View();
     }

@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 namespace OMS.UI.Areas.Settings.Controllers;
+
+
 
 [Area("Settings")]
 public class CompanyController : Controller
@@ -20,7 +24,7 @@ public class CompanyController : Controller
     public IActionResult Consumer()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -33,7 +37,7 @@ public class CompanyController : Controller
     public IActionResult Department()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -46,7 +50,7 @@ public class CompanyController : Controller
     public IActionResult Designation()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -59,7 +63,7 @@ public class CompanyController : Controller
     public IActionResult Client()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Controll";
+        ViewData["pTitle"] = "Company Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";

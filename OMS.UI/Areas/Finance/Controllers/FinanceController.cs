@@ -11,9 +11,9 @@ namespace OMS.UI.Areas.Finance.Controllers
             ViewData["pTitle"] = "Finance Control";
 
             // Breadcrumb
-            ViewData["bGParent"] = "Settings";
+            ViewData["bGParent"] = "Finance";
             ViewData["bParent"] = "Finance";
-            ViewData["bChild"] = "Finance Control";
+            ViewData["bChild"] = "Index";
 
             return View();
         }

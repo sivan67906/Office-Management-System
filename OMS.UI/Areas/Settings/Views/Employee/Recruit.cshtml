@@ -42,20 +42,20 @@
 							</div><!--end card-header-->
 							<div class="card-body">
 								<div class="row">
-									<div class="col-lg-4">
-										<div class="custom-control custom-checkbox mt-2 mb-2">
+									<div class="col-lg-4 mt-2">
+										<div class="custom-control custom-checkbox">
 											<input type="checkbox" class="form-check-input form-check-input-custom" id="reqShiftChange" data-parsley-multiple="" data-parsley-mincheck="2">
 											<label class="custom-control-label labelcustom" for="reqShiftChange">Enable Career Site <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 										</div>
 									</div>
-									<div class="col-lg-4">
-										<div class="custom-control custom-checkbox mt-4 mb-2">
+									<div class="col-lg-4 mt-2">
+										<div class="custom-control custom-checkbox">
 											<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInLocation" data-parsley-multiple="" data-parsley-mincheck="2">
 											<label class="custom-control-label labelcustom" for="clockInLocation">Google Recaptchas <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 										</div>
 									</div>
-									<div class="col-lg-4">
-										<div class="custom-control custom-checkbox mt-4 mb-2">
+									<div class="col-lg-4 mt-2">
+										<div class="custom-control custom-checkbox">
 											<input type="checkbox" class="form-check-input form-check-input-custom" id="clockInOutShift" data-parsley-multiple="" data-parsley-mincheck="2">
 											<label class="custom-control-label labelcustom" for="clockInOutShift">Job Alert <i class="fa fa-question-circle" aria-hidden="true"></i></label>
 										</div>
@@ -70,28 +70,19 @@
 									<div class="col-lg-4"><input type="text" placeholder="e.g. Acme Corporation" class="form-control" id="txtClientId"></div>
 									<div class="col-lg-4"><input type="text" placeholder="e.g. https://www.spacex.com/" class="form-control" id="txtClientId"></div>
 									<div class="col-lg-4">
-										<div class="card">
-											<div class="card-header">
-												<h4 class="card-title">Company Logo</h4>
-											</div><!--end card-header-->
-											<div class="card-body">
-												<div class="d-grid">
-													<p class="text-muted">Please click "Upload" Button to upload your Company logo</p>
-													<input type="file" id="input-file" name="input-file" accept="image/*" onchange="" hidden="">
-													<label class="btn-upload btn btn-primary" for="input-file">Upload </label>
-												</div>
-											</div><!--end card-body-->
-										</div>
+										<input type="file" id="input-file" name="input-file" accept="image/*" onchange="" hidden="">
+										<label class="btn-upload btn btn-primary" for="input-file">Upload </label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="row mt-4">
 									<div class="col-lg-12">About Company</div>
 								</div>
 								<div class="row">
 									<div class="col-lg-12">
-										<div class="card-body">
+										<textarea class="form-control" placeholder="" rows="5" id=""></textarea>
+										@* <div class="card-body">
 											<textarea id="txtAbtCompany">Hello, World!</textarea>
-										</div>
+										</div> *@
 									</div>
 								</div>
 								<div class="row mt-4">
@@ -101,9 +92,10 @@
 								</div>
 								<div class="row">
 									<div class="col-lg-12">
-										<div class="card-body">
+										<textarea class="form-control" placeholder="" rows="5" id=""></textarea>
+										@* <div class="card-body">
 											<textarea id="txtLegalTerms">Hello, World!</textarea>
-										</div>
+										</div> *@
 									</div>
 								</div>
 
@@ -198,10 +190,10 @@
 									</div>
 								</div>
 								<div id="divBackroundImage" style="display:none;">
-									<div class="row mt-2">
+									<div class="row mt-4">
 										<div class="col-lg-12">Background Image (Idle Size 1120 * 200 )</div>
 									</div>
-									<div class="row col-lg-12">
+									<div class="row col-lg-12 mt-2">
 										<div class="card">
 											<div class="card-body">
 												<div class="d-grid">
@@ -214,16 +206,16 @@
 									</div>
 								</div>
 								<div id="divBackroundColor" style="display:none;">
-									<div class="row mt-2">
+									<div class="row mt-4">
 										<div class="col-lg-12">
 											Background Color <span class="text-danger">*</span>
 										</div>
 									</div>
-									<div class="row col-lg-12">
+									<div class="row col-lg-12 mt-2">
 										<input id="" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);">
 									</div>
 								</div>
-								<button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
+								<button type="button" class="btn btn-primary mt-2"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
 							</div>
 						</div><!--end card-body-->
 					</div>
@@ -262,7 +254,7 @@
 												<td>Active</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 										</tbody>
@@ -275,7 +267,7 @@
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title mt-0" id="myNFSModalLabel">Add Footer Link</h5>
+									<h5 class="modal-title mt-0" id="myNFSModalLabel">Footer Link Setup</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
@@ -290,7 +282,8 @@
 											<div class="col-lg-4"><input class="form-control" type="text" value="" id="reminderAftrMns"></div>
 											<div class="col-lg-4">
 												<select id="sltCheck" class="form-select" aria-label="">
-													<option value="1" selected=""> Active </option>
+													<option selected="" value="">--</option>
+													<option value="1"> Active </option>
 													<option value="2"> Inactive </option>
 												</select>
 											</div>
@@ -302,7 +295,8 @@
 											<div class="col-lg-12">
 												<div class="row">
 													<div class="col-lg-12">
-															<textarea id="txtfooterDescription">Hello, World!</textarea>
+														@* <textarea id="txtfooterDescription">Hello, World!</textarea> *@
+														<textarea class="form-control" placeholder="" rows="5" id=""></textarea>
 													</div>
 												</div>
 											</div>
@@ -329,7 +323,7 @@
 									<div class="col-auto">
 										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
 												data-animation="bounce" data-bs-target=".bs-addNewRecruiter-modal-lg">
-											Add New Recruiter
+											Add Recruiter
 										</button>
 									</div><!--end col-->
 								</div>  <!--end row-->
@@ -350,7 +344,7 @@
 												<td>John</td>
 												<td>Enabled</td>
 												<td>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 										</tbody>
@@ -363,7 +357,7 @@
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title mt-0" id="myNRSModalLabel">Add New Recruiter</h5>
+									<h5 class="modal-title mt-0" id="myNRSModalLabel">Recruiter Setup</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
@@ -374,7 +368,8 @@
 										<div class="row">
 											<div class="col-lg-12">
 												<select id="sltNewRecruiter" class="form-select" aria-label="">
-													<option value="1" selected=""> John </option>
+													<option selected="" value="">--</option>
+													<option value="1"> John </option>
 													<option value="2"> Doel </option>
 												</select>
 											</div>
@@ -539,7 +534,7 @@
 												<td>yes</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 											<tr>
@@ -550,7 +545,7 @@
 												<td>yes</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 											<tr>
@@ -561,7 +556,7 @@
 												<td>yes</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 											<tr>
@@ -572,7 +567,7 @@
 												<td>yes</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 											<tr>
@@ -583,7 +578,7 @@
 												<td>yes</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 
@@ -597,19 +592,20 @@
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title mt-0" id="myNJASModalLabel">Add Status Column</h5>
+									<h5 class="modal-title mt-0" id="myNJASModalLabel">Status Setup</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
 									<form>
-										<div class="row mt-3 mb-2">
+										<div class="row mt-2">
 											<div class="col-lg-6">Category <span class="text-danger">*</span></div>
 											<div class="col-lg-6">Status <span class="text-danger">*</span></div>
 										</div>
-										<div class="row mt-3 mb-2">
+										<div class="row mt-2">
 											<div class="col-lg-6">
 												<select id="sltCategory" class="form-select" aria-label="">
-													<option value="1" selected=""> Applied </option>
+													<option selected="" value="">--</option>
+													<option value="1"> Applied </option>
 													<option value="2"> Shortlist </option>
 													<option value="3"> Interview </option>
 													<option value="4"> Hired </option>
@@ -619,17 +615,18 @@
 											</div>
 											<div class="col-lg-6"><input type="text" placeholder="" class="form-control" id=""></div>
 										</div>
-										<div class="row mt-3 mb-2">
+										<div class="row mt-4">
 											<div class="col-lg-6">Label Color <span class="text-danger">*</span></div>
 											<div class="col-lg-6">Position</div>
 										</div>
-										<div class="row mt-3 mb-2">
+										<div class="row mt-2">
 											<div class="col-lg-6">
 												<input id="" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);">
 											</div>
 											<div class="col-lg-6">
 												<select id="sltCategory" class="form-select" aria-label="">
-													<option value="1" selected=""> Before Applied </option>
+													<option selected="" value="">--</option>
+													<option value="1"> Before Applied </option>
 													<option value="2"> After Applied </option>
 													<option value="3"> After Phone Screen </option>
 													<option value="4"> After Interview </option>
@@ -644,7 +641,7 @@
 												<label class="custom-control-label labelcustom" for="firstSignLoc">Apply model actions</label>
 											</div>
 										</div>
-										<div class="row mt-2">
+										<div class="row">
 											<div class="col-lg-8"></div>
 											<div class="col-lg-4 text-end">
 												<button type="button" class="btn btn-primary"><b><i class="mdi mdi-check me-2"></i>Save</b></button>
@@ -679,7 +676,7 @@
 												<th>Question</th>
 												<th>Category</th>
 												<th>Type</th>
-												<th>is required</th>
+												<th>Is Required</th>
 												<th>Status</th>
 												<th>Action</th>
 											</tr><!--end tr-->
@@ -694,7 +691,7 @@
 												<td>Enabled</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 											<tr>
@@ -705,7 +702,7 @@
 												<td>Enabled</td>
 												<td>
 													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 										</tbody>
@@ -718,7 +715,7 @@
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title mt-0" id="myNCQModalLabel">Add Question</h5>
+									<h5 class="modal-title mt-0" id="myNCQModalLabel">Question Setup</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
@@ -730,7 +727,8 @@
 										<div class="row mb-2">
 											<div class="col-lg-6">
 												<select id="sltAddQnCategory" class="form-select" aria-label="">
-													<option value="1" selected=""> Job Application </option>
+													<option selected="" value="">--</option>
+													<option value="1"> Job Application </option>
 													<option value="2"> Job Offer </option>
 												</select>
 											</div>
@@ -738,12 +736,13 @@
 										</div>
 										<div class="row mt-3 mb-2">
 											<div class="col-lg-6">Status</div>
-											<div class="col-lg-6">is required</div>
+											<div class="col-lg-6">Is Required</div>
 										</div>
 										<div class="row mb-2">
 											<div class="col-lg-6">
 												<select id="sltAddQnStatus" class="form-select" aria-label="">
-													<option value="1" selected=""> Enable </option>
+													<option selected="" value="">--</option>
+													<option value="1"> Enable </option>
 													<option value="2"> Disable </option>
 												</select>
 											</div>
@@ -760,7 +759,8 @@
 										<div class="row mb-2">
 											<div class="col-lg-12">
 												<select id="sltAddQnType" class="form-select" aria-label="">
-													<option value="1" selected=""> text </option>
+													<option selected="" value="">--</option>
+													<option value="1"> text </option>
 													<option value="2"> number </option>
 													<option value="3"> password </option>
 													<option value="4"> textarea </option>
@@ -786,16 +786,16 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title mt-0" id="myCModalLabel">Select Company</h5>
+								<h5 class="modal-title mt-0" id="myCModalLabel">Company Profile</h5>
 							</div>
 							<div class="modal-body">
 								<div class="row mt-3 mb-2">
-									<div class="col-lg-12">Select Company</div>
+									<div class="col-lg-12">Company Index</div>
 								</div>
 								<div class="row">
 									<div class="col-lg-12">
 										<select class="form-select" id="sltChooseCompany">
-											<option value="0" selected="">Select Company</option>
+											<option selected="" value="">--</option>
 											<option value="1">Company 1</option>
 											<option value="2">Company 2</option>
 										</select>
@@ -819,9 +819,9 @@
 <!--end row-->
 @section Scripts {
 	<script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
-	<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
-	<script src="~/matrica/assets/js/pages/form-editor.init.js"></script> 
-	<script>
+	@* <script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
+	<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>  *@
+	@* <script>
 		tinymce.init({
 		  selector: 'textarea#txtAbtCompany'
 		});
@@ -831,7 +831,7 @@
 		tinymce.init({
 		  selector: 'textarea#txtfooterDescription'
 		});
-	</script>
+	</script> *@
 	<script type="text/javascript">
 		$(document).ready(function() {
 		  $("input[id$='ipBgImage']").click(function() {

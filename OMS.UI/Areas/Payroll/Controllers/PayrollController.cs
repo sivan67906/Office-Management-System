@@ -8,7 +8,7 @@ public class PayrollController : Controller
     public IActionResult Index()
     {
         // Page Title
-        ViewData["pTitle"] = "Payroll Controll";
+        ViewData["pTitle"] = "Payroll Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Payroll";
@@ -20,7 +20,7 @@ public class PayrollController : Controller
     public IActionResult Payroll()
     {
         // Page Title
-        ViewData["pTitle"] = "Payroll Controll";
+        ViewData["pTitle"] = "Payroll Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Payroll";
@@ -32,7 +32,7 @@ public class PayrollController : Controller
     public IActionResult EmployeeSalary()
     {
         // Page Title
-        ViewData["pTitle"] = "Recruit Controll";
+        ViewData["pTitle"] = "Recruit Control";
 
         // Breadcrumb
         ViewData["bGParent"] = "Payroll";

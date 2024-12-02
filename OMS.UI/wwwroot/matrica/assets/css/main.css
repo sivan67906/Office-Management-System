@@ -8995,37 +8995,6 @@ a.btn.disabled, fieldset:disabled a.btn {
     pointer-events: none
 }
 
-.btn-primary {
-    background-color: #1d82f5;
-    border-color: #1d82f5;
-    color: #fff
-}
-
-    .btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
-        background-color: #0a6fe2;
-        border-color: #0969d6;
-        color: #fff
-    }
-
-    .btn-primary.focus, .btn-primary:focus {
-        box-shadow: 0 0 0 .2rem rgba(63,149,247,.5)
-    }
-
-    .btn-primary.disabled, .btn-primary:disabled {
-        border-color: #1d82f5;
-        color: #fff
-    }
-
-    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-        background-color: #0969d6;
-        border-color: #0963c9;
-        color: #fff
-    }
-
-        .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
-            box-shadow: 0 0 0 .2rem rgba(63,149,247,.5)
-        }
-
 .btn-secondary {
     background-color: #6c757d;
     border-color: #6c757d;
@@ -22857,29 +22826,14 @@ button.disabled, button:disabled {
 }
 
 .btn-primary {
-    background-color: #1d82f5 !important;
-    border: 1px solid #1d82f5 !important;
+    background-color: #0b51b7 !important;
+    border: 1px solid #0b51b7 !important;
     color: #fff !important;
     padding: 9px 11px;
     position: relative;
     text-transform: capitalize
 }
 
-    .btn-primary:hover {
-        background-color: #000 !important;
-        border: 1px solid #000 !important;
-        color: #fff !important
-    }
-
-    .btn-primary.disabled, .btn-primary:disabled {
-        background-color: #1d82f5
-    }
-
-        .btn-primary.disabled:hover, .btn-primary:disabled:hover {
-            background-color: #1d82f5 !important;
-            border: 1px solid #1d82f5 !important;
-            cursor: not-allowed
-        }
 
 .btn-secondary {
     background-color: #fff !important;
@@ -26393,18 +26347,6 @@ body.dark-theme {
         background-color: #616e80 !important;
         border: 1px solid #616e80 !important
     }
-
-    body.dark-theme .btn-primary {
-        background-color: #fff !important;
-        border: 1px solid #fff !important;
-        color: #181c34 !important
-    }
-
-        body.dark-theme .btn-primary:hover {
-            background-color: #000 !important;
-            border: 1px solid #000 !important;
-            color: #fff !important
-        }
 
     body.dark-theme .btn-secondary {
         background-color: #29304c !important;

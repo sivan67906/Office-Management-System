@@ -15,6 +15,9 @@
 	<link href="~/matrica/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 	<link href="~/matrica/assets/css/app.min.css" rel="stylesheet" type="text/css" />
 	<link href="~/matrica/assets/css/app-font.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
+	<link href="~/matrica/assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+	<link href="~/matrica/assets/libs/animate.css/animate.min.css" rel="stylesheet" type="text/css">
 	@if (IsSectionDefined("Styles"))
 	{
 		@await RenderSectionAsync("Styles", required: true)
@@ -29,6 +32,13 @@
 		}
 		.fa17-custom{
 			font-size: 17px !important;
+		}
+		.swal2-icon .swal2-icon-content{
+			font-size: 40px !important;
+		}
+
+		.swal2-cancel{
+			margin-top: 0px !important;
 		}
 	</style>
 </head>
@@ -108,11 +118,11 @@
 								<i class="ti ti-clipboard menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
-						@* <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Ticket" data-bs-trigger="hover">
+						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Ticket" data-bs-trigger="hover">
 							<a href="#hrefTicket" id="ticket-tab" class="nav-link">
 								<i class="ti ti-headset menu-icon"></i>
 							</a><!--end nav-link-->
-						</li> *@
+						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings" data-bs-trigger="hover">
 							<a href="#hrefAvivSettings" id="settings-tab" class="nav-link">
 								<i class="mdi mdi-settings-outline menu-icon"></i>
@@ -179,94 +189,88 @@
 
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Company">Company Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Company">Company</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="BusinessAddress">Business Location</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Application">App Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Application">Application</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Profile" asp-action="Index">Profile Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Profile" asp-action="Index">Profile</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Notifications">Notification Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Notifications">Notification</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Currency">Currency Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Currency">Currency</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payment">Payment Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payment">Payment</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Finance">Finance Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Finance">Finance</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Contract">Contract Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Contract">Contract</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Tax">Tax Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Tax">Tax</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Ticket Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Ticket</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Project Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Project</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Attendance">Attendance Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Attendance">Attendance</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Leaves Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Leaves</a>
 						</li><!--end nav-item-->
-						<li class="nav-item">
+						@* <li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Custom Fields</a>
-						</li><!--end nav-item-->
+						</li><!--end nav-item--> *@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Roles & Permissions</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Message Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Message</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Support" asp-action="Lead">Lead Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Support" asp-action="Lead">Lead</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="TimeLog">Time Log Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="TimeLog">Time Log</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Project" asp-action="Task">Task Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Project" asp-action="Task">Task</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Security">Security Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Security">Security</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Theme Settings?</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Permissions">Module</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Permissions">Module Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Integration" asp-action="Calendar">Google Calendar</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Integration" asp-action="Calendar">Google Calendar Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Assets">Asset</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Custom Link Settings?</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payroll">Payroll</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Assets">Asset Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Purchase">Purchase</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payroll">Payroll Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Recruit">Recruit</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Purchase">Purchase Settings</a>
-						</li><!--end nav-item-->
-						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Recruit">Recruit Settings</a>
-						</li><!--end nav-item-->
-						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="SMS">SMS Settings</a>
+							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="SMS">SMS</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Planning">Billing</a>
@@ -288,9 +292,6 @@
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Project">Project</a>
-						</li><!--end nav-item-->
-						<li class="nav-item">
-							<a class="nav-link" asp-area="Settings" asp-controller="Project" asp-action="Task">Task</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Timesheet">Timesheet</a>
@@ -351,7 +352,7 @@
 							<a class="nav-link" asp-area="Payroll" asp-controller="Payroll" asp-action="Payroll">Payroll</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Payroll" asp-controller="Payroll" asp-action="EmployeeSalary">EmployeeSalary</a>
+							<a class="nav-link" asp-area="Payroll" asp-controller="Payroll" asp-action="EmployeeSalary">Employee Salary</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->
@@ -413,22 +414,22 @@
 							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Proposal">Proposal</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Estimates">Estimates</a>
+							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Estimates">Estimate</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Invoice">Invoices</a>
+							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Invoice">Invoice</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="EInvoice">E-Invoice</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Payments">Payments</a>
+							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Payments">Payment</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="CreditNote">Credit Note</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Expenses">Expenses</a>
+							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="Expenses">Expense</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Finance" asp-controller="Finance" asp-action="BankAccount">Bank Account</a>
@@ -453,13 +454,13 @@
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="PurchaseOrder">Purchase Order</a>
 						</li><!--end nav-item--> *@
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Bills">Bills</a>
+							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Bills">Bill</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="VendorPayments">Vendor Payments</a>
+							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="VendorPayments">Vendor Payment</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="VendorCredits">Vendor Credits</a>
+							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="VendorCredits">Vendor Credit</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Inventory">Inventory</a>
@@ -468,13 +469,13 @@
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Reports">Reports</a>
 						</li><!--end nav-item--> *@
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Assets">Assets</a>
+							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Assets">Asset</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Orders">Orders</a>
+							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Orders">Order</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Products">Products</a>
+							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Products">Product</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->
@@ -508,11 +509,11 @@
 					</div>
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" asp-area="NoticeBoard" asp-controller="NoticeBoard" asp-action="NoticeBoard">NoticeBoard</a>
+							<a class="nav-link" asp-area="NoticeBoard" asp-controller="NoticeBoard" asp-action="NoticeBoard">Notice Board</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->
-			@* 	<div id="hrefTicket" class="main-icon-menu-pane tab-pane" role="tabpanel"
+				<div id="hrefTicket" class="main-icon-menu-pane tab-pane" role="tabpanel"
 					 aria-labelledby="ticket-tab">
 					<div class="title-box">
 						<h6 class="menu-title">Ticket</h6>
@@ -522,7 +523,7 @@
 							<a class="nav-link" asp-area="Ticket" asp-controller="Ticket" asp-action="Tickets">Ticket</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
-				</div><!-- end Settings --> *@
+				</div><!-- end Settings -->
 
 
 				@*  <div id="UikitSettings" class="main-icon-menu-pane tab-pane" role="tabpanel"
@@ -699,6 +700,8 @@
 	<script src="~/matrica/assets/libs/feather-icons/feather.min.js"></script>
 	<!-- App js -->
 	<script src="~/matrica/assets/js/app.js"></script>
+	<script src="~/matrica/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+	<script src="~/matrica/assets/js/pages/sweet-alert.init.js"></script>
 	@if (IsSectionDefined("Scripts"))
 	{
 		@await RenderSectionAsync("Scripts", required: true)
