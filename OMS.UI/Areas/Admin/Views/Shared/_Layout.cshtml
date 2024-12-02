@@ -108,11 +108,11 @@
 								<i class="ti ti-clipboard menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
-						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Ticket" data-bs-trigger="hover">
+						@* <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Ticket" data-bs-trigger="hover">
 							<a href="#hrefTicket" id="ticket-tab" class="nav-link">
 								<i class="ti ti-headset menu-icon"></i>
 							</a><!--end nav-link-->
-						</li>
+						</li> *@
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings" data-bs-trigger="hover">
 							<a href="#hrefAvivSettings" id="settings-tab" class="nav-link">
 								<i class="mdi mdi-settings-outline menu-icon"></i>
@@ -302,6 +302,12 @@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="HR" asp-controller="HR" asp-action="Leave">Leave</a>
 						</li><!--end nav-item-->
+						@* <li class="nav-item">
+							<a class="nav-link" asp-area="HR" asp-controller="HR" asp-action="Attendance">Attendance</a>
+						</li><!--end nav-item-->
+						<li class="nav-item">
+							<a class="nav-link" asp-area="HR" asp-controller="HR" asp-action="Holiday">Holiday</a>
+						</li><!--end nav-item--> *@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="HR" asp-controller="HR" asp-action="Department">Department</a>
 						</li><!--end nav-item-->
@@ -341,6 +347,9 @@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Recruit" asp-controller="Recruit" asp-action="JobApplication">Job Application</a>
 						</li><!--end nav-item-->
+						@* <li class="nav-item">
+							<a class="nav-link" asp-area="Recruit" asp-controller="Recruit" asp-action="InterviewSchedule">Interview Schedule</a>
+						</li><!--end nav-item--> *@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Recruit" asp-controller="Recruit" asp-action="OfferLetter">Offer Letter</a>
 						</li><!--end nav-item-->
@@ -413,12 +422,12 @@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Vendor">Vendor</a>
 						</li><!--end nav-item-->
-						<li class="nav-item">
+					@* 	<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="PurchaseProducts">Purchase Products</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="PurchaseOrder">Purchase Order</a>
-						</li><!--end nav-item-->
+						</li><!--end nav-item--> *@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Bills">Bills</a>
 						</li><!--end nav-item-->
@@ -479,7 +488,7 @@
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->
-				<div id="hrefTicket" class="main-icon-menu-pane tab-pane" role="tabpanel"
+			@* 	<div id="hrefTicket" class="main-icon-menu-pane tab-pane" role="tabpanel"
 					 aria-labelledby="ticket-tab">
 					<div class="title-box">
 						<h6 class="menu-title">Ticket</h6>
@@ -489,8 +498,7 @@
 							<a class="nav-link" asp-area="Ticket" asp-controller="Ticket" asp-action="Tickets">Ticket</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
-				</div><!-- end Settings -->
-
+				</div><!-- end Settings --> *@
 
 
 				@*  <div id="UikitSettings" class="main-icon-menu-pane tab-pane" role="tabpanel"
