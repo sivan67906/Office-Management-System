@@ -436,12 +436,8 @@
 			$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
 			$('#mdlSelectCompany').modal('show');
 		});
-				$(function() {
-			$("body").delegate(".datepicker", "focusin", function(){
-				$(this).datepicker();
-			});
-		});
-				tinymce.init({
+		
+		tinymce.init({
 		  selector: 'textarea#txtAbtCompany'
 		});
 

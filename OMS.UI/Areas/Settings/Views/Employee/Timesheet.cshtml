@@ -1,4 +1,7 @@
-﻿<div class="row">
+﻿@section Styles {
+    <link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+}
+<div class="row">
     <div class="card">
         <div class="card-header">
             <div class="row">
@@ -71,7 +74,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="text" value="" id="example-date-input">
+                                                <input class="form-control mb-3 " type="text" name="foo">
 
                                             </div>
                                         </div>
@@ -82,7 +85,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="email" value="" id="example-time-input">               <!--example-datetime-local-input-->
+                                                <input class="form-control" type="time" value="" id="example-time-input">
 
                                             </div>
                                         </div>
@@ -93,7 +96,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="text" value="" id="example-date-input">
+                                                <input class="form-control mb-3 foo1" id="fooDatePicker" type="text" name="foo1">
 
                                             </div>
                                         </div>
@@ -104,7 +107,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="email" value="" id="example-time-input">
+                                                <input class="form-control" type="time" value="" id="example-time-input">
 
                                             </div>
                                         </div>
@@ -177,3 +180,8 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+}

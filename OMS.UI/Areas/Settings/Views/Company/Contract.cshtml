@@ -1,7 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@section Scripts {
+    <script type="text/javascript">
+        $('#prefix').on('change paste keyup', function () {
+            var prefix = $("#prefix").val();
+            var seperator = $("#separator").val();
+            var digits = $("#digits").val();
+            var n = "1"; if (digits == "" || digits == "0") { n = ""; }
+            digits = n.padStart(digits, '0');
+            var result = prefix + seperator + digits;
+            $("#output").val(result);
+        });
+        $('#separator').on('change paste keyup', function () {
+            var prefix = $("#prefix").val();
+            var seperator = $("#separator").val();
+            var digits = $("#digits").val();
+            var n = "1"; if (digits == "" || digits == "0") { n = ""; }
+            digits = n.padStart(digits, '0');
+            var result = prefix + seperator + digits;
+            $("#output").val(result);
+        });
+        $('#digits').on('change paste keyup', function () {
+            var prefix = $("#prefix").val();
+            var seperator = $("#separator").val();
+            var digits = $("#digits").val();
+            var n = "1"; if (digits == "" || digits == "0") { n = ""; }
+            digits = n.padStart(digits, '0');
+            var result = prefix + seperator + digits;
+            $("#output").val(result);
+        });
+    </script>
 }
 <div class="card">
     <div class="card-header">
@@ -17,7 +43,7 @@
                     </label>
 
 
-                    <input class="form-control" type="text" placeholder="" value="" id="prefix" oninput="updateExample()" >
+                    <input class="form-control" type="text" placeholder="" value="" id="prefix" >
                         
                     
                 </div>
@@ -29,7 +55,7 @@
                         
                     </label>
 
-                    <input class="form-control" type="text" placeholder="" value="" id="separator" oninput="updateExample()" >
+                    <input class="form-control" type="text" placeholder="" value="" id="separator" >
                    
                 </div>
             </div>
@@ -42,7 +68,7 @@
                     </label>
 
 
-                    <input class="form-control" type="number" placeholder="" value="" id="digits" oninput="updateExample()" >
+                    <input class="form-control" type="number" placeholder="" value="" id="digits" >
                         
                    
                 </div>
@@ -65,29 +91,3 @@
     </div>
 </div>
 
-
-
-
-<script>
-    function updateExample() {
-        // Get input values
-        const prefix = document.getElementById('prefix').value;
-        const separator = document.getElementById('separator').value;
-        const digits = parseInt(document.getElementById('digits').value, 10);
-
-        // Validate inputs
-        if (!prefix || !separator || isNaN(digits) || digits <= 0) {
-            document.getElementById('output').value = ''; // Clear output for invalid inputs
-            return;
-        }
-
-        // Generate the number part with leading zeros
-        const numberPart = '0'.repeat(digits - 1) + '1';
-
-        // Construct the example string
-        const example = `${prefix}${separator}${numberPart}`;
-
-        // Update the disabled textbox
-        document.getElementById('output').value = example;
-    }
-</script>

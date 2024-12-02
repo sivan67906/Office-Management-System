@@ -23,14 +23,6 @@
 	{
 		@await RenderSectionAsync("Styles", required: false)
 	}
-	<style type="text/css">
-		.fa15-custom{
-			font-size: 15px !important;
-		}
-		.fa17-custom{
-			font-size: 17px !important;
-		}
-	</style>
 </head>
 <body>
 
@@ -60,57 +52,57 @@
 
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="CRM" data-bs-trigger="hover">
 							<a href="#hrefCRM" id="crm-tab" class="nav-link">
-								<i class="mdi mdi-format-list-bulleted menu-icon"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="HR" data-bs-trigger="hover">
 							<a href="#hrefHR" id="hr-tab" class="nav-link">
-								<i class="fas fa-user-friends menu-icon fa17-custom"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Payroll" data-bs-trigger="hover">
 							<a href="#hrefPayroll" id="payroll-tab" class="nav-link">
-								<i class="fas fa-wallet menu-icon fa17-custom"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Recruit" data-bs-trigger="hover">
 							<a href="#hrefRecruit" id="recruit-tab" class="nav-link">
-								<i class="fas fa-user-check menu-icon fa17-custom"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Work" data-bs-trigger="hover">
 							<a href="#hrefWork" id="work-tab" class="nav-link">
-								<i class="fas fa-briefcase menu-icon fa17-custom"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Finance" data-bs-trigger="hover">
 							<a href="#hrefFinance" id="finance-tab" class="nav-link">
-								<i class="fas fa-dollar-sign menu-icon"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Inventory" data-bs-trigger="hover">
 							<a href="#hrefInventory" id="inventory-tab" class="nav-link">
-								<i class="fas fa-warehouse menu-icon fa15-custom"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Events" data-bs-trigger="hover">
 							<a href="#hrefEvents" id="event-tab" class="nav-link">
-								<i class="ti ti-calendar-event menu-icon"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Message" data-bs-trigger="hover">
 							<a href="#hrefMessage" id="message-tab" class="nav-link">
-								<i class="mdi mdi-message-text-outline menu-icon"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="NoticeBoard" data-bs-trigger="hover">
 							<a href="#hrefNoticeBoard" id="noticeboard-tab" class="nav-link">
-								<i class="ti ti-clipboard menu-icon"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Ticket" data-bs-trigger="hover">
 							<a href="#hrefTicket" id="ticket-tab" class="nav-link">
-								<i class="ti ti-headset menu-icon"></i>
+								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings" data-bs-trigger="hover">
@@ -431,9 +423,9 @@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Inventory">Inventory</a>
 						</li><!--end nav-item-->
-						@* <li class="nav-item">
+						<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Reports">Reports</a>
-						</li><!--end nav-item--> *@
+						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Inventory" asp-controller="Inventory" asp-action="Assets">Assets</a>
 						</li><!--end nav-item-->
@@ -486,7 +478,7 @@
 					</div>
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Ticket" asp-controller="Ticket" asp-action="Tickets">Ticket</a>
+							<a class="nav-link" asp-area="Ticket" asp-controller="Ticket" asp-action="Ticket">Ticket</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->

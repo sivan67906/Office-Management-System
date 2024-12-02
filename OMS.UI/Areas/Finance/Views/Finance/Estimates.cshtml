@@ -1,6 +1,5 @@
 ﻿@section Styles {
 	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css" />
-	<link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
 	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
 
 	<style type="text/css">
@@ -406,17 +405,11 @@
 @section Scripts {
 	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
 	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
-	<script src="~/matrica/assets/js/moment.js"></script>
 	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
 	<script>
 		$(window).on('load', function() {
 			$('#mdlSelectCompany').modal({backdrop: 'static', keyboard: false});
 			$('#mdlSelectCompany').modal('show');
 		});
-
-				tinymce.init({
-		  selector: 'textarea#txtDescription'
-		});
-
 	</script>
 }
