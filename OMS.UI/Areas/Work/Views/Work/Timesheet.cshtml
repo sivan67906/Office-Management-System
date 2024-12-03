@@ -28,8 +28,8 @@
                                                 <label for="example-text-input">
                                                     Project <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option value="" selected>Select Project</option>
+                                                <select class="form-select mt-2" aria-label="Default select example">
+                                                    <option value="" selected>--</option>
                                                     <option value="1">erp Project</option>
                                                 </select>
                                             </div>
@@ -40,8 +40,8 @@
                                                     Task
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option value="" selected>Select task</option>
+                                                <select class="form-select mt-2" aria-label="Default select example">
+                                                    <option value="" selected>--</option>
                                                     <option value="1">Dashboard</option>
                                                     <option value="2">Payment Cretendtial</option>
                                                     <option value="3">Settings</option>
@@ -54,8 +54,8 @@
                                                     Employee
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option value="" selected>Select Employee</option>
+                                                <select class="form-select mt-2" aria-label="Default select example">
+                                                    <option value="" selected></option>
                                                     <option value="1">Manoj</option>
                                                     <option value="2">Deva</option>
                                                     <option value="3">Ganesh</option>
@@ -71,7 +71,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="date" value="" id="example-date-input">
+                                                <input class="form-control mt-2" type="date" value="" id="example-date-input">
 
                                             </div>
                                         </div>
@@ -82,7 +82,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="time" value="" id="example-time-input">               <!--example-datetime-local-input-->
+                                                <input class="form-control mt-2" type="time" value="" id="example-time-input">               <!--example-datetime-local-input-->
 
                                             </div>
                                         </div>
@@ -93,7 +93,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="date" value="" id="example-date-input">
+                                                <input class="form-control mt-2" type="date" value="" id="example-date-input">
 
                                             </div>
                                         </div>
@@ -104,7 +104,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="time" value="" id="example-time-input">
+                                                <input class="form-control mt-2" type="time" value="" id="example-time-input">
 
                                             </div>
                                         </div>
@@ -116,7 +116,7 @@
                                                     Memo
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
-                                                <input class="form-control" type="text" value="" placeholder="e.g.Working on new logo"id="example-text-input">
+                                                <input class="form-control mt-2" type="text" value="" placeholder="e.g.Working on new logo" id="example-text-input">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 g-2">
@@ -131,8 +131,11 @@
                                     </div>
                                 </div><!--end card-body-->
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
-                                    <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                    <div class="row">
+                                        <div class="col-md-12 text-start">
+                                            <button type="button" class="btn btn-primary  "><i class="mdi mdi-check "></i>Save</button>
+                                        </div>
+                                    </div>
                                 </div><!--end modal-footer-->
                             </div><!--end modal-content-->
                         </div><!--end modal-dialog-->
@@ -168,7 +171,7 @@
                             <td>24hrs 00Mins</td>
                             <td>
                                 <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-                                <a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
                             </td>
                         </tr>
                     </tbody>

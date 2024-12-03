@@ -33,7 +33,7 @@
                                                     <label for="example-text-input">
                                                         Choose Member  <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
                                                         <div class="selectr-options-container">
                                                             <div class="selectr-input-container">
                                                                 <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
@@ -43,7 +43,7 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="" selected>Select Member</option>
+                                                            <option value="" selected>--</option>
                                                             <option value="1">App Admin</option>
                                                             <option value="2">EMP-1</option>
                                                             <option value="3">EMP-2</option>
@@ -59,7 +59,7 @@
                                                     <label for="example-text-input">
                                                         Leave Type <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
                                                         <div class="selectr-options-container">
                                                             <div class="selectr-input-container">
                                                                 <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
@@ -69,7 +69,7 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="value-1" selected="">---</option>
+                                                            <option value="value-1" selected="">--</option>
                                                             <option value="value-2">Formal</option>
                                                             <option value="value-3">Casual</option>
                                                         </select>
@@ -82,8 +82,8 @@
                                                         Status
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option value="" selected>Select Status</option>
+                                                    <select class="form-select mt-2" aria-label="Default select example">
+                                                        <option value="" selected>--</option>
                                                         <option value="1">Approved</option>
                                                         <option value="2">Pending</option>
                                                     </select>
@@ -121,7 +121,7 @@
                                                     <label for="example-text-input">
                                                         Date
                                                     </label>
-                                                    <input type="date" class="form-control" id="inputGroupFile01">
+                                                    <input type="date" class="form-control mt-2" id="inputGroupFile01">
                                                 </div>
                                             </div>
                                         </div>
@@ -132,7 +132,7 @@
                                                         Reason for absence
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <textarea class="form-control" id="" rows="4"></textarea>
+                                                    <textarea class="form-control mt-2" id="" rows="4"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,15 +143,17 @@
                                                         Add File
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <input type="file" class="form-control" id="inputGroupFile01">
+                                                    <input type="file" class="form-control mt-2" id="inputGroupFile01">
                                                 </div>
                                             </div>
                                         </div>
                                     </div><!--end card-body-->
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
-                                        <button class="btn btn-de-primary btn-sm" type="button">Save</button>
-                                        <button class="btn btn-de-primary btn-sm" type="button">Save & Add More</button>
+                                        <div class="row">
+                                            <div class="col-md-12 text-start">
+                                                <button type="button" class="btn btn-primary  "><i class="mdi mdi-check me-2"></i>Save</button>
+                                            </div>
+                                        </div>
                                     </div><!--end modal-footer-->
                                 </div><!--end modal-content-->
                             </div><!--end modal-dialog-->
@@ -179,7 +181,7 @@
                                 <td>Active</td>
                                 <td>
                                     <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                         </tbody>
