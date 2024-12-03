@@ -22,7 +22,7 @@
                     <div class="col=md-12 text-md-end">
 
                         <div class="modal fade" id="BAddress" tabindex="-1" aria-labelledby="BAddressLabel" aria-hidden="true" style="display: none;">
-                            <div class="modal-dialog modal-xl">
+                            <div class="modal-dialog ">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h6 class="modal-title m-0" id="BAddressLabel">Add Department</h6>
@@ -35,8 +35,8 @@
                                                     <label for="example-text-input">
                                                         Company Name <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option value="" selected>Select Company</option>
+                                                    <select class="form-select mt-2" aria-label="Default select example">
+                                                        <option value="" selected></option>
                                                         <option value="1">Meta</option>
                                                         <option value="2">Apple</option>
                                                         <option value="3">Microsoft</option>
@@ -50,7 +50,7 @@
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
 
-                                                    <input class="form-control" type="text" value="" id="example-text-input">
+                                                    <input class="form-control mt-2" type="text" value="" id="example-text-input">
 
                                                 </div>
                                             </div>
@@ -63,7 +63,7 @@
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
 
-                                                    <input class="form-control" type="text" value="" id="example-text-input">
+                                                    <input class="form-control mt-2" type="text" value="" id="example-text-input">
 
                                                 </div>
                                             </div>
@@ -74,7 +74,7 @@
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
 
-                                                    <input class="form-control" type="email" value="" id="example-text-input">
+                                                    <input class="form-control mt-2" type="email" value="" id="example-text-input">
 
                                                 </div>
                                             </div>
@@ -84,16 +84,20 @@
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                         Description
-                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                        
                                                     </label>
-                                                    <input class="form-control" type="text" value="" id="example-text-input">
+                                                    <textarea class="form-control mt-2" id="" rows="5" placeholder=""></textarea>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-start">
+                                                <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all "></i>Save</button>
                                             </div>
                                         </div>
                                     </div><!--end card-body-->
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
-                                        <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                        
                                     </div><!--end modal-footer-->
                                 </div><!--end modal-content-->
                             </div><!--end modal-dialog-->
@@ -123,7 +127,7 @@
                                 <td>Meta</td>                           
                                 <td>
                                     <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                         </tbody>

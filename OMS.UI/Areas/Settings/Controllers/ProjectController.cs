@@ -17,7 +17,18 @@ namespace OMS.UI.Areas.Settings.Controllers
 
             return View();
         }
+        public IActionResult Project()
+        {
+            // Page Title
+            ViewData["pTitle"] = "Project Control";
 
+            // Breadcrumb
+            ViewData["bGParent"] = "Settings";
+            ViewData["bParent"] = "Project";
+            ViewData["bChild"] = "Project";
+
+            return View();
+        }
         public IActionResult Task()
         {
             // Page Title

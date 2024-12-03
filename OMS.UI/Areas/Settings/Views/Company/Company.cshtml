@@ -30,81 +30,69 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-3 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input" >
                                                          Name
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                   
-                                                        <input class="form-control" type="text" value="" id="example-text-input">
+
+                                                    <input class="form-control mt-2" type="text" value="" id="example-text-input">
                                                     
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-3 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input" >
                                                          Email
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    
-                                                        <input class="form-control" type="email" value="" id="example-text-input">
+
+                                                    <input class="form-control mt-2" type="email" value="" id="example-text-input">
                                                     
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-3 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                         Phone
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
 
-                                                    <input class="form-control" type="tel" value="" id="example-text-input">
+                                                    <input class="form-control mt-2" type="tel" value="" id="example-text-input">
 
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-3 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
-                                                        Descrption
+                                                        Established Year
                                                     </label>
 
-                                                    <input class="form-control" type="text" value="" id="example-text-input">
+                                                    <input class="form-control mt-2" type="date" value="" id="example-text-input">
 
                                                 </div>
                                             </div>
                                         </div>
+                                       
+                                        
                                         <div class="row">
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                         Website
                                                     </label>
 
-                                                    <input class="form-control" type="url" value="" id="example-text-input">
+                                                    <input class="form-control mt-2" type="url" value="" id="example-text-input">
 
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
-                                                         Established Year
-                                                    </label>
-                                                    
-                                                        <input class="form-control" type="date" value="" id="example-text-input">
-                                                   
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input" >Business Type</label>
                                                     
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option value="" selected>Select Type</option>
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="" selected>--</option>
                                                             <option value="1">Personal Use of Freelance</option>
                                                             <option value="2">Business</option>
                                                             <option value="3">Non-Governmental Organization</option>
@@ -112,12 +100,12 @@
                                                    
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input" >Category</label>
                                                    
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option value="" selected="">Select Category</option>
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="" selected="">--</option>
                                                             <option value="1">Real Estate Management &amp; Development</option>
                                                             <option value="2">Equity Real Estate Investment Trusts</option>
                                                             <option value="3">Utilities</option>
@@ -145,10 +133,27 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+
+                                            <div class="col-lg-12 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Descrption
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" id="" rows="5"></textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 tsxt-start">
+                                                <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all "></i>Save</button>
+                                            </div>
+                                        </div>
                                     </div><!--end card-body-->
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
-                                        <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                        
                                     </div><!--end modal-footer-->
                                 </div><!--end modal-content-->
                             </div><!--end modal-dialog-->
@@ -168,8 +173,8 @@
                                 <th>Website</th>
                                 <th>Business Type</th>
                                 <th>Category</th>
-                                <th>EstablishedYear</th>
-                                <th>IsVerfied</th>
+                                <th>Established Year</th>
+                                <th>Verfied</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -188,7 +193,7 @@
                                 <td>true</td>
                                 <td>
                                     <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                         </tbody>
