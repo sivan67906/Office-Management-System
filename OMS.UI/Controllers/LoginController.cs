@@ -12,6 +12,10 @@ public class LoginController : Controller
     {
         return View();
     }
+    public IActionResult LoginConsumer()
+    {
+        return View();
+    }
     public IActionResult ForgotPassword()
     {
         return View();
