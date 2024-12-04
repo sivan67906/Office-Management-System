@@ -12,4 +12,12 @@ public class LoginController : Controller
     {
         return View();
     }
+    public IActionResult ForgotPassword()
+    {
+        return View();
+    }
+    public IActionResult RecoverPassword()
+    {
+        return View();
+    }
 }
