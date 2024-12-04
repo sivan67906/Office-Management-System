@@ -1,0 +1,168 @@
+﻿@section Styles {
+    <style type="text/css">
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    .badge {
+        font-weight: 400 !important;
+    }
+
+    .boldFont {
+        font-weight: 600 !important;
+    }
+
+    .form-control {
+        padding-left: 24px;
+        padding-right: 24px;
+        height: 58px;
+        background-color: rgb(247, 247, 247);
+        outline: none;
+        box-shadow: none !important;
+        border: none;
+        border-top: 1px solid #e7e7e7
+    }
+
+        .form-control:focus {
+            border: 1px solid #232323 !important
+        }
+
+    ::placeholder {
+        color: #adadad !important
+    }
+
+    #cardInput {
+        padding-right: 64px;
+    }
+
+    #cardImg {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        opacity: 0.2
+    }
+
+    #rightPanel {
+        background-color: aliceblue;
+    }
+
+    .borderDotted {
+        border-bottom: 1px dashed #d8d8d8;
+    }
+
+    #agreeTerms {
+        height: 20px;
+        width: 20px;
+    }
+
+    button.btn {
+        height: 48px;
+    }</style>
+    }
+<div class="container">
+    <div class="text-center my-5">
+        <h1>Check out</h1>
+        <div><small class="text-secondary">Step 3 of 3</small></div>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+            <div class="p-4 border-top">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <h2 class="p-0 m-0">Pay With Card</h2>
+                    </div>
+                    <div>
+                        <span class="badge text-dark border border-dark rounded-3">
+                            Powered By <span class="boldFont">XMPay</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="text-secondary mt-4 mb-2">Card Information</div>
+                <div>
+                    <form>
+                        <div class="mb-3 position-relative">
+                            <input type="text" class="form-control" placeholder="0000 0000 0000 0000" id="cardInput">
+                            <img src="/static_files/svgs/creditCard.svg" alt="" height="32" id="cardImg">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="MM / YY">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="CVC">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" placeholder="Name On card" class="form-control">
+                        </div>
+
+                        <div class="text-secondary mt-4 mb-2">Billing Address</div>
+                        <div class="row mb-3">
+                            <div class="col-lg-8 col-md-6 col-xs-12">
+                                <input type="text" class="form-control" placeholder="Street Address">
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-xs-12">
+                                <input type="text" class="form-control" placeholder="Zipcode">
+                            </div>
+                        </div>
+
+                        <div class="text-secondary mt-4 mb-2">Contact Info </div>
+                        <div class="mb-3">
+                            <input type="text" placeholder="Name" class="form-control">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Phone">
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="p-4" id="rightPanel">
+                <h6 class="text-uppercase"><small>Subscribe To</small></h6>
+                <h4 class="boldFont">Membership</h4>
+
+                <div class="my-4 d-flex justify-content-between align-items-center">
+                    <div>Subscription<br><span class="text-secondary"><small>Billed Yearly</small></span></div>
+                    <div class="w-100 mx-3 borderDotted"></div>
+                    <div>$10.00</div>
+                </div>
+                <div class="my-4 d-flex justify-content-between align-items-center">
+                    <div style="min-width:130px">Application Fee<br><span class="text-secondary"><small>1 time only</small></span></div>
+                    <div class="w-100 mx-3 borderDotted"></div>
+                    <div>$79.99</div>
+                </div>
+                <div class="my-4">
+                    <h6>Apply discount code</h6>
+                    <div class="my-3">
+                        <input type="text" class="bg-white form-control" placeholder="Code">
+                    </div>
+                </div>
+                <hr>
+                <div class="my-4 fs-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="">Total</div>
+                        <div class="text-primary">$89.99</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div><input type="checkbox" id="agreeTerms"></div>
+                    <div class="mx-4"><label for="agreeTerms"><small>I agree to the <a href="#">Terms and Conditions</a> and the <a href="#">Automatic Renewal Terms</a> above</small></label></div>
+                </div>
+                <div class="my-4">
+                    <a asp-area="" asp-controller="Login" asp-action="Login" class="btn btn-primary text-uppercase w-100"><span>Click to Pay</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

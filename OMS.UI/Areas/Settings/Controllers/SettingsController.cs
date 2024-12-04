@@ -9,7 +9,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Settings Control";
+            ViewData["pTitle"] = "Settings Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -22,7 +22,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Application()
         {
             // Page Title
-            ViewData["pTitle"] = "Application Control";
+            ViewData["pTitle"] = "Application Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -35,7 +35,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Purchase()
         {
             // Page Title
-            ViewData["pTitle"] = "Purchase Control";
+            ViewData["pTitle"] = "Purchase Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

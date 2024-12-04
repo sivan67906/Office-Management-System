@@ -7,7 +7,7 @@ public class EventController : Controller
     public IActionResult Index()
     {
         // Page Title
-        ViewData["pTitle"] = "Event Control";
+        ViewData["pTitle"] = "Event Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Event";
@@ -18,7 +18,7 @@ public class EventController : Controller
     public IActionResult Event()
     {
         // Page Title
-        ViewData["pTitle"] = "Event Control";
+        ViewData["pTitle"] = "Event Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Event";

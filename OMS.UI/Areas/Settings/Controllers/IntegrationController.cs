@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Integration Control";
+            ViewData["pTitle"] = "Integration Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -23,7 +23,7 @@ namespace OMS.UI.Areas.Settings.Controllers
             // Google Calendar
 
             // Page Title
-            ViewData["pTitle"] = "Integration Control";
+            ViewData["pTitle"] = "Integration Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

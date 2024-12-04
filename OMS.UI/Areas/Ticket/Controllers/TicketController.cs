@@ -12,7 +12,7 @@ namespace OMS.UI.Areas.Ticket.Controllers
         public IActionResult Tickets()
         {
             // Page Title
-            ViewData["pTitle"] = "Ticket Control";
+            ViewData["pTitle"] = "Ticket Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Ticket";

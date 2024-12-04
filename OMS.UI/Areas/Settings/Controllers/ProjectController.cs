@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Project Control";
+            ViewData["pTitle"] = "Project Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -20,7 +20,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Project()
         {
             // Page Title
-            ViewData["pTitle"] = "Project Control";
+            ViewData["pTitle"] = "Project Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -32,7 +32,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Task()
         {
             // Page Title
-            ViewData["pTitle"] = "Task Control";
+            ViewData["pTitle"] = "Task Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

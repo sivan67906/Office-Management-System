@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.NoticeBoard.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Notice Board Control";
+            ViewData["pTitle"] = "Notice Board Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Inventory";

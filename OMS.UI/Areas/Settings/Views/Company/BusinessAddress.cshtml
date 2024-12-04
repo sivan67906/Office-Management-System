@@ -7,26 +7,28 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h4 class="card-title">Business Location</h4>
                     </div>
                     <div class="col-lg-6 text-end">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BAddress"><i class="fas fa-plus"></i> Add Location</button>
+                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
+                                data-animation="bounce" data-bs-target="#BAddress">
+                             Add Location
+                        </button>
                     </div>
                 </div>
                 
-
             </div><!--end card-header-->
             <div class="card-body">
                 <div class="row">
-                    <div class="col=md-12 text-md-end">
+                    <div class="col=md-12 ">
                        
                         <div class="modal fade" id="BAddress" tabindex="-1" aria-labelledby="BAddressLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="BAddressLabel">Add Location</h6>
+                                        <h6 class="modal-title m-0" id="BAddressLabel">Business Location Setup</h6>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -366,22 +368,20 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-12 tsxt-start">
+                                            <div class="col-lg-12 text-start">
                                                 <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all "></i>Save</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-body-->
-                                    <div class="modal-footer">
-                                        
-                                    </div><!--end modal-footer-->
+                                    
                                 </div><!--end modal-content-->
                             </div><!--end modal-dialog-->
                         </div><!--end modal-->
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-striped mb-0">
-                        <thead>
+                    <table class="table mb-0">
+                        <thead class="thead-light">
                             <tr>
                                 <th>#</th>
                                 <th>Location</th>
@@ -395,14 +395,38 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>New York</td>
-                                <td>Delhi</td>
+                                <td>New Delhi</td>
+                                <td>124,Ninja Street</td>
                                 <td>India</td>
                                 <td>GST</td>
                                 <td>Yes</td>
                                 <td>
-                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Chennei</td>
+                                <td>457,OMR Road</td>
+                                <td>India</td>
+                                <td>Sales</td>
+                                <td>Yes</td>
+                                <td>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr> 
+                            <tr>
+                                <td>3</td>
+                                <td>Kolkata</td>
+                                <td>56,Hawra Bypass </td>
+                                <td>India</td>
+                                <td>Road</td>
+                                <td>Yes</td>
+                                <td>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                         </tbody>

@@ -20,7 +20,7 @@ public class CRMController : Controller
     public IActionResult Client()
     {
         // Page Title
-        ViewData["pTitle"] = "CRM Control";
+        ViewData["pTitle"] = "CRM Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "CRM";

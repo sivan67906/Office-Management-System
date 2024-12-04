@@ -4,9 +4,9 @@
 	<link href="~/matrica/assets/libs/vanillajs-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
 
 	<style type="text/css">
-		.table td {
+		/* .table td {
 			padding: 10px 0 0 5px !important;
-		}
+		} */
 	</style>
 }
 <div class="row">
@@ -19,7 +19,7 @@
 							<div class="card-header">
 								<div class="row align-items-center">
 									<div class="col">
-										<h4 class="card-title">Payment</h4>
+										<h4 class="card-title">Payment Index</h4>
 									</div><!--end col-->
 									<div class="col-auto">
 										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewPayment-modal-lg">Create Payment</button>
@@ -31,7 +31,7 @@
 									<table class="table mb-0">
 										<thead class="thead-light">
 											<tr>
-												<th>Code</th>
+												<th>Payment Code</th>
 												<th>Project</th>
 												<th>Invoice#</th>
 												<th>Client</th>
@@ -53,15 +53,10 @@
 												<td>5000</td>
 												<td>2024-11-01</td>
 												<td>Offline</td>
+												<td>Open</td>
 												<td>
-													<select id="sltCheck" class="form-select" aria-label="">
-														<option value="1" selected=""> Open </option>
-														<option value="2"> Closed </option>
-													</select>
-												</td>
-												<td>
-													<a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')"><i class="las la-trash-alt text-secondary font-16"></i></a>
+													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
 										</tbody>
@@ -204,10 +199,10 @@
 							<label class="btn-upload btn btn-primary" for="input-file">Upload </label>
 						</div>
 						<div class="row mt-4">
-							<div class="col-lg-12">Remark</div>
+							<div class="col-lg-12">Remarks</div>
 						</div>
 						<div class="row mt-2">
-							<textarea class="form-control" rows="5" id="txtRemark"></textarea>
+							<textarea placeholder="Enter Remarks" class="form-control" rows="5" id="txtRemark"></textarea>
 						</div>
 						<button type="button" class="btn btn-primary mt-4"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
 					</div><!-- /.modal-content -->
@@ -218,11 +213,11 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title mt-0" id="myCModalLabel">Company Profile</h5>
+						<h5 class="modal-title mt-0" id="myCModalLabel">Company</h5>
 					</div>
 					<div class="modal-body">
 						<div class="row mt-3 mb-2">
-							<div class="col-lg-12">Company Index</div>
+							<div class="col-lg-12">Select Company</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-12">

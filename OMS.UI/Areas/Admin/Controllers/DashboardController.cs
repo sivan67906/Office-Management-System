@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Admin.Controllers
         public IActionResult Index()
         {
             // Page Titles
-            ViewData["pTitle"] = "Settings Control";
+            ViewData["pTitle"] = "Settings Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

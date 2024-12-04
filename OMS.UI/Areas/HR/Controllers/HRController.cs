@@ -10,7 +10,7 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Control";
+        ViewData["pTitle"] = "HR Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";
@@ -23,7 +23,7 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Control";
+        ViewData["pTitle"] = "HR Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";
@@ -37,7 +37,7 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Control";
+        ViewData["pTitle"] = "HR Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";
@@ -51,7 +51,7 @@ public class HRController : Controller
     {
 
         // Page Title
-        ViewData["pTitle"] = "HR Control";
+        ViewData["pTitle"] = "HR Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "HR";

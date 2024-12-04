@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Support Control";
+            ViewData["pTitle"] = "Support Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -21,7 +21,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Ticket()
         {
             // Page Title
-            ViewData["pTitle"] = "Ticket Control";
+            ViewData["pTitle"] = "Ticket Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -34,7 +34,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Lead()
         {
             // Page Title
-            ViewData["pTitle"] = "Lead Control";
+            ViewData["pTitle"] = "Lead Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

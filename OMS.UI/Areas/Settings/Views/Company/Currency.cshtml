@@ -3,30 +3,33 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h4 class="card-title">Currency Settings</h4>
                     </div>
                     <div class="col-lg-6 text-end">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NCurrency"><i class="fas fa-plus"></i> Add Currency</button>
+                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
+                                data-animation="bounce" data-bs-target="#NCurrency">
+                             Add Currency
+                        </button>
                         
                     </div>
                 </div>
             </div><!--end card-header-->
             <div class="card-body">
                 <div class="row">
-                    <div class="col=md-12 text-md-end">
+                    <div class="col=md-12 ">
                        
                         <div class="modal fade" id="NCurrency" tabindex="-1" aria-labelledby="NCurrencyLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="NCurrencyLabel">Add New Currency</h6>
+                                        <h6 class="modal-title m-0" id="NCurrencyLabel">Currency Setup</h6>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="cname" >
                                                         Currency Name
@@ -48,14 +51,14 @@
                                                    
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="ccode">
                                                         Currency Code
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
 
-                                                    <input class="form-control" type="text" placeholder="e.g. USD" id="ccode">
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. USD" id="ccode">
 
                                                 </div>
                                             </div>
@@ -67,7 +70,7 @@
                                                     <label for="tax" >
                                                         Is Cryptocurrency
                                                     </label>
-                                                    <div class="col-sm-7 text-start mt-1">
+                                                    <div class="col-sm-7 text-start mt-2">
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="icc1" value="1">
                                                             <label class="form-check-label" for="icc1">Yes</label>
@@ -123,7 +126,7 @@
 
                                                     <select class="form-select mt-2" id="cposition" aria-label="Default select example">
 
-                                                            <option value="" selected></option>
+                                                            <option value="" selected>--</option>
                                                             <option value="1">Left</option>
                                                             <option value="2">Right</option>
                                                             <option value="3">Left with Space</option>
@@ -168,22 +171,20 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-12 tsxt-start">
+                                            <div class="col-lg-12 text-start mt-2">
                                                 <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all "></i>Save</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-body-->
-                                    <div class="modal-footer">
-                                        
-                                    </div><!--end modal-footer-->
+                                    
                                 </div><!--end modal-content-->
                             </div><!--end modal-dialog-->
                         </div><!--end modal-->
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-striped mb-0">
-                        <thead>
+                    <table class="table mb-0">
+                        <thead class="thead-light">
                             <tr>
                                 <th>Currency Name</th>
                                 <th>Currency Symbol</th>
@@ -199,23 +200,23 @@
                                 <td>$</td>
                                 <td>USD</td>
                                 <td>1</td>
-                                <td>$1,000.00</td>
+                                <td>$ 1,000.00</td>
 
                                 <td>
-                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Dollars </td>
-                                <td>$</td>
-                                <td>USD</td>
-                                <td>1</td>
-                                <td>$1,000.00</td>
+                                <td>Rupee </td>
+                                <td>₹</td>
+                                <td>IND</td>
+                                <td>24</td>
+                                <td>₹ 1,000.00</td>
 
                                 <td>
-                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                         </tbody>

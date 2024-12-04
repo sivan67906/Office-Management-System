@@ -8,7 +8,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult Index()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -20,7 +20,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult Proposal()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -33,7 +33,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult Estimates()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -45,7 +45,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult Invoice()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -57,7 +57,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult Payments()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -69,7 +69,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult CreditNote()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -81,7 +81,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult EInvoice()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -93,7 +93,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult Expenses()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
@@ -105,7 +105,7 @@ namespace OMS.UI.Areas.Finance.Controllers
         public IActionResult BankAccount()
         {
             // Page Title
-            ViewData["pTitle"] = "Finance Control";
+            ViewData["pTitle"] = "Finance Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Finance";
