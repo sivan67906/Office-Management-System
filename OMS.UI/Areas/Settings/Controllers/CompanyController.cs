@@ -28,8 +28,21 @@ public class CompanyController : Controller
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Consumer Settings";
-        ViewData["bChild"] = "Consumer Creation";
+        ViewData["bParent"] = "Consumer";
+        ViewData["bChild"] = "Create";
+
+        return View();
+    }
+
+    public IActionResult SearchConsumer() // Add
+    {
+        // Page Title
+        ViewData["pTitle"] = "Consumer Profile";
+
+        // Breadcrumb
+        ViewData["bGParent"] = "Settings";
+        ViewData["bParent"] = "SearchConsumer";
+        ViewData["bChild"] = "Filter";
 
         return View();
     }

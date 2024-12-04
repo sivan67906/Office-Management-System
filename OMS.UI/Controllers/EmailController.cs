@@ -1,20 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace OMS.UI.Controllers
+namespace OMS.UI.Controllers;
+
+public class EmailController : Controller
 {
-    public class EmailController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-        public IActionResult OTPVerify()
-        {
-            return View();
-        }
-        public IActionResult Verify()
-        {
-            return View();
-        }
+        return View();
+    }
+    public IActionResult OTPVerify()
+    {
+        return View();
+    }
+    public IActionResult Verify()
+    {
+        return View();
+    }
+    public IActionResult TwoFactorAuth()
+    {
+        return View();
     }
 }

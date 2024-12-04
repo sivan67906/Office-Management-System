@@ -8,7 +8,12 @@ public class PaymentController : Controller
     {
         return View();
     }
+    
     public IActionResult Payment()
+    {
+        return View();
+    }
+    public IActionResult PaymentSuccess()
     {
         return View();
     }

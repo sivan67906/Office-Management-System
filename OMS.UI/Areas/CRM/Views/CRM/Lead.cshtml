@@ -6,24 +6,27 @@
 <div class="row">
     <div class="card">
         <div class="card-header">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h4 class="card-title"></h4>
+                    <h4 class="card-title">Lead Details</h4>
                 </div>
                 <div class="col-lg-6 text-end">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BAddress"><i class="fas fa-plus"></i> Add Lead</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-animation="bounce" data-bs-target="#BAddress">
+                        <i class="fas fa-plus me-2"></i>Add Lead
+                    </button>
                 </div>
             </div>
         </div>
         <div class="card">
             <div class="row">
                 <div class="row">
-                    <div class="col=md-12 text-md-end">
+                    <div class="col=md-12 ">
                         <div class="modal fade" id="BAddress" tabindex="-1" aria-labelledby="BAddressLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="BAddressLabel">Add Leads</h6>
+                                        <h6 class="modal-title m-0" id="BAddressLabel">Leads Setup</h6>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body mb-3">
@@ -129,7 +132,7 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="value-1" selected="">Category 1</option>
+                                                            <option value="value-1" selected="">--</option>
                                                             <option value="value-2">Category 2</option>
                                                             <option value="value-3">Category 3</option>
                                                         </select>
@@ -188,7 +191,8 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="value-1" selected="">Pending</option>
+                                                            <option value="" selected="">--</option>
+                                                            <option value="value-1" >Pending</option>
                                                             <option value="value-2">In Process</option>
                                                             <option value="value-3">Done</option>
                                                             <option value="value-3">In Progress</option>
@@ -212,7 +216,8 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="value-1" selected="">Product 1</option>
+                                                            <option value="" selected="">--</option>
+                                                            <option value="value-1">Product 1</option>
                                                             <option value="value-2">Product 2</option>
                                                             <option value="value-3">Product 3</option>
                                                         </select>
@@ -326,7 +331,8 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="value-1" selected="">India</option>
+                                                            <option value="" selected="">--</option>
+                                                            <option value="value-1" >India</option>
                                                             <option value="value-2">Malaysia</option>
                                                             <option value="value-3">Russia</option>
                                                         </select>
@@ -348,7 +354,8 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="value-1" selected="">State 1</option>
+                                                            <option value="" selected="">--</option>
+                                                            <option value="value-1">State 1</option>
                                                             <option value="value-2">State 2</option>
                                                             <option value="value-3">State 3</option>
                                                         </select>
@@ -370,7 +377,8 @@
                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                         </div>
                                                         <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
-                                                            <option value="value-1" selected="">City 1</option>
+                                                            <option value="" selected="">--</option>
+                                                            <option value="value-1" >City 1</option>
                                                             <option value="value-2">City 2</option>
                                                             <option value="value-3">City 3</option>
                                                         </select>
@@ -407,24 +415,23 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        
                                     </div><!--end card-body-->
                                     <div class="modal-footer">
                                         <div class="row">
-                                            <div class="col-lg-12 text-start">
-                                                 <button type="button" class="btn btn-primary"><b><i class="mdi mdi-check-all ms-2"></i>Save</b></button> 
-                                               
+                                            <div class="col-lg-12 text-end">
+                                                <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
                                             </div>
                                         </div>
-                                    </div><!--end modal-footer-->
+                                    </div>
                                 </div><!--end modal-content-->
                             </div><!--end modal-dialog-->
                         </div><!--end modal-->
                     </div>
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-striped mb-0">
-                        <thead>
+                    <table class="table  mb-0">
+                        <thead class="thead-light">
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
@@ -444,13 +451,12 @@
                                 <td>aba@email.com</td>
                                 <td>2342342345</td>
                                 <td>$7.00</td>
-                                <td>28-11-2024</td>
-                                <td>--</td>
+                                <td>Yes</td>
                                 <td>Agent 1</td>
                                 <td>In Process</td>
                                 <td>
                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                         </tbody>

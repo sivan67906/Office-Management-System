@@ -19,5 +19,19 @@ namespace OMS.UI.Areas.Admin.Controllers
 
             return View();
         }
+        public IActionResult SADashboard()
+        {
+            // Page Titles
+            ViewData["pTitle"] = "Settings Profile";
+
+            // Breadcrumb
+            ViewData["bGParent"] = "Settings";
+            ViewData["bParent"] = "Pages";
+            ViewData["bChild"] = "Dashboard";
+
+
+
+            return View();
+        }
     }
 }
