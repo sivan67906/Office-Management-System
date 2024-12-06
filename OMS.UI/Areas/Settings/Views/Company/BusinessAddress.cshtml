@@ -13,7 +13,7 @@
             <div class="card-header">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h4 class="card-title">Business Location</h4>
+                        <h4 class="card-title">Business Location Index</h4>
                     </div>
                     <div class="col-lg-6 text-end">
                         <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
@@ -32,11 +32,11 @@
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="BAddressLabel">New Business Location</h6>
+                                        <h6 class="modal-title m-0" id="BAddressLabel">Business Location Setup</h6>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-lg-4 g-2">
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                        Company Name
@@ -61,31 +61,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                           
-                                            <div class="col-lg-4 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Tax Name
-
-                                                    </label>
-
-                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" id="example-text-input">
-
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="tax">
-                                                        Tax
-                                                    </label>
-                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" id="tax">
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
-                                        <div class="row">
-                                            <div class="col-lg-4 g-2">
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                         Location
@@ -94,7 +70,11 @@
                                                     <input class="form-control mt-2" type="text" placeholder="e.g.,New York,Chennai,Dubai" id="example-text-input">
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 g-2">
+                                        </div>
+                                       
+                                        <div class="row">
+                                            
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="address" >
                                                         Address 1
@@ -105,7 +85,7 @@
                                                     
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 g-2">
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="address" >
                                                         Address 2
@@ -191,17 +171,38 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
                                         <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Tax Name
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Tax
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                       @*  <div class="row">
                                             <div class="col-lg-12">
                                                 <div id="map" style="width: 100%; height: 400px;"></div>
                                             </div>
-                                        </div>
+                                        </div> *@
                                         <div class="card-footer  border-top">
                                             <div class="row mt-2 text-end ">
                                                 <div class="col-lg-12 ">
                                                     <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,11 +218,11 @@
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="ELocationLabel1">Update Business Location</h6>
+                                        <h6 class="modal-title m-0" id="ELocationLabel1">Edit Business Location Details</h6>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-lg-4 g-2">
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                         Company Name
@@ -246,31 +247,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Tax Name
-
-                                                    </label>
-
-                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" value="Sales Tax" id="example-text-input">
-
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="tax">
-                                                        Tax
-                                                    </label>
-                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" value="SA9789FH789" id="tax">
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                        </div>
-                                       
-                                        <div class="row">
-                                            <div class="col-lg-4 g-2">
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                         Location
@@ -279,7 +256,14 @@
                                                     <input class="form-control mt-2" type="text" placeholder="e.g.,New York,Chennai,Dubai" value="Head Office" id="example-text-input">
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 g-2">
+                                            
+                                            
+                                            
+                                        </div>
+                                       
+                                        <div class="row">
+                                            
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="address">
                                                         Address 1
@@ -290,7 +274,7 @@
 
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 g-2">
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="address">
                                                         Address 2
@@ -358,6 +342,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                       
                                         <div class="row">
                                             <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
@@ -382,17 +368,37 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Tax Name
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" value="Sales Tax" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Tax
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" value="SA9789FH789" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                       @*  <div class="row">
                                             <div class="col-lg-12">
                                                 <div id="map1" style="width: 100%; height: 400px;"></div>
                                             </div>
-                                        </div>
+                                        </div> *@
                                         <div class="card-footer  border-top">
                                             <div class="row mt-2 text-end ">
                                                 <div class="col-lg-12 ">
                                                     <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1208,7 +1214,7 @@
                                 <td>VAT</td>
                                 <td>No</td>
                                 <td>
-                                    <a href="#" data-bs-target="#ELocation2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ELocation1" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr> 
@@ -1224,7 +1230,7 @@
                                 <td>GST</td>
                                 <td>No</td>
                                 <td>
-                                    <a href="#" data-bs-target="#ELocation3" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ELocation1" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr><tr>
@@ -1239,7 +1245,7 @@
                                 <td>Value Added Tax</td>
                                 <td>No</td>
                                 <td>
-                                    <a href="#" data-bs-target="#ELocation4" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ELocation1" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
@@ -1255,7 +1261,7 @@
                                 <td>Service Tax</td>
                                 <td>No</td>
                                 <td>
-                                    <a href="#" data-bs-target="#ELocation5" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ELocation1" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>

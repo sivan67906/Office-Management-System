@@ -80,3 +80,6 @@
     letter-spacing: 2px;
     font-family: IBM Plex Sans !important;
 }
+.text-muted {
+    color: #0B51B7 !important;
+}

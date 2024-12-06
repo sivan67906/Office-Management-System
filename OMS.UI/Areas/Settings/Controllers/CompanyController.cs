@@ -24,7 +24,7 @@ public class CompanyController : Controller
     public IActionResult Consumer()
     {
         // Page Title
-        ViewData["pTitle"] = "Consumer Index";
+        ViewData["pTitle"] = "Consumers Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -50,15 +50,16 @@ public class CompanyController : Controller
     public IActionResult Department()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Departments Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Department Settings";
-        ViewData["bChild"] = "Department Creation";
+        ViewData["bParent"] = "Department ";
+        ViewData["bChild"] = "Department View";
 
         return View();
     }
+
 
     public IActionResult Designation()
     {
@@ -89,7 +90,7 @@ public class CompanyController : Controller
     public IActionResult Company()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Companies Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -99,18 +100,20 @@ public class CompanyController : Controller
         return View();
     }
 
+
     public IActionResult BusinessAddress()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Business Locations Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
         ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Business Location";
+        ViewData["bChild"] = "Business Location Index";
 
         return View();
     }
+
 
     public IActionResult Notifications()
     {
