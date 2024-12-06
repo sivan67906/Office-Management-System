@@ -94,5 +94,18 @@ namespace OMS.UI.Areas.Settings.Controllers
 
             return View();
         }
+        public IActionResult Tax()
+        {
+            // Page Title
+            ViewData["pTitle"] = "Tax Profile";
+
+            // Breadcrumb
+            ViewData["bGParent"] = "Settings";
+            ViewData["bParent"] = "Tax";
+            ViewData["bChild"] = "Tax View";
+
+            return View();
+        }
+
     }
 }

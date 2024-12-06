@@ -73,6 +73,7 @@
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
                                                     <input class="form-control mt-2" type="password" value="" id="example-text-input">
+                                                    <i class="toggle-password fa fa-fw fa-eye-slash"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,6 +192,7 @@
                                                             <span class="f-14 mr-1 text-danger">*</span>
                                                         </label>
                                                         <input class="form-control mt-2" type="password" value="sdrtawDF@213123" id="example-text-input">
+                                                        <i class="toggle-password fa fa-fw fa-eye-slash"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -309,7 +311,8 @@
                                                             Password
                                                             <span class="f-14 mr-1 text-danger">*</span>
                                                         </label>
-                                                        <input class="form-control mt-2" type="password" value="sdfaase#123" id="example-text-input">
+                                                        <input type="password" id="password" class="form-control mt-2"value="rthsGRSE@675" placeholder="Enter your password">
+                                                        <i class="toggle-password fa fa-fw fa-eye-slash"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -419,6 +422,71 @@
                                         <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Sarah </td>
+                                    <td>Taylor</td>
+                                    <td>taylor44@email.com</td>
+                                    <td>Advanced</td>
+                                    <td>6184866845</td>
+                                    <td>https://www.daslook.com</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Mike</td>
+                                    <td>Johnson</td>
+                                    <td>mike.johnson@example.com</td>
+                                    <td>Lite</td>
+                                    <td>4567890123</td>
+                                    <td>www.mikejohnson.com</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>4</td>
+                                    <td>Sarah</td>
+                                    <td>Brown</td>
+                                    <td>sarah.brown@example.com</td>
+                                    <td>Premium</td>
+                                    <td>5678901234</td>
+                                    <td>www.sarahbrown.com</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>5</td>
+                                    <td>Chris</td>
+                                    <td>Davis</td>
+                                    <td>chris.davis@example.com</td>
+                                    <td>Basic</td>
+                                    <td>6789012345</td>
+                                    <td>www.chrisdavis.com</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>6</td>
+                                    <td>Emily</td>
+                                    <td>Wilson</td>
+                                    <td>emily.wilson@example.com</td>
+                                    <td>Standard</td>
+                                    <td>7890123456</td>
+                                    <td>www.emilywilson.com</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
                                 
                             </tbody>
                         </table><!--end /table-->
@@ -442,5 +510,20 @@
          $(window).on('load', function() {
          $('.modal').modal({backdrop: 'static', keyboard: false});
         });
+
+            $(".toggle-password").click(function() {
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            input = $(this).parent().find("input");
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
     </script>
+
+  
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
 }

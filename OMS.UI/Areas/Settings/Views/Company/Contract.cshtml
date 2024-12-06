@@ -1,10 +1,11 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
+@section Styles{
+
 }
 <div class="card">
-    <div class="card-header">
+    <div class="card-header align-items-center">
         <h4 class="header-title mt-2">Contract Index</h4>
     </div>
     <div class="card-body">
@@ -17,7 +18,7 @@
                     </label>
 
 
-                    <input class="form-control mt-2" type="text" placeholder="" value="" id="prefix" oninput="updateExample()" >
+                    <input class="form-control mt-2" type="text" placeholder="" value="" id="ContractPrefix"  >
                         
                     
                 </div>
@@ -29,7 +30,7 @@
                         
                     </label>
 
-                    <input class="form-control mt-2" type="text" placeholder="" value="" id="separator" oninput="updateExample()" >
+                    <input class="form-control mt-2" type="text" placeholder="" value="" id="ContractSeperator"  >
                    
                 </div>
             </div>
@@ -42,7 +43,7 @@
                     </label>
 
 
-                    <input class="form-control mt-2" type="number" placeholder="" value="" id="digits" oninput="updateExample()" >
+                    <input class="form-control mt-2" type="number" placeholder="" value="" name="ContractExample" id="ContractDigits">
                         
                    
                 </div>
@@ -54,7 +55,7 @@
                         
                     </label>
 
-                    <input class="form-control mt-2" type="text" placeholder="" value="" id="output" disabled>
+                    <input class="form-control mt-2" type="text" placeholder="" value="" id="ContractExample" name="ContractExample" disabled>
                     
                 </div>
             </div>
@@ -63,35 +64,63 @@
     <div class="card-footer border-top">
         <div class="row mt-2 text-end ">
             <div class="col-lg-12 ">
-                <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                <button type="button" class="btn btn-de-primary"><i class="mdi mdi-check-all me-2 "></i>Save</button>
             </div>
         </div>
     </div>
 </div>
 
-
+@section Scripts {
 
 
 <script>
-    function updateExample() {
-        // Get input values
-        const prefix = document.getElementById('prefix').value;
-        const separator = document.getElementById('separator').value;
-        const digits = parseInt(document.getElementById('digits').value, 10);
-
-        // Validate inputs
-        if (!prefix || !separator || isNaN(digits) || digits <= 0) {
-            document.getElementById('output').value = ''; // Clear output for invalid inputs
-            return;
+      $.event.special.inputchange = {
+        setup: function() {
+            var self = this, val;
+            $.data(this, 'timer', window.setInterval(function() {
+                val = self.value;
+                if ( $.data( self, 'cache') != val ) {
+                    $.data( self, 'cache', val );
+                    $( self ).trigger( 'inputchange' );
+                }
+            }, 20));
+        },
+        teardown: function() {
+            window.clearInterval( $.data(this, 'timer') );
+        },
+        add: function() {
+            $.data(this, 'cache', this.value);
         }
+    };
 
-        // Generate the number part with leading zeros
-        const numberPart = '0'.repeat(digits - 1) + '1';
 
-        // Construct the example string
-        const example = `${prefix}${separator}${numberPart}`;
-
-        // Update the disabled textbox
-        document.getElementById('output').value = example;
-    }
+        $('#ContractPrefix').on('inputchange', function() {
+                   var prefix = $("#ContractPrefix").val();
+                    var seperator = $("#ContractSeperator").val();
+                    var digits = $("#ContractDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#ContractExample").val(result);
+        });
+        $('#ContractSeperator').on('inputchange', function() {
+                   var prefix = $("#ContractPrefix").val();
+                    var seperator = $("#ContractSeperator").val();
+                    var digits = $("#ContractDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#ContractExample").val(result);
+        });
+        $('#ContractDigits').on('inputchange', function() {
+                   var prefix = $("#ContractPrefix").val();
+                    var seperator = $("#ContractSeperator").val();
+                    var digits = $("#ContractDigits").val();
+                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
+                    digits = n.padStart(digits, '0');
+                    var result = prefix + seperator + digits;
+                    $("#ContractExample").val(result);
+        });
 </script>
+
+        }

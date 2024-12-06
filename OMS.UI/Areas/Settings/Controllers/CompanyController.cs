@@ -128,12 +128,12 @@ public class CompanyController : Controller
     public IActionResult Currency()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Currency Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Currency";
+        ViewData["bParent"] = "Currency";
+        ViewData["bChild"] = "Currency View";
 
         return View();
     }
@@ -141,15 +141,16 @@ public class CompanyController : Controller
     public IActionResult Contract()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Contract Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Contract";
+        ViewData["bParent"] = "Contract";
+        ViewData["bChild"] = "Contract View";
 
         return View();
     }
+
 
     public IActionResult Roles()
     {

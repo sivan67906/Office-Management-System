@@ -1,6 +1,15 @@
 ﻿@section Styles {
 	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
 	<link href="~/matrica/assets/libs/dropify/css/dropify.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.defaultchanger:hover{
+            color: white !important;
+        }
+
+		.defaultchanger {
+			color: blue !important;
+		}
+		</style>
 }
 
 <div class="row">
@@ -26,7 +35,7 @@
 									<div class="col-auto">
 										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
 												data-animation="bounce" data-bs-target=".bs-addNewProfile-modal-lg">
-											<i class="las la-pen text-secondary font-16 me-2" style="color: blue !important;"></i>Edit Profile
+											<i class="fas fa-pen me-2" style=""></i>Edit Profile
 										</button>
 									</div><!--end col-->
 								</div>  <!--end row-->
@@ -276,7 +285,7 @@
 									<div class="col-auto">
 										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
 												data-animation="bounce" data-bs-target=".bs-addEmergencyContacts-modal-lg">
-											<i class="fas fa-plus me-2"></i>Add Emergency Contacts
+											<i class="fas fa-plus me-2"></i>Add Emergency Contact
 										</button>
 									</div><!--end col-->
 								</div>  <!--end row-->
@@ -380,7 +389,7 @@
 												Upload
 											</div>
 											<div class="col-lg-9">
-												<input type="file" class="dropify" id="image" name="image" data-allowed-file-extensions="png jpg jpeg svg bmp" data-height="119" autocomplete="off">
+												<input type="file" class="dropify" id="image" name="image" data-allowed-file-extensions="png jpg jpeg svg bmp txt doc docx" data-height="119" autocomplete="off">
 											</div>
 										</div>
 										<div class="row mt-4">
@@ -541,7 +550,8 @@
 </div>
 
 @section Scripts {
-	<script src="~/matrica/assets/libs/dropify/js/dropify.js"></script>
+	@* <script src="~/matrica/assets/libs/dropify/js/dropify.js"></script> *@
+	<script src="http://jeremyfagis.github.io/dropify/dist/js/dropify.js"></script>
 	<script type="text/javascript">
 		 $(".dropify").attr("data-default-file", window.location.origin + "/matrica/assets/images/logo-sm.png");
 		$('.dropify').dropify();

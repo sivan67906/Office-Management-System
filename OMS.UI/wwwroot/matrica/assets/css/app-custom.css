@@ -50,3 +50,33 @@
     --bs-text-opacity: 1;
     color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
 }
+.fa15-custom {
+    font-size: 15px !important;
+}
+
+.fa17-custom {
+    font-size: 17px !important;
+}
+
+.swal2-icon .swal2-icon-content {
+    font-size: 40px !important;
+}
+
+.swal2-cancel {
+    margin-top: 0px !important;
+}
+
+.btn-de-primary {
+    border: 1px solid #0b51b7 !important;
+}
+
+.btn-de-danger {
+    border: 1px solid #ef4d56 !important
+}
+
+.font-spacing-bold {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: IBM Plex Sans !important;
+}
