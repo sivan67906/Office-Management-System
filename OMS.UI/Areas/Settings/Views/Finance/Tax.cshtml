@@ -60,7 +60,7 @@
                                         <div class="row">
                                             <div class="col-lg-12 tsxt-start">
                                                 <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-footer-->
@@ -79,7 +79,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="ETaxLabel">Update Tax Setup</h6>
+                                        <h6 class="modal-title m-0" id="ETaxLabel">Edit Tax Details</h6>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
@@ -113,7 +113,7 @@
                                         <div class="row">
                                             <div class="col-lg-12 tsxt-start">
                                                 <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-footer-->
@@ -231,3 +231,10 @@
     </div>
 </div>
 
+@section Scripts {
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+}

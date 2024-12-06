@@ -148,7 +148,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="mdlNewProfileSource" class="modal fade bs-addNewProfile-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNPModalLabel" aria-hidden="true">
+					<div id="mdlNewProfileSource" class="modal fade bs-addNewProfile-modal-lg" tabindex="" role="dialog" aria-labelledby="myNPModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-xl">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -266,7 +266,7 @@
 										<div class="row mt-4 text-end ">
 											<div class="col-lg-12 ">
 												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Update</button>
 											</div>
 										</div>
 									</form>
@@ -380,7 +380,7 @@
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title mt-0" id="myECModalLabel">Emergency Contacts Setup</h5>
+									<h5 class="modal-title mt-0" id="myECModalLabel">Emergency Contact Setup</h5>
 								</div>
 								<div class="modal-body">
 									<form>
@@ -426,7 +426,7 @@
 										</div>
 										<div class="col-lg-12 text-end mt-4">
 												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
 										</div>
 									</form>
 								</div>
@@ -497,7 +497,7 @@
 								<div class="card-header">
 									<div class="row align-items-center">
 										<div class="col">
-											<h4 class="card-title">Documents Index</h4>
+											<h4 class="card-title">Document Index</h4>
 										</div><!--end col-->
 										<div class="col-auto">
 											<button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
@@ -536,7 +536,7 @@
 										</div>
 										<div class="col-lg-12 text-end mt-4">
 											<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-											<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+											<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
 										</div>
 									</form>
 								</div>
@@ -565,6 +565,7 @@
 		 $(window).on('load', function() {
 		 $('#mdlNewProfileSource').modal({backdrop: 'static', keyboard: false});
 		 $('#mdlEmergencyContactsSource').modal({backdrop: 'static', keyboard: false});
+		 $('#mdlDocumentsSource').modal({backdrop: 'static', keyboard: false});
 		});
 	</script>
 	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>

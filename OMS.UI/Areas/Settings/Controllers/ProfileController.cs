@@ -20,12 +20,12 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Profile()
         {
             // Page Title
-            ViewData["pTitle"] = "Profile";
+            ViewData["pTitle"] = "Profile - John Doe";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
             ViewData["bParent"] = "Profile";
-            ViewData["bChild"] = "Profile";
+            ViewData["bChild"] = "Profile - John Doe";
 
             return View();
         }

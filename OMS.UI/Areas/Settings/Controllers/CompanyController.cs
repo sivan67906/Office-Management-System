@@ -34,10 +34,10 @@ public class CompanyController : Controller
         return View();
     }
 
-    public IActionResult SearchConsumer() // Add
+    public IActionResult SearchConsumer()
     {
         // Page Title
-        ViewData["pTitle"] = "Consumer Profile";
+        ViewData["pTitle"] = "Search Consumers Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -46,6 +46,7 @@ public class CompanyController : Controller
 
         return View();
     }
+
 
     public IActionResult Department()
     {
@@ -64,15 +65,16 @@ public class CompanyController : Controller
     public IActionResult Designation()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Designations Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Designation Settings";
-        ViewData["bChild"] = "Designation Creation";
+        ViewData["bParent"] = "Designation ";
+        ViewData["bChild"] = "Designation View";
 
         return View();
     }
+
 
     public IActionResult Client()
     {
@@ -131,7 +133,7 @@ public class CompanyController : Controller
     public IActionResult Currency()
     {
         // Page Title
-        ViewData["pTitle"] = "Currency Profile";
+        ViewData["pTitle"] = "Currencies Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -144,7 +146,7 @@ public class CompanyController : Controller
     public IActionResult Contract()
     {
         // Page Title
-        ViewData["pTitle"] = "Contract Profile";
+        ViewData["pTitle"] = "Contracts Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
@@ -155,20 +157,22 @@ public class CompanyController : Controller
     }
 
 
+
     public IActionResult Roles()
     {
         // Roles & Permissions both here only.
 
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Roles Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Roles";
+        ViewData["bParent"] = "Roles";
+        ViewData["bChild"] = "Roles View";
 
         return View();
     }
+
 
     public IActionResult Message()
     {

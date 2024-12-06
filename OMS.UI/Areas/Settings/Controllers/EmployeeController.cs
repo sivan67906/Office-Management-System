@@ -21,7 +21,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Attendance()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Profile";
+            ViewData["pTitle"] = "Employees Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
@@ -60,7 +60,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Recruit()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Profile";
+            ViewData["pTitle"] = "Employees Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

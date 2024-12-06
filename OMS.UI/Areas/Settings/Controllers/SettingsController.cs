@@ -35,7 +35,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Purchase()
         {
             // Page Title
-            ViewData["pTitle"] = "Purchase Profile";
+            ViewData["pTitle"] = "Purchases Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

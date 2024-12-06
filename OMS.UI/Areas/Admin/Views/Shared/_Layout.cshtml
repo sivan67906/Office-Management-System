@@ -191,9 +191,9 @@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Application">Application</a>
 						</li><!--end nav-item-->
-						<li class="nav-item">
+						@* <li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Profile" asp-action="Profile">Profile</a>
-						</li><!--end nav-item-->
+						</li><!--end nav-item--> *@
 						<li class="nav-item">
 							<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Notifications">Notification</a>
 						</li><!--end nav-item-->
@@ -621,7 +621,7 @@
 						</div>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end">
-						<a class="dropdown-item" href="#"><i class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
+						<a class="dropdown-item" asp-area="Settings" asp-controller="Profile" asp-action="Profile"><i class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
 						<a class="dropdown-item" href="#"><i class="ti ti-settings font-16 me-1 align-text-bottom"></i> Settings</a>
 						@* <select id="" class="form-select" aria-label="Default select example">
 							<option value="0" selected="selected">Select Company</option>

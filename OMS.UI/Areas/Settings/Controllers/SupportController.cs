@@ -34,7 +34,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Lead()
         {
             // Page Title
-            ViewData["pTitle"] = "Lead Profile";
+            ViewData["pTitle"] = "Leads Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
