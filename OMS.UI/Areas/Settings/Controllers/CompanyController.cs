@@ -24,12 +24,12 @@ public class CompanyController : Controller
     public IActionResult Consumer()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Consumer Index";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
         ViewData["bParent"] = "Consumer";
-        ViewData["bChild"] = "Create";
+        ViewData["bChild"] = "Consumer List";
 
         return View();
     }
@@ -94,7 +94,7 @@ public class CompanyController : Controller
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
         ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Company Setup";
+        ViewData["bChild"] = "Company List";
 
         return View();
     }
@@ -107,7 +107,7 @@ public class CompanyController : Controller
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
         ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Business Address";
+        ViewData["bChild"] = "Business Location";
 
         return View();
     }
