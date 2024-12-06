@@ -8,7 +8,7 @@ public class RecruitController : Controller
     public IActionResult Index()
     {
         // Page Title
-        ViewData["pTitle"] = "Recruit Profile";
+        ViewData["pTitle"] = "Recruits Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Recruit";
@@ -20,7 +20,7 @@ public class RecruitController : Controller
     public IActionResult Skill()
     {
         // Page Title
-        ViewData["pTitle"] = "Recruit Profile";
+        ViewData["pTitle"] = "Recruits Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Recruit";
@@ -32,7 +32,7 @@ public class RecruitController : Controller
     public IActionResult Job()
     {
         // Page Title
-        ViewData["pTitle"] = "Recruit Profile";
+        ViewData["pTitle"] = "Recruits Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Recruit";
@@ -45,7 +45,7 @@ public class RecruitController : Controller
     public IActionResult JobApplication()
     {
         // Page Title
-        ViewData["pTitle"] = "Recruit Profile";
+        ViewData["pTitle"] = "Recruits Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Recruit";
@@ -58,7 +58,7 @@ public class RecruitController : Controller
     public IActionResult OfferLetter()
     {
         // Page Title
-        ViewData["pTitle"] = "Recruit Profile";
+        ViewData["pTitle"] = "Recruits Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Recruit";

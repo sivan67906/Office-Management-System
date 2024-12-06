@@ -21,7 +21,7 @@
 										<h4 class="card-title">Inventory Details</h4>
 									</div><!--end col-->
 									<div class="col-auto">
-										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewInventory-modal-lg">Add Inventory</button>
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewInventory-modal-lg"><i class="fas fa-plus me-2"></i>Add Inventory</button>
 									</div><!--end col-->
 								</div>  <!--end row-->
 							</div><!--end card-header-->
@@ -57,12 +57,12 @@
 				</div>
 			</div>
 		</div>
-		<div id="mdlNewJob" class="modal fade bs-addNewInventory-modal-lg" tabindex="" role="dialog" aria-labelledby="myNIModalLabel" aria-hidden="true">
+		<div id="mdlNewInventory" class="modal fade bs-addNewInventory-modal-lg" tabindex="" role="dialog" aria-labelledby="myNIModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title mt-0" id="myNIModalLabel">Inventory Setup</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						@* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
 					</div>
 					<div class="modal-body">
 						<div class="row mt-2">
@@ -149,7 +149,12 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
+						<div class="row mt-4 text-end ">
+							<div class="col-lg-12 ">
+								<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+								<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+							</div>
+						</div>
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
@@ -164,5 +169,8 @@
 	<script src="~/matrica/assets/libs/vanillajs-datepicker/js/datepicker-full.min.js"></script>
 	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
 	<script>
+		$(window).on('load', function() {
+		 $('#mdlNewInventory').modal({backdrop: 'static', keyboard: false});
+		});
 	</script>
 }

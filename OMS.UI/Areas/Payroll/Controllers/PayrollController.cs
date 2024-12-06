@@ -32,7 +32,7 @@ public class PayrollController : Controller
     public IActionResult EmployeeSalary()
     {
         // Page Title
-        ViewData["pTitle"] = "Recruits Profile";
+        ViewData["pTitle"] = "Payrolls Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Payroll";

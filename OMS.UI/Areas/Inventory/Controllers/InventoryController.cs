@@ -18,7 +18,7 @@ public class InventoryController : Controller
     public IActionResult Index()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -29,7 +29,7 @@ public class InventoryController : Controller
     public IActionResult Vendor()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -40,7 +40,7 @@ public class InventoryController : Controller
     public IActionResult PurchaseProducts()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -51,7 +51,7 @@ public class InventoryController : Controller
     public IActionResult PurchaseOrder()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -62,7 +62,7 @@ public class InventoryController : Controller
     public IActionResult Bills()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -73,7 +73,7 @@ public class InventoryController : Controller
     public IActionResult VendorPayments()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -84,7 +84,7 @@ public class InventoryController : Controller
     public IActionResult VendorCredits()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -95,7 +95,7 @@ public class InventoryController : Controller
     public IActionResult Inventory()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -106,7 +106,7 @@ public class InventoryController : Controller
     public IActionResult Assets()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -117,7 +117,7 @@ public class InventoryController : Controller
     public IActionResult Orders()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";
@@ -128,7 +128,7 @@ public class InventoryController : Controller
     public IActionResult Products()
     {
         // Page Title
-        ViewData["pTitle"] = "Inventory Profile";
+        ViewData["pTitle"] = "Inventories Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Inventory";

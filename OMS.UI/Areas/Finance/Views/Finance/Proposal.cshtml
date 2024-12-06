@@ -23,7 +23,7 @@
 										<h4 class="card-title">Proposal Index</h4>
 									</div><!--end col-->
 									<div class="col-auto">
-										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewProposal-modal-lg">Add Proposal</button>
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewProposal-modal-lg"><i class="fas fa-plus me-2"></i>Add Proposal</button>
 									</div><!--end col-->
 								</div>  <!--end row-->
 							</div><!--end card-header-->
@@ -68,7 +68,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title mt-0" id="myNPModalLabel">Proposal Setup</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						@* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
 					</div>
 					<div class="modal-body">
 						<div class="row mt-4">
@@ -306,7 +306,12 @@
 									Thank you for your business.
 								</div>
 						</div>
-						<button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
+						<div class="row mt-4 text-end ">
+							<div class="col-lg-12 ">
+								<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+								<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+							</div>
+						</div>
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
@@ -324,5 +329,8 @@
 					<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
 					<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
 					<script>
+						$(window).on('load', function() {
+		 $('#mdlNewJob').modal({backdrop: 'static', keyboard: false});
+		});
 					</script>
 }
