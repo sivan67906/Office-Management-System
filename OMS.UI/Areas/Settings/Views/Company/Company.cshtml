@@ -1,8 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
 
 <div class="row">
     <div class="col-lg-12">
@@ -10,7 +6,7 @@
             <div class="card-header">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h4 class="card-title">Company Settings</h4>
+                        <h4 class="card-title">Company Index</h4>
                     </div>
                     <div class="col-lg-6 text-end">
                         <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
@@ -23,42 +19,42 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col=md-12 ">
-                       
+
                         <div class="modal fade" id="BAddress" tabindex="-1" aria-labelledby="BAddressLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h6 class="modal-title m-0" id="BAddressLabel">Company Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                       
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
                                             <div class="col-lg-3 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
-                                                         Name
+                                                    <label for="example-text-input">
+                                                        Name
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
 
                                                     <input class="form-control mt-2" type="text" value="" id="example-text-input">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
-                                                         Email
-                                                        <span class="f-14 mr-1 text-danger">*</span>
-                                                    </label>
 
-                                                    <input class="form-control mt-2" type="email" value="" id="example-text-input">
-                                                    
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
-                                                        Phone
+                                                        Email
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="email" value="" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Phone Number
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
 
@@ -77,8 +73,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                       
-                                        
+
+
                                         <div class="row">
                                             <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
@@ -92,47 +88,47 @@
                                             </div>
                                             <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >Business Type</label>
-                                                    
-                                                        <select class="form-select mt-2" aria-label="Default select example">
-                                                            <option value="" selected>--</option>
-                                                            <option value="1">Personal Use of Freelance</option>
-                                                            <option value="2">Business</option>
-                                                            <option value="3">Non-Governmental Organization</option>
-                                                        </select>
-                                                   
+                                                    <label for="example-text-input">Business Type</label>
+
+                                                    <select class="form-select mt-2" aria-label="Default select example">
+                                                        <option value="" selected>--</option>
+                                                        <option value="1">Personal Use of Freelance</option>
+                                                        <option value="2">Business</option>
+                                                        <option value="3">Non-Governmental Organization</option>
+                                                    </select>
+
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >Category</label>
-                                                   
-                                                        <select class="form-select mt-2" aria-label="Default select example">
-                                                            <option value="" selected="">--</option>
-                                                            <option value="1">Real Estate Management &amp; Development</option>
-                                                            <option value="2">Equity Real Estate Investment Trusts</option>
-                                                            <option value="3">Utilities</option>
-                                                            <option value="4">Media &amp; Entertainment</option>
-                                                            <option value="5">Telecommunication Services</option>
-                                                            <option value="6">Technology Hardware &amp; Equipment</option>
-                                                            <option value="7">Software &amp; Services</option>
-                                                            <option value="8">Insurance</option>
-                                                            <option value="9">Financial Services</option>
-                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
-                                                            <option value="11">Health Care Equipment &amp; Services</option>
-                                                            <option value="12">Household &amp; Personal Products</option>
-                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
-                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
-                                                            <option value="15">Consumer Services</option>
-                                                            <option value="16">Consumer Durables &amp; Apparel</option>
-                                                            <option value="17">Automobiles &amp; Components</option>
-                                                            <option value="18">Transportation</option>
-                                                            <option value="19">Commercial &amp; Professional Services</option>
-                                                            <option value="20">Capital Goods</option>
-                                                            <option value="21">Materials</option>
-                                                            <option value="22">Energy</option>
-                                                        </select>
-                                                   
+                                                    <label for="example-text-input">Category</label>
+
+                                                    <select class="form-select mt-2" aria-label="Default select example">
+                                                        <option value="" selected="">--</option>
+                                                        <option value="1">Real Estate Management &amp; Development</option>
+                                                        <option value="2">Equity Real Estate Investment Trusts</option>
+                                                        <option value="3">Utilities</option>
+                                                        <option value="4">Media &amp; Entertainment</option>
+                                                        <option value="5">Telecommunication Services</option>
+                                                        <option value="6">Technology Hardware &amp; Equipment</option>
+                                                        <option value="7">Software &amp; Services</option>
+                                                        <option value="8">Insurance</option>
+                                                        <option value="9">Financial Services</option>
+                                                        <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                        <option value="11">Health Care Equipment &amp; Services</option>
+                                                        <option value="12">Household &amp; Personal Products</option>
+                                                        <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                        <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                        <option value="15">Consumer Services</option>
+                                                        <option value="16">Consumer Durables &amp; Apparel</option>
+                                                        <option value="17">Automobiles &amp; Components</option>
+                                                        <option value="18">Transportation</option>
+                                                        <option value="19">Commercial &amp; Professional Services</option>
+                                                        <option value="20">Capital Goods</option>
+                                                        <option value="21">Materials</option>
+                                                        <option value="22">Energy</option>
+                                                    </select>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -149,153 +145,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div><!--end card-body-->
                                     <div class="modal-footer  border-top">
                                         <div class="row mt-2 text-end ">
                                             <div class="col-lg-12 ">
-                                                <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!--end modal-content-->
-                            </div><!--end modal-dialog-->
-                        </div><!--end modal-->
-                    </div> 
-                    <div class="row">
-                    <div class="col=md-12 ">
-                       
-                        <div class="modal fade" id="ECompany" tabindex="-1" aria-labelledby="EditCompany" aria-hidden="true" style="display: none;">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="EditCompany">Company Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-lg-3 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
-                                                         Name
-                                                        <span class="f-14 mr-1 text-danger">*</span>
-                                                    </label>
-
-                                                    <input class="form-control mt-2" type="text" value="" id="example-text-input">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
-                                                         Email
-                                                        <span class="f-14 mr-1 text-danger">*</span>
-                                                    </label>
-
-                                                    <input class="form-control mt-2" type="email" value="" id="example-text-input">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Phone
-                                                        <span class="f-14 mr-1 text-danger">*</span>
-                                                    </label>
-
-                                                    <input class="form-control mt-2" type="tel" value="" id="example-text-input">
-
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Established Year
-                                                    </label>
-
-                                                    <input class="form-control mt-2" type="date" value="" id="example-text-input">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
-                                        
-                                        <div class="row">
-                                            <div class="col-lg-4 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Website
-                                                    </label>
-
-                                                    <input class="form-control mt-2" type="url" value="" id="example-text-input">
-
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >Business Type</label>
-                                                    
-                                                        <select class="form-select mt-2" aria-label="Default select example">
-                                                            <option value="" selected>--</option>
-                                                            <option value="1">Personal Use of Freelance</option>
-                                                            <option value="2">Business</option>
-                                                            <option value="3">Non-Governmental Organization</option>
-                                                        </select>
-                                                   
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >Category</label>
-                                                   
-                                                        <select class="form-select mt-2" aria-label="Default select example">
-                                                            <option value="" selected="">--</option>
-                                                            <option value="1">Real Estate Management &amp; Development</option>
-                                                            <option value="2">Equity Real Estate Investment Trusts</option>
-                                                            <option value="3">Utilities</option>
-                                                            <option value="4">Media &amp; Entertainment</option>
-                                                            <option value="5">Telecommunication Services</option>
-                                                            <option value="6">Technology Hardware &amp; Equipment</option>
-                                                            <option value="7">Software &amp; Services</option>
-                                                            <option value="8">Insurance</option>
-                                                            <option value="9">Financial Services</option>
-                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
-                                                            <option value="11">Health Care Equipment &amp; Services</option>
-                                                            <option value="12">Household &amp; Personal Products</option>
-                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
-                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
-                                                            <option value="15">Consumer Services</option>
-                                                            <option value="16">Consumer Durables &amp; Apparel</option>
-                                                            <option value="17">Automobiles &amp; Components</option>
-                                                            <option value="18">Transportation</option>
-                                                            <option value="19">Commercial &amp; Professional Services</option>
-                                                            <option value="20">Capital Goods</option>
-                                                            <option value="21">Materials</option>
-                                                            <option value="22">Energy</option>
-                                                        </select>
-                                                   
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-
-                                            <div class="col-lg-12 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Description
-                                                    </label>
-
-                                                    <textarea class="form-control mt-2" id="" rows="5"></textarea>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                            
-                                    </div><!--end card-body-->
-                                        <div class="modal-footer ">
-                                        <div class="row mt-2 text-end ">
-                                            <div class="col-lg-12 ">
-                                                <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
                                             </div>
                                         </div>
                                     </div>
@@ -303,76 +159,1137 @@
                             </div><!--end modal-dialog-->
                         </div><!--end modal-->
                     </div>
-                </div>
-                <div class="table-responsive">
-                    <table class="table  mb-0">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Website</th>
-                                <th>Business Type</th>
-                                <th>Category</th>
-                                <th>Established Year</th>
-                                <th>Verified</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>New Company</td>
-                                <td>Company Description</td>
-                                <td>into@email.com</td>
-                                <td>8668456493</td>
-                                <td>https://www.google.com</td>
-                                <td>Bussiness</td>
-                                <td>Software&Service</td>
-                                <td>1999</td>
-                                <td>True</td>
-                                <td>
-                                    <a href="#" data-bs-target="#ECompany"data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
-                                </td>
-                            </tr> <tr>
-                                <td>2</td>
-                                <td>AVIV Company</td>
-                                <td>Company Des</td>
-                                <td>public@email.com</td>
-                                <td>6184866845</td>
-                                <td>https://www.linkdin.com</td>
-                                <td>Bussiness</td>
-                                <td>Software&Service</td>
-                                <td>2007</td>
-                                <td>True</td>
-                                <td>
-                                    <a href="#" data-bs-target="#ECompany" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
-                                </td>
-                            </tr> <tr>
-                                <td>3</td>
-                                <td>Meta Company</td>
-                                <td>Social Servics</td>
-                                <td>socio@email.com</td>
-                                <td>8664561845</td>
-                                <td>https://www.facebook.com</td>
-                                <td>Bussiness</td>
-                                <td>Software&Service</td>
-                                <td>2014</td>
-                                <td>True</td>
-                                <td>
-                                    <a href="#" data-bs-target="#ECompany"data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
-                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table><!--end /table-->
-                </div><!--end /tableresponsive-->
-            </div><!--end card-body-->
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="ECompany1" tabindex="-1" aria-labelledby="EditCompany1" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany1">Update Company Setup</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="New Company" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="into@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="8668456493" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Established Year
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="date" value="1999-09-13" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.google.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Business Type</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Personal Use of Freelance</option>
+                                                            <option value="2" selected>Business</option>
+                                                            <option value="3">Non-Governmental Organization</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Category</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Real Estate Management &amp; Development</option>
+                                                            <option value="2">Equity Real Estate Investment Trusts</option>
+                                                            <option value="3">Utilities</option>
+                                                            <option value="4">Media &amp; Entertainment</option>
+                                                            <option value="5">Telecommunication Services</option>
+                                                            <option value="6">Technology Hardware &amp; Equipment</option>
+                                                            <option value="7" selected>Software &amp; Services</option>
+                                                            <option value="8">Insurance</option>
+                                                            <option value="9">Financial Services</option>
+                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                            <option value="11">Health Care Equipment &amp; Services</option>
+                                                            <option value="12">Household &amp; Personal Products</option>
+                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                            <option value="15">Consumer Services</option>
+                                                            <option value="16">Consumer Durables &amp; Apparel</option>
+                                                            <option value="17">Automobiles &amp; Components</option>
+                                                            <option value="18">Transportation</option>
+                                                            <option value="19">Commercial &amp; Professional Services</option>
+                                                            <option value="20">Capital Goods</option>
+                                                            <option value="21">Materials</option>
+                                                            <option value="22">Energy</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+                                                        </label>
+
+                                                        <textarea class="form-control mt-2" id="" rows="5">Company Description</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="ECompany2" tabindex="-1" aria-labelledby="EditCompany2" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany2">Update Company Setup</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="AVIV Company" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="public@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="6184866845" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Established Year
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="date" value="2007-09-12" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.aviv.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Business Type</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Personal Use of Freelance</option>
+                                                            <option value="2">Business</option>
+                                                            <option value="3" selected>Non-Governmental Organization</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Category</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Real Estate Management &amp; Development</option>
+                                                            <option value="2">Equity Real Estate Investment Trusts</option>
+                                                            <option value="3">Utilities</option>
+                                                            <option value="4">Media &amp; Entertainment</option>
+                                                            <option value="5" selected>Telecommunication Services</option>
+                                                            <option value="6">Technology Hardware &amp; Equipment</option>
+                                                            <option value="7">Software &amp; Services</option>
+                                                            <option value="8">Insurance</option>
+                                                            <option value="9">Financial Services</option>
+                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                            <option value="11">Health Care Equipment &amp; Services</option>
+                                                            <option value="12">Household &amp; Personal Products</option>
+                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                            <option value="15">Consumer Services</option>
+                                                            <option value="16">Consumer Durables &amp; Apparel</option>
+                                                            <option value="17">Automobiles &amp; Components</option>
+                                                            <option value="18">Transportation</option>
+                                                            <option value="19">Commercial &amp; Professional Services</option>
+                                                            <option value="20">Capital Goods</option>
+                                                            <option value="21">Materials</option>
+                                                            <option value="22">Energy</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+                                                        </label>
+
+                                                        <textarea class="form-control mt-2" id="" rows="5">Company Des</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="ECompany3" tabindex="-1" aria-labelledby="EditCompany3" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany3">Update Company Setup</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="Meta Company" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="socio@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="8664561845" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Established Year
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="date" value="2014-09-23" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.facebook.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Business Type</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1"selected>Personal Use of Freelance</option>
+                                                            <option value="2">Business</option>
+                                                            <option value="3">Non-Governmental Organization</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Category</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Real Estate Management &amp; Development</option>
+                                                            <option value="2">Equity Real Estate Investment Trusts</option>
+                                                            <option value="3">Utilities</option>
+                                                            <option value="4">Media &amp; Entertainment</option>
+                                                            <option value="5">Telecommunication Services</option>
+                                                            <option value="6">Technology Hardware &amp; Equipment</option>
+                                                            <option value="7">Software &amp; Services</option>
+                                                            <option value="8">Insurance</option>
+                                                            <option value="9" selected>Financial Services</option>
+                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                            <option value="11">Health Care Equipment &amp; Services</option>
+                                                            <option value="12">Household &amp; Personal Products</option>
+                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                            <option value="15">Consumer Services</option>
+                                                            <option value="16">Consumer Durables &amp; Apparel</option>
+                                                            <option value="17">Automobiles &amp; Components</option>
+                                                            <option value="18">Transportation</option>
+                                                            <option value="19">Commercial &amp; Professional Services</option>
+                                                            <option value="20">Capital Goods</option>
+                                                            <option value="21">Materials</option>
+                                                            <option value="22">Energy</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+                                                        </label>
+
+                                                        <textarea class="form-control mt-2" id="" rows="5">Social Servics</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="ECompany4" tabindex="-1" aria-labelledby="EditCompany4" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany4">Update Company Setup</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="Apex Innovations" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="apex@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="7623561845" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Established Year
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="date" value="2002-08-18" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.apex.inc" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Business Type</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1"selected>Personal Use of Freelance</option>
+                                                            <option value="2">Business</option>
+                                                            <option value="3">Non-Governmental Organization</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Category</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Real Estate Management &amp; Development</option>
+                                                            <option value="2">Equity Real Estate Investment Trusts</option>
+                                                            <option value="3">Utilities</option>
+                                                            <option value="4">Media &amp; Entertainment</option>
+                                                            <option value="5">Telecommunication Services</option>
+                                                            <option value="6">Technology Hardware &amp; Equipment</option>
+                                                            <option value="7">Software &amp; Services</option>
+                                                            <option value="8">Insurance</option>
+                                                            <option value="9">Financial Services</option>
+                                                            <option value="10" selected>Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                            <option value="11">Health Care Equipment &amp; Services</option>
+                                                            <option value="12">Household &amp; Personal Products</option>
+                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                            <option value="15">Consumer Services</option>
+                                                            <option value="16">Consumer Durables &amp; Apparel</option>
+                                                            <option value="17">Automobiles &amp; Components</option>
+                                                            <option value="18">Transportation</option>
+                                                            <option value="19">Commercial &amp; Professional Services</option>
+                                                            <option value="20">Capital Goods</option>
+                                                            <option value="21">Materials</option>
+                                                            <option value="22">Energy</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+                                                        </label>
+
+                                                        <textarea class="form-control mt-2" id="" rows="5">Tech Servics</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="ECompany5" tabindex="-1" aria-labelledby="EditCompany5" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany5">Update Company Setup</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="Synergy Networks" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="synergy@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="2349561841" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Established Year
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="date" value="2013-04-27" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.synergy.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Business Type</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Personal Use of Freelance</option>
+                                                            <option value="2" selected>Business</option>
+                                                            <option value="3">Non-Governmental Organization</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Category</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Real Estate Management &amp; Development</option>
+                                                            <option value="2">Equity Real Estate Investment Trusts</option>
+                                                            <option value="3">Utilities</option>
+                                                            <option value="4">Media &amp; Entertainment</option>
+                                                            <option value="5">Telecommunication Services</option>
+                                                            <option value="6">Technology Hardware &amp; Equipment</option>
+                                                            <option value="7">Software &amp; Services</option>
+                                                            <option value="8">Insurance</option>
+                                                            <option value="9">Financial Services</option>
+                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                            <option value="11">Health Care Equipment &amp; Services</option>
+                                                            <option value="12" selected>Household &amp; Personal Products</option>
+                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                            <option value="15">Consumer Services</option>
+                                                            <option value="16">Consumer Durables &amp; Apparel</option>
+                                                            <option value="17">Automobiles &amp; Components</option>
+                                                            <option value="18">Transportation</option>
+                                                            <option value="19">Commercial &amp; Professional Services</option>
+                                                            <option value="20">Capital Goods</option>
+                                                            <option value="21">Materials</option>
+                                                            <option value="22">Energy</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+                                                        </label>
+
+                                                        <textarea class="form-control mt-2" id="" rows="5">Network Provider</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="ECompany6" tabindex="-1" aria-labelledby="EditCompany6" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany6">Update Company Setup</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="Visionary Solutions" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="visionary@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="8964561445" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Established Year
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="date" value="2005-08-04" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.vision.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Business Type</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Personal Use of Freelance</option>
+                                                            <option value="2">Business</option>
+                                                            <option value="3" selected>Non-Governmental Organization</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Category</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Real Estate Management &amp; Development</option>
+                                                            <option value="2">Equity Real Estate Investment Trusts</option>
+                                                            <option value="3" selected>Utilities</option>
+                                                            <option value="4">Media &amp; Entertainment</option>
+                                                            <option value="5">Telecommunication Services</option>
+                                                            <option value="6">Technology Hardware &amp; Equipment</option>
+                                                            <option value="7">Software &amp; Services</option>
+                                                            <option value="8">Insurance</option>
+                                                            <option value="9">Financial Services</option>
+                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                            <option value="11">Health Care Equipment &amp; Services</option>
+                                                            <option value="12">Household &amp; Personal Products</option>
+                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                            <option value="15">Consumer Services</option>
+                                                            <option value="16">Consumer Durables &amp; Apparel</option>
+                                                            <option value="17">Automobiles &amp; Components</option>
+                                                            <option value="18">Transportation</option>
+                                                            <option value="19">Commercial &amp; Professional Services</option>
+                                                            <option value="20">Capital Goods</option>
+                                                            <option value="21">Materials</option>
+                                                            <option value="22">Energy</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+                                                        </label>
+
+                                                        <textarea class="form-control mt-2" id="" rows="5">Realtime Problem Solution</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="ECompany7" tabindex="-1" aria-labelledby="EditCompany7" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany7">Update Company Setup</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="Bright Horizons Corp" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="brighthoz@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="8634891845" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Established Year
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="date" value="2018-06-08" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.brighthoz.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Business Type</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Personal Use of Freelance</option>
+                                                            <option value="2" selected>Business</option>
+                                                            <option value="3">Non-Governmental Organization</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">Category</label>
+
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="">--</option>
+                                                            <option value="1">Real Estate Management &amp; Development</option>
+                                                            <option value="2">Equity Real Estate Investment Trusts</option>
+                                                            <option value="3">Utilities</option>
+                                                            <option value="4">Media &amp; Entertainment</option>
+                                                            <option value="5">Telecommunication Services</option>
+                                                            <option value="6">Technology Hardware &amp; Equipment</option>
+                                                            <option value="7">Software &amp; Services</option>
+                                                            <option value="8" selected>Insurance</option>
+                                                            <option value="9">Financial Services</option>
+                                                            <option value="10">Pharmaceuticals, Biotechnology &amp; Life Sciences</option>
+                                                            <option value="11">Health Care Equipment &amp; Services</option>
+                                                            <option value="12">Household &amp; Personal Products</option>
+                                                            <option value="13">Food, Beverage &amp; Tobacco</option>
+                                                            <option value="14">Consumer Staples Distribution &amp; Retail</option>
+                                                            <option value="15">Consumer Services</option>
+                                                            <option value="16">Consumer Durables &amp; Apparel</option>
+                                                            <option value="17">Automobiles &amp; Components</option>
+                                                            <option value="18">Transportation</option>
+                                                            <option value="19">Commercial &amp; Professional Services</option>
+                                                            <option value="20">Capital Goods</option>
+                                                            <option value="21">Materials</option>
+                                                            <option value="22">Energy</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+                                                        </label>
+
+                                                        <textarea class="form-control mt-2" id="" rows="5">Tech Forward</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table  mb-0">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>Website</th>
+                                    <th>Business Type</th>
+                                    <th>Category</th>
+                                    <th>Established Year</th>
+                                    <th>Verified</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>New Company</td>
+                                    <td>into@email.com</td>
+                                    <td>8668456493</td>
+                                    <td>https://www.google.com</td>
+                                    <td>Bussiness</td>
+                                    <td>Software&Service</td>
+                                    <td>1999</td>
+                                    <td>True</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#ECompany1" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>AVIV Company</td>
+                                    <td>public@email.com</td>
+                                    <td>6184866845</td>
+                                    <td>https://www.aviv.com</td>
+                                    <td>Non-Governmental Organization</td>
+                                    <td>Telecommunication Services</td>
+                                    <td>2007</td>
+                                    <td>True</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#ECompany2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Meta Company</td>
+                                    <td>socio@email.com</td>
+                                    <td>8664561845</td>
+                                    <td>https://www.facebook.com</td>
+                                    <td>Personal Use of Freelance</td>
+                                    <td>Financial Services</td>
+                                    <td>2014</td>
+                                    <td>True</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#ECompany3" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Apex Innovations</td>
+                                    <td>apex@email.com</td>
+                                    <td>7623561845</td>
+                                    <td>https://www.apex.inc</td>
+                                    <td>Personal Use of Freelance</td>
+                                    <td>Pharmaceuticals, Biotechnology & Life Sciences</td>
+                                    <td>2002</td>
+                                    <td>True</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#ECompany4" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Synergy Networks</td>
+                                    <td>synergy@email.com</td>
+                                    <td>2349561841</td>
+                                    <td>https://www.synergy.com</td>
+                                    <td>Bussiness</td>
+                                    <td>Household & Personal Products</td>
+                                    <td>2013</td>
+                                    <td>True</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#ECompany5" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Visionary Solutions</td>
+                                    <td>visionary@email.com</td>
+                                    <td>8964561445</td>
+                                    <td>https://www.vision.com</td>
+                                    <td>Non-Governmental Organization</td>
+                                    <td>Utilities</td>
+                                    <td>2005</td>
+                                    <td>True</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#ECompany6" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Bright Horizons Corp</td>
+                                    <td>brighthoz@email.com</td>
+                                    <td>8634891845</td>
+                                    <td>https://www.brighthoz.com</td>
+                                    <td>Bussiness</td>
+                                    <td>Insurence</td>
+                                    <td>2018</td>
+                                    <td>True</td>
+                                    <td>
+                                        <a href="#" data-bs-target="#ECompany7" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table><!--end /table-->
+                    </div><!--end /tableresponsive-->
+                </div><!--end card-body-->
+            </div>
         </div>
     </div>
 </div>
 
+
+
+@section Scripts {
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+}

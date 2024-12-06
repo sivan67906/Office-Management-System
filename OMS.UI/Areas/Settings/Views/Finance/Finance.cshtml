@@ -1,6 +1,27 @@
 ﻿@section Styles {
     <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css" />
     <link href="~/matrica/assets/css/app-imgpicker-custom.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/libs/dropify/css/dropify.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+            .dropify-font-upload:before, .dropify-wrapper .dropify-message span.file-icon:before {
+        content: '\e800';
+    }
+    .dropify-font:before, .dropify-wrapper .dropify-message span.file-icon:before, .dropify-wrapper .dropify-preview .dropify-infos .dropify-infos-inner p.dropify-filename span.file-icon:before, [class*=" dropify-font-"]:before, [class^=dropify-font-]:before {
+        font-family: dropify;
+        font-style: normal;
+        font-weight: 400;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-left: .2em;
+        margin-right: .2em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+    }
+    </style>
 }
 <div class="row">
     <div class="col-12 col-lg-12">
@@ -20,7 +41,7 @@
                     <li class="nav-item">
                         <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbUnit" role="tab">Unit</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none">
                         <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbQuickbooksSettings" role="tab">Quickbooks Settings</a>
                     </li>
                 </ul>
@@ -41,13 +62,9 @@
                                                 <h4 class="card-title">Invoice Logo <i class="fa fa-question-circle" aria-hidden="true"></i></h4>
                                             </div><!--end card-header-->
                                             <div class="card-body">
-                                                <div class="d-grid">
-                                                    <p class="text-muted">Please click "Upload" Button to upload your Invoice logo</p>
-                                                    <input type="file" id="input-file" name="input-file" accept="image/*" onchange="{handleChange()}" hidden="">
-                                                    <label class="btn-upload btn btn-primary" for="input-file">Upload </label>
-                                                </div>
+                                             <input type="file" class="dropify" id="image" name="image" data-allowed-file-extensions="png jpg jpeg svg bmp" data-height="100" autocomplete="off">
                                             </div><!--end card-body-->
-                                        </div>
+										</div>
                                     </div>
                                     <div class="col-lg-2">
                                     </div>
@@ -57,22 +74,18 @@
                                                 <h4 class="card-title">Authorised Signatory Signature <i class="fa fa-question-circle" aria-hidden="true"></i></h4>
                                             </div><!--end card-header-->
                                             <div class="card-body">
-                                                <div class="d-grid">
-                                                    <p class="text-muted">Authorised Signatory Signature</p>
-                                                    <input type="file" id="input-file" name="input-file" accept="image/*" onchange="{handleChange()}" hidden="">
-                                                    <label class="btn-upload btn btn-primary" for="input-file">Choose a file</label>
-                                                </div>
+                                                <input type="file" class="dropify" id="image" name="image" data-allowed-file-extensions="png jpg jpeg svg bmp" data-height="100" autocomplete="off">
                                             </div><!--end card-body-->
                                         </div>
                                     </div>
                                     <div class="col-lg-2">
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-2">
                                     <div class="col-lg-6">Language</div>
                                     <div class="col-lg-6">Due after <span class="text-danger">*</span></div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-2">
                                     <div class="col-lg-6">
                                         <select id="sltLanguage" class="form-select" aria-label="">
                                             <option selected="" value="">--</option>
@@ -94,7 +107,7 @@
                                     <div class="col-lg-6">Send Reminder Before</div>
                                     <div class="col-lg-6"></div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-2">
                                     <div class="col-lg-6">
                                         <div class="input-group">
                                             <input type="number" class="form-control" placeholder="0" aria-label="" aria-describedby="sendReminder">
@@ -194,19 +207,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12 mt-4 mb-2">
+                                <div class="row mt-4">
+                                    <div class="col-md-12">
                                         <label class="custom-control-label" for="reqShiftChange" style="font-size: 14px;">Terms and Conditions</label>
-                                        <textarea class="form-control" rows="5" id="termsConditions">Thank you for your business.</textarea>
+                                        <textarea class="form-control mt-2" rows="5" id="termsConditions">Thank you for your business.</textarea>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12 mt-4 mb-2">
+                                <div class="row mt-4">
+                                    <div class="col-md-12">
                                         <label class="custom-control-label" for="reqShiftChange" style="font-size: 14px;">Other information</label>
-                                        <textarea class="form-control" rows="5" id="otherInformation" placeholder="Enter Other information"></textarea>
+                                        <textarea class="form-control mt-2" rows="5" id="otherInformation" placeholder="Enter Other information"></textarea>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
+                                <button type="button" class="btn btn-de-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
                             </div><!--end card-body-->
                         </div>
                     </div>
@@ -248,7 +261,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
+                                <button type="button" class="btn btn-de-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
                             </div><!--end card-body-->
                         </div><!--end card-->
                     </div>
@@ -262,61 +275,146 @@
                                     </div><!--end col-->
                                 </div>  <!--end row-->
                             </div><!--end card-header-->
-                            <div class="card-body">
-                                <div class="row mb-2">
-                                    <div class="col-lg-3">Invoice Prefix <span class="text-danger">*</span></div>
-                                    <div class="col-lg-3">Invoice Number Separator</div>
-                                    <div class="col-lg-3">Invoice Number Digits</div>
-                                    <div class="col-lg-3">Invoice Number Example</div>
+                            
+                            <div class="row col-lg-12 mt-2 ms-1">
+                                <div class="col-lg-3">
+                                    <div class="text-center">
+                                        <h4 class="text-muted">Invoice</h4>
+                                    </div>
+                                    <div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+                                        <div class="card-body">
+                                            <div class="row mt-2">
+                                                <span>Invoice Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Enter Invoice Prefix" class="form-control" name="invoiceNoPrefix" id="txtInvoiceNoPrefix" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Invoice Number Separator
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Invoice Number Seperator" class="form-control" name="invoiceNoNoSeperator" id="txtInvoiceNoNoSeperator" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Invoice Number Digits
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="number" placeholder="Invoice Number Digits" class="form-control" name="invoiceNoNoDigits" id="txtInvoiceNoNoDigits" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Invoice Number Example
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Invoice Number Example" class="form-control" name="invoiceNoNoExample" id="txtInvoiceNoNoExample" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row mb-4">
-                                    <div class="col-lg-3"><input type="text" placeholder="Enter Invoice Prefix" class="form-control" name="invoiceNoPrefix" id="txtInvoiceNoPrefix" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Invoice Number Seperator" class="form-control" name="invoiceNoNoSeperator" id="txtInvoiceNoNoSeperator" /></div>
-                                    <div class="col-lg-3"><input type="number" placeholder="Invoice Number Digits" class="form-control" name="invoiceNoNoDigits" id="txtInvoiceNoNoDigits" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Invoice Number Example" class="form-control" name="invoiceNoNoExample" id="txtInvoiceNoNoExample" disabled="disabled" /></div>
+                                <div class="col-lg-3">
+                                    <div class="text-center">
+                                        <h4 class="text-muted">Credit Note</h4>
+                                    </div>
+                                    <div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+                                        <div class="card-body">
+                                            <div class="row mt-2">
+                                                <span>Credit Note Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Enter Credit Note Prefix" class="form-control" name="creditNotePrefix" id="txtCreditNotePrefix" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Credit Note Number Separator
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Credit Note Number Separator" class="form-control" name="creditNoteNoSeperator" id="txtCreditNoteNoSeperator" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Credit Note Digits
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="number" placeholder="Credit Note Digits" class="form-control" name="creditNoteNoDigits" id="txtCreditNoteNoDigits" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Credit Note Number Example
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Credit Note Number Example" class="form-control" name="creditNoteNoExample" id="txtCreditNoteNoExample" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col-lg-3">Credit Note Prefix <span class="text-danger">*</span></div>
-                                    <div class="col-lg-3">Credit Note Number Separator</div>
-                                    <div class="col-lg-3">Credit Note Digits</div>
-                                    <div class="col-lg-3">Credit Note Number Example</div>
+                                <div class="col-lg-3">
+                                    <div class="text-center">
+                                        <h4 class="text-muted">Estimation</h4>
+                                    </div>
+                                    <div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+                                        <div class="card-body">
+                                            <div class="row mt-2">
+                                                <span>Estimation Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Estimate Prefix" class="form-control" name="estimatePrefix" id="txtEstimatePrefix" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Estimation Number Separator
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Estimate Number Separator" class="form-control" name="estimateNoSeperator" id="txtEstimateNoSeperator" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Estimation Number Digits
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="number" placeholder="Estimate Number Digits" class="form-control" name="estimateNoDigits" id="txtEstimateNoDigits" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Estimation Number Example
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Estimate Number Example" class="form-control" name="estimateNoExample" id="txtEstimateNoExample" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row mb-4">
-                                    <div class="col-lg-3"><input type="text" placeholder="Enter Credit Note Prefix" class="form-control" name="creditNotePrefix" id="txtCreditNotePrefix" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Credit Note Number Separator" class="form-control" name="creditNoteNoSeperator" id="txtCreditNoteNoSeperator" /></div>
-                                    <div class="col-lg-3"><input type="number" placeholder="Credit Note Digits" class="form-control" name="creditNoteNoDigits" id="txtCreditNoteNoDigits" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Credit Note Number Example" class="form-control" name="creditNoteNoExample" id="txtCreditNoteNoExample" disabled="disabled" /></div>
+                                <div class="col-lg-3">
+                                    <div class="text-center">
+                                        <h4 class="text-muted">Order</h4>
+                                    </div>
+                                    <div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+                                        <div class="card-body">
+                                            <div class="row mt-2">
+                                                <span>Order Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Order Prefix" class="form-control" name="orderPrefix" id="txtOrderPrefix" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Order Number Separator
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Order Number Separator" class="form-control" name="ordNoSeperator" id="txtOrdNoSeperator" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Order Number Digits
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="number" placeholder="Order Number Digits" class="form-control" name="ordNoDigits" id="txtOrdNoDigits" />
+                                            </div>
+                                            <div class="row mt-4">
+                                                Order Number Example
+                                            </div>
+                                            <div class="row mt-2">
+                                                <input type="text" placeholder="Order Number Example" class="form-control" name="ordNoExample" id="txtOrdNoExample" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col-lg-3">Estimate Prefix <span class="text-danger">*</span></div>
-                                    <div class="col-lg-3">Estimate Number Separator</div>
-                                    <div class="col-lg-3">Estimate Number Digits</div>
-                                    <div class="col-lg-3">Estimate Number Example</div>
-                                </div>
-                                <div class="row mb-4">
-                                    <div class="col-lg-3"><input type="text" placeholder="Estimate Prefix" class="form-control" name="estimatePrefix" id="txtEstimatePrefix" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Estimate Number Separator" class="form-control" name="estimateNoSeperator" id="txtEstimateNoSeperator" /></div>
-                                    <div class="col-lg-3"><input type="number" placeholder="Estimate Number Digits" class="form-control" name="estimateNoDigits" id="txtEstimateNoDigits" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Estimate Number Example" class="form-control" name="estimateNoExample" id="txtEstimateNoExample" disabled="disabled" /></div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-lg-3">Order Prefix <span class="text-danger">*</span></div>
-                                    <div class="col-lg-3">Order Number Separator</div>
-                                    <div class="col-lg-3">Order Number Digits</div>
-                                    <div class="col-lg-3">Order Number Example</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-3"><input type="text" placeholder="Order Prefix" class="form-control" name="orderPrefix" id="txtOrderPrefix" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Separator" class="form-control" name="ordNoSeperator" id="txtOrdNoSeperator" /></div>
-                                    <div class="col-lg-3"><input type="number" placeholder="Order Number Digits" class="form-control" name="ordNoDigits" id="txtOrdNoDigits" /></div>
-                                    <div class="col-lg-3"><input type="text" placeholder="Order Number Example" class="form-control" name="ordNoExample" id="txtOrdNoExample" disabled="disabled" /></div>
-                                </div>
-                                <button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
                             </div>
                         </div>
+                        <button type="button" class="btn btn-de-primary mt-2 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
                     </div>
 
-                    <div class="tab-pane" id="tbUnit" role="tabpanel" style="width: 50%;">
+                    <div class="tab-pane" id="tbUnit" role="tabpanel" style="width: 50%; margin-left: 20%;">
                         <div class="card">
                             <div class="card-header">
                                 <div class="row align-items-center">
@@ -324,7 +422,7 @@
                                         <h4 class="card-title">Unit Index</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewUnit-modal-lg">Add Unit</button>
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-addNewUnit-modal-lg"><i class="fas fa-plus me-2"></i>Add Unit</button>
                                     </div><!--end col-->
                                 </div>  <!--end row-->
                             </div><!--end card-header-->
@@ -344,7 +442,10 @@
                                                 <td>Pcs</td>
                                                 <td>Yes</td>
                                                 <td>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#" data-toggle="tooltip" data-placement="top"
+                                                       data-bs-toggle="modal"
+                                                       data-animation="bounce" data-bs-target=".bs-addEditUnit-modal-lg"
+                                                    title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                                 </td>
                                             </tr><!--end tr-->
                                         </tbody>
@@ -371,10 +472,10 @@
                                         <div class="row">
                                             <div class="col-lg-12"><input type="text" placeholder="Enter a category name" class="form-control" id="txtUnit"></div>
                                         </div>
-                                        <div class="row mt-2">
-                                            <div class="col-lg-8"></div>
-                                            <div class="col-lg-4 text-end">
-                                                <button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
+                                        <div class="row mt-2 text-end ">
+                                            <div class="col-lg-12 mt-4">
+                                                <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
                                             </div>
                                         </div>
                                     </form>
@@ -383,8 +484,34 @@
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
 
+                    <div id="mdlEditUnit" class="modal fade bs-addEditUnit-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEUnitModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myEUnitModalLabel">Unit Setup</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row mt-3 mb-2">
+                                            <div class="col-lg-12">Unit Type <span class="text-danger">*</span></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12"><input type="text" placeholder="" value="Pcs" class="form-control" id=""></div>
+                                        </div>
+                                        <div class="row mt-2 text-end ">
+                                            <div class="col-lg-12 mt-4">
+                                                <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
 
-                    <div class="tab-pane" id="tbQuickbooksSettings" role="tabpanel">
+                    <div class="tab-pane d-none" id="tbQuickbooksSettings" role="tabpanel">
                         <div class="card">
                             <div class="card-header">
                                 <div class="row align-items-center">
@@ -454,7 +581,7 @@
                                         Connect Quickbooks Account. Without connecting quickbooks account Sync will not work.
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
+                                <button type="button" class="btn btn-de-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Save</b></button>
                             </div><!--end card-body-->
                         </div><!--end card-->
                     </div>
@@ -471,8 +598,21 @@
 @section Scripts {
     <script src="~/matrica/assets/libs/clipboard/clipboard.min.js"></script>
     <script src="~/matrica/assets/js/pages/clipboard.init.js"></script>
-    
+    <script src="~/matrica/assets/libs/dropify/js/dropify.js"></script>
+
     <script type="text/javascript">
+        // ~/matrica/assets/images/logo-sm.png
+        $(".dropify").attr("data-default-file", window.location.origin + "/matrica/assets/images/logo-sm.png");
+        $('.dropify').dropify();
+
+          const dropifyMessages = {
+            default: "Choose a file",
+            replace: "Drop a file or click to replace",
+            remove: "Remove",
+            error: "Some error occurred.",
+        };
+
+
                 $(".toggle-password").click(function() {
             $(this).toggleClass("fa-eye fa-eye-slash");
             input = $(this).parent().find("input");
@@ -625,5 +765,9 @@
         });
     </script>
     <script type="text/javascript">
+         $(window).on('load', function() {
+         $('#mdlNewUnit').modal({backdrop: 'static', keyboard: false});
+         $('#mdlEditUnit').modal({backdrop: 'static', keyboard: false});
+        });
     </script>
 }

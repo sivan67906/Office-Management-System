@@ -1,0 +1,562 @@
+﻿@section Styles {
+	<link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
+	<link href="~/matrica/assets/libs/dropify/css/dropify.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<!-- Nav tabs -->
+				<nav>
+					<div class="nav nav-tabs" id="nav-tab" role="tablist">
+						<a class="nav-link active" id="Profile-tab" data-bs-toggle="tab" href="#tbProfile" aria-selected="true" role="tab">Profile</a>
+						<a class="nav-link" id="EmergencyContacts-tab" data-bs-toggle="tab" href="#tbEmergencyContacts" aria-selected="false" role="tab" tabindex="">Emergency Contacts</a>
+						<a class="nav-link" id="Documents-tab" data-bs-toggle="tab" href="#tbDocuments" aria-selected="false" role="tab" tabindex="">Documents</a>
+					</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane active show" id="tbProfile" role="tabpanel" aria-labelledby="#Profile-tab">
+						<div class="card">
+							<div class="card-header">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="card-title">Profile Index</h4>
+									</div><!--end col-->
+									<div class="col-auto">
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
+												data-animation="bounce" data-bs-target=".bs-addNewProfile-modal-lg">
+											<i class="las la-pen text-secondary font-16 me-2" style="color: blue !important;"></i>Edit Profile
+										</button>
+									</div><!--end col-->
+								</div>  <!--end row-->
+							</div><!--end card-header-->
+							<div class="card-body">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="card mb-4">
+									<div class="card-body text-center">
+										<img src="~/matrica/assets/images/person.png" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+										<h5 class="my-3">John Doe</h5>
+										<p class="text-muted mb-1">Senior Associate</p>
+										<p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<div class="card mb-4">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">First Name</p></div>
+													<div class="col-lg-8"><p class="mb-0">John</p></div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Last Name</p></div>
+													<div class="col-lg-8"><p class="mb-0">Doe</p></div>
+												</div>
+											</div>
+										</div>
+										<hr />
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Gender</p></div>
+													<div class="col-lg-8"><p class="mb-0">Male</p></div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">DOB</p></div>
+													<div class="col-lg-8"><p class="mb-0">1988-06-01</p></div>
+												</div>
+											</div>
+										</div>
+										<hr />
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Email</p></div>
+													<div class="col-lg-8"><p class="mb-0">John@gmail.com</p></div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Mobile No</p></div>
+													<div class="col-lg-8"><p class="mb-0">(085)1988980601</p></div>
+												</div>
+											</div>
+										</div>
+										<hr />
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Marital Status</p></div>
+													<div class="col-lg-8"><p class="mb-0">Married</p></div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Country</p></div>
+													<div class="col-lg-8"><p class="mb-0">Malaysia</p></div>
+												</div>
+											</div>
+										</div>
+										<hr />
+										<div class="row">
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Address</p></div>
+													<div class="col-lg-8"><p class="mb-0">Bay Area,<br />San Francisco,<br />CA.</p></div>
+												</div>
+											</div>
+											<div class="col-lg-6">
+												<div class="row">
+													<div class="col-lg-4"><p class="text-muted mb-0">Notifications</p></div>
+													<div class="col-lg-8"><p class="mb-0">Enabled</p></div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div col-lg-12="">
+								<div class="card mb-4">
+									<div class="card-body">
+										<div class="row">
+											<h5 class="text-muted">About Me</h5><div class="col-lg-12">
+												<p class="mx-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+							</div>
+						</div>
+					</div>
+					<div id="mdlNewProfileSource" class="modal fade bs-addNewProfile-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNPModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myNPModalLabel">Profile Setup</h5>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-4">
+											<div class="col-lg-3">First Name</div>
+											<div class="col-lg-3">
+												Last Name
+											</div>
+											<div class="col-lg-3">Marital Status</div>
+											<div class="col-lg-3">Notifications</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required="" value="John"></div>
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required="" value="Doe"></div>
+											<div class="col-lg-3">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option value="1">Single</option>
+													<option value="2" selected="selected">Married</option>
+												</select>
+											</div>
+											<div class="col-lg-3">
+												<select id="" class="form-select" aria-label="Default select example">
+													<option value="1">Enabled</option>
+													<option value="2">Disabled</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Country</div>
+											<div class="col-lg-3">State</div>
+											<div class="col-lg-3">City</div>
+											<div class="col-lg-3">Zipcode</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3">
+												<div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+													<div class="selectr-options-container">
+														<div class="selectr-input-container">
+															<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+															<button class="selectr-input-clear" type="button"></button>
+														</div>
+														<div class="selectr-notice"></div>
+														<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+													</div>
+													<select id="default3" tabindex="4" class="selectr-hidden defaultSelectr" aria-hidden="true">
+														<option value="">--</option>
+														<option selected="selected">Malaysia</option>
+														<option>USA</option>
+														<option>Canada</option>
+														<option>UK</option>
+														<option>Australia</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+													<div class="selectr-options-container">
+														<div class="selectr-input-container">
+															<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+															<button class="selectr-input-clear" type="button"></button>
+														</div>
+														<div class="selectr-notice"></div>
+														<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+													</div>
+													<select id="default3" tabindex="4" class="selectr-hidden defaultSelectr" aria-hidden="true">
+														<option value="">--</option>
+														<option>California</option>
+														<option>Texas</option>
+														<option selected="selected">Ontario</option>
+														<option>Grater Landon</option>
+														
+													</select>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<div class="selectr-container selectr-desktop has-selected" style="width: 100%;">
+													<div class="selectr-options-container">
+														<div class="selectr-input-container">
+															<input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+															<button class="selectr-input-clear" type="button"></button>
+														</div>
+														<div class="selectr-notice"></div>
+														<ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+													</div>
+													<select id="default3" tabindex="4" class="selectr-hidden defaultSelectr" aria-hidden="true">
+														<option value="">--</option>
+														<option>Los Angeles</option>
+														<option selected="selected">Austin</option>
+														<option>Toranto</option>
+														<option>London</option>
+														<option>Sydney</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-lg-3">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="5463289">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3">Location</div>
+											<div class="col-lg-3">Address 1</div>
+											<div class="col-lg-3">Address 2</div>
+											<div class="col-lg-3"></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required="" value="Torrento"></div>
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required="" value="125/12 Cross Street"></div>
+											<div class="col-lg-3"><input type="text" placeholder="" class="form-control" id="" required="" value="Bay Area"></div>
+											<div class="col-lg-3"></div>
+										</div>
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
+												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+
+					<div class="tab-pane" id="tbEmergencyContacts" role="tabpanel" aria-labelledby="#EmergencyContacts-tab">
+						<div class="card">
+							<div class="card-header">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="card-title">Emergency Contacts Index</h4>
+									</div><!--end col-->
+									<div class="col-auto">
+										<button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
+												data-animation="bounce" data-bs-target=".bs-addEmergencyContacts-modal-lg">
+											<i class="fas fa-plus me-2"></i>Add Emergency Contacts
+										</button>
+									</div><!--end col-->
+								</div>  <!--end row-->
+							</div><!--end card-header-->
+							<div class="card-body">
+							<div class="table-responsive">
+								<table class="table mb-0">
+									<thead class="thead-light">
+										<tr>
+											<th>Name</th>
+											<th>Email</th>
+											<th>Phone No</th>
+											<th>Relationship</th>
+											<th>Action</th>
+										</tr><!--end tr-->
+									</thead>
+
+									<tbody>
+										<tr>
+												<td><img src="~/matrica/assets/images/person.png" alt="" class="thumb-sm rounded-circle me-2">Donald Gardner</td>
+											<td>xyx@gmail.com</td>
+											<td>+12345329</td>
+											<td>Starbucks coffee</td>
+
+											<td>
+													<a href="#" data-toggle="tooltip" data-placement="top" data-bs-target=".bs-addEditEmergencyContacts-modal-lg" data-animation="bounce" data-bs-toggle="modal" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+												<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+											</td>
+										</tr><!--end tr-->
+										<tr>
+												<td><img src="~/matrica/assets/images/person.png" alt="" class="thumb-sm rounded-circle me-2">Matt Rosales</td>
+											<td>xyx@gmail.com</td>
+											<td>+12312189</td>
+											<td>Mac Donald</td>
+
+											<td>
+												<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+												<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+											</td>
+										</tr><!--end tr-->
+										<tr>
+												<td><img src="~/matrica/assets/images/person.png" alt="" class="thumb-sm rounded-circle me-2">Michael Hill</td>
+											<td>xyx@gmail.com</td>
+											<td>+12563789</td>
+											<td>Life Good</td>
+
+											<td>
+												<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+												<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+											</td>
+										</tr><!--end tr-->
+										<tr>
+												<td><img src="~/matrica/assets/images/person.png" alt="" class="thumb-sm rounded-circle me-2">Nancy Flanary</td>
+											<td>xyx@gmail.com</td>
+											<td>+123456789</td>
+											<td>Flipcart</td>
+
+											<td>
+												<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+												<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+											</td>
+										</tr><!--end tr-->
+										<tr>
+												<td><img src="~/matrica/assets/images/person.png" alt="" class="thumb-sm rounded-circle me-2">Dorothy Key</td>
+											<td>xyx@gmail.com</td>
+											<td>+1232093789</td>
+											<td>Adidas</td>
+
+											<td>
+												<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+												<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+											</td>
+										</tr><!--end tr-->
+										<tr>
+												<td><img src="~/matrica/assets/images/person.png" alt="" class="thumb-sm rounded-circle me-2">Joseph Cross</td>
+											<td>xyx@gmail.com</td>
+											<td>+1234549789</td>
+											<td>Reebok</td>
+
+											<td>
+												<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+												<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+											</td>
+										</tr><!--end tr-->
+									</tbody>
+								</table>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div id="mdlEmergencyContactsSource" class="modal fade bs-addEmergencyContacts-modal-lg" tabindex="" role="dialog" aria-labelledby="myECModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myECModalLabel">Emergency Contacts Setup</h5>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Upload
+											</div>
+											<div class="col-lg-9">
+												<input type="file" class="dropify" id="image" name="image" data-allowed-file-extensions="png jpg jpeg svg bmp" data-height="119" autocomplete="off">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Name
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Email
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Phone No
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Relationship
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="">
+											</div>
+										</div>
+										<div class="col-lg-12 text-end mt-4">
+												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					<div id="mdlEditEmergencyContactsSource" class="modal fade bs-addEditEmergencyContacts-modal-lg" tabindex="" role="dialog" aria-labelledby="myEECModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myEECModalLabel">Emergency Contacts Setup</h5>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Upload
+											</div>
+											<div class="col-lg-9">
+												<input type="file" class="dropify" id="image" name="image" data-allowed-file-extensions="png jpg jpeg svg bmp" data-height="119" autocomplete="off">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Name
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="Donald Gardner">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Email
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="xyx@gmail.com">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Phone No
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="+12345329">
+											</div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Relationship
+											</div>
+											<div class="col-lg-9">
+												<input type="text" placeholder="" class="form-control" id="" required="" value="Starbucks coffee">
+											</div>
+										</div>
+										<div class="col-lg-12 text-end mt-4">
+											<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+											<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					
+					<div class="tab-pane" id="tbDocuments" role="tabpanel" aria-labelledby="#Documents-tab">
+							<div class="col-lg-12">
+							<div class="card">
+								<div class="card-header">
+									<div class="row align-items-center">
+										<div class="col">
+											<h4 class="card-title">Documents Index</h4>
+										</div><!--end col-->
+										<div class="col-auto">
+											<button type="button" class="btn btn-de-primary" data-bs-toggle="modal"
+													data-animation="bounce" data-bs-target=".bs-addDocumentsProfile-modal-lg">
+												<i class="fas fa-plus me-2"></i>Add Document
+											</button>
+										</div><!--end col-->
+									</div>  <!--end row-->
+								</div><!--end card-header-->
+								<div class="card-body">
+									<div class="row">
+										<div class="col-lg-1"><img src="~/matrica/assets/images/person.png" alt="avatar" class="rounded-circle img-fluid" style="width: 100px; height: 80px;"></div>
+										<div class="col-lg-1"><img src="~/matrica/assets/images/users/user-2.jpg" alt="avatar" class="rounded-circle img-fluid" style="width: 100px; height: 80px;"></div>
+										<div class="col-lg-1"><img src="~/matrica/assets/images/users/user-3.jpg" alt="avatar" class="rounded-circle img-fluid" style="width: 100px; height: 80px;"></div>
+										<div class="col-lg-1"></div>
+									</div>
+								</div>
+						</div>
+				</div>
+			</div>
+					<div id="mdlDocumentsSource" class="modal fade bs-addDocumentsProfile-modal-lg" tabindex="" role="dialog" aria-labelledby="myDModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myDModalLabel">Documents Setup</h5>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-4">
+											<div class="col-lg-3 d-flex align-items-center">
+												Upload
+											</div>
+											<div class="col-lg-9">
+												<input type="file" class="dropify" id="image" name="image" data-allowed-file-extensions="png jpg jpeg svg bmp" data-height="119" autocomplete="off">
+											</div>
+										</div>
+										<div class="col-lg-12 text-end mt-4">
+											<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+											<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Save</button>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script src="~/matrica/assets/libs/dropify/js/dropify.js"></script>
+	<script type="text/javascript">
+		 $(".dropify").attr("data-default-file", window.location.origin + "/matrica/assets/images/logo-sm.png");
+		$('.dropify').dropify();
+
+		  const dropifyMessages = {
+			default: "Choose a file",
+			replace: "Drop a file or click to replace",
+			remove: "Remove",
+			error: "Some error occurred.",
+		};
+		 $(window).on('load', function() {
+		 $('#mdlNewProfileSource').modal({backdrop: 'static', keyboard: false});
+		 $('#mdlEmergencyContactsSource').modal({backdrop: 'static', keyboard: false});
+		});
+	</script>
+	<script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+	<script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+}

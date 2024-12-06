@@ -3,7 +3,10 @@
 *@
 @section Styles{
     #map img:not(:first-of-type){display: none}
+
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
 }
+
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
@@ -29,75 +32,141 @@
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h6 class="modal-title m-0" id="BAddressLabel">Business Location Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <h6 class="modal-title m-0" id="BAddressLabel">New Business Location</h6>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
-                                                        Country
-                                                        
+                                                    <label for="example-text-input">
+                                                       Company Name
                                                     </label>
-                                                   
-                                                        <select id="countryDropdown" class="form-select mt-2">
-                                                            <option selected>--</option>
-                                                            <option>India</option>
-                                                            <option>Nepal</option>
-                                                            <option>Sri Lanka</option>
-                                                            <option>Russia</option>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" selected="">--</option>
+                                                            <option value="value-1">Tech Solutions Inc	</option>
+                                                            <option value="value-2">Global Innovations Ltd</option>
+                                                            <option value="value-3">NextGen Software LLC</option>
+                                                            <option value="value-4">Tech Solutions Inc</option>
+                                                            <option value="value-5">Future Edge Enterprises	</option>
                                                         </select>
-                                                   
+                                                    </div>
                                                 </div>
                                             </div>
                                             
-                                            <div class="col-lg-6 g-2">
+                                           
+                                            <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
-                                                        Location
-                                                        <span class="f-14 mr-1 text-danger">*</span>
-                                                    </label>
-                                                   
-                                                        <input class="form-control mt-2" type="text" placeholder="e.g.,New York,Chennai" id="example-text-input">
-                                                   
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 g-2">
-                                                <div class="mb-3 text-start">
-                                                    <label for="example-text-input" >
+                                                    <label for="example-text-input">
                                                         Tax Name
 
                                                     </label>
 
                                                     <input class="form-control mt-2" type="text" placeholder=" Tax Name" id="example-text-input">
-                                                   
+
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-4 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="tax" >
+                                                    <label for="tax">
                                                         Tax
-
                                                     </label>
-                                                   
-                                                        <input class="form-control mt-2" type="email" placeholder="Enter Tax Number" id="tax">
+                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Location
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g.,New York,Chennai,Dubai" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address" >
+                                                        Address 1
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address"></textarea>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address" >
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g. Street, Floor, Block" id="address"></textarea>
                                                     
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-12 g-2">
+                                            <div class="col-lg-3 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="address" >
-                                                        Address
-                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    <label for="example-text-input">
+                                                        Country
                                                     </label>
-
-                                                    <textarea class="form-control mt-2" type="text" rows="3" placeholder="e.g. 132, My Street, Kingston, New York 12401" id="address"></textarea>
-                                                    
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option selected>--</option>
+                                                        <option>USA</option>
+                                                        <option>Canada</option>
+                                                        <option>UK</option>
+                                                        <option>Australia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option selected>--</option>
+                                                        <option>California</option>
+                                                        <option>Texas</option>
+                                                        <option>Ontario</option>
+                                                        <option>Grater Landon</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option selected>--</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Austin</option>
+                                                        <option>Toranto</option>
+                                                        <option>London</option>
+                                                        <option>Sydney</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" type="number" placeholder="" id="tax">
                                                 </div>
                                             </div>
                                         </div>
@@ -106,11 +175,8 @@
                                                 <div class="mb-3 text-start">
                                                     <label for="latitude" >
                                                         Latitude
-
                                                     </label>
-                                                    
                                                         <input class="form-control mt-2" type="text" placeholder="e.g. 38.895" value="" name="latitude" id="latitude">
-                                                   
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 g-2">
@@ -134,7 +200,8 @@
                                         <div class="card-footer  border-top">
                                             <div class="row mt-2 text-end ">
                                                 <div class="col-lg-12 ">
-                                                    <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,6 +210,957 @@
                                 </div><!--end modal-content-->
                             </div><!--end modal-dialog-->
                         </div><!--end modal-->
+
+                        @* Edit Setup *@
+
+                        <div class="modal fade" id="ELocation1" tabindex="-1" aria-labelledby="ELocationLabel1" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="ELocationLabel1">Update Business Location</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Company Name
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" >--</option>
+                                                            <option value="value-1" selected>Tech Solutions Inc	</option>
+                                                            <option value="value-2">Global Innovations Ltd</option>
+                                                            <option value="value-3">NextGen Software LLC</option>
+                                                            <option value="value-4">Tech Solutions Inc</option>
+                                                            <option value="value-5">Future Edge Enterprises	</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Tax Name
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" value="Sales Tax" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Tax
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" value="SA9789FH789" id="tax">
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Location
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g.,New York,Chennai,Dubai" value="Head Office" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 1
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" value="" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address">123 Main Street</textarea>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" value="" placeholder="e.g. Street, Floor, Block" id="address">Suite 101</textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+
+                                                    </label>
+
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option value="1" selected>USA</option>
+                                                        <option value="2">Canada</option>
+                                                        <option value="3">UK</option>
+                                                        <option value="4">Australia</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option value="1" selected>California</option>
+                                                        <option value="2">Texas</option>
+                                                        <option value="3">Ontario</option>
+                                                        <option value="4">Grater Landon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option value="1" selected>Los Angeles</option>
+                                                        <option value="2">Austin</option>
+                                                        <option value="3">Toranto</option>
+                                                        <option value="4">London</option>
+                                                        <option value="5">Sydney</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" type="number" placeholder="" value="765345" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="latitude">
+                                                        Latitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. 38.895" value="55.895" name="latitude" id="latitude">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="longitude">
+                                                        Longitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. -77.0364" value="-99.0364" name="longitude" id="longitude">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div id="map1" style="width: 100%; height: 400px;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer  border-top">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-body-->
+
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+
+                        @* Edit2 *@
+
+                        <div class="modal fade" id="ELocation2" tabindex="-1" aria-labelledby="ELocation1Label2" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="ELocation1Label2">Update Business Location</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Company Name
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" >--</option>
+                                                            <option value="value-1">Tech Solutions Inc	</option>
+                                                            <option value="value-2" selected>Global Innovations Ltd</option>
+                                                            <option value="value-3">NextGen Software LLC</option>
+                                                            <option value="value-4">Tech Solutions Inc</option>
+                                                            <option value="value-5">Future Edge Enterprises	</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Tax Name
+
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" placeholder=" Tax Name" value="VAT" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="tax">
+                                                            Tax
+                                                        </label>
+                                                        <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" value="VAT56346GT85" id="tax">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Location
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g.,New York,Chennai,Dubai" value="Branch Office" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 1
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" value="" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address">456 Elm Avenue</textarea>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" value="" rows="1" placeholder="e.g. Street, Floor, Block" id="address">Floor 2</textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+
+                                                    </label>
+
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option selected>USA</option>
+                                                        <option>Canada</option>
+                                                        <option>UK</option>
+                                                        <option>Australia</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>California</option>
+                                                        <option selected>Texas</option>
+                                                        <option>Ontario</option>
+                                                        <option>Grater Landon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>Los Angeles</option>
+                                                        <option selected>Austin</option>
+                                                        <option>Toranto</option>
+                                                        <option>London</option>
+                                                        <option>Sydney</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" type="number" placeholder=""value="765123" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="latitude">
+                                                        Latitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. 38.895" value="67.895" name="latitude" id="latitude">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="longitude">
+                                                        Longitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. -77.0364" value="-19.0364" name="longitude" id="longitude">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div id="map2" style="width: 100%; height: 400px;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer  border-top">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-body-->
+
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+
+                        @* Edit3 *@
+
+                        <div class="modal fade" id="ELocation3" tabindex="-1" aria-labelledby="ELocationLabel3" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="ELocationLabel3">Update Business Location</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                       Company Name
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" >--</option>
+                                                            <option value="value-1">Tech Solutions Inc	</option>
+                                                            <option value="value-2">Global Innovations Ltd</option>
+                                                            <option value="value-3" selected>NextGen Software LLC</option>
+                                                            <option value="value-4">Tech Solutions Inc</option>
+                                                            <option value="value-5">Future Edge Enterprises	</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Tax Name
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" value="GST" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Tax
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" value="GST65674JK534" placeholder="Enter Tax Number" id="tax">
+                                                </div>
+                                            </div>
+                                            
+                                           
+                                        </div>
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Location
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" value="Branch Office " placeholder="e.g.,New York,Chennai,Dubai" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address" >
+                                                        Address 1
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address">789 Oak Boulevard</textarea>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address" >
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g. Street, Floor, Block" id="address">Building C</textarea>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+
+                                                    </label>
+
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option>USA</option>
+                                                        <option selected>Canada</option>
+                                                        <option>UK</option>
+                                                        <option>Australia</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>California</option>
+                                                        <option>Texas</option>
+                                                        <option selected>Ontario</option>
+                                                        <option>Grater Landon</option>
+                                                    </select>
+                                                </div>
+                                            </div> 
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Austin</option>
+                                                        <option selected>Toranto</option>
+                                                        <option>London</option>
+                                                        <option>Sydney</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" value="879465" type="number" placeholder="" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="latitude" >
+                                                        Latitude
+                                                    </label>
+                                                        <input class="form-control mt-2" type="text" placeholder="e.g. 38.895" value="43.895" name="latitude" id="latitude">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="longitude" >
+                                                        Longitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. -77.0364" value="-88.0364" name="longitude" id="longitude">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div id="map3" style="width: 100%; height: 400px;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer  border-top">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-body-->
+                                    
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+
+                       @*  Edit4 *@
+
+                        <div class="modal fade" id="ELocation4" tabindex="-1" aria-labelledby="ELocationLabel4" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="ELocationLabel4">Update Business Location</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Company Name
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" >--</option>
+                                                            <option value="value-1">Tech Solutions Inc	</option>
+                                                            <option value="value-2">Global Innovations Ltd</option>
+                                                            <option value="value-3">NextGen Software LLC</option>
+                                                            <option value="value-4" selected>Tech Solutions Inc</option>
+                                                            <option value="value-5">Future Edge Enterprises	</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Tax Name
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" value="Value Added Tax" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Tax
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" value="VA67567OY12" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Location
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" value="Warehouse" placeholder="e.g.,New York,Chennai,Dubai" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 1
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address">321 Pine Road</textarea>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g. Street, Floor, Block" id="address">Block A</textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+
+                                                    </label>
+
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option>USA</option>
+                                                        <option>Canada</option>
+                                                        <option selected>UK</option>
+                                                        <option>Australia</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>California</option>
+                                                        <option>Texas</option>
+                                                        <option>Ontario</option>
+                                                        <option selected>Grater Landon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Austin</option>
+                                                        <option>Toranto</option>
+                                                        <option selected>London</option>
+                                                        <option>Sydney</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" type="number" placeholder="" value="395618" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="latitude">
+                                                        Latitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. 38.895" value="67.895" name="latitude" id="latitude">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="longitude">
+                                                        Longitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. -77.0364" value="22.0364" name="longitude" id="longitude">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div id="map4" style="width: 100%; height: 400px;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer  border-top">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-body-->
+
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+
+                      @*   Edit5 *@
+
+                        <div class="modal fade" id="ELocation5" tabindex="-1" aria-labelledby="ELocationLabel5" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="ELocationLabel5">Update Business Location</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Company Name
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" >--</option>
+                                                            <option value="value-1">Tech Solutions Inc	</option>
+                                                            <option value="value-2">Global Innovations Ltd</option>
+                                                            <option value="value-3">NextGen Software LLC</option>
+                                                            <option value="value-4">Tech Solutions Inc</option>
+                                                            <option value="value-5" selected>Future Edge Enterprises	</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Tax Name
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder=" Tax Name" value="Service Tax" id="example-text-input">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Tax
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" placeholder="Enter Tax Number" value="ST789786GR675" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Location
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" value="Regional Office" placeholder="e.g.,New York,Chennai,Dubai" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 1
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address">654 Maple Lane</textarea>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g. Street, Floor, Block" id="address">Room 202</textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+
+                                                    </label>
+
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option>USA</option>
+                                                        <option>Canada</option>
+                                                        <option>UK</option>
+                                                        <option selected>Australia</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>California</option>
+                                                        <option>Texas</option>
+                                                        <option>Ontario</option>
+                                                        <option>Grater Landon</option>
+                                                        <option selected>New South Wales</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option >--</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Austin</option>
+                                                        <option>Toranto</option>
+                                                        <option>London</option>
+                                                        <option selected>Sydney</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" type="number" placeholder="" value="986754" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="latitude">
+                                                        Latitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. 38.895" value="87.895" name="latitude" id="latitude">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="longitude">
+                                                        Longitude
+
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" placeholder="e.g. -77.0364" value="41.0364" name="longitude" id="longitude">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div id="map5" style="width: 100%; height: 400px;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer  border-top">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-body-->
+
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+
+
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -150,9 +1168,13 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
+                                <th>Company Name</th>
                                 <th>Location</th>
-                                <th>Address</th>
+                                <th>Address 1</th>
+                                <th>Address 2</th>
                                 <th>Country</th>
+                                <th>State</th>
+                                <th>City</th>
                                 <th>Tax Name</th>
                                 <th>Default</th>
                                 <th>Action</th>
@@ -161,37 +1183,80 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>New Delhi</td>
-                                <td>124,Ninja Street</td>
-                                <td>India</td>
-                                <td>GST</td>
+                                <td>Tech Solutions Inc</td>
+                                <td>Head Office</td>
+                                <td>123 Main Street</td>
+                                <td>Suite 101</td>
+                                <td>USA</td>
+                                <td>California</td>
+                                <td>Los Angeles</td>
+                                <td>Sales Tax</td>
                                 <td>Yes</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ELocation1" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>Chennei</td>
-                                <td>457,OMR Road</td>
-                                <td>India</td>
-                                <td>Sales</td>
-                                <td>Yes</td>
+                                <td>Global Innovations Ltd</td>
+                                <td>Branch Office </td>
+                                <td>456 Elm Avenue</td>
+                                <td>Floor 2</td>
+                                <td>USA</td>
+                                <td>Texas</td>
+                                <td>Austin</td>
+                                <td>VAT</td>
+                                <td>No</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ELocation2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr> 
                             <tr>
                                 <td>3</td>
-                                <td>Kolkata</td>
-                                <td>56,Hawra Bypass </td>
-                                <td>India</td>
-                                <td>Road</td>
-                                <td>Yes</td>
+                                <td>NextGen Software LLC</td>
+                                <td>Branch Office </td>
+                                <td>789 Oak Boulevard</td>
+                                <td>Building C</td>
+                                <td>Canada</td>
+                                <td>Ontario</td>
+                                <td>Toronto</td>
+                                <td>GST</td>
+                                <td>No</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ECompany3" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr><tr>
+                                <td>4</td>
+                                <td>Tech Solutions Inc</td>
+                                <td>Warehouse</td>
+                                <td>321 Pine Road</td>
+                                <td>Block A</td>
+                                <td>UK</td>
+                                <td>Greater London</td>
+                                <td>London</td>
+                                <td>Value Added Tax</td>
+                                <td>No</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ECompany4" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Future Edge Enterprises</td>
+                                <td>Regional Office</td>
+                                <td>654 Maple Lane</td>
+                                <td>Room 202</td>
+                                <td>Australia</td>
+                                <td>New South Wales</td>
+                                <td>Sydney</td>
+                                <td>Service Tax</td>
+                                <td>No</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ECompany5" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
@@ -199,6 +1264,8 @@
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->
             </div><!--end card-body-->
+
+
         </div>
     </div>
 </div>
@@ -208,7 +1275,22 @@
     <script type="text/javascript">
         var map_parameters = { center: {lat: 47.490, lng: -117.585}, zoom: 8 };
         var map = new google.maps.Map(document.getElementById('map'), map_parameters);
+        var map1 = new google.maps.Map(document.getElementById('map1'), map_parameters);
+        var map2 = new google.maps.Map(document.getElementById('map2'), map_parameters);
+        var map3 = new google.maps.Map(document.getElementById('map3'), map_parameters);
+        var map4 = new google.maps.Map(document.getElementById('map4'), map_parameters);
+        var map5 = new google.maps.Map(document.getElementById('map5'), map_parameters);
+
     </script>
+
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+
 }
 
 

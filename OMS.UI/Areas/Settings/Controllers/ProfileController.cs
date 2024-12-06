@@ -17,7 +17,18 @@ namespace OMS.UI.Areas.Settings.Controllers
 
             return View();
         }
+        public IActionResult Profile()
+        {
+            // Page Title
+            ViewData["pTitle"] = "Profile";
 
+            // Breadcrumb
+            ViewData["bGParent"] = "Settings";
+            ViewData["bParent"] = "Profile";
+            ViewData["bChild"] = "Profile";
+
+            return View();
+        }
         public IActionResult ChangePassword()
         {
             // Page Title
