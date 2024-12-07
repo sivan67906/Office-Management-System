@@ -29,7 +29,6 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h6 class="modal-title m-0" id="BAddressLabel">Employee Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
@@ -125,7 +124,8 @@
                                     <div class="modal-footer">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-footer-->
@@ -134,6 +134,122 @@
                         </div><!--end modal-->
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col=md-12 ">
+
+                        <div class="modal fade" id="EEmp" tabindex="-1" aria-labelledby="EEmpLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="EEmpLabel">Edit Employee Details</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Employee Id <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" value="E001" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Employee Name
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" value="John Doe" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Date Of Birth <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="date" value="1990-01-15" id="example-text-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Phone Number<span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="tel" value="+1-234-567-8901" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Company Name <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <select class="form-select mt-2" aria-label="Default select example">
+                                                        <option value="" >--</option>
+                                                        <option value="1">Meta</option>
+                                                        <option value="2">Apple</option>
+                                                        <option value="3" selected>TechCorp</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Department Name
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <select class="form-select mt-2" aria-label="Default select example">
+                                                        <option value="">--</option>
+                                                        <option value="1" selected>IT</option>
+                                                        <option value="2">Finance</option>
+                                                        <option value="3">Sales</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-lg-12 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Address
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <textarea class="form-control mt-2" id="" rows="3" placeholder="e,g, 1/160 Main Road, New York">123 Main St, New York, NY</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-lg-12 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Description
+
+                                                    </label>
+                                                    <textarea class="form-control mt-2" id="" rows="5" placeholder="">Hi Hello</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!--end card-body-->
+                                    <div class="modal-footer">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-footer-->
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+                    </div>
+                </div>
+
+
                 <div class="table-responsive">
                     <table class="table mb-0">
                         <thead class="thead-light">
@@ -152,46 +268,145 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>EMP 1</td>
-                                <td>Aravind</td>
-                                <td>17-09-1999</td>
-                                <td>Delhi</td>
-                                <td>7897896234</td>
-                                <td>Meta</td>
-                                <td>Finance</td>
+                                <td>E001</td>
+                                <td>John Doe</td>
+                                <td>15-01-1990</td>
+                                <td>123 Main St, New York, NY</td>
+                                <td>+1-234-567-8901</td>
+                                <td>TechCorp</td>
+                                <td>IT</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>EMP 2</td>
-                                <td>Vijay</td>
-                                <td>09-12-1999</td>
-                                <td>Mumbai</td>
-                                <td>4587899346</td>
-                                <td>Meta</td>
-                                <td>IT</td>
+                                <td>E002</td>
+                                <td>Jane Smith</td>
+                                <td>10-04-1985</td>
+                                <td>456 Elm St, Los Angeles, CA</td>
+                                <td>+1-345-678-9012</td>
+                                <td>BizSolutions</td>
+                                <td>Marketing</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>EMP 3</td>
-                                <td>Leo</td>
-                                <td>11-04-1998</td>
-                                <td>Hydrabad</td>
-                                <td>8197893681</td>
-                                <td>Meta</td>
-                                <td>Sales</td>
+                                <td>E003</td>
+                                <td>Mike Johnson</td>
+                                <td>20-07-1992</td>
+                                <td>789 Oak St, Chicago, IL</td>
+                                <td>+1-456-789-0123</td>
+                                <td>PeopleFirst Inc.</td>
+                                <td>Human Resources</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>E004</td>
+                                <td>Sarah Brown</td>
+                                <td>25-09-1988</td>
+                                <td>321 Pine St, Houston, TX</td>
+                                <td>+1-567-890-1234</td>
+                                <td>GlobalTrade</td>
+                                <td>Sales</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>E005</td>
+                                <td>Chris Davis</td>
+                                <td>12-03-1995</td>
+                                <td>654 Cedar St, Seattle, WA</td>
+                                <td>+1-678-901-2345</td>
+                                <td>InsightWorks</td>
+                                <td>Analytics</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>E006</td>
+                                <td>Emily Wilson</td>
+                                <td>18-11-1993</td>
+                                <td>987 Maple St, Miami, FL</td>
+                                <td>+1-789-012-3456</td>
+                                <td>BuildRight Ltd.</td>
+                                <td>Operations</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>E007</td>
+                                <td>David Martinez</td>
+                                <td>14-02-1989</td>
+                                <td>159 Birch St, Boston, MA</td>
+                                <td>+1-890-123-4567</td>
+                                <td>LedgerPro</td>
+                                <td>Finance</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>E008</td>
+                                <td>Anna Garcia</td>
+                                <td>30-06-1991</td>
+                                <td>753 Spruce St, Denver, CO</td>
+                                <td>+1-901-234-5678</td>
+                                <td>CreativeFlow</td>
+                                <td>Design</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>E009</td>
+                                <td>Tom Clark</td>
+                                <td>05-12-1987</td>
+                                <td>852 Ash St, San Francisco, CA</td>
+                                <td>+1-012-345-6789</td>
+                                <td>HelpDeskNow</td>
+                                <td>Support</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>E010</td>
+                                <td>Olivia Lopez</td>
+                                <td>22-08-1994</td>
+                                <td>147 Willow St, Austin, TX</td>
+                                <td>+1-123-456-7890</td>
+                                <td>VisionaryCorp</td>
+                                <td>Strategy</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EEmp" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->
@@ -199,4 +414,10 @@
         </div>
     </div>
 </div>
-
+@section Scripts {
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+}

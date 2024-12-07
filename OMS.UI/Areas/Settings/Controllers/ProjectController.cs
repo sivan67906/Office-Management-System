@@ -20,12 +20,12 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Project()
         {
             // Page Title
-            ViewData["pTitle"] = "Project Profile";
+            ViewData["pTitle"] = "Projects Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
             ViewData["bParent"] = "Project";
-            ViewData["bChild"] = "Project";
+            ViewData["bChild"] = "Project View";
 
             return View();
         }
@@ -36,8 +36,8 @@ namespace OMS.UI.Areas.Settings.Controllers
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
-            ViewData["bParent"] = "Project";
-            ViewData["bChild"] = "Task";
+            ViewData["bParent"] = "Task";
+            ViewData["bChild"] = "Task View";
 
             return View();
         }

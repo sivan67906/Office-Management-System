@@ -19,7 +19,6 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h6 class="modal-title m-0" id="BAddressLabel">Timesheet Setup</h6>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
@@ -82,7 +81,7 @@
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
 
-                                                <input class="form-control" type="email" value="" id="example-time-input">               <!--example-datetime-local-input-->
+                                                <input class="form-control mt-2" type="email" value="" id="example-time-input">               <!--example-datetime-local-input-->
 
                                             </div>
                                         </div>
@@ -134,7 +133,8 @@
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-lg-12 text-end">
-                                            <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                         </div>
                                     </div>
                                 </div><!--end modal-footer-->
@@ -143,12 +143,147 @@
                     </div><!--end modal-->
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col=md-12 text-md-end">
+
+                    <div class="modal fade" id="ETime" tabindex="-1" aria-labelledby="ETimeLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title m-0" id="ETimeLabel">Edit Timesheet Details</h6>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-4 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Project <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <select class="form-select mt-2" aria-label="Default select example">
+                                                    <option value="" >Select Project</option>
+                                                    <option value="1" selected>Apollo Analytics Platform</option>
+                                                    <option value="2">Nebula E-commerce Solution</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Task
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <select class="form-select mt-2" aria-label="Default select example">
+                                                    <option value="" >Select task</option>
+                                                    <option value="1" selected>Develop Landing Page</option>
+                                                    <option value="2">Payment Cretendtial</option>
+                                                    <option value="3">Settings</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Employee
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <select class="form-select mt-2" aria-label="Default select example">
+                                                    <option value="" >Select Employee</option>
+                                                    <option value="1" selected>John Doe</option>
+                                                    <option value="2">Deva</option>
+                                                    <option value="3">Ganesh</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Start Date
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+
+                                                <input class="form-control mt-2" type="text" value="2024-12-01" id="example-date-input">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Start Time
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+
+                                                <input class="form-control mt-2" type="email" value="09:00" id="example-time-input">               <!--example-datetime-local-input-->
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    End Date
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+
+                                                <input class="form-control mt-2" type="date" value="2024-12-01" id="example-date-input">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    End Time
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+
+                                                <input class="form-control mt-2" type="time" value="12:00" id="example-time-input">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Memo
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <input class="form-control mt-2" type="text" value="Nice day" placeholder="e.g.Working on new logo" id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label for="example-text-input">
+                                                    Total Hours
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <input class="form-control mt-2" type="text" value="3Hrs 00 Min" id="example-text-input">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!--end card-body-->
+                                <div class="modal-footer">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-end">
+                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
+                                        </div>
+                                    </div>
+                                </div><!--end modal-footer-->
+                            </div><!--end modal-content-->
+                        </div><!--end modal-dialog-->
+                    </div><!--end modal-->
+                </div>
+            </div>
+
             <div class="table-responsive">
-                <table class="table table-striped mb-0">
-                    <thead>
+                <table class="table  mb-0">
+                    <thead class="thead-light">
                         <tr>
                             <th>#</th>
-                            <th>Code</th>
+                            <th>Project</th>
                             <th>Task</th>
                             <th>Employee</th>
                             <th>Start Time</th>
@@ -160,24 +295,107 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>ADO32</td>
-                            <td>Dashboard Work</td>
-                            <td>Aravind</td>
-                            <td>27-11-2024
-                                7:45 PM
-                            </td> 
-                            <td>28-11-2024
-                                7:45 PM
-                            </td>
-                            <td>24hrs 00Mins</td>
+                            <td>Apollo Analytics Platform</td>
+                            <td>Develop Landing Page</td>
+                            <td>John Doe</td>
+                            <td>2024-12-01 9:00 AM</td>
+                            <td>2024-12-01 12:00 PM</td>
+                            <td>3Hrs 00 Min</td>
                             <td>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#" data-bs-target="#ETime" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                 <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
                             </td>
                         </tr>
+                         <tr>
+                            <td>2</td>
+                            <td>Nebula E-commerce Solution</td>
+                            <td>Fix Login Bug</td>
+                            <td>Jane Smith</td>
+                            <td>2024-12-02 10:00 AM</td>
+                            <td>2024-12-02 1:00 PM</td>
+                            <td>3Hrs 00Mins</td>
+                            <td>
+                                <a href="#" data-bs-target="#ETime" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>3</td>
+                            <td>Orion Task Management System</td>
+                            <td>Design Dashboard</td>
+                            <td>Mike Johnson</td>
+                            <td>2024-12-03 1:30 PM</td>
+                            <td>2024-12-03 5:30 PM</td>
+                            <td>4Hrs 00Mins</td>
+                            <td>
+                                <a href="#" data-bs-target="#ETime" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>4</td>
+                            <td>Vega Health Tracker App</td>
+                            <td>Write API Documentation</td>
+                            <td>Sarah Brown</td>
+                            <td>2024-12-04 9:00 AM</td>
+                            <td>2024-12-04 11:30 AM</td>
+                            <td>2Hrs 30Mins</td>
+                            <td>
+                                <a href="#" data-bs-target="#ETime" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>5</td>
+                            <td>Lunar Logistics Dashboard</td>
+                            <td>Database Backup</td>
+                            <td>Chris Davis</td>
+                            <td>2024-12-05 2:00 PM</td>
+                            <td>2024-12-05 4:30 PM</td>
+                            <td>2Hrs 30Mins</td>
+                            <td>
+                                <a href="#" data-bs-target="#ETime" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>6</td>
+                            <td>Solace Customer Support Portal</td>
+                            <td>Test User Flows</td>
+                            <td>Emily Wilson</td>
+                            <td>2024-12-06 10:00 AM</td>
+                            <td>2024-12-06 12:30 PM</td>
+                            <td>2Hrs 30Mins</td>
+                            <td>
+                                <a href="#" data-bs-target="#ETime" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>7</td>
+                            <td>Nova Social Networking App</td>
+                            <td>Create Marketing Campaign</td>
+                            <td>David Martinez</td>
+                            <td>2024-12-07 11:00 AM</td>
+                            <td>2024-12-07 3:00 PM</td>
+                            <td>4Hrs 00Mins</td>
+                            <td>
+                                <a href="#" data-bs-target="#ETime" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                            </td>
+                        </tr>
+
                     </tbody>
                 </table><!--end /table-->
             </div><!--end /tableresponsive-->
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+}

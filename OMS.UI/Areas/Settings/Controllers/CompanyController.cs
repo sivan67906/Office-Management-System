@@ -79,12 +79,12 @@ public class CompanyController : Controller
     public IActionResult Client()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Clients Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Client";
+        ViewData["bParent"] = "Client";
+        ViewData["bChild"] = "Client View";
 
         return View();
     }
@@ -177,12 +177,12 @@ public class CompanyController : Controller
     public IActionResult Message()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Message Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Message";
+        ViewData["bParent"] = "Message";
+        ViewData["bChild"] = "Message view";
 
         return View();
     }
@@ -231,37 +231,38 @@ public class CompanyController : Controller
     public IActionResult SMS()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "SMS Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "SMS";
+        ViewData["bParent"] = "SMS";
+        ViewData["bChild"] = "SMS View";
 
         return View();
     }
 
+
     public IActionResult Planning()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Plannings Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Planning";
+        ViewData["bParent"] = "Planning";
+        ViewData["bChild"] = "Planning View";
 
         return View();
     }
     public IActionResult DesignationRoleMap()
     {
         // Page Title
-        ViewData["pTitle"] = "Company Profile";
+        ViewData["pTitle"] = "Roles Mappings Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "Settings";
-        ViewData["bParent"] = "Company";
-        ViewData["bChild"] = "Planning";
+        ViewData["bParent"] = "Roles Mapping";
+        ViewData["bChild"] = "Roles Mapping View";
 
         return View();
     }

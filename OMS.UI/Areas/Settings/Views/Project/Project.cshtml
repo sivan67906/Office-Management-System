@@ -79,7 +79,7 @@
                             <div class="card-footer border-top-5">
                                 <div class="row">
                                     <div class="col-lg-12 text-end">
-                                        <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                        <button type="button" class="btn btn-de-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
                                     </div>
                                 </div>
                             </div>
@@ -109,8 +109,7 @@
                                         <div class="modal-dialog ">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h6 class="modal-title m-0" id="StatusLabel">Edit Project Status</h6>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <h6 class="modal-title m-0" id="StatusLabel">Edit Project Status Details</h6>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="row">
@@ -120,7 +119,7 @@
                                                                      Name <span class="f-14 mr-1 text-danger">*</span>
 
                                                                 </label>
-                                                                <input class="form-control" type="text" value="" id="example-text-input">
+                                                                <input class="form-control" type="text" value="	In-Progress" id="example-text-input">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -142,7 +141,7 @@
                                                                     
                                                                 </label><br />
                                                             <div class="form-check form-check-inline mt-1">
-                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
                                                                 <label class="form-check-label" for="inlineRadio1">Active</label>
                                                             </div>
                                                             <div class="form-check form-check-inline mt-1">
@@ -158,22 +157,22 @@
                                                
                                                     <div class="row">
                                                         <div class="col-lg-12 text-end">
-                                                            <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
-                                                        </div>
+                                                        <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                        <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                                     </div>
+                                                    
                                                 
                                                 </div><!--end modal-footer-->
                                             </div><!--end modal-content-->
                                         </div><!--end modal-dialog-->
                                     </div><!--end modal-->
-                                <!--status Setting Modal end-->
+                                </div><!--status Setting Modal end-->
                                 
                                 <div class="modal fade" id="Statusadd" tabindex="-1" aria-labelledby="addStatusLabel" aria-hidden="true" style="display: none;">
                                         <div class="modal-dialog ">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h6 class="modal-title m-0" id="addStatusLabel">Project Status Setup</h6>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="row">
@@ -221,8 +220,9 @@
                                                
                                                     <div class="row">
                                                         <div class="col-lg-12 text-end">
-                                                            <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
-                                                        </div>
+                                                        <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                        <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
+                                                    </div>
                                                     </div>
                                                 
                                                 </div><!--end modal-footer-->
@@ -245,10 +245,10 @@
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>In-Progress</td>
+                                                <td><span><i class="bi bi-dot bg-info ps-2 pe-2  rounded-circle me-2"></i></span>In-Progress</td>
                                                 <td>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
+                                                        <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1" checked>
                                                         <label class="form-check-label" for="projRadios1">
                                                             Default
                                                         </label>
@@ -262,7 +262,7 @@
                                             </tr><!--end tr-->
                                             <tr>
                                                 <td>2</td>
-                                                <td>Not Started</td>
+                                                <td><span><i class="bi bi-dot bg-secondary ps-2 pe-2  rounded-circle me-2"></i></span>Not Started</td>
                                                 <td>
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
@@ -278,7 +278,39 @@
                                             </tr><!--end tr-->
                                             <tr>
                                                 <td>3</td>
-                                                <td>On Hold</td>
+                                                <td><span><i class="bi bi-dot bg-warning ps-2 pe-2  rounded-circle me-2"></i></span>On Hold</td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
+                                                        <label class="form-check-label" for="projRadios1">
+                                                            Default
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Status"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>4</td>
+                                                <td><span><i class="bi bi-dot bg-danger ps-2 pe-2  rounded-circle me-2"></i></span>On Hold</td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
+                                                        <label class="form-check-label" for="projRadios1">
+                                                            Default
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Status"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>5</td>
+                                                <td><span><i class="bi bi-dot bg-success ps-2 pe-2  rounded-circle me-2"></i></span>On Hold</td>
                                                 <td>
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
@@ -364,7 +396,6 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title mt-0" id="myProjCategeoryModalLabel">Project Category Setup</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form>
@@ -387,7 +418,8 @@
 
                                     <div class="row">
                                         <div class="col-lg-12 text-end">
-                                            <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                         </div>
                                     </div>
 
@@ -401,8 +433,7 @@
                         <div class="modal-dialog ">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title m-0" id="StatusLabel">Edit Category</h6>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h6 class="modal-title m-0" id="StatusLabel">Edit Project Category Details</h6>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
@@ -411,7 +442,7 @@
                                                 <label class="form-label " for="ProjCategoryName">Category Name
                                                     <span class="f-14 mr-1 text-danger">*</span>
                                                 </label>
-                                                <input type="text" class="form-control" id="CategoryName" required="">
+                                                <input type="text" class="form-control" id="CategoryName" value="Reseller 1" required="">
                                             </div>
                                         </div>
                                     </div>
@@ -420,7 +451,8 @@
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-lg-12 text-end">
-                                            <button type="button" class="btn btn-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                         </div>
                                     </div>
 
@@ -437,19 +469,28 @@
     </div>
 </div>
 
-<script>
-    // Select the checkbox and the textbox container
-    const checkbox = document.getElementById("InlineCheckbox");
-    const textboxContainer = document.getElementById("ti");
+@section Scripts {
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
 
-    // Add event listener for checkbox
-    checkbox.addEventListener("change", () => {
-      if (checkbox.checked) {
-        // Show the textbox container when checkbox is checked
-        textboxContainer.style.display = "block";
-      } else {
-        // Hide the textbox container when checkbox is unchecked
-        textboxContainer.style.display = "none";
-      }
-    });
-</script>
+    <script>
+        // Select the checkbox and the textbox container
+        const checkbox = document.getElementById("InlineCheckbox");
+        const textboxContainer = document.getElementById("ti");
+
+        // Add event listener for checkbox
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            // Show the textbox container when checkbox is checked
+            textboxContainer.style.display = "block";
+          } else {
+            // Hide the textbox container when checkbox is unchecked
+            textboxContainer.style.display = "none";
+          }
+        });
+    </script>
+
+}

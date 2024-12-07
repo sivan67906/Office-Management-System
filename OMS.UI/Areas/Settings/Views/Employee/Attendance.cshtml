@@ -193,8 +193,8 @@
 																<input class="form-control" type="text" value="" id="txtipaddress-@i">
 															</td>
 															<td>
-																<button id="btnadd-@i" type="button" class="btn btn-sm btn-primary ml-1 visible" onclick="AddItem(this)">Add IP Address</button>
-																<button id="btnremove-@i" type="button" class="btn btn-sm btn-danger invisible" onclick="DeleteItem(this)">Delete</button>
+																<button id="btnadd-@i" type="button" class="btn btn-sm btn-de-primary ml-1 visible" onclick="AddItem(this)"><i class="mdi mdi-check-all me-2"></i>Add IP Address</button>
+																<button id="btnremove-@i" type="button" class="btn btn-sm btn-de-danger invisible" onclick="DeleteItem(this)"><i class="mdi mdi-window-close me-2"></i>Delete</button>
 															</td>
 														</tr>
 													}
@@ -205,7 +205,7 @@
 									</div>
 								</div>
 							</div>
-							<button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
+							<button type="button" class="btn btn-de-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
 						</div>
 						<div class="tab-pane" id="tbEmployeeShift" role="tabpanel" aria-labelledby="#tbEmployeeShift-tab">
 							<div class="card">
@@ -250,7 +250,44 @@
 													</td>
 													<td>Yes</td>
 													<td>
-														<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal" data-animation="bounce"
+														   data-bs-target=".bs-addEditShift-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+													</td>
+												</tr><!--end tr-->
+												<tr>
+													<td>Day Shift</td>
+													<td>
+														Start Time: 07:00 AM<br />
+														Half Day:<br />
+														Start Time: 17:00 PM<br />
+													</td>
+													<td>
+														Late mark after (minutes): 20<br />
+														Maximum check-in allowed in a day: 2<br />
+														Office opens on: Monday Tuesday Wednesday Thursday Friday<br />
+													</td>
+													<td>Yes</td>
+													<td>
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal" data-animation="bounce"
+														   data-bs-target=".bs-addEditShift-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
+													</td>
+												</tr><!--end tr-->
+												<tr>
+													<td>Night Shift</td>
+													<td>
+														Start Time: 21:00 AM<br />
+														Half Day:<br />
+														Start Time: 06:00 PM<br />
+													</td>
+													<td>
+														Late mark after (minutes): 20<br />
+														Maximum check-in allowed in a day: 2<br />
+														Office opens on: Monday Tuesday Wednesday Thursday Friday<br />
+													</td>
+													<td>Yes</td>
+													<td>
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal" data-animation="bounce"
+														   data-bs-target=".bs-addEditShift-modal-lg"><i class="las la-pen text-secondary font-16"></i></a>
 													</td>
 												</tr><!--end tr-->
 											</tbody>
@@ -259,7 +296,7 @@
 								</div><!--end card-body-->
 							</div><!--end card-->
 						</div>
-						<div id="mdlNewShift" class="modal fade bs-addNewShift-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNSModalLabel" aria-hidden="true">
+						<div id="mdlNewShift" class="modal fade bs-addNewShift-modal-lg" tabindex="" role="dialog" aria-labelledby="myNSModalLabel" aria-hidden="true">
 							<div class="modal-dialog modal-xl">
 								<div class="modal-content" style="height: 428px !important;">
 									<div class="modal-header">
@@ -332,11 +369,95 @@
 													<label class="custom-control-label labelcustom" for="">Sunday</label>
 												</div>
 											</div>
-											<div class="row mt-2">
-												<div class="col-lg-8"></div>
-												<div class="col-lg-4 text-end">
+											<div class="row mt-4 text-end ">
+												<div class="col-lg-12 ">
 													<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-													<button type="button" class="btn btn-primary mt-2 float-end"><b><i class="mdi mdi-check-all me-2"></i>Create</b></button>
+													<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+
+
+						<div id="mdlEditShift" class="modal fade bs-addEditShift-modal-lg" tabindex="" role="dialog" aria-labelledby="mySEModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl">
+								<div class="modal-content" style="height: 428px !important;">
+									<div class="modal-header">
+										<h5 class="modal-title mt-0" id="mySEModalLabel">Edit Shift Details</h5>
+									</div>
+									<div class="modal-body">
+										<form>
+											<div class="row mt-3">
+												<div class="col-lg-4">Shift Name <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Shift Short Code <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Color Code <span class="text-danger">*</span></div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required="" value="General Shift"></div>
+												<div class="col-lg-4"><input type="text" class="form-control" id="" required="" value="GS#01"></div>
+												<div class="col-lg-4"><input id="txtLabelColor" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);"></div>
+											</div>
+											<div class="row mt-4">
+												<div class="col-lg-4">Shift Start Time <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Shift End Time <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Half-day Mark Time <span class="text-danger">*</span></div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4"><input class="form-control" type="time" value="09:00" id=""></div>
+												<div class="col-lg-4"><input class="form-control" type="time" value="18:00" id=""></div>
+												<div class="col-lg-4"><input class="form-control" type="time" value="00:00" id=""></div>
+											</div>
+											<div class="row mt-4">
+												<div class="col-lg-4">Early Clock In (minutes) <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Late mark after (minutes) <span class="text-danger">*</span></div>
+												<div class="col-lg-4">Maximum check-in allowed in a day <span class="text-danger">*</span></div>
+											</div>
+											<div class="row">
+												<div class="col-lg-4"><input type="number" class="form-control" id="" required=""></div>
+												<div class="col-lg-4"><input type="number" class="form-control" id="" required="" value="20"></div>
+												<div class="col-lg-4"><input type="number" class="form-control" id="" required="" value="2"></div>
+											</div>
+											<div class="row mt-4">
+												<div class="col-lg-12">Office opens on <span class="text-danger">*</span></div>
+											</div>
+											<div class="row">
+												<div class="col-md-1"></div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" checked="checked" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Monday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" checked="checked" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Tuesday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" checked="checked" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Wednesday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" checked="checked" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Thursday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" checked="checked" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Friday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Saturday</label>
+												</div>
+												<div class="col-md-1 col-md-15">
+													<input type="checkbox" class="form-check-input form-check-input-custom" id="" data-parsley-multiple="" data-parsley-mincheck="2">
+													<label class="custom-control-label labelcustom" for="">Sunday</label>
+												</div>
+											</div>
+											<div class="row mt-4 text-end ">
+												<div class="col-lg-12 ">
+													<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+													<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
 												</div>
 											</div>
 										</form>
@@ -358,9 +479,10 @@
 @section Scripts {
 	<script src="~/matrica/assets/libs/huebee/huebee.pkgd.min.js"></script>
 	<script type="text/javascript">
-		
+
 		$(window).on('load', function() {
 		 $('#mdlNewShift').modal({backdrop: 'static', keyboard: false});
+		 $('#mdlEditShift').modal({backdrop: 'static', keyboard: false});
 		});
 		
 		function AddItem(btn) {

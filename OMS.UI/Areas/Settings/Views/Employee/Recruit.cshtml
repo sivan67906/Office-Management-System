@@ -215,13 +215,13 @@
 										<input id="" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);">
 									</div>
 								</div>
-								<button type="button" class="btn btn-primary mt-2 float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
+								<button type="button" class="btn btn-de-primary mt-2 float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
 							</div>
 						</div><!--end card-body-->
 					</div>
 
-					<div class="tab-pane" id="tbFooterSettings" role="tabpanel">
-						<div class="card" style="width:70%;">
+					<div class="tab-pane" id="tbFooterSettings" role="tabpanel" style="margin-left: 20%;">
+						<div class="card" style="">
 							<div class="card-header">
 								<div class="row align-items-center">
 									<div class="col">
@@ -253,7 +253,8 @@
 												<td>FooterTest Description</td>
 												<td>Active</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditFooterSource-modal-lg" href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -301,11 +302,59 @@
 												</div>
 											</div>
 										</div>
-										<div class="row mt-2">
-											<div class="col-lg-8"></div>
-											<div class="col-lg-4 text-end">
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
 												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-												<button type="button" class="btn btn-primary mt-2 float-end"><b><i class="mdi mdi-check-all me-2"></i>Create</b></button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					<div id="mdlEditFooterLink" class="modal fade bs-addEditFooterSource-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEFLModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myEFLModalLabel">Footer Link Setup</h5>
+									@* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-4">Title <span class="text-danger">*</span></div>
+											<div class="col-lg-4">Slug <span class="text-danger">*</span></div>
+											<div class="col-lg-4">Status</div>
+										</div>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-4"><input class="form-control" type="text" value="Footer Test" id="reminderAftrMns"></div>
+											<div class="col-lg-4"><input class="form-control" type="text" value="" id="reminderAftrMns"></div>
+											<div class="col-lg-4">
+												<select id="sltCheck" class="form-select" aria-label="">
+													<option value="">--</option>
+													<option value="1" selected="selected"> Active </option>
+													<option value="2"> Inactive </option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-3">
+											<div class="col-lg-12">Description</div>
+										</div>
+										<div class="row mb-2">
+											<div class="col-lg-12">
+												<div class="row">
+													<div class="col-lg-12">
+														@* <textarea id="txtfooterDescription">Hello, World!</textarea> *@
+														<textarea class="form-control" placeholder="" rows="5" id="">FooterTest Description</textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
+												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
 											</div>
 										</div>
 									</form>
@@ -314,8 +363,8 @@
 						</div><!-- /.modal-dialog -->
 					</div><!-- /.modal -->
 
-					<div class="tab-pane" id="tbRecruiterSettings" role="tabpanel">
-						<div class="card" style="width:50%;">
+					<div class="tab-pane" id="tbRecruiterSettings" role="tabpanel" style="margin-left: 20%;">
+						<div class="card" style="">
 							<div class="card-header">
 								<div class="row align-items-center">
 									<div class="col">
@@ -375,11 +424,10 @@
 												</select>
 											</div>
 										</div>
-										<div class="row mt-2">
-											<div class="col-lg-8"></div>
-											<div class="col-lg-4 text-end">
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
 												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-												<button type="button" class="btn btn-primary mt-2 float-end"><b><i class="mdi mdi-check-all me-2"></i>Create</b></button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
 											</div>
 										</div>
 									</form>
@@ -493,7 +541,7 @@
 
 
 								</div>
-								<button type="button" class="btn btn-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
+								<button type="button" class="btn btn-de-primary mt-4 float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
 							</div><!--end card-body-->
 						</div>
 					</div>
@@ -535,7 +583,8 @@
 												<td>1</td>
 												<td>yes</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditStatus-modal-lg" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -546,7 +595,8 @@
 												<td>2</td>
 												<td>yes</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditStatus-modal-lg" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -557,7 +607,8 @@
 												<td>3</td>
 												<td>yes</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditStatus-modal-lg" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -568,7 +619,8 @@
 												<td>4</td>
 												<td>yes</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditStatus-modal-lg" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -579,7 +631,8 @@
 												<td>5</td>
 												<td>yes</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditStatus-modal-lg" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -643,11 +696,74 @@
 												<label class="custom-control-label labelcustom" for="firstSignLoc">Apply model actions</label>
 											</div>
 										</div>
-										<div class="row">
-											<div class="col-lg-8"></div>
-											<div class="col-lg-4 text-end">
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
 												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-												<button type="button" class="btn btn-primary float-end"><b><i class="mdi mdi-check-all me-2"></i>Create</b></button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					<div id="mdlAddEditStatusColumn" class="modal fade bs-addEditStatus-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEStatusModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myEStatusModalLabel">Status Setup</h5>
+									@* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-2">
+											<div class="col-lg-6">Category <span class="text-danger">*</span></div>
+											<div class="col-lg-6">Status <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-6">
+												<select id="sltCategory" class="form-select" aria-label="">
+													<option value="">--</option>
+													<option value="1" selected="selected"> Applied </option>
+													<option value="2"> Shortlist </option>
+													<option value="3"> Interview </option>
+													<option value="4"> Hired </option>
+													<option value="5"> Rejected </option>
+													<option value="6"> Others </option>
+												</select>
+											</div>
+											<div class="col-lg-6"><input type="text" placeholder="" class="form-control" id=""></div>
+										</div>
+										<div class="row mt-4">
+											<div class="col-lg-6">Label Color <span class="text-danger">*</span></div>
+											<div class="col-lg-6">Position</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-lg-6">
+												<input id="" class="form-control" value="#f7f8f9" data-huebee="{ &quot;setBGColor&quot;: true, &quot;saturations&quot;: 2 }" style="background-color: rgb(247, 248, 249); color: rgb(34, 34, 34);">
+											</div>
+											<div class="col-lg-6">
+												<select id="sltCategory" class="form-select" aria-label="">
+													<option value="">--</option>
+													<option value="1" selected="selected"> Before Applied </option>
+													<option value="2"> After Applied </option>
+													<option value="3"> After Phone Screen </option>
+													<option value="4"> After Interview </option>
+													<option value="5"> After Hired </option>
+													<option value="6"> After Rejected </option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-12 custom-control custom-checkbox mt-2 mb-2">
+												<input type="checkbox" checked="checked" class="form-check-input form-check-input-custom" id="firstSignLoc" data-parsley-multiple="" data-parsley-mincheck="2">
+												<label class="custom-control-label labelcustom" for="firstSignLoc">Apply model actions</label>
+											</div>
+										</div>
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
+												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
 											</div>
 										</div>
 									</form>
@@ -693,7 +809,8 @@
 												<td>Yes</td>
 												<td>Enabled</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditCustomQn-modal-lg" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -704,7 +821,8 @@
 												<td>Yes</td>
 												<td>Enabled</td>
 												<td>
-													<a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+													<a href="#" data-bs-toggle="modal"
+													   data-animation="bounce" data-bs-target=".bs-addEditCustomQn-modal-lg" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
 													<a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
 												</td>
 											</tr><!--end tr-->
@@ -714,7 +832,7 @@
 							</div><!--end card-body-->
 						</div>
 					</div>
-					<div id="mdlAddQuestion" class="modal fade bs-addNewCustomQn-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNCQModalLabel" aria-hidden="true">
+					<div id="mdlAddQuestion" class="modal fade bs-addNewCustomQn-modal-lg" tabindex="" role="dialog" aria-labelledby="myNCQModalLabel" aria-hidden="true">
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -772,11 +890,79 @@
 												</select>
 											</div>
 										</div>
-										<div class="row mt-2">
-											<div class="col-lg-8"></div>
-											<div class="col-lg-4 text-end">
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
 												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-												<button type="button" class="btn btn-primary mt-2 float-end"><b><i class="mdi mdi-check-all me-2"></i>Create</b></button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					<div id="mdlAddEditQuestion" class="modal fade bs-addEditCustomQn-modal-lg" tabindex="" role="dialog" aria-labelledby="myECQModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title mt-0" id="myECQModalLabel">Question Setup</h5>
+									@* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-6">Category</div>
+											<div class="col-lg-6">Question <span class="text-danger">*</span></div>
+										</div>
+										<div class="row mb-2">
+											<div class="col-lg-6">
+												<select id="sltAddQnCategory" class="form-select" aria-label="">
+													<option value="">--</option>
+													<option value="1" selected="selected"> Job Application </option>
+													<option value="2"> Job Offer </option>
+												</select>
+											</div>
+											<div class="col-lg-6"><input class="form-control" type="text" value="Sample Question 1" id=""></div>
+										</div>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-6">Status</div>
+											<div class="col-lg-6">Is Required</div>
+										</div>
+										<div class="row mb-2">
+											<div class="col-lg-6">
+												<select id="sltAddQnStatus" class="form-select" aria-label="">
+													<option value="">--</option>
+													<option value="1" selected="selected"> Enable </option>
+													<option value="2"> Disable </option>
+												</select>
+											</div>
+											<div class="col-lg-6 mt-2">
+												<input class="form-check-input" checked="checked" type="radio" name="QnReqOptions" id="ipQnRequiredYes" value="">
+												<label class="form-check-label me-2" for="ipQnRequiredYes">Yes</label>
+												<input class="form-check-input" type="radio" name="QnReqOptions" id="ipQnRequiredNo" value="">
+												<label class="form-check-label" for="ipQnRequiredNo">No</label>
+											</div>
+										</div>
+										<div class="row mt-3 mb-2">
+											<div class="col-lg-12">Type</div>
+										</div>
+										<div class="row mb-2">
+											<div class="col-lg-12">
+												<select id="sltAddQnType" class="form-select" aria-label="">
+													<option value="">--</option>
+													<option value="1"> text </option>
+													<option value="2"> number </option>
+													<option value="3"> password </option>
+													<option value="4"> textarea </option>
+													<option value="5" selected="selected"> select </option>
+													<option value="6"> radio </option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-4 text-end ">
+											<div class="col-lg-12 ">
+												<button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+												<button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
 											</div>
 										</div>
 									</form>
@@ -821,7 +1007,12 @@
 		 $('#mdlFooterLink').modal({backdrop: 'static', keyboard: false});
 		 $('#mdlAddNewRecruiter').modal({backdrop: 'static', keyboard: false});
 		 $('#mdlAddStatusColumn').modal({backdrop: 'static', keyboard: false});
-		 $('#mdlAddStatusColumn').modal({backdrop: 'static', keyboard: false});
+		 $('#mdlAddQuestion').modal({backdrop: 'static', keyboard: false});
+
+		 $('#mdlEditFooterLink').modal({backdrop: 'static', keyboard: false});
+		 $('#mdlAddEditStatusColumn').modal({backdrop: 'static', keyboard: false});
+		 $('#mdlAddEditQuestion').modal({backdrop: 'static', keyboard: false});
+
 		});
 	</script>
 }

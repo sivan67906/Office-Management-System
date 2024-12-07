@@ -1,4 +1,9 @@
-﻿<div class="row">
+﻿@section Styles{
+    <style type="text/css">
+        
+    </style>
+}
+<div class="row">
     <div class="card">
         <div class="card-header">
             <div class="row align-items-center">
@@ -29,35 +34,35 @@
                 </div>
             </div>
             <div class="row" id="searchFields">
-                <div class="col-lg-3">
+                <div class="col-lg-3" id="divNameSearch">
                     <div class="mb-3 text-start">
                         <label for="nameSearch">
                             By Name
                             <span class="f-14 mr-1 text-danger">*</span>
                         </label>
 
-                        <input class="form-control mt-2 hidden" type="text" value="" id="nameSearch">
+                        <input class="form-control mt-2" type="text" value="" id="nameSearch">
 
                     </div>
                 </div> 
-                <div class="col-lg-3">
+                <div class="col-lg-3" id="divDateSearch">
                     <div class="mb-3 text-start">
                         <label for="dateSearch">
                             Date
                             <span class="f-14 mr-1 text-danger">*</span>
                         </label>
 
-                        <input class="form-control mt-2 hidden" type="date" value="" id="dateSearch">
+                        <input class="form-control mt-2" type="date" value="" id="dateSearch">
 
                     </div>
                 </div> 
-                <div class="col-lg-3">
+                <div class="col-lg-3" id="divDateBetweenSearch">
                     <div class="mb-3 text-start">
                         <label for="startDate endDate">
                             Date Between
                             <span class="f-14 mr-1 text-danger">*</span>
                         </label>
-                        <div class="row hidden">
+                        <div class="row ">
                             <div class="col-lg-6">
                                 <input class="form-control mt-2" type="date" value="" id="startDate">
                             </div>
@@ -68,14 +73,14 @@
 
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" id="divPhoneNumberSearch">
                     <div class="mb-3 text-start">
                         <label for="phoneNumberSearch">
                             Phone Number
                             <span class="f-14 mr-1 text-danger">*</span>
                         </label>
 
-                        <input class="form-control mt-2 hidden" type="tel" value="" id="phoneNumberSearch">
+                        <input class="form-control mt-2" type="tel" value="" id="phoneNumberSearch">
 
                     </div>
                 </div>
@@ -89,26 +94,40 @@
         </div>
     </div>
 </div>
-<script>
-    function updateSearchFields() {
-        const dropdown = document.getElementById("filterDropdown");
-        const selectedValue = dropdown.value;
-
+@section Scripts{
+<script type="text/javascript">
+        $(document).ready (function () {
         // Hide all input fields initially
-        document.querySelectorAll("#searchFields input").forEach(input => {
-            input.classList.add("hidden");
+          document.getElementById("searchFields").classList.add('d-none');
         });
 
-        // Show relevant input fields based on selected value
-        if (selectedValue === "name") {
-            document.getElementById("nameSearch").classList.remove("hidden");
-        } else if (selectedValue === "date") {
-            document.getElementById("dateSearch").classList.remove("hidden");
-        } else if (selectedValue === "dateBetween") {
-            document.getElementById("startDate").classList.remove("hidden");
-            document.getElementById("endDate").classList.remove("hidden");
-        } else if (selectedValue === "phoneNumber") {
-            document.getElementById("phoneNumberSearch").classList.remove("hidden");
-        }
+        function updateSearchFields() {
+        const dropdown = document.getElementById("filterDropdown");
+        const selectedValue = dropdown.value;
+          document.getElementById("searchFields").classList.remove('d-none');
+        
+            // Show relevant input fields based on selected value
+            if (selectedValue === "name") {
+                document.getElementById("divNameSearch").classList.remove("d-none");
+                document.getElementById("divDateSearch").classList.add("d-none");
+                document.getElementById("divDateBetweenSearch").classList.add("d-none");
+                document.getElementById("divPhoneNumberSearch").classList.add("d-none");
+            } else if (selectedValue === "date") {
+                document.getElementById("divNameSearch").classList.add("d-none");
+                document.getElementById("divDateSearch").classList.remove("d-none");
+                document.getElementById("divDateBetweenSearch").classList.add("d-none");
+                document.getElementById("divPhoneNumberSearch").classList.add("d-none");
+            } else if (selectedValue === "dateBetween") {
+                document.getElementById("divNameSearch").classList.add("d-none");
+                document.getElementById("divDateSearch").classList.add("d-none");
+                document.getElementById("divDateBetweenSearch").classList.remove("d-none");
+                document.getElementById("divPhoneNumberSearch").classList.add("d-none");
+            } else if (selectedValue === "phoneNumber") {
+                document.getElementById("divNameSearch").classList.add("d-none");
+                document.getElementById("divDateSearch").classList.add("d-none");
+                document.getElementById("divDateBetweenSearch").classList.add("d-none");
+                document.getElementById("divPhoneNumberSearch").classList.remove("d-none");
+            }
     }
 </script>
+}

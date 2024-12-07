@@ -1,163 +1,228 @@
 ﻿@section Styles {
 }
 <div class="row">
-    <div class="col-12 col-lg-12">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h4 class="card-title">Purchase Index</h4>
-                    </div><!--end col-->
-                </div>  <!--end row-->
-            </div><!--end card-header-->
-            <div class="card-body">
-                <div class="row mb-2">
-                    <div class="col-lg-3">Purchase Order Prefix <span class="text-danger">*</span></div>
-                    <div class="col-lg-3">Purchase Order Number Seprator</div>
-                    <div class="col-lg-3">Purchase Order Number Digits</div>
-                    <div class="col-lg-3">Purchase Order Number Example</div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-lg-3"><input type="text" placeholder="Enter Order Prefix" class="form-control" name="purchaseOrderPrefix" id="txtPurchaseOrderPrefix" /></div>
-                    <div class="col-lg-3"><input type="text" placeholder="Order Number Seperator" class="form-control" name="purchaseOrderNoSeperator" id="txtPurchaseOrderNoSeperator" /></div>
-                    <div class="col-lg-3"><input type="number" placeholder="Order Number Digits" class="form-control" name="purchaseOrderNoDigits" id="txtPurchaseOrderNoDigits" /></div>
-                    <div class="col-lg-3"><input type="text" placeholder="Order Number Example" class="form-control" name="purchaseOrderNoExample" id="txtPurchaseOrderNoExample" disabled="disabled" /></div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-lg-3">Bill Order Prefix <span class="text-danger">*</span></div>
-                    <div class="col-lg-3">Bill Order Number Seprator</div>
-                    <div class="col-lg-3">Bill Order Digits</div>
-                    <div class="col-lg-3">Bill Order Example</div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-lg-3"><input type="text" placeholder="Enter Bill Order Prefix" class="form-control" name="billOrderNotePrefix" id="txtBillOrderPrefix" /></div>
-                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Separator" class="form-control" name="billOrderNoSeperator" id="txtBillOrderNoSeperator" /></div>
-                    <div class="col-lg-3"><input type="number" placeholder="Bill Order Digits" class="form-control" name="billOrderNoDigits" id="txtBillOrderNoDigits" /></div>
-                    <div class="col-lg-3"><input type="text" placeholder="Bill Order Number Example" class="form-control" name="billOrderNoExample" id="txtBillOrderNoExample" disabled="disabled" /></div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-lg-3">Vendor Credit Prefix <span class="text-danger">*</span></div>
-                    <div class="col-lg-3">Vendor Credit Number Seprator</div>
-                    <div class="col-lg-3">Vendor Credit Number Digits</div>
-                    <div class="col-lg-3">Vendor Credit Number Example</div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Prefix" class="form-control" name="vendorCreditPrefix" id="txtVendorCreditPrefix" /></div>
-                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Separator" class="form-control" name="vendorCreditNoSeperator" id="txtVendorCreditNoSeperator" /></div>
-                    <div class="col-lg-3"><input type="number" placeholder="Vendor Credit Number Digits" class="form-control" name="vendorCreditNoDigits" id="txtVendorCreditNoDigits" /></div>
-                    <div class="col-lg-3"><input type="text" placeholder="Vendor Credit Number Example" class="form-control" name="vendorCreditNoExample" id="txtVendorCreditNoExample" disabled="disabled" /></div>
-                </div>
-                <button type="button" class="btn btn-primary float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
-            </div>
-        </div>
-        </div>
-    </div>
+	<div class="col-12 col-lg-12">
+		<div class="card">
+			<div class="card-header">
+				<div class="row align-items-center">
+					<div class="col">
+						<h4 class="card-title">Purchase Index</h4>
+					</div><!--end col-->
+				</div>  <!--end row-->
+			</div><!--end card-header-->
+			<div class="card-body">
+				<div class="row col-lg-12 mt-2 ms-1">
+					<div class="col-lg-3">
+						<div class="text-center">
+							<h4 class="text-muted">Purchase Order</h4>
+						</div>
+						<div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+							<div class="card-body">
+								<div class="row mt-2">
+									<span>Purchase Order Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Enter Order Prefix" class="form-control" name="purchaseOrderPrefix" id="txtPurchaseOrderPrefix" />
+								</div>
+								<div class="row mt-4">
+									Purchase Order Number Seprator
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Order Number Seperator" class="form-control" name="purchaseOrderNoSeperator" id="txtPurchaseOrderNoSeperator" />
+								</div>
+								<div class="row mt-4">
+									Purchase Order Number Digits
+								</div>
+								<div class="row mt-2">
+									<input type="number" placeholder="Order Number Digits" class="form-control" name="purchaseOrderNoDigits" id="txtPurchaseOrderNoDigits" />
+								</div>
+								<div class="row mt-4">
+									Purchase Order Number Example
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Order Number Example" class="form-control" name="purchaseOrderNoExample" id="txtPurchaseOrderNoExample" disabled="disabled" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="text-center">
+							<h4 class="text-muted">Bill Order</h4>
+						</div>
+						<div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+							<div class="card-body">
+								<div class="row mt-2">
+									<span>Bill Order Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Enter Bill Order Prefix" class="form-control" name="billOrderNotePrefix" id="txtBillOrderPrefix" />
+								</div>
+								<div class="row mt-4">
+									Bill Order Number Seprator
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Bill Order Number Separator" class="form-control" name="billOrderNoSeperator" id="txtBillOrderNoSeperator" />
+								</div>
+								<div class="row mt-4">
+									Bill Order Digits
+								</div>
+								<div class="row mt-2">
+									<input type="number" placeholder="Bill Order Digits" class="form-control" name="billOrderNoDigits" id="txtBillOrderNoDigits" />
+								</div>
+								<div class="row mt-4">
+									Bill Order Example
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Bill Order Number Example" class="form-control" name="billOrderNoExample" id="txtBillOrderNoExample" disabled="disabled" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="text-center">
+							<h4 class="text-muted">Vendor Credit</h4>
+						</div>
+						<div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+							<div class="card-body">
+								<div class="row mt-2">
+									<span>Vendor Credit Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Vendor Credit Prefix" class="form-control" name="vendorCreditPrefix" id="txtVendorCreditPrefix" />
+								</div>
+								<div class="row mt-4">
+									Vendor Credit Number Seprator
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Vendor Credit Number Separator" class="form-control" name="vendorCreditNoSeperator" id="txtVendorCreditNoSeperator" />
+								</div>
+								<div class="row mt-4">
+									Vendor Credit Number Digits
+								</div>
+								<div class="row mt-2">
+									<input type="number" placeholder="Vendor Credit Number Digits" class="form-control" name="vendorCreditNoDigits" id="txtVendorCreditNoDigits" />
+								</div>
+								<div class="row mt-4">
+									Vendor Credit Number Example
+								</div>
+								<div class="row mt-2">
+									<input type="text" placeholder="Vendor Credit Number Example" class="form-control" name="vendorCreditNoExample" id="txtVendorCreditNoExample" disabled="disabled" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
+			</div>
+		</div>
+	</div>
+</div>
 <!--end row-->
 @section Scripts {
-    <script type="text/javascript">
-            $.event.special.inputchange = {
-            setup: function() {
-                var self = this, val;
-                $.data(this, 'timer', window.setInterval(function() {
-                    val = self.value;
-                    if ( $.data( self, 'cache') != val ) {
-                        $.data( self, 'cache', val );
-                        $( self ).trigger( 'inputchange' );
-                    }
-                }, 20));
-            },
-            teardown: function() {
-                window.clearInterval( $.data(this, 'timer') );
-            },
-            add: function() {
-                $.data(this, 'cache', this.value);
-            }
-        };
+	<script type="text/javascript">
+			$.event.special.inputchange = {
+			setup: function() {
+				var self = this, val;
+				$.data(this, 'timer', window.setInterval(function() {
+					val = self.value;
+					if ( $.data( self, 'cache') != val ) {
+						$.data( self, 'cache', val );
+						$( self ).trigger( 'inputchange' );
+					}
+				}, 20));
+			},
+			teardown: function() {
+				window.clearInterval( $.data(this, 'timer') );
+			},
+			add: function() {
+				$.data(this, 'cache', this.value);
+			}
+		};
 
-        $('#txtPurchaseOrderPrefix').on('inputchange', function() {
-                   var prefix = $("#txtPurchaseOrderPrefix").val();
-                    var seperator = $("#txtPurchaseOrderNoSeperator").val();
-                    var digits = $("#txtPurchaseOrderNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtPurchaseOrderNoExample").val(result);
-        });
-        $('#txtPurchaseOrderNoSeperator').on('inputchange', function() {
-                   var prefix = $("#txtPurchaseOrderPrefix").val();
-                    var seperator = $("#txtPurchaseOrderNoSeperator").val();
-                    var digits = $("#txtPurchaseOrderNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtPurchaseOrderNoExample").val(result);
-        });
-        $('#txtPurchaseOrderNoDigits').on('inputchange', function() {
-                   var prefix = $("#txtPurchaseOrderPrefix").val();
-                    var seperator = $("#txtPurchaseOrderNoSeperator").val();
-                    var digits = $("#txtPurchaseOrderNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtPurchaseOrderNoExample").val(result);
-        });
-
-
-        $('#txtBillOrderPrefix').on('inputchange', function() {
-                   var prefix = $("#txtBillOrderPrefix").val();
-                    var seperator = $("#txtBillOrderNoSeperator").val();
-                    var digits = $("#txtBillOrderNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtBillOrderNoExample").val(result);
-        });
-        $('#txtBillOrderNoSeperator').on('inputchange', function() {
-                   var prefix = $("#txtBillOrderPrefix").val();
-                    var seperator = $("#txtBillOrderNoSeperator").val();
-                    var digits = $("#txtBillOrderNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtBillOrderNoExample").val(result);
-        });
-        $('#txtBillOrderNoDigits').on('inputchange', function() {
-                   var prefix = $("#txtBillOrderPrefix").val();
-                    var seperator = $("#txtBillOrderNoSeperator").val();
-                    var digits = $("#txtBillOrderNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtBillOrderNoExample").val(result);
-        });
+		$('#txtPurchaseOrderPrefix').on('inputchange', function() {
+				   var prefix = $("#txtPurchaseOrderPrefix").val();
+					var seperator = $("#txtPurchaseOrderNoSeperator").val();
+					var digits = $("#txtPurchaseOrderNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtPurchaseOrderNoExample").val(result);
+		});
+		$('#txtPurchaseOrderNoSeperator').on('inputchange', function() {
+				   var prefix = $("#txtPurchaseOrderPrefix").val();
+					var seperator = $("#txtPurchaseOrderNoSeperator").val();
+					var digits = $("#txtPurchaseOrderNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtPurchaseOrderNoExample").val(result);
+		});
+		$('#txtPurchaseOrderNoDigits').on('inputchange', function() {
+				   var prefix = $("#txtPurchaseOrderPrefix").val();
+					var seperator = $("#txtPurchaseOrderNoSeperator").val();
+					var digits = $("#txtPurchaseOrderNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtPurchaseOrderNoExample").val(result);
+		});
 
 
-        $('#txtVendorCreditPrefix').on('inputchange', function() {
-                   var prefix = $("#txtVendorCreditPrefix").val();
-                    var seperator = $("#txtVendorCreditNoSeperator").val();
-                    var digits = $("#txtVendorCreditNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtVendorCreditNoExample").val(result);
-        });
-        $('#txtVendorCreditNoSeperator').on('inputchange', function() {
-                   var prefix = $("#txtVendorCreditPrefix").val();
-                    var seperator = $("#txtVendorCreditNoSeperator").val();
-                    var digits = $("#txtVendorCreditNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtVendorCreditNoExample").val(result);
-        });
-        $('#txtVendorCreditNoDigits').on('inputchange', function() {
-                   var prefix = $("#txtVendorCreditPrefix").val();
-                    var seperator = $("#txtVendorCreditNoSeperator").val();
-                    var digits = $("#txtVendorCreditNoDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#txtVendorCreditNoExample").val(result);
-        });
-    </script>
+		$('#txtBillOrderPrefix').on('inputchange', function() {
+				   var prefix = $("#txtBillOrderPrefix").val();
+					var seperator = $("#txtBillOrderNoSeperator").val();
+					var digits = $("#txtBillOrderNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtBillOrderNoExample").val(result);
+		});
+		$('#txtBillOrderNoSeperator').on('inputchange', function() {
+				   var prefix = $("#txtBillOrderPrefix").val();
+					var seperator = $("#txtBillOrderNoSeperator").val();
+					var digits = $("#txtBillOrderNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtBillOrderNoExample").val(result);
+		});
+		$('#txtBillOrderNoDigits').on('inputchange', function() {
+				   var prefix = $("#txtBillOrderPrefix").val();
+					var seperator = $("#txtBillOrderNoSeperator").val();
+					var digits = $("#txtBillOrderNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtBillOrderNoExample").val(result);
+		});
+
+
+		$('#txtVendorCreditPrefix').on('inputchange', function() {
+				   var prefix = $("#txtVendorCreditPrefix").val();
+					var seperator = $("#txtVendorCreditNoSeperator").val();
+					var digits = $("#txtVendorCreditNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtVendorCreditNoExample").val(result);
+		});
+		$('#txtVendorCreditNoSeperator').on('inputchange', function() {
+				   var prefix = $("#txtVendorCreditPrefix").val();
+					var seperator = $("#txtVendorCreditNoSeperator").val();
+					var digits = $("#txtVendorCreditNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtVendorCreditNoExample").val(result);
+		});
+		$('#txtVendorCreditNoDigits').on('inputchange', function() {
+				   var prefix = $("#txtVendorCreditPrefix").val();
+					var seperator = $("#txtVendorCreditNoSeperator").val();
+					var digits = $("#txtVendorCreditNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtVendorCreditNoExample").val(result);
+		});
+	</script>
 }
