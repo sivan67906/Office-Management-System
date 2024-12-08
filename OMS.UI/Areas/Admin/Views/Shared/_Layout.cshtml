@@ -48,6 +48,7 @@
 								<i class="ti ti-smart-home menu-icon"></i>
 							</a><!--end nav-link-->
 						</li><!--end nav-item-->
+						
 						<!--end nav-item-->
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="CRM" data-bs-trigger="hover">
 							<a href="#hrefCRM" id="crm-tab" class="nav-link">
@@ -109,6 +110,11 @@
 								<i class="mdi mdi-settings-outline menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
+						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Configuration" data-bs-trigger="hover">
+							<a href="#hrefConfigurationSettings" id="configurationsettings-tab" class="nav-link">
+								<i class="mdi mdi-settings menu-icon"></i>
+							</a><!--end nav-link-->
+						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!--end /div-->
 			</div><!--end main-icon-menu-body-->
@@ -391,42 +397,6 @@
 						<!-- Navigation -->
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="#sidebarElementsConfiguration" data-bs-toggle="collapse" role="button"
-								   aria-expanded="false" aria-controls="sidebarElementsConfiguration">
-									Configuration
-								</a>
-								<div class="collapse " id="sidebarElementsConfiguration">
-									<ul class="nav flex-column">
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Consumer">Consumer</a>
-										</li><!--end nav-item-->
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="SearchConsumer">Search Consumer </a>
-										</li><!--end nav-item-->
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Company">Company</a>
-										</li><!--end nav-item-->
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="BusinessAddress">Business Location</a>
-										</li><!--end nav-item-->
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Department">Department</a>
-										</li><!--end nav-item-->
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Designation">Designation</a>
-										</li><!--end nav-item-->
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Roles">Roles</a>
-										</li><!--end nav-item-->
-
-										<li class="nav-item">
-											<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="DesignationRoleMap">Role Assignment</a>
-										</li><!--end nav-item-->
-									</ul><!--end nav-->
-								</div><!--end sidebarElements-->
-							</li><!--end nav-item-->
-
-							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Support" asp-action="Lead">Lead</a>
 							</li><!--end nav-item-->
 							<li class="nav-item">
@@ -513,7 +483,42 @@
 						</ul><!--end navbar-nav--->
 					</div><!--end sidebarCollapse_2-->
 				</div><!-- end Settings -->
+				<div id="hrefConfigurationSettings" class="main-icon-menu-pane tab-pane" role="tabpanel"
+					 aria-labelledby="configurationsettings-tab">
+					<div class="title-box">
+						<h6 class="menu-title">Configuration</h6>
+					</div>
+					<div class="collapse navbar-collapse" id="sbCollapseConfiguration_2">
+						<!-- Navigation -->
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Consumer">Consumer</a>
+							</li><!--end nav-item-->
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="SearchConsumer">Search Consumer </a>
+							</li><!--end nav-item-->
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Company">Company</a>
+							</li><!--end nav-item-->
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="BusinessAddress">Business Location</a>
+							</li><!--end nav-item-->
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Department">Department</a>
+							</li><!--end nav-item-->
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Designation">Designation</a>
+							</li><!--end nav-item-->
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Roles">Roles</a>
+							</li><!--end nav-item-->
 
+							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="DesignationRoleMap">Role Assignment</a>
+							</li><!--end nav-item-->
+						</ul><!--end navbar-nav--->
+					</div><!--end sidebarCollapse_2-->
+				</div><!-- end Settings -->
 			</div><!--end menu-body-->
 		</div><!-- end main-menu-inner-->
 	</div>
@@ -712,7 +717,7 @@
 				<script>
 					document.write(new Date().getFullYear())
 				</script>
-				Urben Techies <span class="text-muted d-none d-sm-inline-block float-end"> Crafted with <i class="mdi mdi-heart text-danger"></i> by Aviv Solutions Inc </span>
+				Urben Techies <span class="d-none d-sm-inline-block float-end"> Crafted with <i class="mdi mdi-heart text-danger"></i> by Aviv Solutions Inc </span>
 			</footer><!-- End Footer -->
 		</div>
 		<!-- end page content -->
