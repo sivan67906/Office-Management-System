@@ -69,7 +69,7 @@ Author: Mannatthemes
   --bs-body-bg: #f5f5f9;
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: #e8ebf3;
+  --bs-border-color: #c5c7cc;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.25rem;
   --bs-border-radius-sm: 0.25rem;
@@ -2430,7 +2430,7 @@ progress {
 .table {
   --bs-table-color: #000444;
   --bs-table-bg: transparent;
-  --bs-table-border-color: #e8ebf3;
+  --bs-table-border-color: #c5c7cc;
   --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #000444;
   --bs-table-striped-bg: #f5f5f9;
@@ -2459,7 +2459,7 @@ progress {
 }
 
 .table-group-divider {
-  border-top: 2px solid #e8ebf3;
+  border-top: 2px solid #c5c7cc;
 }
 
 .caption-top {
@@ -2693,7 +2693,7 @@ progress {
   color: #000444;
   background-color: #ffffff;
   background-clip: padding-box;
-  border: 1px solid #e8ebf3;
+  border: 1px solid #c5c7cc;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2906,7 +2906,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: left 1rem center;
   background-size: 16px 12px;
-  border: 1px solid #e8ebf3;
+  border: 1px solid #c5c7cc;
   border-radius: 0.25rem;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -3332,7 +3332,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: #f1f5fa;
-  border: 1px solid #e8ebf3;
+  border: 1px solid #c5c7cc;
   border-radius: 0.25rem;
 }
 
@@ -5419,7 +5419,7 @@ textarea.form-control-lg {
   --bs-accordion-color: #000444;
   --bs-accordion-bg: #ffffff;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-  --bs-accordion-border-color: #eceff5;
+  --bs-accordion-border-color: #c5c7cc;
   --bs-accordion-border-width: 1px;
   --bs-accordion-border-radius: 0.25rem;
   --bs-accordion-inner-border-radius: calc(0.25rem - 1px);
@@ -5936,7 +5936,7 @@ textarea.form-control-lg {
 .list-group {
   --bs-list-group-color: #000444;
   --bs-list-group-bg: #ffffff;
-  --bs-list-group-border-color: #eceff5;
+  --bs-list-group-border-color: #c5c7cc;
   --bs-list-group-border-width: 1px;
   --bs-list-group-border-radius: 0.25rem;
   --bs-list-group-item-padding-x: 1rem;
@@ -6466,7 +6466,7 @@ textarea.form-control-lg {
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
   --bs-modal-bg: #ffffff;
-  --bs-modal-border-color: #eceff5;
+  --bs-modal-border-color: #c5c7cc;
   --bs-modal-border-width: 0;
   --bs-modal-border-radius: 0.5rem;
   --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -6474,12 +6474,12 @@ textarea.form-control-lg {
   --bs-modal-header-padding-x: 1rem;
   --bs-modal-header-padding-y: 1rem;
   --bs-modal-header-padding: 1rem 1rem;
-  --bs-modal-header-border-color: #e8ebf3;
+  --bs-modal-header-border-color: #c5c7cc;
   --bs-modal-header-border-width: 0;
   --bs-modal-title-line-height: 1.5;
   --bs-modal-footer-gap: 0.5rem;
   --bs-modal-footer-bg: ;
-  --bs-modal-footer-border-color: #e8ebf3;
+  --bs-modal-footer-border-color: #c5c7cc;
   --bs-modal-footer-border-width: 0;
   position: fixed;
   top: 0;
@@ -7344,7 +7344,7 @@ textarea.form-control-lg {
   --bs-offcanvas-color: ;
   --bs-offcanvas-bg: #ffffff;
   --bs-offcanvas-border-width: 0;
-  --bs-offcanvas-border-color: #eceff5;
+  --bs-offcanvas-border-color: #c5c7cc;
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
@@ -13520,20 +13520,20 @@ textarea.form-control-lg {
 .card {
   margin-bottom: 16px;
   background-color: #ffffff;
-  border: 1px solid #eceff5;
+  border: 1px solid #c5c7cc;
   -webkit-box-shadow: 0 1px 3px 0 rgba(34, 41, 47, 0.1);
           box-shadow: 0 1px 3px 0 rgba(34, 41, 47, 0.1);
 }
 .card .card-header {
   background-color: #ffffff;
-  border-bottom: 1px solid #eceff5;
+  border-bottom: 1px solid #c5c7cc;
 }
 .card .card-header:first-child {
   border-radius: calc(0.5rem - 1px) calc(0.5rem - 1px) 0 0;
 }
 .card .card-footer {
   background-color: #ffffff;
-  border-top: 1px dashed #eceff5;
+  border-top: 1px dashed #c5c7cc;
 }
 
 .card-title {
