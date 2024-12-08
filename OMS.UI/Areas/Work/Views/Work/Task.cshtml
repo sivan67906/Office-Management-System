@@ -1,8 +1,7 @@
-﻿@section Scripts {
+﻿@section Styles {
     <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
     <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css">
-    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+   
 }
 <div class="row">
     <div class="card">
@@ -28,7 +27,6 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h6 class="modal-title m-0" id="BAddressLabel">Task Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
@@ -383,7 +381,8 @@
                                     <div class="modal-footer">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <button type="button" class="btn btn-de-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-footer-->
@@ -392,6 +391,378 @@
                         </div><!--end modal-->
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col=md-12 ">
+                        <div class="modal fade" id="ETask" tabindex="-1" aria-labelledby="ETaskLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="ETaskLabel">Edit Task Details</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Title    <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input class="form-control mt-2" type="text" value="Db Work" id="example-text-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Task category
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="1" selected>TaskCat1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Project
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="1" selected>Database Backup</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+
+                                                    <label class="">Assigned To  </label>
+                                                    <div class="selectr-container selectr-desktop multiple mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+
+                                                            <option value="value-1">App Admin</option>
+                                                            <option value="value-2" selected>John Doe</option>
+                                                            <option value="value-3">Jack</option>
+                                                        </select>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Start Date <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input type="date" class="form-control mt-2" value="2024-02-25" id="inputGroupFile01">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2 ">
+
+                                                <div class="textbox-container " id="textbox7" style="display: none;">
+                                                    <div class="mb-3 row text-start">
+                                                        <div class="col-sm-12">
+                                                            <label for="example-text-input">
+                                                                Due Date
+                                                            </label>
+                                                            <input type="date" class="form-control mt-2" value="2024-03-01" id="inputGroupFile01">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-check form-check-inline mt-2">
+                                                            <input class="dynamic-checkbox form-check-input form-check-input-custom me-2" type="checkbox" id="checkbox7" data-target="textbox7" value="1">
+                                                            <label class="form-check-label mt-1" for="dynamic-checkbox">WithOut Due Date</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-start">
+                                                <label for="notes">
+                                                    Description
+                                                </label>
+                                                <textarea id="" aria-hidden="true" rows="5" class="form-control mt-2">Project Work</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-start mb-3 mt-3">
+                                                <h4 class="header-title">Other Details</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Label
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" >--</option>
+                                                            <option value="value-1">Label1</option>
+                                                            <option value="value-2" selected>Label2</option>
+                                                            <option value="value-3">Label3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2 " id="belowone">
+                                                <div class="mb-3 text-start">
+                                                    <div class="mb-3 row">
+                                                        <div class="col-sm-12">
+                                                            <label for="example-text-input">
+                                                                Milestones
+                                                            </label>
+                                                            <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                                <div class="selectr-options-container">
+                                                                    <div class="selectr-input-container">
+                                                                        <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                        <button class="selectr-input-clear" type="button"></button>
+                                                                    </div>
+                                                                    <div class="selectr-notice"></div>
+                                                                    <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                </div>
+                                                                <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                                    <option value="" >--</option>
+                                                                    <option value="value-1">Milestone1</option>
+                                                                    <option value="value-2" selected>Milestone1</option>
+                                                                    <option value="value-3">Milestone1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <div class="col-sm-12">
+                                                        <label for="example-text-input">
+                                                            Status
+                                                        </label>
+                                                        <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                            <div class="selectr-options-container">
+                                                                <div class="selectr-input-container">
+                                                                    <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                    <button class="selectr-input-clear" type="button"></button>
+                                                                </div>
+                                                                <div class="selectr-notice"></div>
+                                                                <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                            </div>
+                                                            <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                                <option value="" >--</option>
+                                                                <option value="value-1">InComplete</option>
+                                                                <option value="value-2">To Do</option>
+                                                                <option value="value-3">Doing</option>
+                                                                <option value="value-3" selected>Completed</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <div class="col-sm-12">
+                                                        <label for="example-text-input">
+                                                            Priority
+                                                        </label>
+                                                        <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                            <div class="selectr-options-container">
+                                                                <div class="selectr-input-container">
+                                                                    <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                    <button class="selectr-input-clear" type="button"></button>
+                                                                </div>
+                                                                <div class="selectr-notice"></div>
+                                                                <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                            </div>
+                                                            <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                                <option value="" >--</option>
+                                                                <option value="value-1" selected>High</option>
+                                                                <option value="value-2">Medium</option>
+                                                                <option value="value-3">Low</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 text-start">
+                                            <div class="col-lg-4">
+                                                <div class="col-sm-12">
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input class="form-check-input form-check-input-custom me-2" type="checkbox" id="" value="1">
+                                                        <label class="form-check-label mt-1" for="allowce">Make Private</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="col-sm-12">
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input class="form-check-input form-check-input-custom me-2" type="checkbox" id="" value="1">
+                                                        <label class="form-check-label mt-1" for="allowce">Billable</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-check form-check-inline mt-2">
+                                                            <input class="form-check-input form-check-input-custom me-2" type="checkbox" id="allowce" value="1">
+                                                            <label class="form-check-label mt-1" for="allowce">Time Estimate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 " id="belowone" style="display: none;">
+                                                        <div class="input-group mt-2">
+                                                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                                                            <div class="input-group-text">Hrs</div>
+                                                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                                                            <div class="input-group-text">Mins</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 text-start">
+                                            <div class="col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-check form-check-inline mt-2">
+                                                            <input class="dynamic-checkbox form-check-input form-check-input-custom me-2" type="checkbox" id="checkbox1" data-target="textbox1" value="1">
+                                                            <label class="form-check-label mt-1" for="dynamic-checkbox">Reapeat</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="textbox-container" id="textbox1" style="display: none;">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <label for="example-text-input">
+                                                                    Repeat every
+                                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                                </label>
+                                                                <input type="number" class="form-control mt-2" id="inputGroupFile01">
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <label for="example-text-input">
+                                                                    Cycles
+                                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                                </label>
+                                                                <input type="number" class="form-control mt-2" id="inputGroupFile01">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-check form-check-inline mt-2">
+                                                            <input class="dynamic-checkbox form-check-input form-check-input-custom me-2" type="checkbox" id="checkbox2" data-target="textbox2" value="1">
+                                                            <label class="form-check-label mt-1" for="dynamic-checkbox">Task is Dependent on anather Task</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="textbox-container" id="textbox2" style="display: none;">
+                                                        <div class="col-lg-12">
+                                                            <label for="example-text-input">
+                                                                Dependent Task
+                                                            </label>
+                                                            <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                                <div class="selectr-options-container">
+                                                                    <div class="selectr-input-container">
+                                                                        <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                        <button class="selectr-input-clear" type="button"></button>
+                                                                    </div>
+                                                                    <div class="selectr-notice"></div>
+                                                                    <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                </div>
+                                                                <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                                    <option value="value-1" selected>Task1</option>
+                                                                    <option value="value-2">Task2</option>
+                                                                    <option value="value-3">Task3</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Add File
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="input-group mt-2">
+
+                                                        <input type="file" class="form-control" id="inputGroupFile01">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!--end card-body-->
+                                    <div class="modal-footer">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-footer-->
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+                    </div>
+                </div>
+
                 <div class="table-responsive">
                     <table class="table mb-0">
                         <thead class="thead-light">
@@ -410,20 +781,111 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th><input type="checkbox" /></th>
-                                <td>TA44</td>
-                                <td>Filter Creation</td>
-                                <td>---</td>
-                                <td>01-12-2024</td>
-                                <td>15-03-2024</td>
-                                <td>App Admin</td>
-                                <td>Ravi</td>
-                                <td>On Progress</td>
+                                <td><input type="checkbox" /></td>
+                                <td>TT001</td>
+                                <td>Database Backup</td>
+                                <td>2024-03-01</td>
+                                <td>2024-02-25</td>
+                                <td>2024-03-01</td>
+                                <td>6</td>
+                                <td>John Doe</td>
+                                <td>Completed</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ETask" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>TT002</td>
+                                <td>Code Review</td>
+                                <td>-</td>
+                                <td>2024-03-05</td>
+                                <td>2024-03-07</td>
+                                <td>3</td>
+                                <td>Jane Smith</td>
+                                <td>In Progress</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ETask" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>TT003</td>
+                                <td>Design Mockups</td>
+                                <td>-</td>
+                                <td>2024-03-10</td>
+                                <td>2024-03-20</td>
+                                <td>10</td>
+                                <td>Emily Davis</td>
+                                <td>Not Started</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ETask" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>TT004</td>
+                                <td>Server Maintenance</td>
+                                <td>2024-02-28</td>
+                                <td>2024-02-25</td>
+                                <td>2024-02-28</td>
+                                <td>8</td>
+                                <td>Michael Brown</td>
+                                <td>Completed</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ETask" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>TT005</td>
+                                <td>Client Feedback</td>
+                                <td>-</td>
+                                <td>2024-03-15</td>
+                                <td>2024-03-18</td>
+                                <td>4</td>
+                                <td>Chris Johnson</td>
+                                <td>In Progress</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ETask" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>TT006</td>
+                                <td>API Integration</td>
+                                <td>-</td>
+                                <td>2024-03-20</td>
+                                <td>2024-03-25</td>
+                                <td>5</td>
+                                <td>William Taylor</td>
+                                <td>Not Started</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ETask" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>TT007</td>
+                                <td>Testing & QA</td>
+                                <td>2024-03-05</td>
+                                <td>2024-03-01</td>
+                                <td>2024-03-05</td>
+                                <td>7</td>
+                                <td>Sarah Wilson</td>
+                                <td>Completed</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ETask" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->
@@ -432,17 +894,14 @@
     </div>
 </div>
 
-<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
-<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
-<script>
-    tinymce.init({
-      selector: 'textarea#txtlead'
-    });
-    tinymce.init({
-      selector: 'textarea#txtedittemplate'
-    });
-</script>
-
+@section Scripts{
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
 <script>
    // Select all checkboxes with the class 'dynamic-checkbox'
 const checkboxes = document.querySelectorAll(".dynamic-checkbox");
@@ -464,3 +923,4 @@ checkboxes.forEach((checkbox) => {
 });
 
 </script>
+}

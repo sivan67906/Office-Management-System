@@ -17,80 +17,305 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="mb-3 text-start">
-                        <label for="example-text-input">
-                            Search Filter
-                            <span class="f-14 mr-1 text-danger">*</span>
-                        </label>
-                        <select id="filterDropdown" onchange="updateSearchFields()"class="form-select" >
-                            <option value="" disabled selected>--</option>
-                            <option value="name">Name Search</option>
-                            <option value="date">Date Search</option>
-                            <option value="dateBetween">Date Between Search</option>
-                            <option value="phoneNumber">Phone Number Search</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="searchFields">
-                <div class="col-lg-3" id="divNameSearch">
-                    <div class="mb-3 text-start">
-                        <label for="nameSearch">
-                            By Name
-                            <span class="f-14 mr-1 text-danger">*</span>
-                        </label>
-
-                        <input class="form-control mt-2" type="text" value="" id="nameSearch">
-
-                    </div>
-                </div> 
-                <div class="col-lg-3" id="divDateSearch">
-                    <div class="mb-3 text-start">
-                        <label for="dateSearch">
-                            Date
-                            <span class="f-14 mr-1 text-danger">*</span>
-                        </label>
-
-                        <input class="form-control mt-2" type="date" value="" id="dateSearch">
-
-                    </div>
-                </div> 
-                <div class="col-lg-3" id="divDateBetweenSearch">
-                    <div class="mb-3 text-start">
-                        <label for="startDate endDate">
-                            Date Between
-                            <span class="f-14 mr-1 text-danger">*</span>
-                        </label>
-                        <div class="row ">
-                            <div class="col-lg-6">
-                                <input class="form-control mt-2" type="date" value="" id="startDate">
-                            </div>
-                            <div class="col-lg-6">
-                                <input class="form-control mt-2" type="date" value="" id="endDate">
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mb-3 text-start">
+                                <label for="example-text-input">
+                                    Search Filter
+                                    <span class="f-14 mr-1 text-danger">*</span>
+                                </label>
+                                <select id="filterDropdown" onchange="updateSearchFields()" class="form-select mt-2">
+                                    <option value="" disabled selected>--</option>
+                                    <option value="name">Name Search</option>
+                                    <option value="date">Date Search</option>
+                                    <option value="dateBetween">Date Between Search</option>
+                                    <option value="phoneNumber">Phone Number Search</option>
+                                </select>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <div class="col-lg-3" id="divPhoneNumberSearch">
-                    <div class="mb-3 text-start">
-                        <label for="phoneNumberSearch">
-                            Phone Number
-                            <span class="f-14 mr-1 text-danger">*</span>
-                        </label>
+                <div class="col-lg-5">
+                    <div class="row" id="searchFields">
+                        <div class="col-lg-12" id="divNameSearch">
+                            <div class="mb-3 text-start">
+                                <label for="nameSearch">
+                                    By Name
+                                    <span class="f-14 mr-1 text-danger">*</span>
+                                </label>
 
-                        <input class="form-control mt-2" type="tel" value="" id="phoneNumberSearch">
+                                <input class="form-control mt-2" type="text" value="" id="nameSearch">
 
+                            </div>
+                        </div>
+                        <div class="col-lg-12" id="divDateSearch">
+                            <div class="mb-3 text-start">
+                                <label for="dateSearch">
+                                    Date
+                                    <span class="f-14 mr-1 text-danger">*</span>
+                                </label>
+
+                                <input class="form-control mt-2" type="date" value="" id="dateSearch">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12" id="divDateBetweenSearch">
+                            <div class="mb-3 text-start">
+                                <label for="startDate endDate">
+                                    Date Between
+                                    <span class="f-14 mr-1 text-danger">*</span>
+                                </label>
+                                <div class="row ">
+                                    <div class="col-lg-6">
+                                        <input class="form-control mt-2" type="date" value="" id="startDate">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input class="form-control mt-2" type="date" value="" id="endDate">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12" id="divPhoneNumberSearch">
+                            <div class="mb-3 text-start">
+                                <label for="phoneNumberSearch">
+                                    Phone Number
+                                    <span class="f-14 mr-1 text-danger">*</span>
+                                </label>
+
+                                <input class="form-control mt-2" type="tel" value="" id="phoneNumberSearch">
+
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-end">
-                    <button type="button" class="btn btn-warning bg-opacity-75 "><i class="mdi mdi-filter me-2"></i>Filter</button>
+                <div class="col-lg-3">
+                     <div class="row">
+                            <div class="col-lg-12 text-end mt-1">
+                                <button type="button" class="btn btn-warning bg-opacity-75 mt-4"><i class="mdi mdi-filter me-2"></i>Filter</button>
+                            </div>
+                     </div>
                 </div>
+
+
+
+
+                    <div class="row">
+                        <div class="col=md-12 ">
+
+                            <div class="modal fade" id="EConsumer1" tabindex="-1" aria-labelledby="EditConsumer1" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="EditCompany2">Edit Consumer Details</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            First Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="Sarah" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Last Name
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="text" value="Taylor" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Email
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="email" value="taylor44@email.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Password
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+                                                        <input type="password" id="password" class="form-control mt-2"value="rthsGRSE@675" placeholder="Enter your password">
+                                                        <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Plan Type
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+                                                        <select class="form-select mt-2" aria-label="Default select example">
+                                                            <option value="" selected>--</option>
+                                                            <option value="1">Lite</option>
+                                                            <option value="2"selected>Advanced</option>
+                                                            <option value="3">Premium</option>
+                                                            <option value="3">Platinum</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Phone Number
+                                                            <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="tel" value="6184866845" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Website
+                                                        </label>
+
+                                                        <input class="form-control mt-2" type="url" value="https://www.daslook.com" id="example-text-input">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Description
+
+                                                        </label>
+                                                        <textarea class="form-control mt-2" id="" rows="5">Think Smart Work Hard</textarea>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer ">
+                                            <div class="row mt-2 text-end ">
+                                                <div class="col-lg-12 ">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+
+
+                <div class="table-responsive">
+                    <table class="table  mb-0">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Plan Type</th>
+                                <th>Phone Number</th>
+                                <th>Website</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Jane Smith</td>
+                                <td>smith07@email.com</td>
+                                <td>Lite</td>
+                                <td>8668456493</td>
+                                <td>https://www.ramio.com</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EConsumer1" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sarah Taylor</td>
+                                <td>taylor44@email.com</td>
+                                <td>Advanced</td>
+                                <td>6184866845</td>
+                                <td>https://www.daslook.com</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mike Johnson</td>
+                                <td>mike.johnson@example.com</td>
+                                <td>Lite</td>
+                                <td>4567890123</td>
+                                <td>www.mikejohnson.com</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Sarah Brown</td>
+                                <td>sarahbrown@example.com</td>
+                                <td>Premium</td>
+                                <td>5678901234</td>
+                                <td>www.sarahbrown.com</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Chris Davis</td>
+                                <td>chris.davis@example.com</td>
+                                <td>Basic</td>
+                                <td>6789012345</td>
+                                <td>www.chrisdavis.com</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Emily Wilson</td>
+                                <td>emily.wilson@example.com</td>
+                                <td>Standard</td>
+                                <td>7890123456</td>
+                                <td>www.emilywilson.com</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EConsumer2" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table><!--end /table-->
+                </div><!--end /tableresponsive-->
+
             </div>
-           
         </div>
     </div>
 </div>

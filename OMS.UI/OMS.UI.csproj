@@ -31,8 +31,8 @@
     <Folder Include="Areas\Messages\Data\" />
     <Folder Include="Areas\Messages\Models\" />
     <Folder Include="Areas\Messages\Views\" />
-    <Folder Include="Areas\NoticeBoard\Data\" />
-    <Folder Include="Areas\NoticeBoard\Models\" />
+    <Folder Include="Areas\Broadcast\Data\" />
+    <Folder Include="Areas\Broadcast\Models\" />
     <Folder Include="Areas\Payroll\Data\" />
     <Folder Include="Areas\Payroll\Models\" />
     <Folder Include="Areas\Recruit\Data\" />

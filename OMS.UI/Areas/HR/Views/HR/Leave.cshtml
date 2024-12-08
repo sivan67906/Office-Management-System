@@ -1,7 +1,6 @@
-﻿@section Scripts {
+﻿@section Styles {
         <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
-        <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-        <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+       
 }
 <div class="row">
     <div class="card">
@@ -27,7 +26,6 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h6 class="modal-title m-0" id="BAddressLabel">Leave Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
@@ -155,7 +153,8 @@
                                     <div class="modal-footer">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <button type="button" class="btn btn-de-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-footer-->
@@ -164,6 +163,152 @@
                         </div><!--end modal-->
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col=md-12 ">
+                        <div class="modal fade" id="ELeave" tabindex="-1" aria-labelledby="ELeaveLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="ELeaveLabel">Edit Leave Details</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Choose Member  <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="" >--</option>
+                                                            <option value="1">App Admin</option>
+                                                            <option value="2" selected>EMP-1</option>
+                                                            <option value="3">EMP-2</option>
+                                                            <option value="3">EMP-3</option>
+                                                            <option value="3">EMP-4</option>
+                                                            <option value="3">EMP-5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Leave Type <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                            <option value="value-1">--</option>
+                                                            <option value="value-2">Formal</option>
+                                                            <option value="value-3" selected>Sick Leave</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Status
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <select class="form-select mt-2" aria-label="Default select example">
+                                                        <option value="" >--</option>
+                                                        <option value="1" selected>Approved</option>
+                                                        <option value="2">Pending</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Select Duration
+
+                                                    </label><br />
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"checked>
+                                                        <label class="form-check-label" for="inlineRadio1">Full Day</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Multiple</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                        <label class="form-check-label" for="inlineRadio1">First Half</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline mt-2">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                        <label class="form-check-label" for="inlineRadio2">Second Half</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Date
+                                                    </label>
+                                                    <input type="date" class="form-control mt-2" value="2024-12-04" id="inputGroupFile01">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Reason for absence
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <textarea class="form-control mt-2" id="" rows="4">High Fevar</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Add File
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input type="file" class="form-control mt-2" id="inputGroupFile01">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!--end card-body-->
+                                    <div class="modal-footer">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-footer-->
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+                    </div>
+                </div>
+
                 <div class="table-responsive">
                     <table class="table  mb-0">
                         <thead class="thead-light">
@@ -181,17 +326,96 @@
                         <tbody>
                             <tr>
                                 <td><input type="checkbox" /></td>
-                                <td>Mr.Ravi</td>
-                                <td>27-11-2024</td>
-                                <td>Full Day</td>
+                                <td>John Doe</td>
+                                <td>2024-12-05</td>
+                                <td>2 Days</td>
                                 <td>Approved</td>
-                                <td>Sick</td>
-                                <td>yes</td>
+                                <td>Sick Leave</td>
+                                <td>Yes</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#ELeave" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
+                             <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Jane Smith</td>
+                                <td>2024-12-07</td>
+                                <td>1 Day</td>
+                                <td>Pending</td>
+                                <td>Casual Leave</td>
+                                <td>No</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ELeave" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Michael Brown</td>
+                                <td>2024-12-10</td>
+                                <td>3 Days</td>
+                                <td>Rejected</td>
+                                <td>Vacation</td>
+                                <td>Yes</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ELeave" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Emily Davis</td>
+                                <td>2024-12-15</td>
+                                <td>1 Day</td>
+                                <td>Approved</td>
+                                <td>Maternity Leave</td>
+                                <td>Yes</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ELeave" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>William Taylor</td>
+                                <td>2024-12-20</td>
+                                <td>2 Weeks</td>
+                                <td>Pending</td>
+                                <td>Annual Leave</td>
+                                <td>No</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ELeave" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Sarah Wilson</td>
+                                <td>2024-12-22</td>
+                                <td>5 Days</td>
+                                <td>Approved</td>
+                                <td>Compensatory Leave</td>
+                                <td>Yes</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ELeave" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Chris Johnson</td>
+                                <td>2024-12-25</td>
+                                <td>1 Day</td>
+                                <td>Rejected</td>
+                                <td>Personal Leave</td>
+                                <td>No</td>
+                                <td>
+                                    <a href="#" data-bs-target="#ELeave" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->
@@ -200,13 +424,14 @@
     </div>
 </div>
 
-<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
-<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
-<script>
-    tinymce.init({
-      selector: 'textarea#txtlead'
-    });
-    tinymce.init({
-      selector: 'textarea#txtedittemplate'
-    });
-</script>
+
+
+@section Scripts{
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+}

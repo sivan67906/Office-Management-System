@@ -3,10 +3,9 @@
 *@
 @{
 }
-@section Scripts {
+@section Styles {
     <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
-    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+   
 }
 <div class="row">
     <div class="card">
@@ -32,7 +31,6 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h6 class="modal-title m-0" id="BAddressLabel">Order Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
@@ -43,7 +41,7 @@
                                                     </label>
                                                     <div class="input-group mt-2">
                                                         <div class="input-group-text">ODR#00</div>
-                                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" value="1" placeholder="Username">
+                                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" value="" placeholder="Username">
                                                     </div>
                                                 </div>
                                             </div>
@@ -226,7 +224,7 @@
                                                                                         Sub Total
                                                                                     </td>
                                                                                     <td width="30%" class="border-top-0 sub-total">0.00</td>
-                                                                                    <input type="hidden" class="sub-total-field" name="sub_total" value="0" autocomplete="off" />
+                                                                                    <td><input type="hidden" class="sub-total-field" name="sub_total" value="0" autocomplete="off" /></td>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td width="20%" class="text-dark-grey">Discount                                </td>
@@ -264,7 +262,7 @@
                                                                                 <tr class="bg-amt-grey f-16 f-w-500">
                                                                                     <td colspan="2">Total</td>
                                                                                     <td><span class="total">0.00</span></td>
-                                                                                    <input type="hidden" class="total-field" name="total" value="0.00" autocomplete="off" />
+                                                                                    <td><input type="hidden" class="total-field" name="total" value="0.00" autocomplete="off" /></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
@@ -295,7 +293,8 @@
                                     <div class="modal-footer">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <button type="button" class="btn btn-de-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-footer-->
@@ -304,6 +303,287 @@
                         </div><!--end modal-->
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col=md-12 ">
+                        <div class="modal fade" id="EOrder" tabindex="-1" aria-labelledby="EOrderLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title m-0" id="EOrderLabel">Edit Order Details</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Order Number   <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="input-group mt-2">
+                                                        <div class="input-group-text">ODR#00</div>
+                                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" value="023" placeholder="Username">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start ">
+                                                    <label for="example-text-input">
+                                                        Client
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="1">App Admin</option>
+                                                            <option value="1" selected>John Doe</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Billing Address
+                                                    </label>
+
+                                                    <input class="form-control mt-2" type="text" value="123 Elm Street, Springfield, IL 62701, USA" id="example-text-input" disabled>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Shipping Address
+                                                    </label>
+                                                    <textarea class="form-control mt-2" id="" rows="3">789 Oak Lane, Manchester, M13 9PL, United Kingdom</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Generated By
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="1" selected>Recipt</option>
+                                                            <option value="2">Message</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Status
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="0">Pending</option>
+                                                            <option value="1">On Hold</option>
+                                                            <option value="2">Failed</option>
+                                                            <option value="3" selected>Processing</option>
+                                                            <option value="4">Completed</option>
+                                                            <option value="5">Cancelled</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Bank Account
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="1">IOB</option>
+                                                            <option value="1">SBI</option>
+                                                            <option value="1" selected>Axis</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Product Category
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="1" selected>Mobile</option>
+                                                            <option value="1">Laptop</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Product
+                                                    </label>
+                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                        <div class="selectr-options-container">
+                                                            <div class="selectr-input-container">
+                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                <button class="selectr-input-clear" type="button"></button>
+                                                            </div>
+                                                            <div class="selectr-notice"></div>
+                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                        </div>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option value="" >--</option>
+                                                            <option value="1">Redmi</option>
+                                                            <option value="1">HP</option>
+                                                            <option value="1" selected>Samsung</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 offset-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <div class="table-responsive mt-2">
+                                                        <table width="100%" class="text-right f-14 table mb-0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="50%" class="border-0 d-lg-table d-md-table d-none"></td>
+                                                                    <td width="50%" class="">
+                                                                        <table width="100%" style="border: 1px solid #616e80;">
+                                                                            <tbody>
+                                                                                <tr style="border: 1px solid #616e80;">
+                                                                                    <td colspan="2" class="border-top-0 text-dark-grey">
+                                                                                        Sub Total
+                                                                                    </td>
+                                                                                    <td width="30%" class="border-top-0 sub-total">0.00</td>
+                                                                                    <td><input type="hidden" class="sub-total-field" name="sub_total" value="0" autocomplete="off" /></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="20%" class="text-dark-grey">Discount                                </td>
+                                                                                    <td width="40%" style="padding: 5px;">
+                                                                                        <table width="100%" class="mw-250">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td width="70%" class="c-inv-sub-padding">
+                                                                                                        <input type="number" min="0" name="discount_value" class="f-14 border-0 w-100 text-right discount_value" placeholder="0" value="0" autocomplete="off">
+                                                                                                    </td>
+                                                                                                    <td width="30%" align="left" class="c-inv-sub-padding">
+                                                                                                        <div class="select-others select-tax height-35 rounded border-0">
+                                                                                                            <div class="dropdown bootstrap-select form-control select-picker">
+                                                                                                                <select id="" class="form-select" aria-label="Default select example">
+                                                                                                                    <option value="1" selected="selected">%</option>
+                                                                                                                    <option value="2">Amount</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <span id="discount_amount">0.00</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Tax</td>
+                                                                                    <td colspan="2" class="p-0 border-0">
+                                                                                        <table width="100%" id="invoice-taxes"><tr><td colspan="2"><span class="tax-percent">0.00</span></td></tr></table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="bg-amt-grey f-16 f-w-500">
+                                                                                    <td colspan="2">Total</td>
+                                                                                    <td><span class="total">0.00</span></td>
+                                                                                    <td><input type="hidden" class="total-field" name="total" value="0.00" autocomplete="off" /></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 g-2 text-start mb-3">
+                                                <div class="textbox-container" id="textbox3" style="display: none;">
+                                                    <label for="example-text-input">
+                                                        Client Notes
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <div class="input-group mt-2">
+                                                        <textarea class="form-control" id="" rows="5">Good Product</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><!--end card-body-->
+                                    <div class="modal-footer">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
+                                            </div>
+                                        </div>
+                                    </div><!--end modal-footer-->
+                                </div><!--end modal-content-->
+                            </div><!--end modal-dialog-->
+                        </div><!--end modal-->
+                    </div>
+                </div>
+
                 <div class="table-responsive">
                     <table class="table  mb-0">
                         <thead class="thead-light">
@@ -317,15 +597,76 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th>ODR#007</th>
-                                <td>Ravi</td>
-                                <td>30-11-2024</td>
-                                <td>Completed</td>
+                                <td>ORD001</td>
+                                <td>John Doe</td>
+                                <td>2024-12-01</td>
+                                <td>Shipped</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" data-bs-target="#EOrder" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>ORD002</td>
+                                <td>Jane Smith</td>
+                                <td>2024-12-03</td>
+                                <td>Pending</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EOrder" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORD003</td>
+                                <td>Emily Johnson</td>
+                                <td>2024-12-04</td>
+                                <td>Delivered</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EOrder" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORD004</td>
+                                <td>Michael Brown</td>
+                                <td>2024-12-05</td>
+                                <td>Cancelled</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EOrder" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORD005</td>
+                                <td>Anna Davis</td>
+                                <td>2024-12-06</td>
+                                <td>Processing</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EOrder" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORD006</td>
+                                <td>Chris Wilson</td>
+                                <td>2024-12-07</td>
+                                <td>Shipped</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EOrder" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ORD007</td>
+                                <td>Patricia Miller</td>
+                                <td>2024-12-08</td>
+                                <td>Pending</td>
+                                <td>
+                                    <a href="#" data-bs-target="#EOrder" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->
@@ -334,5 +675,12 @@
     </div>
 </div>
 
-<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
-<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
+@section Scripts{
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+}

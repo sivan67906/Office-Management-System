@@ -85,26 +85,26 @@
 								<i class="fas fa-warehouse menu-icon fa15-custom"></i>
 							</a><!--end nav-link-->
 						</li>
-						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Events" data-bs-trigger="hover">
+						@* <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Events" data-bs-trigger="hover">
 							<a href="#hrefEvents" id="event-tab" class="nav-link">
 								<i class="ti ti-calendar-event menu-icon"></i>
 							</a><!--end nav-link-->
-						</li>
-						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Message" data-bs-trigger="hover">
+						</li> *@
+						@* <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Message" data-bs-trigger="hover">
 							<a href="#hrefMessage" id="message-tab" class="nav-link">
 								<i class="mdi mdi-message-text-outline menu-icon"></i>
 							</a><!--end nav-link-->
-						</li>
-						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="NoticeBoard" data-bs-trigger="hover">
-							<a href="#hrefNoticeBoard" id="noticeboard-tab" class="nav-link">
+						</li> *@
+						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Broadcast" data-bs-trigger="hover">
+							<a href="#hrefBroadcast" id="broadcast-tab" class="nav-link">
 								<i class="ti ti-clipboard menu-icon"></i>
 							</a><!--end nav-link-->
 						</li>
-						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Ticket" data-bs-trigger="hover">
+						@* <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Ticket" data-bs-trigger="hover">
 							<a href="#hrefTicket" id="ticket-tab" class="nav-link">
 								<i class="ti ti-headset menu-icon"></i>
 							</a><!--end nav-link-->
-						</li>
+						</li> *@
 						<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings" data-bs-trigger="hover">
 							<a href="#hrefAvivSettings" id="settings-tab" class="nav-link">
 								<i class="mdi mdi-settings-outline menu-icon"></i>
@@ -343,7 +343,7 @@
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->
-				<div id="hrefEvent" class="main-icon-menu-pane tab-pane" role="tabpanel"
+				@* <div id="hrefEvent" class="main-icon-menu-pane tab-pane" role="tabpanel"
 					 aria-labelledby="event-tab">
 					<div class="title-box">
 						<h6 class="menu-title">Event</h6>
@@ -353,8 +353,8 @@
 							<a class="nav-link" asp-area="Event" asp-controller="Event" asp-action="Event">Event</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
-				</div><!-- end Settings -->
-				<div id="hrefMessage" class="main-icon-menu-pane tab-pane" role="tabpanel"
+				</div><!-- end Settings --> *@
+				@* <div id="hrefMessage" class="main-icon-menu-pane tab-pane" role="tabpanel"
 					 aria-labelledby="message-tab">
 					<div class="title-box">
 						<h6 class="menu-title">Message</h6>
@@ -364,19 +364,19 @@
 							<a class="nav-link" asp-area="Message" asp-controller="Message" asp-action="Message">Message</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
-				</div><!-- end Settings -->
-				<div id="hrefNoticeBoard" class="main-icon-menu-pane tab-pane" role="tabpanel"
-					 aria-labelledby="noticeboard-tab">
+				</div><!-- end Settings --> *@
+				<div id="hrefBroadcast" class="main-icon-menu-pane tab-pane" role="tabpanel"
+					 aria-labelledby="broadcast-tab">
 					<div class="title-box">
-						<h6 class="menu-title">Notice Board</h6>
+						<h6 class="menu-title">Broadcast</h6>
 					</div>
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" asp-area="NoticeBoard" asp-controller="NoticeBoard" asp-action="NoticeBoard">Notice Board</a>
+							<a class="nav-link" asp-area="Broadcast" asp-controller="Broadcast" asp-action="NoticeBoard">Notice Board</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->
-				<div id="hrefTicket" class="main-icon-menu-pane tab-pane" role="tabpanel"
+				@* <div id="hrefTicket" class="main-icon-menu-pane tab-pane" role="tabpanel"
 					 aria-labelledby="ticket-tab">
 					<div class="title-box">
 						<h6 class="menu-title">Ticket</h6>
@@ -386,7 +386,7 @@
 							<a class="nav-link" asp-area="Ticket" asp-controller="Ticket" asp-action="Tickets">Ticket</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
-				</div><!-- end Settings -->
+				</div><!-- end Settings --> *@
 
 				<div id="hrefAvivSettings" class="main-icon-menu-pane tab-pane" role="tabpanel"
 					 aria-labelledby="settings-tab">
@@ -423,9 +423,9 @@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Project" asp-action="Task">Task</a>
 							</li><!--end nav-item-->
-							<li class="nav-item">
+							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Project">Project</a>
-							</li><!--end nav-item-->
+							</li><!--end nav-item--> *@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Timesheet">Timesheet</a>
 							</li><!--end nav-item-->
@@ -465,9 +465,9 @@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Attendance">Attendance</a>
 							</li><!--end nav-item-->
-							<li class="nav-item">
+							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Leaves</a>
-							</li><!--end nav-item-->
+							</li><!--end nav-item--> *@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="TimeLog">Time Log</a>
 							</li><!--end nav-item-->
@@ -477,9 +477,9 @@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Permissions">Module</a>
 							</li><!--end nav-item-->
-							<li class="nav-item">
+							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Integration" asp-action="Calendar">Google Calendar</a>
-							</li><!--end nav-item-->
+							</li><!--end nav-item--> *@
 						</ul><!--end navbar-nav--->
 					</div><!--end sidebarCollapse_2-->
 				</div><!-- end Settings -->

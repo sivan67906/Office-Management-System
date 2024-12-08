@@ -1,10 +1,10 @@
-﻿@section Scripts {
+﻿@section Styles {
     <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
-    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+   
 }
 <div class="row">
     <div class="card">
+        <div class="col-lg-6 offset-3">
         <div class="card-header">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -27,11 +27,10 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h6 class="modal-title m-0" id="BAddressLabel">Designation Setup</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-12 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                        Name  <span class="f-14 mr-1 text-danger">*</span>
@@ -39,7 +38,7 @@
                                                     <input type="text" class="form-control mt-2" id=""/>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 g-2">
+                                            <div class="col-lg-12 g-2">
                                                 <div class="mb-3 text-start">
                                                     <label for="example-text-input">
                                                         Parent 
@@ -67,7 +66,8 @@
                                     <div class="modal-footer">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <button type="button" class="btn btn-de-primary "><i class="mdi mdi-check-all me-2"></i>Save</button>
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                             </div>
                                         </div>
                                     </div><!--end modal-footer-->
@@ -76,7 +76,65 @@
                         </div><!--end modal-->
                     </div>
                 </div>
-                <div class="table-responsive" id="tbUnit" style="width: 50%;">
+
+                    <div class="row">
+                        <div class="col=md-12 ">
+                            <div class="modal fade" id="EDes" tabindex="-1" aria-labelledby="EDesLabel" aria-hidden="true" style="display: none;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title m-0" id="BAddressLabel">Edit Designation Details</h6>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Name  <span class="f-14 mr-1 text-danger">*</span>
+                                                        </label>
+                                                        <input type="text" class="form-control mt-2" value="Project Manager" id="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 g-2">
+                                                    <div class="mb-3 text-start">
+                                                        <label for="example-text-input">
+                                                            Parent
+                                                        </label>
+                                                        <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                            <div class="selectr-options-container">
+                                                                <div class="selectr-input-container">
+                                                                    <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                    <button class="selectr-input-clear" type="button"></button>
+                                                                </div>
+                                                                <div class="selectr-notice"></div>
+                                                                <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                            </div>
+                                                            <select id="default" tabindex="-1" class="selectr-hidden defaultSelectr" aria-hidden="true">
+                                                                <option value="value-1" >---</option>
+                                                                <option value="value-2" selected>Senior Manager</option>
+                                                                <option value="value-3">Casual</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--end card-body-->
+                                        <div class="modal-footer">
+                                            <div class="row">
+                                                <div class="col-lg-12 text-end">
+                                                    <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                    <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
+                                                </div>
+                                            </div>
+                                        </div><!--end modal-footer-->
+                                    </div><!--end modal-content-->
+                                </div><!--end modal-dialog-->
+                            </div><!--end modal-->
+                        </div>
+                    </div>
+
+                <div class="table-responsive" >
                     <table class="table  mb-0">
                         <thead class ="thead-light">
                             <tr>
@@ -88,19 +146,84 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="checkbox" /></td>
-                                <td>Senior</td>
-                                <td>Super Senior</td>
+                               <td><input type="checkbox" /></td>
+                               <td>Project Manager</td>
+                               <td>Senior Manager</td>
                                 <td>
-                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#"data-bs-target="#EDes" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                 </td>
                             </tr>
+                            <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Team Lead</td>
+                                    <td>Project Manager</td>
+                                <td>
+                                    <a href="#"data-bs-target="#EDes" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Senior Developer</td>
+                                    <td>Team Lead</td>
+                                <td>
+                                    <a href="#"data-bs-target="#EDes" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Junior Developer</td>
+                                    <td>Senior Developer</td>
+                                <td>
+                                    <a href="#"data-bs-target="#EDes" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>HR Manager</td>
+                                    <td>Director</td>
+                                <td>
+                                    <a href="#"data-bs-target="#EDes" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Marketing Specialist</td>
+                                    <td>Marketing Manager</td>
+                                <td>
+                                    <a href="#"data-bs-target="#EDes" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Administrative Assistant</td>
+                                    <td>Office Manager</td>
+                                <td>
+                                    <a href="#"data-bs-target="#EDes" data-bs-toggle="modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                </td>
+                            </tr>
+
                         </tbody>
                     </table><!--end /table-->
                 </div><!--end /tableresponsive-->
             </div>
         </div>
     </div>
+    </div>
 </div>
 
+@section Scripts{
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+}

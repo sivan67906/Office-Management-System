@@ -8,7 +8,7 @@ public class CRMController : Controller
     public IActionResult Lead()
     {
         // Page Title
-        ViewData["pTitle"] = "Leads Profile";
+        ViewData["pTitle"] = "CRM Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "CRM";
@@ -20,7 +20,7 @@ public class CRMController : Controller
     public IActionResult Client()
     {
         // Page Title
-        ViewData["pTitle"] = "Clients Profile";
+        ViewData["pTitle"] = "CRM Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "CRM";
