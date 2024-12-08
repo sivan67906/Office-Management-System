@@ -8,26 +8,25 @@ public class CRMController : Controller
     public IActionResult Lead()
     {
         // Page Title
-        ViewData["pTitle"] = "CRM Settings";
+        ViewData["pTitle"] = "Leads Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "CRM";
         ViewData["bParent"] = "Lead";
-        ViewData["bChild"] = "Lead";
+        ViewData["bChild"] = "Lead View";
 
         return View();
     }
     public IActionResult Client()
     {
         // Page Title
-        ViewData["pTitle"] = "CRM Profile";
+        ViewData["pTitle"] = "Clients Profile";
 
         // Breadcrumb
         ViewData["bGParent"] = "CRM";
         ViewData["bParent"] = "Client";
-        ViewData["bChild"] = "Client";
+        ViewData["bChild"] = "Client View ";
 
         return View();
     }
-
 }
