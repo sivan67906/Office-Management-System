@@ -1,126 +1,104 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@section Styles{
-
+﻿@section Styles {
 }
-<div class="card">
-    <div class="card-header align-items-center">
-        <h4 class="header-title mt-2">Contract Index</h4>
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-3 g-2">
-                <div class="mb-3 text-start">
-                    <label for="prefix">
-                        Contract Prefix
-                        <span class="f-14 mr-1 text-danger">*</span>
-                    </label>
-
-
-                    <input class="form-control mt-2" type="text" placeholder="" value="CONT" id="ContractPrefix"  >
-                        
-                    
-                </div>
-            </div>
-            <div class="col-lg-3 g-2">
-                <div class="mb-3 text-start">
-                    <label for="separator">
-                        Contract Number Separator
-                        
-                    </label>
-
-                    <input class="form-control mt-2" type="text" placeholder="" value="#" id="ContractSeperator"  >
-                   
-                </div>
-            </div>
-       
-            <div class="col-md-3 g-2">
-                <div class="mb-3 text-start">
-                    <label for="digits">
-                        Contract Number Digits
-                        
-                    </label>
-
-
-                    <input class="form-control mt-2" type="number" placeholder="" value="2" name="ContractExample" id="ContractDigits">
-                        
-                   
-                </div>
-            </div>
-            <div class="col-lg-3 g-2">
-                <div class="mb-3 text-start">
-                    <label for="output">
-                        Contract Number Example
-                        
-                    </label>
-
-                    <input class="form-control mt-2" type="text" placeholder="" value="CONT#01" id="ContractExample" name="ContractExample" disabled>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-footer">
-        <div class="row mt-2 text-end ">
-            <div class="col-lg-12 ">
-                <button type="button" class="btn btn-de-primary"><i class="mdi mdi-check-all me-2 "></i>Update</button>
-            </div>
-        </div>
-    </div>
+<div class="row">
+	<div class="col-12 col-lg-12">
+		<div class="card">
+			<div class="card-header">
+				<div class="row align-items-center">
+					<div class="col">
+						<h4 class="card-title">Contract Index</h4>
+					</div><!--end col-->
+				</div>  <!--end row-->
+			</div><!--end card-header-->
+			<div class="card-body">
+				<div class="row col-lg-12 mt-2 ms-1">
+					<div class="col-lg-3">
+						<div class="text-center">
+							<h4 class="text-muted">Contract </h4>
+						</div>
+						<div class="card" style="box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;">
+							<div class="card-body">
+								<div class="row mt-2">
+									<span>Contract  Prefix<span class="f-14 ms-1 text-danger">*</span></span>
+								</div>
+								<div class="row mt-2">
+									<input value="CO" type="text" placeholder="Enter  Prefix" class="form-control" name="contractPrefix" id="txtContractPrefix" />
+								</div>
+								<div class="row mt-4">
+									Contract  Number Seprator
+								</div>
+								<div class="row mt-2">
+									<input value="#" type="text" placeholder=" Number Seperator" class="form-control" name="contractNoSeperator" id="txtContractNoSeperator" />
+								</div>
+								<div class="row mt-4">
+									Contract  Number Digits
+								</div>
+								<div class="row mt-2">
+									<input value="2" type="number" placeholder=" Number Digits" class="form-control" name="contractNoDigits" id="txtContractNoDigits" />
+								</div>
+								<div class="row mt-4">
+									Contract  Number Example
+								</div>
+								<div class="row mt-2">
+									<input value="CO#01" type="text" placeholder=" Number Example" class="form-control font-spacing-bold" name="contractNoExample" id="txtContractNoExample" disabled="disabled" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-de-primary float-end"><b><i class="mdi mdi-check-all me-2"></i>Update</b></button>
+			</div>
+		</div>
+	</div>
 </div>
-
+<!--end row-->
 @section Scripts {
+	<script type="text/javascript">
+			$.event.special.inputchange = {
+			setup: function() {
+				var self = this, val;
+				$.data(this, 'timer', window.setInterval(function() {
+					val = self.value;
+					if ( $.data( self, 'cache') != val ) {
+						$.data( self, 'cache', val );
+						$( self ).trigger( 'inputchange' );
+					}
+				}, 20));
+			},
+			teardown: function() {
+				window.clearInterval( $.data(this, 'timer') );
+			},
+			add: function() {
+				$.data(this, 'cache', this.value);
+			}
+		};
 
-
-<script>
-      $.event.special.inputchange = {
-        setup: function() {
-            var self = this, val;
-            $.data(this, 'timer', window.setInterval(function() {
-                val = self.value;
-                if ( $.data( self, 'cache') != val ) {
-                    $.data( self, 'cache', val );
-                    $( self ).trigger( 'inputchange' );
-                }
-            }, 20));
-        },
-        teardown: function() {
-            window.clearInterval( $.data(this, 'timer') );
-        },
-        add: function() {
-            $.data(this, 'cache', this.value);
-        }
-    };
-
-
-        $('#ContractPrefix').on('inputchange', function() {
-                   var prefix = $("#ContractPrefix").val();
-                    var seperator = $("#ContractSeperator").val();
-                    var digits = $("#ContractDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#ContractExample").val(result);
-        });
-        $('#ContractSeperator').on('inputchange', function() {
-                   var prefix = $("#ContractPrefix").val();
-                    var seperator = $("#ContractSeperator").val();
-                    var digits = $("#ContractDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#ContractExample").val(result);
-        });
-        $('#ContractDigits').on('inputchange', function() {
-                   var prefix = $("#ContractPrefix").val();
-                    var seperator = $("#ContractSeperator").val();
-                    var digits = $("#ContractDigits").val();
-                    var n = "1"; if(digits == "" || digits == "0"){n = "";}
-                    digits = n.padStart(digits, '0');
-                    var result = prefix + seperator + digits;
-                    $("#ContractExample").val(result);
-        });
-</script>
-
-        }
+		$('#txtContractPrefix').on('inputchange', function() {
+				   var prefix = $("#txtContractPrefix").val();
+					var seperator = $("#txtContractNoSeperator").val();
+					var digits = $("#txtContractNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtContractNoExample").val(result);
+		});
+		$('#txtContractNoSeperator').on('inputchange', function() {
+				   var prefix = $("#txtContractPrefix").val();
+					var seperator = $("#txtContractNoSeperator").val();
+					var digits = $("#txtContractNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtContractNoExample").val(result);
+		});
+		$('#txtContractNoDigits').on('inputchange', function() {
+				   var prefix = $("#txtContractPrefix").val();
+					var seperator = $("#txtContractNoSeperator").val();
+					var digits = $("#txtContractNoDigits").val();
+					var n = "1"; if(digits == "" || digits == "0"){n = "";}
+					digits = n.padStart(digits, '0');
+					var result = prefix + seperator + digits;
+					$("#txtContractNoExample").val(result);
+		});
+	</script>
+}
