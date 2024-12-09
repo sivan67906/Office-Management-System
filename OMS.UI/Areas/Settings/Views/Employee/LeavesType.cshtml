@@ -1,9 +1,9 @@
 ﻿
-<div class="row">
+<div class="row ">
     <div class="col-12 col-lg-10 mx-auto">
 
-        <div class="card">
-            <div class="card-body">
+        <div class="card ">
+            <div class="card-body ">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
@@ -136,21 +136,21 @@
                                                                     <input type="text" class="form-control my-3" id="txtLeaveTypeName">
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                                                                    <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="This leave type will be paid or unpaid for all the employees"></i></label>
                                                                     <select class="form-select my-3">
-                                                                        <option value="" selected>--</option>
+                                                                        <option value=""selected>--</option>
                                                                         <option value="1">Paid</option>
                                                                         <option value="2">Unpaid</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label for="LeaveNumber">No.of Leaves <span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
+                                                                    <label for="LeaveNumber">No.of Leaves <span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Number of leaves of this type an employee can take per mounth"></i></span></label>
                                                                     <input type="number" class="form-control my-3" id="txtLeaveNumber">
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label for="LeaveMonthlyLimit">Monthly Limit<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
+                                                                    <label for="LeaveMonthlyLimit">Monthly Limit<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The maximum number of leaves of this type an employee can take per month"></i></span></label>
                                                                     <input type="number" class="form-control mt-3" id="txtLeaveMonthlyLimit">
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
@@ -168,7 +168,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
+                                                    
                                                 </div>
 
                                                 <div class="tab-pane" id="tbEntitlement" role="tabpanel">
@@ -187,9 +187,9 @@
 
                                                                     <div class="row mb-3">
                                                                         <div class="col-lg-8 ">
-                                                                            <label for="LeaveMonthlyLimit">Effective After <span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
+                                                                            <label for="LeaveMonthlyLimit">Effective After <span><i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="This leave type will be effective after the number of days or the number of month of employee's joining.   Leave blank to allow from date of joining." data-trigger="hover" aria-hidden="true"></i></span></label>
                                                                             <div class="input-group mt-2">
-                                                                                <input type="text" class="form-control" id="inlineFormInputGroupUsername" value="1" placeholder="Username">
+                                                                                <input type="text" class="form-control" id="inlineFormInputGroupUsername"  placeholder="Username">
                                                                                 <div class="input-group-text p-0 bg-light">
                                                                                     <select class="form-select ">
                                                                                         <option value="1">Days</option>
@@ -208,39 +208,39 @@
                                                                 <div class="col-md-6">
                                                                     <div class="custom-control custom-checkbox mt-4 mb-2">
                                                                         <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2">
-                                                                        <label class="custom-control-label labelcustom" for="showTax">Allowed in Probation</label>
+                                                                        <label class="custom-control-label labelcustom" for="showTax">Allowed in Probation<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Check this if you want to allow employees in the  Probation</b> to apply for leaves of this type." data-trigger="hover"></i></span></label>
                                                                     </div>
                                                                 </div><!--end row-->
-
-                                                                <div class="col-lg-6">
-                                                                    <label for="LeaveMonthlyLimit">
-                                                                        Unused Leaves<span><i class="fa fa-question-circle" aria-hidden="true"></i></span>
-                                                                    </label>
-                                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
-                                                                        <div class="selectr-options-container">
-                                                                            <div class="selectr-input-container">
-                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
-                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                 
+                                                                    <div class="col-lg-6">
+                                                                        <label for="LeaveMonthlyLimit">
+                                                                        Unused Leaves<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Determines how the unused leaves are treated at the end of the year.  Carry Forward</b>: Unused leaves will be added to next year leaves.   Lapse</b>: Unused leaves will simply lapse and no action will be taken.   Paid</b>: Employee will be paid salary of the number of days equivalent of unused leaves." data-trigger="hover"></i></span>
+                                                                        </label>
+                                                                        <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                                            <div class="selectr-options-container">
+                                                                                <div class="selectr-input-container">
+                                                                                    <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                    <button class="selectr-input-clear" type="button"></button>
+                                                                                </div>
+                                                                                <div class="selectr-notice"></div>
+                                                                                <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                             </div>
-                                                                            <div class="selectr-notice"></div>
-                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                            <select class="form-select" aria-label="Default select example">
+                                                                                <option value="" selected>--</option>
+                                                                                <option value="1">Carry Forward</option>
+                                                                                <option value="1">Lapse</option>
+                                                                                <option value="1">Paid</option>
+                                                                            </select>
                                                                         </div>
-                                                                        <select class="form-select" aria-label="Default select example">
-                                                                            <option value="" selected>--</option>
-                                                                            <option value="1">Carry Forward</option>
-                                                                            <option value="1">Lapse</option>
-                                                                            <option value="1">Paid</option>
-                                                                        </select>
                                                                     </div>
-                                                                </div>
-
+                                                                
                                                                 <div class="col-md-6">
-
-                                                                    <div class="custom-control custom-checkbox mt-4 mb-2">
-                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax1" data-parsley-multiple="" data-parsley-mincheck="2">
-                                                                        <label class="custom-control-label labelcustom" for="showTax1">Allowed in notice period</label>
-                                                                    </div>
-
+                                                                    
+                                                                        <div class="custom-control custom-checkbox mt-4 mb-2">
+                                                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax1" data-parsley-multiple="" data-parsley-mincheck="2">
+                                                                        <label class="custom-control-label labelcustom" for="showTax1">Allowed in notice period<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Check this if you want to allow employees in the  Notice Period</b> to apply for leaves of this type." data-trigger="hover"></i></span></label>
+                                                                        </div>
+                                                                    
                                                                 </div><!--end row-->
                                                             </div>
                                                         </div><!--end card-body-->
@@ -269,7 +269,7 @@
                                                         <div class="card-body">
                                                             <div class="row">
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Gender <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                                                                    <label class="mb-3">Gender <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Gender</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i></label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -279,16 +279,16 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                            <option value="value-1">Male</option>
-                                                                            <option value="value-2">Female</option>
-                                                                            <option value="value-3">other</option>
-                                                                        </select>
-                                                                    </div>
+                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                                <option value="value-1">Male</option>
+                                                                                <option value="value-2">Female</option>
+                                                                                <option value="value-3">other</option>
+                                                                            </select>
+                                                                        </div>
                                                                 </div>
-
+                                                                
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Marital Status <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <label class="mb-3">Marital Status <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Marital Status</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -298,33 +298,15 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                            <option value="value-1">Married</option>
-                                                                            <option value="value-2">Single</option>
-                                                                        </select>
-
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Department <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
-                                                                    <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
-                                                                        <div class="selectr-options-container">
-                                                                            <div class="selectr-input-container">
-                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
-                                                                                <button class="selectr-input-clear" type="button"></button>
-                                                                            </div>
-                                                                            <div class="selectr-notice"></div>
-                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
-                                                                        </div>
-                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                            <option value="value-1">Marketing</option>
-                                                                            <option value="value-2">Sales</option>
-                                                                        </select>
-
+                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                                <option value="value-1">Married</option>
+                                                                                <option value="value-2">Single</option>
+                                                                            </select>
+                                                                       
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Designation <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <label class="mb-3">Department <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Department</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -334,15 +316,15 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                            <option value="value-1">Senior</option>
-                                                                            <option value="value-2">Junior</option>
-                                                                        </select>
-
+                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                                <option value="value-1">Marketing</option>
+                                                                                <option value="value-2">Sales</option>
+                                                                            </select>
+                                                                       
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">User Role <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                 <div class="col-md-4 mb-3">
+                                                                    <label class="mb-3">Designation <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Designation</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -352,11 +334,29 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                            <option value="value-1">App Administrator</option>
-                                                                            <option value="value-2">Employee</option>
-                                                                            <option value="value-2">Membership</option>
-                                                                        </select>
+                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true"> 
+                                                                                <option value="value-1">Senior</option>
+                                                                                <option value="value-2">Junior</option>
+                                                                            </select>
+                                                                       
+                                                                    </div>
+                                                                </div>
+                                                                 <div class="col-md-4 mb-3">
+                                                                    <label class="mb-3">User Role <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Role</b> and other role will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
+                                                                    <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                            </div>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                        </div>
+                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                                <option value="value-1">App Administrator</option>
+                                                                                <option value="value-2">Employee</option>
+                                                                                <option value="value-2">Membership</option>
+                                                                            </select>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -375,7 +375,7 @@
                                             </div><!-- New Leave Type Sub Modal Tab Content -->
                                         </div>
 
-
+               
 
 
 
@@ -388,7 +388,7 @@
 
 
 
-                    @* Edit Leave Type Settings *@
+     @* Edit Leave Type Settings *@
 
 
 
@@ -434,25 +434,25 @@
                                                             <div class="row">
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeaveTypeName">Leave Type<span class="f-14 mr-1 text-danger">*</span></label>
-                                                                    <input type="text" class="form-control my-3" value="Sick" id="txtLeaveTypeName">
+                                                                    <input type="text" class="form-control my-3"value="Sick" id="txtLeaveTypeName">
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                                                                    <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="This leave type will be paid or unpaid for all the employees"></i></label>
                                                                     <select class="form-select my-3">
-                                                                        <option value="">--</option>
+                                                                        <option value="" >--</option>
                                                                         <option value="1" selected>Paid</option>
                                                                         <option value="2">Unpaid</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label for="LeaveNumber">No.of Leaves <span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
-                                                                    <input type="number" class="form-control my-3" value="2" id="txtLeaveNumber">
+                                                                    <label for="LeaveNumber">No.of Leaves <span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Number of leaves of this type an employee can take per mounth"></i></span></label>
+                                                                    <input type="number" class="form-control my-3"value="2" id="txtLeaveNumber">
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label for="LeaveMonthlyLimit">Monthly Limit<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
-                                                                    <input type="number" class="form-control mt-3" value="0" id="txtLeaveMonthlyLimit">
+                                                                    <label for="LeaveMonthlyLimit">Monthly Limit<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The maximum number of leaves of this type an employee can take per month"></i></span></label>
+                                                                    <input type="number" class="form-control mt-3"value="0" id="txtLeaveMonthlyLimit">
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeaveColourCode">Colour Code</label>
@@ -488,9 +488,9 @@
 
                                                                     <div class="row mb-3">
                                                                         <div class="col-lg-8 ">
-                                                                            <label for="LeaveMonthlyLimit">Effective After <span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
+                                                                            <label for="LeaveMonthlyLimit">Effective After <span><i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="This leave type will be effective after the number of days or the number of month of employee's joining.   Leave blank to allow from date of joining." data-trigger="hover" aria-hidden="true"></i></span></label>
                                                                             <div class="input-group mt-2">
-                                                                                <input type="number" class="form-control" id="inlineFormInputGroupUsername" value="20" placeholder="Username">
+                                                                                <input type="text" class="form-control" id="inlineFormInputGroupUsername" value="20" placeholder="Username">
                                                                                 <div class="input-group-text p-0 bg-light">
                                                                                     <select class="form-select ">
                                                                                         <option value="1">Days</option>
@@ -508,14 +508,14 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="custom-control custom-checkbox mt-4 mb-2">
-                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2" checked>
-                                                                        <label class="custom-control-label labelcustom" for="showTax">Allowed in Probation</label>
+                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2"checked>
+                                                                        <label class="custom-control-label labelcustom" for="showTax">Allowed in Probation<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Check this if you want to allow employees in the  Probation</b> to apply for leaves of this type." data-trigger="hover"></i></span></label>
                                                                     </div>
                                                                 </div><!--end row-->
 
                                                                 <div class="col-lg-6">
                                                                     <label for="LeaveMonthlyLimit">
-                                                                        Unused Leaves<span><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                                                        Unused Leaves<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Determines how the unused leaves are treated at the end of the year.  Carry Forward</b>: Unused leaves will be added to next year leaves.   Lapse</b>: Unused leaves will simply lapse and no action will be taken.   Paid</b>: Employee will be paid salary of the number of days equivalent of unused leaves." data-trigger="hover"></i></span>
                                                                     </label>
                                                                     <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
                                                                         <div class="selectr-options-container">
@@ -527,7 +527,7 @@
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
                                                                         <select class="form-select" aria-label="Default select example">
-                                                                            <option value="">--</option>
+                                                                            <option value="" >--</option>
                                                                             <option value="1" selected>Carry Forward</option>
                                                                             <option value="1">Lapse</option>
                                                                             <option value="1">Paid</option>
@@ -538,8 +538,8 @@
                                                                 <div class="col-md-6">
 
                                                                     <div class="custom-control custom-checkbox mt-4 mb-2">
-                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2">
-                                                                        <label class="custom-control-label labelcustom" for="showTax">Allowed in notice period</label>
+                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax1" data-parsley-multiple="" data-parsley-mincheck="2">
+                                                                        <label class="custom-control-label labelcustom" for="showTax1">Allowed in notice period<span><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Check this if you want to allow employees in the  Notice Period</b> to apply for leaves of this type." data-trigger="hover"></i></span></label>
                                                                     </div>
 
                                                                 </div><!--end row-->
@@ -570,7 +570,7 @@
                                                         <div class="card-body">
                                                             <div class="row">
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Gender <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                                                                    <label class="mb-3">Gender <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Gender</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i></label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -589,7 +589,7 @@
                                                                 </div>
 
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Marital Status <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <label class="mb-3">Marital Status <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Marital Status</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -601,13 +601,13 @@
                                                                         </div>
                                                                         <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
                                                                             <option value="value-1" selected>Married</option>
-                                                                            <option value="value-2">Single</option>
+                                                                            <option value="value-2" selected>Single</option>
                                                                         </select>
 
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Department <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <label class="mb-3">Department <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Department</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -619,13 +619,13 @@
                                                                         </div>
                                                                         <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
                                                                             <option value="value-1" selected>Marketing</option>
-                                                                            <option value="value-2" selected>Sales</option>
+                                                                            <option value="value-2">Sales</option>
                                                                         </select>
 
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">Designation <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <label class="mb-3">Designation <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Designation</b> employees and other employees will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -643,7 +643,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
-                                                                    <label class="mb-3">User Role <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <label class="mb-3">User Role <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Leave Type can only be used by selected  Role</b> and other role will not be able to apply for leaves with this leave type" data-trigger="hover"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
                                                                             <div class="selectr-input-container">
@@ -683,6 +683,10 @@
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
+
+
+
+
                     <!--  Modal content for  Leave General Settings -->
 
 
@@ -701,7 +705,7 @@
                                 <div class="row mb-3">
                                     <div class="col-md-9">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" id="leaveCountDOJ" name="toggle" value="yes" onclick="toggleTextbox()" />
+                                            <input class="form-check-input" type="radio"  id="leaveCountDOJ" name="toggle" value="yes" onclick="toggleTextbox()" />
                                             <label class="form-check-label" for="leaveCountDOJ">Count leaves from the date of joining</label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -747,7 +751,7 @@
                                     <label class="col-sm-2 mt-2 col-form-labels text-end">Reporting Manager can</label>
                                     <div class="col-sm-6">
                                         <select class="form-select">
-                                            <option value="" selected>--</option>
+                                            <option value=""selected>--</option>
                                             <option value="1">Approve</option>
                                             <option value="2">Pre-Approve</option>
                                             <option value="3">Not Approve</option>
@@ -766,19 +770,19 @@
     </div>
 </div>
 
-@section Scripts {
+@section Scripts{
     <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
     <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css">
     <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
     <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
 
-    <script type="text/javascript">
-        $(window).on('load', function() {
+<script type="text/javascript">
+    	$(window).on('load', function() {
          $('#mdlNewLeaveType').modal({backdrop: 'static', keyboard: false});
          $('#mdlEditLeaveType').modal({backdrop: 'static', keyboard: false});
-        });
+		});
 
-
+      
         function toggleTextbox() {
           const textbox = document.getElementById("textbox");
           const noRadio = document.querySelector('input[value="no"]');
