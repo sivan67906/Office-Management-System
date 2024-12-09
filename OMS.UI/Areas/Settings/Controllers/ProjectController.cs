@@ -32,7 +32,7 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult Task()
         {
             // Page Title
-            ViewData["pTitle"] = "Task Profile";
+            ViewData["pTitle"] = "Tasks Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";

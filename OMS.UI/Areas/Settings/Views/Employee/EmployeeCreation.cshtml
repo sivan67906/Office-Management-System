@@ -96,14 +96,80 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                           
-                                            <div class="col-lg-12 g-2">
+
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Address
+                                                    <label for="address">
+                                                        Address 1
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <textarea class="form-control mt-2" id="" rows="3" placeholder="e,g, 1/160 Main Road, New York"></textarea>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address"></textarea>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g. Street, Floor, Block" id="address"></textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option selected>--</option>
+                                                        <option>USA</option>
+                                                        <option>Canada</option>
+                                                        <option>UK</option>
+                                                        <option>Australia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option selected>--</option>
+                                                        <option>California</option>
+                                                        <option>Texas</option>
+                                                        <option>Ontario</option>
+                                                        <option>Grater Landon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option selected>--</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Austin</option>
+                                                        <option>Toranto</option>
+                                                        <option>London</option>
+                                                        <option>Sydney</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" type="number" placeholder="" id="tax">
                                                 </div>
                                             </div>
                                         </div>
@@ -211,16 +277,83 @@
                                         </div>
                                         <div class="row">
 
-                                            <div class="col-lg-12 g-2">
+                                            <div class="col-lg-6 g-2">
                                                 <div class="mb-3 text-start">
-                                                    <label for="example-text-input">
-                                                        Address
+                                                    <label for="address">
+                                                        Address 1
                                                         <span class="f-14 mr-1 text-danger">*</span>
                                                     </label>
-                                                    <textarea class="form-control mt-2" id="" rows="3" placeholder="e,g, 1/160 Main Road, New York">123 Main St, New York, NY</textarea>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g.  132, My Street, Kingston, New York 12401" id="address">123 Main St</textarea>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="address">
+                                                        Address 2
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+
+                                                    <textarea class="form-control mt-2" type="text" rows="1" placeholder="e.g. Street, Floor, Block" id="address">New York, NY</textarea>
+
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="example-text-input">
+                                                        Country
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option selected>USA</option>
+                                                        <option>Canada</option>
+                                                        <option>UK</option>
+                                                        <option>Australia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        State
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option>California</option>
+                                                        <option selected>New Yark</option>
+                                                        <option>Ontario</option>
+                                                        <option>Grater Landon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        City
+                                                    </label>
+                                                    <select id="countryDropdown" class="form-select mt-2">
+                                                        <option>--</option>
+                                                        <option>Los Angeles</option>
+                                                        <option>Austin</option>
+                                                        <option>Toranto</option>
+                                                        <option>London</option>
+                                                        <option selected>USA</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 g-2">
+                                                <div class="mb-3 text-start">
+                                                    <label for="tax">
+                                                        Zip Code
+                                                    </label>
+                                                    <input class="form-control mt-2" type="number" value="765634" placeholder="" id="tax">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
                                         <div class="row">
 
                                             <div class="col-lg-12 g-2">
@@ -255,7 +388,7 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
-                                <th>Employee Id</th>
+                                <th>Employee Code</th>
                                 <th>Employee Name</th>
                                 <th>Data of Birth</th>
                                 <th>Address</th>
