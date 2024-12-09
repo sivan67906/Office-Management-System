@@ -31,13 +31,13 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
-                                        <h4 class="card-title"> Ticket Agents</h4>
+                                        <h4 class="card-title"> Ticket Agent Index</h4>
                                     </div>
                                     <div class="col-lg-6 text-end">
                                         <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicket-modal-lg"><i class="fas fa-plus me-2"></i>Add Ticket Agent </button>
                                     </div>
                                 </div>
-                                
+
                             </div><!--end card-header-->
 
                             <div class="card-body">
@@ -79,7 +79,7 @@
                                         </tbody>
                                     </table>
 
-                                    
+
 
                                 </div><!--end card-body-->
                             </div>
@@ -87,7 +87,7 @@
                     </div>
 
                     <!--  Modal content for New Ticket Agent -->
-                    <div class="modal fade bs-NewTicket-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketModal" aria-hidden="true">
+                    <div class="modal fade bs-NewTicket-modal-lg" id="Ta" tabindex="-1" role="dialog" aria-labelledby="myNewTicketModal" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -123,13 +123,13 @@
 
                                         </div><!--end row-->
 
-                                       
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
                     <!--  Modal content for Edit Ticket Agent -->
-                    <div class="modal fade bs-EditTicketAgent-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketAgent" aria-hidden="true">
+                    <div class="modal fade bs-EditTicketAgent-modal-lg" id="Eta" tabindex="-1" role="dialog" aria-labelledby="myEditTicketAgent" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -152,7 +152,7 @@
                                                     <label class="label ">Choose Agents</label>
                                                     <div class="">
                                                         <select class="form-select" aria-label="Default select example">
-                                                            <option >-- </option>
+                                                            <option>-- </option>
                                                             <option value="1" selected>Matt Frend</option>
                                                             <option value="2">Donald String</option>
                                                         </select>
@@ -164,7 +164,7 @@
                                                     <label class="label ">Assign Groups</label>
                                                     <div class="">
                                                         <select class="form-select" aria-label="Default select example">
-                                                            <option >--</option>
+                                                            <option>--</option>
                                                             <option value="1" selected>Client</option>
                                                             <option value="2">Sales</option>
                                                         </select>
@@ -174,13 +174,13 @@
 
                                         </div><!--end row-->
 
-                                        
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                         </div>
                                     </div>
@@ -194,8 +194,8 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
-                                         <h4 class="card-title">Ticket Groups</h4>
-                                    </div> 
+                                        <h4 class="card-title">Ticket Group Index</h4>
+                                    </div>
                                     <div class="col-lg-6 text-end">
                                         <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicketGroup-modal-lg"><i class="fas fa-plus me-2"></i>Add Ticket Group </button>
                                     </div>
@@ -242,7 +242,7 @@
                         </div><!--end card-->
                     </div>
                     <!--  Modal content for New Ticket Group -->
-                    <div class="modal fade bs-NewTicketGroup-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketGroupModal" aria-hidden="true">
+                    <div class="modal fade bs-NewTicketGroup-modal-lg" id="Tg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketGroupModal" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -260,13 +260,13 @@
 
                                         </div><!--end row-->
 
-                                       
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                         </div>
                                     </div>
@@ -275,7 +275,7 @@
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
                     <!--  Modal content for Edit Ticket Group -->
-                    <div class="modal fade bs-EditTicketGroup-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketGroupModal" aria-hidden="true">
+                    <div class="modal fade bs-EditTicketGroup-modal-lg" id="Etg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketGroupModal" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -293,13 +293,13 @@
 
                                         </div><!--end row-->
 
-                                        
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                         </div>
                                     </div>
@@ -314,7 +314,7 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h4 class="card-title">Ticket Types</h4>
+                                        <h4 class="card-title">Ticket Type Index</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicketType-modal-lg"><i class="fas fa-plus me-2"></i>Add Ticket Type </button>
@@ -358,12 +358,12 @@
                                     </table>
                                 </div>
                             </div><!--end card-body-->
-                           
+
                         </div>
                     </div>
 
                     <!--  Modal content for New Ticket Type -->
-                    <div class="modal fade bs-NewTicketType-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketTypeModal" aria-hidden="true">
+                    <div class="modal fade bs-NewTicketType-modal-lg" id="Tt" tabindex="-1" role="dialog" aria-labelledby="myNewTicketTypeModal" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -381,13 +381,13 @@
 
                                         </div><!--end row-->
 
-                                        
+
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                         </div>
                                     </div>
@@ -396,7 +396,7 @@
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
                     <!--  Modal content for Edit Ticket Type -->
-                    <div class="modal fade bs-EditTicketType-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketTypeModal" aria-hidden="true">
+                    <div class="modal fade bs-EditTicketType-modal-lg" id="Ett" tabindex="-1" role="dialog" aria-labelledby="myEditTicketTypeModal" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -414,13 +414,13 @@
 
                                         </div><!--end row-->
 
-                                       
+
                                     </form>
                                 </div>
-                                 <div class="modal-footer">
+                                <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                         </div>
                                     </div>
@@ -435,7 +435,7 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h4 class="card-title">Ticket Channel</h4>
+                                        <h4 class="card-title">Ticket Channel Index</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTicketChannel-modal-lg"><i class="fas fa-plus me-2"></i>Add Ticket Channel </button>
@@ -484,7 +484,7 @@
                     </div>
 
                     <!--  Modal content for New Ticket Channel -->
-                    <div class="modal fade bs-NewTicketChannel-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewTicketChannelModal" aria-hidden="true">
+                    <div class="modal fade bs-NewTicketChannel-modal-lg" id="Tc" tabindex="-1" role="dialog" aria-labelledby="myNewTicketChannelModal" aria-hidden="true">
                         <div class="modal-dialog ">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -496,19 +496,19 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class=" my-2" for="TicketChannelName">Ticket Channel</label>
-                                                    <input type="text" class="form-control" id="TicketChannelName"  required="">
+                                                    <input type="text" class="form-control" id="TicketChannelName" required="">
                                                 </div>
                                             </div>
 
                                         </div><!--end row-->
 
-                                       
+
                                     </form>
                                 </div>
-                                 <div class="modal-footer">
+                                <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                         </div>
                                     </div>
@@ -517,7 +517,7 @@
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
                     <!--  Modal content for Edit Ticket Channel -->
-                    <div class="modal fade bs-EditTicketChannel-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEditTicketChannelModal" aria-hidden="true">
+                    <div class="modal fade bs-EditTicketChannel-modal-lg" id="Etc" tabindex="-1" role="dialog" aria-labelledby="myEditTicketChannelModal" aria-hidden="true">
                         <div class="modal-dialog ">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -535,13 +535,13 @@
 
                                         </div><!--end row-->
 
-                                       
+
                                     </form>
                                 </div>
-                                 <div class="modal-footer">
+                                <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                         </div>
                                     </div>
@@ -557,7 +557,7 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h4 class="card-title">Replay Template</h4>
+                                        <h4 class="card-title">Replay Template Index</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewTemplate-modal-lg"><i class="fas fa-plus me-2"></i>Add Template </button>
@@ -606,7 +606,7 @@
                     </div>
 
                     <!--  Modal content for New Ticket Template -->
-                    <div class="modal fade bs-NewTemplate-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myNewtemplateModal" aria-hidden="true">
+                    <div class="modal fade bs-NewTemplate-modal-lg" id="Temp" tabindex="-1" role="dialog" aria-labelledby="myNewtemplateModal" aria-hidden="true">
                         <div class="modal-dialog ">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -635,13 +635,13 @@
                                             </div>
                                         </div>
                                     </div><!--end row-->
-                                    
+
 
                                 </div>
                                 <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                         </div>
                                     </div>
@@ -650,7 +650,7 @@
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
                     <!--  Modal content for Edit Ticket Template -->
-                    <div class="modal fade bs-EditTemplate-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myEdittemplateModal" aria-hidden="true">
+                    <div class="modal fade bs-EditTemplate-modal-lg" id="ETemp" tabindex="-1" role="dialog" aria-labelledby="myEdittemplateModal" aria-hidden="true">
                         <div class="modal-dialog ">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -679,13 +679,13 @@
                                                 </div>
                                             </div>
                                         </div><!--end row-->
-                                        
+
                                     </form>
                                 </div>
-                                 <div class="modal-footer">
+                                <div class="modal-footer">
                                     <div class="row">
                                         <div class="col-md-12 text-end">
-                                            <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                             <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                         </div>
                                     </div>
@@ -703,7 +703,20 @@
 @section Scripts {
     <script type="text/javascript">
          $(window).on('load', function() {
-         $('.modal').modal({backdrop: 'static', keyboard: false});
+         $('#Ta').modal({backdrop: 'static', keyboard: false});
+         $('#Eta').modal({backdrop: 'static', keyboard: false});
+
+         $('#Tg').modal({backdrop: 'static', keyboard: false});
+         $('#Etg').modal({backdrop: 'static', keyboard: false});
+
+         $('#Tt').modal({backdrop: 'static', keyboard: false});
+         $('#Ett').modal({backdrop: 'static', keyboard: false});
+
+         $('#Tc').modal({backdrop: 'static', keyboard: false});
+         $('#Etc').modal({backdrop: 'static', keyboard: false});
+
+         $('#ETemp').modal({backdrop: 'static', keyboard: false});
+         $('#Temp').modal({backdrop: 'static', keyboard: false});
         });
     </script>
 }

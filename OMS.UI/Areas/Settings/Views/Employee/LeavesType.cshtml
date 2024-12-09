@@ -24,7 +24,7 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h4 class="card-title">Leave Type Settings</h4>
+                                        <h4 class="card-title">Leave Type Settings Index</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewLeaveTypeMethod-modal"><i class="fas fa-plus me-2"></i>Add Leave Type </button>
@@ -138,7 +138,7 @@
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true"></i></label>
                                                                     <select class="form-select my-3">
-                                                                        <option value=""selected>--</option>
+                                                                        <option value="" selected>--</option>
                                                                         <option value="1">Paid</option>
                                                                         <option value="2">Unpaid</option>
                                                                     </select>
@@ -168,7 +168,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                 </div>
 
                                                 <div class="tab-pane" id="tbEntitlement" role="tabpanel">
@@ -211,36 +211,36 @@
                                                                         <label class="custom-control-label labelcustom" for="showTax">Allowed in Probation</label>
                                                                     </div>
                                                                 </div><!--end row-->
-                                                                 
-                                                                    <div class="col-lg-6">
-                                                                        <label for="LeaveMonthlyLimit">
-                                                                            Unused Leaves<span><i class="fa fa-question-circle" aria-hidden="true"></i></span>
-                                                                        </label>
-                                                                        <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
-                                                                            <div class="selectr-options-container">
-                                                                                <div class="selectr-input-container">
-                                                                                    <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
-                                                                                    <button class="selectr-input-clear" type="button"></button>
-                                                                                </div>
-                                                                                <div class="selectr-notice"></div>
-                                                                                <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+
+                                                                <div class="col-lg-6">
+                                                                    <label for="LeaveMonthlyLimit">
+                                                                        Unused Leaves<span><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                                                    </label>
+                                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
                                                                             </div>
-                                                                            <select class="form-select" aria-label="Default select example">
-                                                                                <option value="" selected>--</option>
-                                                                                <option value="1">Carry Forward</option>
-                                                                                <option value="1">Lapse</option>
-                                                                                <option value="1">Paid</option>
-                                                                            </select>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
+                                                                        <select class="form-select" aria-label="Default select example">
+                                                                            <option value="" selected>--</option>
+                                                                            <option value="1">Carry Forward</option>
+                                                                            <option value="1">Lapse</option>
+                                                                            <option value="1">Paid</option>
+                                                                        </select>
                                                                     </div>
-                                                                
+                                                                </div>
+
                                                                 <div class="col-md-6">
-                                                                    
-                                                                        <div class="custom-control custom-checkbox mt-4 mb-2">
-                                                                            <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2">
-                                                                            <label class="custom-control-label labelcustom" for="showTax">Allowed in notice period</label>
-                                                                        </div>
-                                                                    
+
+                                                                    <div class="custom-control custom-checkbox mt-4 mb-2">
+                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax1" data-parsley-multiple="" data-parsley-mincheck="2">
+                                                                        <label class="custom-control-label labelcustom" for="showTax1">Allowed in notice period</label>
+                                                                    </div>
+
                                                                 </div><!--end row-->
                                                             </div>
                                                         </div><!--end card-body-->
@@ -279,14 +279,14 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                                <option value="value-1">Male</option>
-                                                                                <option value="value-2">Female</option>
-                                                                                <option value="value-3">other</option>
-                                                                            </select>
-                                                                        </div>
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1">Male</option>
+                                                                            <option value="value-2">Female</option>
+                                                                            <option value="value-3">other</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
-                                                                
+
                                                                 <div class="col-md-4 mb-3">
                                                                     <label class="mb-3">Marital Status <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
@@ -298,11 +298,11 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                                <option value="value-1">Married</option>
-                                                                                <option value="value-2">Single</option>
-                                                                            </select>
-                                                                       
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1">Married</option>
+                                                                            <option value="value-2">Single</option>
+                                                                        </select>
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
@@ -316,14 +316,14 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                                <option value="value-1">Marketing</option>
-                                                                                <option value="value-2">Sales</option>
-                                                                            </select>
-                                                                       
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1">Marketing</option>
+                                                                            <option value="value-2">Sales</option>
+                                                                        </select>
+
                                                                     </div>
                                                                 </div>
-                                                                 <div class="col-md-4 mb-3">
+                                                                <div class="col-md-4 mb-3">
                                                                     <label class="mb-3">Designation <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
@@ -334,14 +334,14 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true"> 
-                                                                                <option value="value-1">Senior</option>
-                                                                                <option value="value-2">Junior</option>
-                                                                            </select>
-                                                                       
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1">Senior</option>
+                                                                            <option value="value-2">Junior</option>
+                                                                        </select>
+
                                                                     </div>
                                                                 </div>
-                                                                 <div class="col-md-4 mb-3">
+                                                                <div class="col-md-4 mb-3">
                                                                     <label class="mb-3">User Role <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
                                                                     <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
                                                                         <div class="selectr-options-container">
@@ -352,11 +352,11 @@
                                                                             <div class="selectr-notice"></div>
                                                                             <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                         </div>
-                                                                            <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
-                                                                                <option value="value-1">App Administrator</option>
-                                                                                <option value="value-2">Employee</option>
-                                                                                <option value="value-2">Membership</option>
-                                                                            </select>
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1">App Administrator</option>
+                                                                            <option value="value-2">Employee</option>
+                                                                            <option value="value-2">Membership</option>
+                                                                        </select>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -375,7 +375,7 @@
                                             </div><!-- New Leave Type Sub Modal Tab Content -->
                                         </div>
 
-               
+
 
 
 
@@ -388,12 +388,12 @@
 
 
 
-     @* Edit Leave Type Settings *@
+                    @* Edit Leave Type Settings *@
 
 
 
                     <!--  Modal content for New Leave Type Method -->
-                    <div id="mdlNewLeaveType" class="modal fade bs-EditLeaveTypeMethod-modal" tabindex="-1" role="dialog" aria-labelledby="myEditLeaveTypeMethodModal" aria-hidden="true">
+                    <div id="mdlEditLeaveType" class="modal fade bs-EditLeaveTypeMethod-modal" tabindex="-1" role="dialog" aria-labelledby="myEditLeaveTypeMethodModal" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -434,7 +434,7 @@
                                                             <div class="row">
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeaveTypeName">Leave Type<span class="f-14 mr-1 text-danger">*</span></label>
-                                                                    <input type="text" class="form-control my-3"value="Sick" id="txtLeaveTypeName">
+                                                                    <input type="text" class="form-control my-3" value="Sick" id="txtLeaveTypeName">
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true"></i></label>
@@ -683,10 +683,6 @@
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
-
-
-
-
                     <!--  Modal content for  Leave General Settings -->
 
 
@@ -696,7 +692,7 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h4 class="card-title">Leave General Settings</h4>
+                                        <h4 class="card-title">Leave General Settings Index</h4>
                                     </div><!--end col-->
 
                                 </div>  <!--end row-->
@@ -705,7 +701,7 @@
                                 <div class="row mb-3">
                                     <div class="col-md-9">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio"  id="leaveCountDOJ" name="toggle" value="yes" onclick="toggleTextbox()" />
+                                            <input class="form-check-input" type="radio" id="leaveCountDOJ" name="toggle" value="yes" onclick="toggleTextbox()" />
                                             <label class="form-check-label" for="leaveCountDOJ">Count leaves from the date of joining</label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -751,7 +747,7 @@
                                     <label class="col-sm-2 mt-2 col-form-labels text-end">Reporting Manager can</label>
                                     <div class="col-sm-6">
                                         <select class="form-select">
-                                            <option value=""selected>--</option>
+                                            <option value="" selected>--</option>
                                             <option value="1">Approve</option>
                                             <option value="2">Pre-Approve</option>
                                             <option value="3">Not Approve</option>
@@ -770,19 +766,19 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
     <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css">
     <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
     <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
 
-<script type="text/javascript">
-    	$(window).on('load', function() {
-         $('#mdlEditLeaveTypeSettings').modal({backdrop: 'static', keyboard: false});
+    <script type="text/javascript">
+        $(window).on('load', function() {
          $('#mdlNewLeaveType').modal({backdrop: 'static', keyboard: false});
-		});
+         $('#mdlEditLeaveType').modal({backdrop: 'static', keyboard: false});
+        });
 
-      
+
         function toggleTextbox() {
           const textbox = document.getElementById("textbox");
           const noRadio = document.querySelector('input[value="no"]');
