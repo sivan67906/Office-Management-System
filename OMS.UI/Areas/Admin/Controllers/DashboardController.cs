@@ -8,29 +8,13 @@ namespace OMS.UI.Areas.Admin.Controllers
         public IActionResult Index()
         {
             // Page Titles
-            ViewData["pTitle"] = "Settings Profile";
+            ViewData["pTitle"] = "Dashboard";
 
             // Breadcrumb
-            ViewData["bGParent"] = "Settings";
-            ViewData["bParent"] = "Pages";
-            ViewData["bChild"] = "Dashboard";
-
+            ViewData["bGParent"] = "Admin";
+            ViewData["bParent"] = "Dashboard";
+            ViewData["bChild"] = "Index";
             
-
-            return View();
-        }
-        public IActionResult SADashboard()
-        {
-            // Page Titles
-            ViewData["pTitle"] = "Settings Profile";
-
-            // Breadcrumb
-            ViewData["bGParent"] = "Settings";
-            ViewData["bParent"] = "Pages";
-            ViewData["bChild"] = "Dashboard";
-
-
-
             return View();
         }
     }

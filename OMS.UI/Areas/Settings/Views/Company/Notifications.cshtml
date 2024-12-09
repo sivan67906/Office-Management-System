@@ -1,5 +1,744 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="row">
+    <div class="col-12 col-lg-10 mx-auto">
+
+        <div class="card">
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbsms" role="tab">SMS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbnoti" role="tab">Notification</a>
+                    </li>
+                </ul>
+            </div><!--end card-body-->
+            <div class="card-body pt-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tbsms" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                        <img src="assets/images/logo-sm.png" alt="" height="20" class="me-1">
+                                        <h5 class="me-auto my-0">Aviv</h5>
+                                        <small>11 mins ago</small>
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body ">
+                                        Development InProgress
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="tab-pane" id="tbnoti" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-12">
+                                        <h4 class="card-title">Notification Index</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Common</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="1">
+                                            <label class="form-check-label mt-1" for="1">
+                                                Contract Signed
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="2">
+                                            <label class="form-check-label mt-1" for="2">
+                                                Estimate Declined
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="3">
+                                            <label class="form-check-label mt-1" for="3">
+                                                Event Invite
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="4">
+                                            <label class="form-check-label mt-1" for="4">
+                                                modules.emailNotification.event-invite-new
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="5">
+                                            <label class="form-check-label mt-1" for="5">
+                                                Recurring Expense Status Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="55">
+                                            <label class="form-check-label mt-1" for="55">
+                                                New Expense/Added by Admin
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="6">
+                                            <label class="form-check-label mt-1" for="6">
+                                                New Expense/Added by Member
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="7">
+                                            <label class="form-check-label mt-1" for="7">
+                                                Lead notification
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="8">
+                                            <label class="form-check-label mt-1" for="8">
+                                                New Order
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="9">
+                                            <label class="form-check-label mt-1" for="9">
+                                                Order Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="10">
+                                            <label class="form-check-label mt-1" for="10">
+                                                New Product Purchase
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="11">
+                                            <label class="form-check-label mt-1" for="11">
+                                                New Notice Published
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="12">
+                                            <label class="form-check-label mt-1" for="12">
+                                                User Join Via Invitation
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="13">
+                                            <label class="form-check-label mt-1" for="13">
+                                                Notice Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="14">
+                                            <label class="form-check-label mt-1" for="14">
+                                                User Registration/Added by Admin
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="15">
+                                            <label class="form-check-label mt-1" for="15">
+                                                modules.emailNotification.test-notification
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="16">
+                                            <label class="form-check-label mt-1" for="16">
+                                                Two Factor Code
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3 ">
+                                        <h4 class="header-title">Leave</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="17">
+                                            <label class="form-check-label mt-1" for="17">
+                                                New Leave Application
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="18">
+                                            <label class="form-check-label mt-1" for="18">
+                                                New Leave Request
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="19">
+                                            <label class="form-check-label mt-1" for="19">
+                                                Leave Approved
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="20">
+                                            <label class="form-check-label mt-1" for="20">
+                                                Leave Rejected
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="21">
+                                            <label class="form-check-label mt-1" for="21">
+                                                Leave Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="22">
+                                            <label class="form-check-label mt-1" for="22">
+                                                Multiple Leave Application
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="23">
+                                            <label class="form-check-label mt-1" for="23">
+                                                New Multiple Leave Application
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Proposal</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="24">
+                                            <label class="form-check-label mt-1" for="24">
+                                                Proposal Approved
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="25">
+                                            <label class="form-check-label mt-1" for="25">
+                                                Proposal Rejected
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="26">
+                                            <label class="form-check-label mt-1" for="26">
+                                                New Proposal
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Invoice</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="27">
+                                            <label class="form-check-label mt-1" for="27">
+                                                Recurring Invoice Status Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="28">
+                                            <label class="form-check-label mt-1" for="28">
+                                                Invoice Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="29">
+                                            <label class="form-check-label mt-1" for="29">
+                                                Invoice Created
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="30">
+                                            <label class="form-check-label mt-1" for="30">
+                                                Invoice Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="31">
+                                            <label class="form-check-label mt-1" for="31">
+                                                New Recurring Invoice
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Payment</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="32">
+                                            <label class="form-check-label mt-1" for="32">
+                                                New Payment
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="33">
+                                            <label class="form-check-label mt-1" for="33">
+                                                Payment Received
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="34">
+                                            <label class="form-check-label mt-1" for="34">
+                                                Payment Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Task</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="35">
+                                            <label class="form-check-label mt-1" for="35">
+                                                New Task
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="36">
+                                            <label class="form-check-label mt-1" for="36">
+                                                Task Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="37">
+                                            <label class="form-check-label mt-1" for="37">
+                                                Task Updated
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="38">
+                                            <label class="form-check-label mt-1" for="38">
+                                                Task Completed Client
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="39">
+                                            <label class="form-check-label mt-1" for="39">
+                                                Task Completed
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="40">
+                                            <label class="form-check-label mt-1" for="40">
+                                                New Client Task
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="41">
+                                            <label class="form-check-label mt-1" for="41">
+                                                Task Update Client
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="42">
+                                            <label class="form-check-label mt-1" for="42">
+                                                Sub Task Assignee Added
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="43">
+                                            <label class="form-check-label mt-1" for="43">
+                                                Sub Task Completed
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="44">
+                                            <label class="form-check-label mt-1" for="44">
+                                                Task Comment
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="45">
+                                            <label class="form-check-label mt-1" for="45">
+                                                Task Note
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="46">
+                                            <label class="form-check-label mt-1" for="46">
+                                                Task Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="47">
+                                            <label class="form-check-label mt-1" for="47">
+                                                Auto Task Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Ticket</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="48">
+                                            <label class="form-check-label mt-1" for="48">
+                                                New Ticket Request
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="49">
+                                            <label class="form-check-label mt-1" for="49">
+                                                New Support Ticket Request
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="50">
+                                            <label class="form-check-label mt-1" for="50">
+                                                Agent Ticket
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="51">
+                                            <label class="form-check-label mt-1" for="51">
+                                                New Ticket Reply
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Project</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="52">
+                                            <label class="form-check-label mt-1" for="52">
+                                                Employee Assign to Project
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="53">
+                                            <label class="form-check-label mt-1" for="53">
+                                                New File Uploaded to Project
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="54">
+                                            <label class="form-check-label mt-1" for="54">
+                                                Project Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="555">
+                                            <label class="form-check-label mt-1" for="555">
+                                                New Project
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Project</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="56">
+                                            <label class="form-check-label mt-1" for="56">
+                                                Attendance Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="57">
+                                            <label class="form-check-label mt-1" for="57">
+                                                Follow Up Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="58">
+                                            <label class="form-check-label mt-1" for="58">
+                                                Event Reminder
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="59">
+                                            <label class="form-check-label mt-1" for="59">
+                                                modules.emailNotification.event-reminder-new
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="60">
+                                            <label class="form-check-label mt-1" for="60">
+                                                modules.emailNotification.attendance-reminder-new
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3">
+                                        <h4 class="header-title">Request</h4>
+                                        <i class="arrow bi bi-chevron-right" data-target="section-1"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="61">
+                                            <label class="form-check-label mt-1" for="61">
+                                                Removal Request Admin Notification
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="62">
+                                            <label class="form-check-label mt-1" for="62">
+                                                Removal Request Approved
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="63">
+                                            <label class="form-check-label mt-1" for="63">
+                                                Removal Request Reject
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="64">
+                                            <label class="form-check-label mt-1" for="64">
+                                                Removal Request Approved Lead
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check  mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="65">
+                                            <label class="form-check-label mt-1" for="65">
+                                                Removal Request Reject Lead
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="66">
+                                            <label class="form-check-label mt-1" for="66">
+                                                Removal Request Reject User
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input form-check-input-custom me-3" type="checkbox" value="" id="67">
+                                            <label class="form-check-label mt-1" for="67">
+                                                Removal Request Approved User
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-lg-12 text-end">
+                                        <button type="button" class="btn btn-de-primary "><i class="mdi mdi-check-all me-2"></i>Update</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end card-body-->
+        </div><!--end card-->
+
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+         $(window).on('load', function() {
+         $('.modal').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript for Multiple Toggles -->
+    <script>
+        // Add event listener to all toggle arrows
+        document.querySelectorAll('.arrow').forEach(arrow => {
+            arrow.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target'); // Get target ID
+                const content = document.getElementById(targetId); // Find the corresponding content
+
+                // Toggle content visibility
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block'; // Show content
+                    this.classList.add('down'); // Rotate arrow
+                } else {
+                    content.style.display = 'none'; // Hide content
+                    this.classList.remove('down'); // Reset arrow rotation
+                }
+            });
+        });
+    </script>
+    <script>
+        // Select the checkbox and the textbox container
+        const checkbox = document.getElementById("InlineCheckbox");
+        const textboxContainer = document.getElementById("ti");
+
+        // Add event listener for checkbox
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            // Show the textbox container when checkbox is checked
+            textboxContainer.style.display = "block";
+          } else {
+            // Hide the textbox container when checkbox is unchecked
+            textboxContainer.style.display = "none";
+          }
+        });
+    </script>
+
 }

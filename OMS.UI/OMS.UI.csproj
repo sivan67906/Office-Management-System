@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Broadcast\Views\Shared\" />
     <Folder Include="Areas\CRM\Data\" />
     <Folder Include="Areas\CRM\Models\" />
     <Folder Include="Areas\Dashboard\Controllers\" />

@@ -1,9 +1,4 @@
-﻿@section Scripts {
-    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
-    <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css">
-    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
-}
+﻿
 <div class="row">
     <div class="col-12 col-lg-10 mx-auto">
 
@@ -32,7 +27,7 @@
                                         <h4 class="card-title">Leave Type Settings</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewLeaveTypeMethod-modal">New Leave Type </button>
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewLeaveTypeMethod-modal">Add Leave Type </button>
                                     </div><!--end col-->
                                 </div>  <!--end row-->
                             </div><!--end card-header-->
@@ -98,12 +93,12 @@
                     </div>
 
                     <!--  Modal content for New Leave Type Method -->
-                    <div class="modal fade bs-NewLeaveTypeMethod-modal" tabindex="-1" role="dialog" aria-labelledby="myNewLeaveTypeMethodModal" aria-hidden="true">
+                    <div id="mdlNewLeaveType" class="modal fade bs-NewLeaveTypeMethod-modal" tabindex="-1" role="dialog" aria-labelledby="myNewLeaveTypeMethodModal" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title mt-0" id="myNewLeaveTypeMethodModal">New Leave Type </h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h5 class="modal-title mt-0" id="myNewLeaveTypeMethodModal">Leave Type Setup</h5>
+                                    @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
                                 </div>
                                 <div class="modal-body">
                                     <div class="card">
@@ -162,14 +157,12 @@
                                                                     <input type="color" class="form-control form-control-color mt-3" id="exampleColorInput" value="#0b51b7" title="Choose your color">
                                                                 </div>
                                                             </div>
-                                                            
                                                         </div><!--end card-body-->
-                                                        <div class="card-footer">
-                                                            <div class="row">
-                                                                <div class="col-md-12 text-start">
-                                                                    <button type="button" class="btn btn-de-primary  "><i class="mdi mdi-check-all-all me-2"></i>Save</button>
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="row mt-2 text-end ">
+                                                        <div class="col-lg-12 ">
+                                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                            <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -249,8 +242,9 @@
                                                         </div><!--end card-body-->
                                                         <div class="card-footer">
                                                             <div class="row">
-                                                                <div class="col-md-12 text-start">
-                                                                    <button type="button" class="btn btn-de-primary  "><i class="mdi mdi-check-all-all me-2"></i>Save</button>
+                                                                <div class="col-md-12 text-end">
+                                                                    <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                                    <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -365,8 +359,9 @@
                                                                 
 
                                                                 <div class="row">
-                                                                    <div class="col-md-12 text-start">
-                                                                        <button type="button" class="btn btn-de-primary  "><i class="mdi mdi-check-all-all me-2"></i>Save</button>
+                                                                    <div class="col-md-12 text-end">
+                                                                        <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                                        <button type="button" class="btn btn-sm btn-de-primary  "><i class="mdi mdi-check-all me-2"></i>Create</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -383,12 +378,12 @@
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
                     <!--  Modal content for Edit Leave Type Settings -->
-                    <div class="modal fade bs-EditLeaveTypeSettings-modal" tabindex="-1" role="dialog" aria-labelledby="myEditLeaveTypeSettingsModal" aria-hidden="true">
+                    <div id="mdlEditLeaveTypeSettings" class="modal fade bs-EditLeaveTypeSettings-modal" tabindex="-1" role="dialog" aria-labelledby="myEditLeaveTypeSettingsModal" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title mt-0" id="myEditLeaveTypeSettingsModal">Edit Leave Type Settings</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h5 class="modal-title mt-0" id="myEditLeaveTypeSettingsModal">Edit Leave Type Details</h5>
+                                    @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
                                 </div>
                                 <div class="modal-body">
                                     <form>
@@ -405,10 +400,10 @@
                                             </div>
                                         </div><!--end row-->
 
-                                        <div class="row">
-                                            <div class="col-md-12 text-end">
-                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
-                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                        <div class="row mt-4 text-end ">
+                                            <div class="col-lg-12 ">
+                                                <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Update</button>
                                             </div>
                                         </div>
                                     </form>
@@ -496,7 +491,19 @@
         </div>
     </div>
 </div>
-<script>
+
+@section Scripts{
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
+    <link href="~/matrica/assets/css/app-custom.css" rel="stylesheet" type="text/css">
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+
+<script type="text/javascript">
+    	$(window).on('load', function() {
+         $('#mdlEditLeaveTypeSettings').modal({backdrop: 'static', keyboard: false});
+         $('#mdlNewLeaveType').modal({backdrop: 'static', keyboard: false});
+		});
+
        // Get the checkbox element
     const checkbox = document.getElementById("leaveCountFromYearStart");
     // Get the textbox container
@@ -512,4 +519,5 @@
         textboxContainer.style.display = "none";
       }
     });
-</script>
+    </script>
+}

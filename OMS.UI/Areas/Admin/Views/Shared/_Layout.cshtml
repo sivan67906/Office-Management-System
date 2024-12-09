@@ -147,7 +147,7 @@
 						<li class="nav-item">
 							<a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="nav-link">Home</a>
 						</li><!--end nav-item-->
-						<li class="nav-item">
+						@* <li class="nav-item">
 							<a class="nav-link" href="crypto-index.html">Crypto</a>
 						</li><!--end nav-item-->
 						<li class="nav-item">
@@ -164,7 +164,7 @@
 						</li><!--end nav-item-->
 						<li class="nav-item">
 							<a class="nav-link" href="hospital-index.html">Hospital</a>
-						</li><!--end nav-item-->
+						</li><!--end nav-item--> *@
 					</ul><!--end nav-->
 				</div><!-- end Dashboards -->
 				<div id="hrefCRM" class="main-icon-menu-pane tab-pane" role="tabpanel"
@@ -372,7 +372,7 @@
 					</div>
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" asp-area="Broadcast" asp-controller="Broadcast" asp-action="NoticeBoard">Notice Board</a>
+							<a class="nav-link" asp-area="Broadcast" asp-controller="Broadcast" asp-action="Broadcast">Notice Board</a>
 						</li><!--end nav-item-->
 					</ul><!--end nav-->
 				</div><!-- end Settings -->
@@ -411,9 +411,9 @@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="EmployeeCreation">Employee</a>
 							</li><!--end nav-item-->
-							<li class="nav-item">
+							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payroll">Payroll</a>
-							</li><!--end nav-item-->
+							</li><!--end nav-item--> *@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Contract">Contract</a>
 							</li><!--end nav-item-->
@@ -432,15 +432,15 @@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payment">Payment</a>
 							</li><!--end nav-item-->
-							<li class="nav-item">
+							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Assets">Asset</a>
-							</li><!--end nav-item-->
+							</li><!--end nav-item--> *@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Message">Message</a>
 							</li><!--end nav-item-->
-							<li class="nav-item">
-								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Ticket</a>
-							</li><!--end nav-item-->
+							@* <li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Support" asp-action="Ticket">Ticket</a>
+							</li><!--end nav-item--> *@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Currency">Currency</a>
 							</li><!--end nav-item-->
@@ -456,9 +456,9 @@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Recruit">Recruit</a>
 							</li><!--end nav-item-->
-							<li class="nav-item">
+							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="SMS">SMS</a>
-							</li><!--end nav-item-->
+							</li><!--end nav-item--> *@
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Notifications">Notification</a>
 							</li><!--end nav-item-->
@@ -469,14 +469,17 @@
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Leaves</a>
 							</li><!--end nav-item--> *@
 							<li class="nav-item">
-								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="TimeLog">Time Log</a>
+								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="LeavesType">Leaves</a>
 							</li><!--end nav-item-->
 							<li class="nav-item">
+								<a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="TimeLog">Time Log</a>
+							</li><!--end nav-item-->
+							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Security">Security</a>
 							</li><!--end nav-item-->
 							<li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Permissions">Module</a>
-							</li><!--end nav-item-->
+							</li><!--end nav-item--> *@
 							@* <li class="nav-item">
 								<a class="nav-link" asp-area="Settings" asp-controller="Integration" asp-action="Calendar">Google Calendar</a>
 							</li><!--end nav-item--> *@

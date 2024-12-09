@@ -1,9 +1,4 @@
-﻿@section Scripts {
-    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
-    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
-    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
-}
-<div class="row">
+﻿<div class="row">
     <div class="card">
         <div class="card-header">
             <div class="row align-items-center">
@@ -469,7 +464,7 @@
                                     <div class="modal-footer">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                                 <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Create</button>
                                             </div>
                                         </div>
@@ -929,7 +924,7 @@
                                     <div class="modal-footer">
                                         <div class="row">
                                             <div class="col-lg-12 text-end">
-                                                <button type="button" class="btn btn-sm btn-de-danger " data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
                                                 <button type="button" class="btn btn-sm btn-de-primary "><i class="mdi mdi-check-all me-2 "></i>Update</button>
                                             </div>
                                         </div>
@@ -1020,14 +1015,29 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    
+  @*   <script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
+    <script src="~/matrica/assets/js/pages/form-editor.init.js"></script> *@
 
-<script src="~/matrica/assets/libs/tinymce/tinymce.min.js"></script>
-<script src="~/matrica/assets/js/pages/form-editor.init.js"></script>
-<script>
-    tinymce.init({
-      selector: 'textarea#txtlead'
-    });
-    tinymce.init({
-      selector: 'textarea#txtedittemplate'
-    });
-</script>
+    <link href="~/matrica/assets/libs/mobius1-selectr/selectr.min.css" rel="stylesheet" type="text/css">
+    <script src="~/matrica/assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="~/matrica/assets/js/pages/forms-advanced.js"></script>
+
+
+    <script>
+        $(window).on('load', function() {
+         $('#BAddress').modal({backdrop: 'static', keyboard: false});
+         $('#EClient').modal({backdrop: 'static', keyboard: false});
+        });
+
+
+        // tinymce.init({
+        //   selector: 'textarea#txtlead'
+        // });
+        // tinymce.init({
+        //   selector: 'textarea#txtedittemplate'
+        // });
+    </script>
+
+}

@@ -21,7 +21,7 @@
                             <div class="card-header">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h4 class="card-title">Offline Payment Method</h4>
+                                        <h4 class="card-title">Offline Payment Index</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-OfflinePaymentMethod-modal">Offline Payment Method </button>
@@ -71,12 +71,12 @@
                     </div>
 
                     <!--  Modal content for New Offline Payment Method -->
-                    <div class="modal fade bs-OfflinePaymentMethod-modal" tabindex="-1" role="dialog" aria-labelledby="myOfflinePaymentMethodModal" aria-hidden="true">
+                    <div id="mdlAddOfflinePayment" class="modal fade bs-OfflinePaymentMethod-modal" tabindex="-1" role="dialog" aria-labelledby="myOfflinePaymentMethodModal" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title mt-0" id="myOfflinePaymentMethodModal">New Payment Method</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h5 class="modal-title mt-0" id="myOfflinePaymentMethodModal">Offline Payment Setup</h5>
+                                    @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
                                 </div>
                                 <div class="modal-body">
                                     <form>
@@ -93,10 +93,10 @@
                                             </div>
                                         </div><!--end row-->
 
-                                        <div class="row">
-                                            <div class="col-md-12 text-end">
-                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
-                                                <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                                        <div class="row mt-4 text-end ">
+                                            <div class="col-lg-12 ">
+                                                <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
                                             </div>
                                         </div>
                                     </form>
@@ -110,12 +110,12 @@
         </div><!--end card-->
 
         <!--  Modal content for Edit Offline Payment Method -->
-        <div class="modal fade bs-EditOfflinePayment-modal" tabindex="-1" role="dialog" aria-labelledby="myEditOfflinePaymentMethodModal" aria-hidden="true">
+        <div id="mdlEditOfflinePayment" class="modal fade bs-EditOfflinePayment-modal" tabindex="-1" role="dialog" aria-labelledby="myEditOfflinePaymentMethodModal" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title mt-0" id="myEditOfflinePaymentMethodModal">Edit Payment Method</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title mt-0" id="myEditOfflinePaymentMethodModal">Edit Offline Payment Details</h5>
+                        @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
                     </div>
                     <div class="modal-body">
                         <form>
@@ -131,11 +131,10 @@
                                     <textarea class="form-control" rows="5" id="txtDescription"></textarea>
                                 </div>
                             </div><!--end row-->
-
-                            <div class="row">
-                                <div class="col-md-12 text-end">
-                                    <button type="button" class="btn btn-sm btn-de-primary">Save</button>
-                                    <button type="button" class="btn btn-sm btn-de-danger">Cancel</button>
+                            <div class="row mt-4 text-end ">
+                                <div class="col-lg-12 ">
+                                    <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                    <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Update</button>
                                 </div>
                             </div>
                         </form>
@@ -146,5 +145,11 @@
 
     </div>
 </div><!--end card-body-->
-       
-
+@section Scripts {
+        <script>
+        $(window).on('load', function() {
+             $('#mdlAddOfflinePayment').modal({backdrop: 'static', keyboard: false});
+             $('#mdlEditOfflinePayment').modal({backdrop: 'static', keyboard: false});
+        });
+    </script>
+}
