@@ -25,8 +25,8 @@ namespace OMS.UI.Areas.Settings.Controllers
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
-            ViewData["bParent"] = "Support";
-            ViewData["bChild"] = "Ticket";
+            ViewData["bParent"] = "Ticket";
+            ViewData["bChild"] = "Ticket View";
 
             return View();
         }

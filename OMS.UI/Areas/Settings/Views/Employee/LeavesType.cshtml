@@ -27,7 +27,7 @@
                                         <h4 class="card-title">Leave Type Settings</h4>
                                     </div><!--end col-->
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewLeaveTypeMethod-modal">Add Leave Type </button>
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewLeaveTypeMethod-modal"><i class="fas fa-plus me-2"></i>Add Leave Type </button>
                                     </div><!--end col-->
                                 </div>  <!--end row-->
                             </div><!--end card-header-->
@@ -61,7 +61,7 @@
                                                     <ol>2.Sr.Developer</ol>
                                                 </td>
                                                 <td>
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditLeaveTypeSettings-modal"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditLeaveTypeMethod-modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                                 </td>
                                             </tr><!--end tr-->
@@ -80,7 +80,7 @@
                                                     <ol>3.Team Lead</ol>
                                                 </td>
                                                 <td>
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditLeaveTypeSettings-modal"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target=".bs-EditLeaveTypeMethod-modal" data-toggle="tooltip" data-placement="top" title="Edit"><i class="las la-pen text-secondary font-16"></i></a>
                                                     <a href="#" class="ms-2" onclick="executeExample('warningConfirm')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                                 </td>
                                             </tr><!--end tr-->
@@ -138,19 +138,20 @@
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true"></i></label>
                                                                     <select class="form-select my-3">
+                                                                        <option value=""selected>--</option>
                                                                         <option value="1">Paid</option>
                                                                         <option value="2">Unpaid</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeaveNumber">No.of Leaves <span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
-                                                                    <input type="text" class="form-control my-3" id="txtLeaveNumber">
+                                                                    <input type="number" class="form-control my-3" id="txtLeaveNumber">
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeaveMonthlyLimit">Monthly Limit<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
-                                                                    <input type="text" class="form-control mt-3" id="txtLeaveMonthlyLimit">
+                                                                    <input type="number" class="form-control mt-3" id="txtLeaveMonthlyLimit">
                                                                 </div>
                                                                 <div class="col-md-4 mb-3">
                                                                     <label for="LeaveColourCode">Colour Code</label>
@@ -158,13 +159,16 @@
                                                                 </div>
                                                             </div>
                                                         </div><!--end card-body-->
-                                                    </div>
-                                                    <div class="row mt-2 text-end ">
-                                                        <div class="col-lg-12 ">
-                                                            <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-                                                            <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+                                                        <div class="card-footer">
+                                                            <div class="row">
+                                                                <div class="col-md-12 text-end">
+                                                                    <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                                    <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
 
                                                 <div class="tab-pane" id="tbEntitlement" role="tabpanel">
@@ -196,8 +200,8 @@
                                                                             @*  <input type="text" class="form-control my-3" id="txtLeaveMonthlyLimit"> *@
                                                                             @*  <label class="col-mb-3 form-label text-start">of joining</label> *@
                                                                         </div>
-                                                                        <div class="col-lg-4 mt-5">
-                                                                            <label class=" form-label text-start">of joining</label>
+                                                                        <div class="col-lg-4 mt-2">
+                                                                            <label class=" form-label text-start mt-4">of joining</label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -222,7 +226,7 @@
                                                                                 <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
                                                                             </div>
                                                                             <select class="form-select" aria-label="Default select example">
-                                                                                <option value="" selected></option>
+                                                                                <option value="" selected>--</option>
                                                                                 <option value="1">Carry Forward</option>
                                                                                 <option value="1">Lapse</option>
                                                                                 <option value="1">Paid</option>
@@ -353,64 +357,337 @@
                                                                                 <option value="value-2">Employee</option>
                                                                                 <option value="value-2">Membership</option>
                                                                             </select>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                                
-
-                                                                <div class="row">
-                                                                    <div class="col-md-12 text-end">
-                                                                        <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-                                                                        <button type="button" class="btn btn-sm btn-de-primary  "><i class="mdi mdi-check-all me-2"></i>Create</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div><!--end card-body-->
+                                                        <div class="card-footer">
+                                                            <div class="row">
+                                                                <div class="col-md-12 text-end">
+                                                                    <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                                    <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Create</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
                                             </div><!-- New Leave Type Sub Modal Tab Content -->
                                         </div>
+
+               
+
+
+
                                     </div>
 
                                 </div>
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
-                    <!--  Modal content for Edit Leave Type Settings -->
-                    <div id="mdlEditLeaveTypeSettings" class="modal fade bs-EditLeaveTypeSettings-modal" tabindex="-1" role="dialog" aria-labelledby="myEditLeaveTypeSettingsModal" aria-hidden="true">
+
+
+
+     @* Edit Leave Type Settings *@
+
+
+
+                    <!--  Modal content for New Leave Type Method -->
+                    <div id="mdlNewLeaveType" class="modal fade bs-EditLeaveTypeMethod-modal" tabindex="-1" role="dialog" aria-labelledby="myEditLeaveTypeMethodModal" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title mt-0" id="myEditLeaveTypeSettingsModal">Edit Leave Type Details</h5>
+                                    <h5 class="modal-title mt-0" id="myEditLeaveTypeMethodModal">Edit Leave Type Details</h5>
                                     @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> *@
                                 </div>
                                 <div class="modal-body">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-12 mb-3">
-                                                <div class="form-group">
-                                                    <label class="mb-3" for="OffPayMethod">Method</label>
-                                                    <input type="text" class="form-control" id="PaymentName" required="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 mb-3">
-                                                <label class="mb-3">Description</label>
-                                                <textarea class="form-control" rows="5" id="txtDescription"></textarea>
-                                            </div>
-                                        </div><!--end row-->
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbEGeneral" role="tab">General</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbEEntitlement" role="tab">Entitlement</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbEApplicability" role="tab">Applicability</a>
+                                                </li>
+                                            </ul>
+                                        </div><!--end card-body-->
 
-                                        <div class="row mt-4 text-end ">
-                                            <div class="col-lg-12 ">
-                                                <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
-                                                <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Update</button>
-                                            </div>
+
+                                        <div class="card-body pt-0">
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+
+                                                <div class="tab-pane active show" id="tbEGeneral" role="tabpanel">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <h4 class="card-title">General</h4>
+                                                                </div><!--end col-->
+                                                            </div>  <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label for="LeaveTypeName">Leave Type<span class="f-14 mr-1 text-danger">*</span></label>
+                                                                    <input type="text" class="form-control my-3"value="Sick" id="txtLeaveTypeName">
+                                                                </div>
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label for="LeavePaidStatus">Leave Paid Status <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                                                                    <select class="form-select my-3">
+                                                                        <option value="">--</option>
+                                                                        <option value="1" selected>Paid</option>
+                                                                        <option value="2">Unpaid</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label for="LeaveNumber">No.of Leaves <span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
+                                                                    <input type="number" class="form-control my-3" value="2" id="txtLeaveNumber">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label for="LeaveMonthlyLimit">Monthly Limit<span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
+                                                                    <input type="number" class="form-control mt-3" value="0" id="txtLeaveMonthlyLimit">
+                                                                </div>
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label for="LeaveColourCode">Colour Code</label>
+                                                                    <input type="color" class="form-control form-control-color mt-3" id="exampleColorInput" value="#0b51b7" title="Choose your color">
+                                                                </div>
+                                                            </div>
+                                                        </div><!--end card-body-->
+                                                        <div class="card-footer">
+                                                            <div class="row">
+                                                                <div class="col-md-12 text-end">
+                                                                    <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                                    <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Update</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="tab-pane" id="tbEEntitlement" role="tabpanel">
+
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <h4 class="card-title">Entitlement</h4>
+                                                                </div><!--end col-->
+                                                            </div>  <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="card-body">
+                                                            <div class="row mb-3">
+                                                                <div class="col-md-6">
+
+                                                                    <div class="row mb-3">
+                                                                        <div class="col-lg-8 ">
+                                                                            <label for="LeaveMonthlyLimit">Effective After <span><i class="fa fa-question-circle" aria-hidden="true"></i></span></label>
+                                                                            <div class="input-group mt-2">
+                                                                                <input type="number" class="form-control" id="inlineFormInputGroupUsername" value="20" placeholder="Username">
+                                                                                <div class="input-group-text p-0 bg-light">
+                                                                                    <select class="form-select ">
+                                                                                        <option value="1">Days</option>
+                                                                                        <option value="2">Month</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            @*  <input type="text" class="form-control my-3" id="txtLeaveMonthlyLimit"> *@
+                                                                            @*  <label class="col-mb-3 form-label text-start">of joining</label> *@
+                                                                        </div>
+                                                                        <div class="col-lg-4 mt-2">
+                                                                            <label class=" form-label text-start mt-4">of joining</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="custom-control custom-checkbox mt-4 mb-2">
+                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2" checked>
+                                                                        <label class="custom-control-label labelcustom" for="showTax">Allowed in Probation</label>
+                                                                    </div>
+                                                                </div><!--end row-->
+
+                                                                <div class="col-lg-6">
+                                                                    <label for="LeaveMonthlyLimit">
+                                                                        Unused Leaves<span><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                                                    </label>
+                                                                    <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                            </div>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                        </div>
+                                                                        <select class="form-select" aria-label="Default select example">
+                                                                            <option value="">--</option>
+                                                                            <option value="1" selected>Carry Forward</option>
+                                                                            <option value="1">Lapse</option>
+                                                                            <option value="1">Paid</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6">
+
+                                                                    <div class="custom-control custom-checkbox mt-4 mb-2">
+                                                                        <input type="checkbox" class="form-check-input form-check-input-custom" id="showTax" data-parsley-multiple="" data-parsley-mincheck="2">
+                                                                        <label class="custom-control-label labelcustom" for="showTax">Allowed in notice period</label>
+                                                                    </div>
+
+                                                                </div><!--end row-->
+                                                            </div>
+                                                        </div><!--end card-body-->
+                                                        <div class="card-footer">
+                                                            <div class="row">
+                                                                <div class="col-md-12 text-end">
+                                                                    <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                                    <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Update</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="tab-pane" id="tbEApplicability" role="tabpanel">
+
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <h4 class="card-title">Applicability</h4>
+                                                                </div><!--end col-->
+                                                            </div>  <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label class="mb-3">Gender <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                                                                    <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                            </div>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                        </div>
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1" selected>Male</option>
+                                                                            <option value="value-2" selected>Female</option>
+                                                                            <option value="value-3" selected>other</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label class="mb-3">Marital Status <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                            </div>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                        </div>
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1" selected>Married</option>
+                                                                            <option value="value-2">Single</option>
+                                                                        </select>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label class="mb-3">Department <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                            </div>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                        </div>
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1" selected>Marketing</option>
+                                                                            <option value="value-2" selected>Sales</option>
+                                                                        </select>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label class="mb-3">Designation <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                            </div>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                        </div>
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1" selected>Senior</option>
+                                                                            <option value="value-2" selected>Junior</option>
+                                                                        </select>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mb-3">
+                                                                    <label class="mb-3">User Role <span class="f-14 mr-1 text-danger">* </span> <i class="fa fa-question-circle" aria-hidden="true"></i> </label>
+                                                                    <div class="selectr-container selectr-desktop multiple" style="width: 100%;">
+                                                                        <div class="selectr-options-container">
+                                                                            <div class="selectr-input-container">
+                                                                                <input class="selectr-input" tagindex="-1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="true" role="textbox" type="search">
+                                                                                <button class="selectr-input-clear" type="button"></button>
+                                                                            </div>
+                                                                            <div class="selectr-notice"></div>
+                                                                            <ul class="selectr-options" role="tree" aria-hidden="true" aria-expanded="false"></ul>
+                                                                        </div>
+                                                                        <select id="multiSelect" multiple="" tabindex="-1" class="selectr-hidden multiSelectr" aria-hidden="true">
+                                                                            <option value="value-1" selected>App Administrator</option>
+                                                                            <option value="value-2" selected>Employee</option>
+                                                                            <option value="value-2">Membership</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--end card-body-->
+                                                        <div class="card-footer">
+                                                            <div class="row">
+                                                                <div class="col-md-12 text-end">
+                                                                    <button type="button" class="btn btn-sm btn-de-danger me-2" data-bs-dismiss="modal"><i class="mdi mdi-window-close me-2"></i>Close</button>
+                                                                    <button type="button" class="btn btn-sm btn-de-primary"><i class="mdi mdi-check-all me-2"></i>Update</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div><!-- New Leave Type Sub Modal Tab Content -->
                                         </div>
-                                    </form>
+
+
+                                    </div>
+
                                 </div>
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
                     </div><!-- /.modal -->
+
+
+
+
+                    <!--  Modal content for  Leave General Settings -->
 
 
                     <div class="tab-pane" id="tbLeaveGeneralSettings" role="tabpanel">
@@ -428,11 +705,11 @@
                                 <div class="row mb-3">
                                     <div class="col-md-9">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="leaveCount" id="leaveCountDOJ" value="option1 " name="inlineRadioOptions" />
+                                            <input class="form-check-input" type="radio"  id="leaveCountDOJ" name="toggle" value="yes" onclick="toggleTextbox()" />
                                             <label class="form-check-label" for="leaveCountDOJ">Count leaves from the date of joining</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input dynamic-checkbox" type="radio" id="leaveCountFromYearStart" data-target="textbox1" value="option2" name="inlineRadioOptions" />
+                                            <input class="form-check-input dynamic-checkbox" type="radio" id="leaveCountFromYearStart" data-target="textbox1" name="toggle" value="no" onclick="toggleTextbox()" />
                                             <label class="form-check-label" for="leaveCountFromYearStart">Count leaves from the start of the year</label>
                                         </div>
                                     </div>
@@ -440,7 +717,7 @@
                                 </div> <!--end row-->
                                 <div class="mb-3 row">
                                     <div class="col-lg-6">
-                                        <div class="textbox-container" id="textbox1" style="display: none;">
+                                        <div class="textbox-container" id="textbox" style="display: none;">
                                             <label class=" col-form-label ">Year Starts From</label>
                                             <div class="selectr-container selectr-desktop has-selected mt-2" style="width: 100%;">
                                                 <div class="selectr-options-container">
@@ -471,9 +748,10 @@
                                     </div>
                                 </div><!--end row-->
                                 <div class="mb-3 row">
-                                    <label class="col-sm-2 col-form-label text-end">Reporting Manager can</label>
+                                    <label class="col-sm-2 mt-2 col-form-labels text-end">Reporting Manager can</label>
                                     <div class="col-sm-6">
                                         <select class="form-select">
+                                            <option value=""selected>--</option>
                                             <option value="1">Approve</option>
                                             <option value="2">Pre-Approve</option>
                                             <option value="3">Not Approve</option>
@@ -504,20 +782,17 @@
          $('#mdlNewLeaveType').modal({backdrop: 'static', keyboard: false});
 		});
 
-       // Get the checkbox element
-    const checkbox = document.getElementById("leaveCountFromYearStart");
-    // Get the textbox container
-    const textboxContainer = document.getElementById("textbox1");
+      
+        function toggleTextbox() {
+          const textbox = document.getElementById("textbox");
+          const noRadio = document.querySelector('input[value="no"]');
 
-    // Add an event listener for the checkbox
-    checkbox.addEventListener("change", () => {
-      if (checkbox.checked) {
-        // Show the textbox container when checkbox is checked
-        textboxContainer.style.display = "block";
-      } else {
-        // Hide the textbox container when checkbox is unchecked
-        textboxContainer.style.display = "none";
-      }
-    });
+          // Show textbox if "No" is selected, otherwise hide it
+          if (noRadio.checked) {
+            textbox.style.display = "block";
+          } else {
+            textbox.style.display = "none";
+          }
+        }
     </script>
 }

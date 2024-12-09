@@ -34,12 +34,12 @@ namespace OMS.UI.Areas.Settings.Controllers
         public IActionResult LeavesType()
         {
             // Page Title
-            ViewData["pTitle"] = "Employee Profile";
+            ViewData["pTitle"] = "Leaves Profile";
 
             // Breadcrumb
             ViewData["bGParent"] = "Settings";
-            ViewData["bParent"] = "Employee";
-            ViewData["bChild"] = "Leaves Type";
+            ViewData["bParent"] = "Leaves";
+            ViewData["bChild"] = "Leaves View";
 
             return View();
         }
